@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "By Invitation Only"
-AuthUserFile "c:/xampp/apache/passwd/passwords"
-Require valid-user
