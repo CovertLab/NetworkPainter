@@ -57,7 +57,7 @@ function start($email = '', $error = '') {
     echo "      </tr>";
     echo "      <tr>";
     echo "        <td>Password</td>";
-	echo "        <td style=\"padding-left:10px;width:200px;\"><input type=\"text\" name=\"password\" style=\"width:323px;\" /></td>";
+	echo "        <td style=\"padding-left:10px;width:200px;\"><input type=\"password\" name=\"password\" style=\"width:323px;\" /></td>";
     echo "      </tr>";
     echo "      <tr>";
 	echo "        <td colspan=\"2\" style=\"text-align:right\"><button type=\"submit\"><div><span>Login</span></div></button></td>";

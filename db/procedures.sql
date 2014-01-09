@@ -45,8 +45,9 @@ SELECT _userid id;
 END $$
 
 DROP PROCEDURE IF EXISTS `saveuser` $$
-CREATE PROCEDURE `saveuser` (_userid BIGINT, _FirstName varchar(255), _LastName varchar(255),
-     _PrincipalInvestigator varchar(255), _Organization varchar(255), _Password varchar(255))
+CREATE PROCEDURE `saveuser` (_userid BIGINT, 
+     _FirstName varchar(255), _LastName varchar(255),
+     _PrincipalInvestigator varchar(255), _Organization varchar(255))
 BEGIN
 
 UPDATE users
@@ -54,8 +55,7 @@ SET
   firstname = _FirstName,
   lastname = _LastName,
   principalinvestigator = _PrincipalInvestigator,
-  organization = _Organization,
-  password = _Password
+  organization = _Organization
 WHERE users.id = _userid;
 
 CALL getuserwithid(_userid);

@@ -338,8 +338,8 @@ SQL;
 	/** 
 	 * helper functions
 	 */
-	private function runQuery($sql){		
-		$link = new mysqli('localhost', 'networkpainter', 'networkpainter', 'networkpainter');
+	private function runQuery($sql){
+        $link = new mysqli('localhost', 'networkpainter', 'networkpainter', 'networkpainter');
 		if (mysqli_connect_error()) die(mysqli_connect_error());
 		
 		$rows = array();
@@ -361,12 +361,11 @@ SQL;
 	}
 	
 	private function getResultSet($sql){		
-		$link = @mysql_connect('localhost', 'networkpainter', 
-'networkpainter',0,65536);
-		mysql_select_db('networkpainter', $link);
+        $link = @mysql_connect('localhost', 'networkpainter', 'networkpainter', 0, 65536) or die(mysql_error());
+		mysql_select_db('networkpainter', $link) or die(mysql_error($link));
 		$result = mysql_query($sql, $link);
 		
-		if(!$result) return mysql_error($link);		
+		if(!$result) return mysql_error($link);
 		if(($lastInsertID = mysql_insert_id($link)) != 0) return $lastInsertID;
 	
 		@mysql_close($link);

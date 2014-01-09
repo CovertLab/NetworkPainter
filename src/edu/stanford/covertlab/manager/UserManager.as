@@ -199,12 +199,11 @@
 		 * save user profile to database
 		 * *****************************************************************/
 		public function saveUser():void {
-			saveUserQuery.execute(printf("CALL saveUser(%d,'%s','%s','%s','%s','%s')",
+			saveUserQuery.execute(printf("CALL saveUser(%d,'%s','%s','%s','%s')",
 				id, firstname.replace(/'/g, "\'"), 
 				lastname.replace(/'/g, "\'"), 
 				principalinvestigator.replace(/'/g, "\'"), 
-				organization.replace(/'/g, "\'"), 
-				email.replace(/'/g,"\'")));
+				organization.replace(/'/g, "\'")));
 		}
 		
 		private function saveUserQueryHandler(event:Event):void {
