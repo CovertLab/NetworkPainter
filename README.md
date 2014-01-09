@@ -2,7 +2,7 @@
 	
 	
 ### Introduction ###
-NetworkPainter is a web-based software program for the visualization and analysis of network-scale biological data, and in particular flow cytometry data deposited in the [CytoBank](http://www.cytobank.org) database. NetworkPainter was developed by Jonathan Karr, Harendra Guturu, Ed Chen, Jonathan Irish, Nikesh Kotecha, and Markus Covert at Stanford University.
+NetworkPainter is a web-based software program for the visualization and analysis of network-scale biological data, and in particular flow cytometry data deposited in the [Cytobank](http://www.cytobank.org) database. NetworkPainter was developed by Jonathan Karr, Harendra Guturu, Ed Chen, Jonathan Irish, Nikesh Kotecha, and Markus Covert at Stanford University.
 
 ### Free, hosted version ###
 NetworkPainter is freely available at [covertlab.stanford.edu](http://covertlab.stanford.edu/projects/NetworkPainter).
