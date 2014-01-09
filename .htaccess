@@ -1,4 +1,4 @@
  Options +FollowSymLinks
  RewriteEngine On
- RewriteRule ^KarrEtAl2013Fig1$  http://%{SERVER_NAME}/projects/NetworkAnalyzer/bin/view.php?networkID=132
+ RewriteRule ^KarrEtAl2014Fig1$  http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
  
