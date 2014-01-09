@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model cmeta:id="TCR_Signaling" name="TCR Signaling" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:cmeta="http://www.cellml.org/metadata/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:RDF>
+    <rdf:Description rdf:about="#TCR_Signaling">
+      <dc:Title><![CDATA[TCR Signaling]]></dc:Title>
+      <dc:Subject><![CDATA[The adaptive phase of the immune response begins with engagement on CD4+ helper T cells of the T cell antigen receptor (TCR) by its ligand, a small foreign peptide bound to a cell surface protein of the class II major histocompatibility complex (peptide-MHC) expressed on an antigen-presenting cell. This engagement initiates a series of biochemical events that can differentially signal the naive T cell to: 1) enter into a pathway leading to generation of effector T cells with the onset of rapid proliferation and production of effector cytokines; 2) enter into a state of antigenic non-responsiveness known as anergy; or 3) die by apoptosis. The type of response elicited depends on multiple factors including the affinity of the interaction, the duration of the interaction, and the presence or absence of various costimulatory signaling inputs such as those provided by the CD4 coreceptor and the CD28 costimulatory receptor.References- Yanping Huang and Ronald L. Wange (2004). T Cell Receptor Signaling: Beyond Complex Complexes. J. Biol. Chem. 279 (28): 28827-28830.]]></dc:Subject>
+      <dc:Contributor><![CDATA[Jonathan Karr]]></dc:Contributor>
+      <dc:Creator><![CDATA[NetworkAnalyzer]]></dc:Creator>
+      <dc:Date><![CDATA[Tue Mar 31 2009 09:45:42 PM]]></dc:Date>
+    </rdf:Description>
+  </rdf:RDF>
+  <units name="binary">
+    <unit multiplier="1" units="dimensionless"/>
+  </units>
+  <component name="Media"/>
+  <component name="Cytosol"/>
+  <component name="Nucleus"/>
+  <component name="Media_Cytosol_Membrane"/>
+  <component name="Cytosol_Nucleus_Membrane"/>
+  <component name="Peptide_MHC">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Peptide_MHC" initial_value="0"/>
+  </component>
+  <component name="CD40">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="CD40" initial_value="0"/>
+  </component>
+  <component name="TCR_CD3">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="TCR_CD3" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Peptide_MHC"/>
+    <math cmeta:id="TCR_CD3_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>TCR_CD3</ci>
+        <ci>Peptide_MHC</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="Lck">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Lck" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="CD40"/>
+    <math cmeta:id="Lck_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>Lck</ci>
+        <ci>CD40</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="ZAP70">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="ZAP70" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="TCR_CD3"/>
+    <math cmeta:id="ZAP70_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>ZAP70</ci>
+        <ci>TCR_CD3</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="Itk">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Itk" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Lck"/>
+    <variable units="binary" public_interface="in" name="ZAP70"/>
+    <math cmeta:id="Itk_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>Itk</ci>
+        <apply>
+          <and/>
+          <ci>Lck</ci>
+          <ci>ZAP70</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="Akt">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Akt" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Itk"/>
+    <math cmeta:id="Akt_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>Akt</ci>
+        <ci>Itk</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="NFAT_cytoplasm">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="NFAT_cytoplasm" initial_value="0"/>
+  </component>
+  <component name="NFAT_nucleus">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="NFAT_nucleus" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="NFAT_cytoplasm"/>
+    <math cmeta:id="NFAT_nucleus_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>NFAT_nucleus</ci>
+        <ci>NFAT_cytoplasm</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="c_Fos">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="c_Fos" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="ERK"/>
+    <math cmeta:id="c_Fos_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>c_Fos</ci>
+        <ci>ERK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="c_Jun">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="c_Jun" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="PKCt"/>
+    <math cmeta:id="c_Jun_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>c_Jun</ci>
+        <ci>PKCt</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="p50_nucleus">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="p50_nucleus" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="p50_cytoplasm"/>
+    <math cmeta:id="p50_nucleus_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>p50_nucleus</ci>
+        <ci>p50_cytoplasm</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="p65_nucleus">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="p65_nucleus" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="p65_cytoplasm"/>
+    <math cmeta:id="p65_nucleus_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>p65_nucleus</ci>
+        <ci>p65_cytoplasm</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="p50_cytoplasm">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="p50_cytoplasm" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="IkB"/>
+    <math cmeta:id="p50_cytoplasm_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>p50_cytoplasm</ci>
+        <apply>
+          <not/>
+          <ci>IkB</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="p65_cytoplasm">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="p65_cytoplasm" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="IkB"/>
+    <math cmeta:id="p65_cytoplasm_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>p65_cytoplasm</ci>
+        <apply>
+          <not/>
+          <ci>IkB</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="IkB">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="IkB" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="IKK"/>
+    <variable units="binary" public_interface="in" name="NIK"/>
+    <variable units="binary" public_interface="in" name="CAMKII"/>
+    <variable units="binary" public_interface="in" name="UBC13"/>
+    <math cmeta:id="IkB_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>IkB</ci>
+        <apply>
+          <not/>
+          <apply>
+            <and/>
+            <ci>IKK</ci>
+            <ci>NIK</ci>
+            <ci>CAMKII</ci>
+            <ci>UBC13</ci>
+          </apply>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="IKK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="IKK" initial_value="0"/>
+  </component>
+  <component name="RasGRP">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="RasGRP" initial_value="0"/>
+  </component>
+  <component name="Ras">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Ras" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="RasGRP"/>
+    <math cmeta:id="Ras_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>Ras</ci>
+        <ci>RasGRP</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="Raf_1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Raf_1" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Ras"/>
+    <math cmeta:id="Raf_1_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>Raf_1</ci>
+        <ci>Ras</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="MEK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="MEK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Raf_1"/>
+    <math cmeta:id="MEK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>MEK</ci>
+        <ci>Raf_1</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="ERK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="ERK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="MEK"/>
+    <math cmeta:id="ERK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>ERK</ci>
+        <ci>MEK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="PKCt">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="PKCt" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="cytoskeleton_reorganization"/>
+    <math cmeta:id="PKCt_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>PKCt</ci>
+        <ci>cytoskeleton_reorganization</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="COT">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="COT" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Akt"/>
+    <math cmeta:id="COT_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>COT</ci>
+        <ci>Akt</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="NIK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="NIK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="COT"/>
+    <math cmeta:id="NIK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>NIK</ci>
+        <ci>COT</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="CAMKII">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="CAMKII" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="PKCt"/>
+    <math cmeta:id="CAMKII_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>CAMKII</ci>
+        <ci>PKCt</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="CARMA1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="CARMA1" initial_value="0"/>
+  </component>
+  <component name="Bcl10">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Bcl10" initial_value="0"/>
+  </component>
+  <component name="MALT1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="MALT1" initial_value="0"/>
+  </component>
+  <component name="UBC13">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="UBC13" initial_value="0"/>
+  </component>
+  <component name="gene_expression_NFAT">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="gene_expression_NFAT" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="NFAT_nucleus"/>
+    <math cmeta:id="gene_expression_NFAT_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>gene_expression_NFAT</ci>
+        <ci>NFAT_nucleus</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="gene_expression_ap1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="gene_expression_ap1" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="c_Fos"/>
+    <variable units="binary" public_interface="in" name="c_Jun"/>
+    <math cmeta:id="gene_expression_ap1_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>gene_expression_ap1</ci>
+        <apply>
+          <and/>
+          <ci>c_Fos</ci>
+          <ci>c_Jun</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="gene_expression_nfkb">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="gene_expression_nfkb" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="p50_nucleus"/>
+    <variable units="binary" public_interface="in" name="p65_nucleus"/>
+    <math cmeta:id="gene_expression_nfkb_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>gene_expression_nfkb</ci>
+        <apply>
+          <and/>
+          <ci>p50_nucleus</ci>
+          <ci>p65_nucleus</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="IL_2">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="IL_2" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="gene_expression_nfkb"/>
+    <math cmeta:id="IL_2_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>IL_2</ci>
+        <ci>gene_expression_nfkb</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="PI3K">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="PI3K" initial_value="0"/>
+  </component>
+  <component name="Nck">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Nck" initial_value="0"/>
+  </component>
+  <component name="Vav1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Vav1" initial_value="0"/>
+  </component>
+  <component name="SLP76">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="SLP76" initial_value="0"/>
+  </component>
+  <component name="PLCy1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="PLCy1" initial_value="0"/>
+  </component>
+  <component name="LAT">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="LAT" initial_value="0"/>
+  </component>
+  <component name="cytoskeleton_reorganization">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="cytoskeleton_reorganization" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Nck"/>
+    <variable units="binary" public_interface="in" name="Vav1"/>
+    <math cmeta:id="cytoskeleton_reorganization_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>cytoskeleton_reorganization</ci>
+        <apply>
+          <and/>
+          <ci>Nck</ci>
+          <ci>Vav1</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <group>
+    <relationship_ref name="Media" relationship="containment"/>
+    <component_ref component="Media">
+      <component_ref component="Peptide_MHC"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Cytosol" relationship="containment"/>
+    <component_ref component="Cytosol">
+      <component_ref component="Lck"/>
+      <component_ref component="ZAP70"/>
+      <component_ref component="Itk"/>
+      <component_ref component="Akt"/>
+      <component_ref component="NFAT_cytoplasm"/>
+      <component_ref component="p50_cytoplasm"/>
+      <component_ref component="p65_cytoplasm"/>
+      <component_ref component="IkB"/>
+      <component_ref component="IKK"/>
+      <component_ref component="RasGRP"/>
+      <component_ref component="Ras"/>
+      <component_ref component="Raf_1"/>
+      <component_ref component="MEK"/>
+      <component_ref component="ERK"/>
+      <component_ref component="PKCt"/>
+      <component_ref component="COT"/>
+      <component_ref component="NIK"/>
+      <component_ref component="CAMKII"/>
+      <component_ref component="CARMA1"/>
+      <component_ref component="Bcl10"/>
+      <component_ref component="MALT1"/>
+      <component_ref component="UBC13"/>
+      <component_ref component="PI3K"/>
+      <component_ref component="Nck"/>
+      <component_ref component="Vav1"/>
+      <component_ref component="SLP76"/>
+      <component_ref component="PLCy1"/>
+      <component_ref component="LAT"/>
+      <component_ref component="cytoskeleton_reorganization"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Nucleus" relationship="containment"/>
+    <component_ref component="Nucleus">
+      <component_ref component="NFAT_nucleus"/>
+      <component_ref component="c_Fos"/>
+      <component_ref component="c_Jun"/>
+      <component_ref component="p50_nucleus"/>
+      <component_ref component="p65_nucleus"/>
+      <component_ref component="gene_expression_NFAT"/>
+      <component_ref component="gene_expression_ap1"/>
+      <component_ref component="gene_expression_nfkb"/>
+      <component_ref component="IL_2"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Media_Cytosol_Membrane" relationship="containment"/>
+    <component_ref component="Media_Cytosol_Membrane">
+      <component_ref component="CD40"/>
+      <component_ref component="TCR_CD3"/>
+    </component_ref>
+  </group>
+  <connection>
+    <map_components component_1="Peptide_MHC" component_2="TCR_CD3"/>
+    <map_variables variable_1="Peptide_MHC" variable_2="Peptide_MHC"/>
+  </connection>
+  <connection>
+    <map_components component_1="CD40" component_2="Lck"/>
+    <map_variables variable_1="CD40" variable_2="CD40"/>
+  </connection>
+  <connection>
+    <map_components component_1="TCR_CD3" component_2="ZAP70"/>
+    <map_variables variable_1="TCR_CD3" variable_2="TCR_CD3"/>
+  </connection>
+  <connection>
+    <map_components component_1="Lck" component_2="Itk"/>
+    <map_variables variable_1="Lck" variable_2="Lck"/>
+  </connection>
+  <connection>
+    <map_components component_1="ZAP70" component_2="Itk"/>
+    <map_variables variable_1="ZAP70" variable_2="ZAP70"/>
+  </connection>
+  <connection>
+    <map_components component_1="Itk" component_2="Akt"/>
+    <map_variables variable_1="Itk" variable_2="Itk"/>
+  </connection>
+  <connection>
+    <map_components component_1="NFAT_cytoplasm" component_2="NFAT_nucleus"/>
+    <map_variables variable_1="NFAT_cytoplasm" variable_2="NFAT_cytoplasm"/>
+  </connection>
+  <connection>
+    <map_components component_1="ERK" component_2="c_Fos"/>
+    <map_variables variable_1="ERK" variable_2="ERK"/>
+  </connection>
+  <connection>
+    <map_components component_1="PKCt" component_2="c_Jun"/>
+    <map_variables variable_1="PKCt" variable_2="PKCt"/>
+  </connection>
+  <connection>
+    <map_components component_1="p50_cytoplasm" component_2="p50_nucleus"/>
+    <map_variables variable_1="p50_cytoplasm" variable_2="p50_cytoplasm"/>
+  </connection>
+  <connection>
+    <map_components component_1="p65_cytoplasm" component_2="p65_nucleus"/>
+    <map_variables variable_1="p65_cytoplasm" variable_2="p65_cytoplasm"/>
+  </connection>
+  <connection>
+    <map_components component_1="IkB" component_2="p50_cytoplasm"/>
+    <map_variables variable_1="IkB" variable_2="IkB"/>
+  </connection>
+  <connection>
+    <map_components component_1="IkB" component_2="p65_cytoplasm"/>
+    <map_variables variable_1="IkB" variable_2="IkB"/>
+  </connection>
+  <connection>
+    <map_components component_1="IKK" component_2="IkB"/>
+    <map_variables variable_1="IKK" variable_2="IKK"/>
+  </connection>
+  <connection>
+    <map_components component_1="NIK" component_2="IkB"/>
+    <map_variables variable_1="NIK" variable_2="NIK"/>
+  </connection>
+  <connection>
+    <map_components component_1="CAMKII" component_2="IkB"/>
+    <map_variables variable_1="CAMKII" variable_2="CAMKII"/>
+  </connection>
+  <connection>
+    <map_components component_1="UBC13" component_2="IkB"/>
+    <map_variables variable_1="UBC13" variable_2="UBC13"/>
+  </connection>
+  <connection>
+    <map_components component_1="RasGRP" component_2="Ras"/>
+    <map_variables variable_1="RasGRP" variable_2="RasGRP"/>
+  </connection>
+  <connection>
+    <map_components component_1="Ras" component_2="Raf_1"/>
+    <map_variables variable_1="Ras" variable_2="Ras"/>
+  </connection>
+  <connection>
+    <map_components component_1="Raf_1" component_2="MEK"/>
+    <map_variables variable_1="Raf_1" variable_2="Raf_1"/>
+  </connection>
+  <connection>
+    <map_components component_1="MEK" component_2="ERK"/>
+    <map_variables variable_1="MEK" variable_2="MEK"/>
+  </connection>
+  <connection>
+    <map_components component_1="cytoskeleton_reorganization" component_2="PKCt"/>
+    <map_variables variable_1="cytoskeleton_reorganization" variable_2="cytoskeleton_reorganization"/>
+  </connection>
+  <connection>
+    <map_components component_1="Akt" component_2="COT"/>
+    <map_variables variable_1="Akt" variable_2="Akt"/>
+  </connection>
+  <connection>
+    <map_components component_1="COT" component_2="NIK"/>
+    <map_variables variable_1="COT" variable_2="COT"/>
+  </connection>
+  <connection>
+    <map_components component_1="PKCt" component_2="CAMKII"/>
+    <map_variables variable_1="PKCt" variable_2="PKCt"/>
+  </connection>
+  <connection>
+    <map_components component_1="NFAT_nucleus" component_2="gene_expression_NFAT"/>
+    <map_variables variable_1="NFAT_nucleus" variable_2="NFAT_nucleus"/>
+  </connection>
+  <connection>
+    <map_components component_1="c_Fos" component_2="gene_expression_ap1"/>
+    <map_variables variable_1="c_Fos" variable_2="c_Fos"/>
+  </connection>
+  <connection>
+    <map_components component_1="c_Jun" component_2="gene_expression_ap1"/>
+    <map_variables variable_1="c_Jun" variable_2="c_Jun"/>
+  </connection>
+  <connection>
+    <map_components component_1="p50_nucleus" component_2="gene_expression_nfkb"/>
+    <map_variables variable_1="p50_nucleus" variable_2="p50_nucleus"/>
+  </connection>
+  <connection>
+    <map_components component_1="p65_nucleus" component_2="gene_expression_nfkb"/>
+    <map_variables variable_1="p65_nucleus" variable_2="p65_nucleus"/>
+  </connection>
+  <connection>
+    <map_components component_1="gene_expression_nfkb" component_2="IL_2"/>
+    <map_variables variable_1="gene_expression_nfkb" variable_2="gene_expression_nfkb"/>
+  </connection>
+  <connection>
+    <map_components component_1="Nck" component_2="cytoskeleton_reorganization"/>
+    <map_variables variable_1="Nck" variable_2="Nck"/>
+  </connection>
+  <connection>
+    <map_components component_1="Vav1" component_2="cytoskeleton_reorganization"/>
+    <map_variables variable_1="Vav1" variable_2="Vav1"/>
+  </connection>
+</model>

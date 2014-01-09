@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="100" height="138" viewBox="0 0 100 138">
+<defs>
+<linearGradient id='renderingstyle_top' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='5%' style='stop-color:orange;stop-opacity:1' />
+  <stop offset='50%' style='stop-color:white;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</linearGradient>
+<linearGradient id='renderingstyle_side' x1='0%' x2='0%' y1='0%' y2='100%'>
+  <stop offset='5%' style='stop-color:orange;stop-opacity:1' />
+  <stop offset='50%' style='stop-color:white;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</linearGradient>
+<radialGradient id='renderingstyle_body' cx='50%' cy='50%' r='70%' fx='50%' fy='50%'>
+  <stop offset='5%' style='stop-color:white;stop-opacity:1'/>
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1'/>
+</radialGradient>
+<linearGradient id='renderingstyle_edge' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='5%' style='stop-color:black;stop-opacity:1' />
+  <stop offset='50%' style='stop-color:black;stop-opacity:.3' />
+  <stop offset='95%' style='stop-color:black;stop-opacity:1' />
+</linearGradient>
+</defs>
+<path style="fill:url(#renderingstyle_top);stroke:none;" d="
+M 0,13
+q 50,-20 100,0
+l -5,5
+q -45,-20 -90,0
+l -5,-5
+z
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 5,18
+q 45,-20 90,0
+q -20,60 0,120
+q -45,-20 -90,0
+q 20,-60 0,-120
+z
+"/>
+<path style="fill:url(#renderingstyle_side);stroke:none;" d="
+M 0,13
+l 5,5
+q 20,60 0,120
+l -5,-5
+q 20,-60 0,-120
+z
+"/>
+<path style="fill:url(#renderingstyle_side);stroke:none;" d="
+M 100,13
+q -20,60 0,120
+l -5,5
+q -20,-60 0,-120
+l 5,-5
+z
+"/>
+<path style="fill:none;stroke:url(#renderingstyle_edge);" d="
+M 0,13
+q 50,-20 100,0
+l -5,5
+q -45,-20 -90,0
+l -5,-5
+q 20,60 0,120
+l 5,5
+q 20,-60 0,-120
+m 90,0
+q -20,60 0,120
+l 5,-5
+q -20,-60 0,-120
+m -5,125
+q -45,-20 -90,0
+"/>
+</svg>

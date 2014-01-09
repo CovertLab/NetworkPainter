@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!---
+@author Jonathan Karr, jkarr@stanford.edu
+@affiliation Covert Lab, Department of Bioengineering, Stanford University
+@lastupdated 4/3/2009
+-->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="displayColormaps();">
+	<mx:Script><![CDATA[
+		import com.degrafa.geometry.RasterText;
+		import com.degrafa.geometry.RegularRectangle;
+		import com.degrafa.GeometryGroup;
+		import com.degrafa.paint.SolidFill;
+		import com.degrafa.paint.SolidStroke;
+		import com.degrafa.Surface;
+		import edu.stanford.covertlab.graphics.renderer.PNGRenderer;
+		import edu.stanford.covertlab.graphics.renderer.SVGRenderer;
+		import edu.stanford.covertlab.graphics.renderablerepeater.ColorBar;		
+		import flash.events.MouseEvent;
+		import flash.net.FileReference;
+		import mx.containers.HBox;
+		import mx.controls.Button;
+				
+		private function displayColormaps():void
+		{
+			setStyle('verticalAlign', 'middle');
+			setStyle('horizontalAlign', 'center');
+			setStyle('backgroundColor', 0xe5e5e5);
+			setStyle('verticalGap', 20);
+					
+			var surface:Surface = new Surface();			
+			addChild(surface);
+			
+			var backgroundGeometryGroup:GeometryGroup = new GeometryGroup();
+			surface.addChild(backgroundGeometryGroup);
+			
+			var backgroundRectangle:RegularRectangle = new RegularRectangle();
+			backgroundRectangle.fill = new SolidFill(0xe5e5e5);
+			backgroundGeometryGroup.geometryCollection.addItem(backgroundRectangle);
+			
+			var colorBarGeometryGroup:GeometryGroup = new GeometryGroup();
+			colorBarGeometryGroup.rotation = 270;
+			surface.addChild(colorBarGeometryGroup);
+			
+			var labelGeometryGroup:GeometryGroup = new GeometryGroup();
+			surface.addChild(labelGeometryGroup);			
+			var labelWidth:Number = 0;
+			var labelHeight:Number = 0;
+			
+			for (var i:uint = 0; i < Colormap.COLORMAPS.length; i++) {
+				var colors:Array = [];
+				for (var j:uint = 0; j < 101; j++) {
+					colors.push(Colormap.scale(Colormap.COLORMAPS[i].name, j / 100));
+				}
+				var newColorBar:ColorBar = new ColorBar(i * 30, 0, 20, 200, 100, colors);
+				newColorBar.stroke = new SolidStroke(0x000000);
+				colorBarGeometryGroup.geometryCollection.addItem(newColorBar);
+				
+				var newRasterText:RasterText = new RasterText();
+				newRasterText.text = Colormap.COLORMAPS[i].name;				
+				newRasterText.fontSize = 12;
+				newRasterText.autoSizeField = true;
+				newRasterText.width = newRasterText.textWidth;
+				newRasterText.y = i * 30;				
+				labelGeometryGroup.geometryCollection.addItem(newRasterText);				
+				labelWidth = Math.max(labelWidth, newRasterText.textWidth);				
+			}
+			labelHeight = newRasterText.y + newRasterText.height;
+			
+			colorBarGeometryGroup.x = labelWidth + 20;
+			colorBarGeometryGroup.y = (labelHeight - colorBarGeometryGroup.getBounds(this).height) / 2 -
+				colorBarGeometryGroup.getBounds(this).top;
+			backgroundRectangle.height = surface.height = Colormap.COLORMAPS.length * 30 - 9;
+			backgroundRectangle.width = surface.width = labelWidth + 225;
+			
+			var hBox:HBox = new HBox();
+			addChild(hBox);
+
+			var button:Button = new Button();
+			button.label = 'SVG';
+			var fileReference:FileReference = new FileReference();
+			button.addEventListener(MouseEvent.CLICK, function(event:MouseEvent):void {
+				var renderer:SVGRenderer=new SVGRenderer();
+				fileReference.save(renderer.render(surface),'ColormapTest.svg');
+			});
+			hBox.addChild(button);
+			
+			button = new Button();
+			button.label = 'PNG';
+			button.addEventListener(MouseEvent.CLICK, function(event:MouseEvent):void {
+				var renderer:PNGRenderer=new PNGRenderer();
+				fileReference.save(renderer.render(surface),'ColormapTest.png');
+			});
+			hBox.addChild(button);
+		}
+	]]></mx:Script>
+</mx:Application>

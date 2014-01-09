@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml level="2" version="4" xmlns="http://www.sbml.org/sbml/level2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:networkanalyzer="http://covertlab.stanford.edu/projects/networkanalyzer/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <model id="TCR Signaling">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Title: TCR Signaling</p>
+        <p>Subject: The adaptive phase of the immune response begins with engagement on CD4+ helper T cells of the T cell antigen receptor (TCR) by its ligand, a small foreign peptide bound to a cell surface protein of the class II major histocompatibility complex (peptide-MHC) expressed on an antigen-presenting cell. This engagement initiates a series of biochemical events that can differentially signal the naive T cell to: 1) enter into a pathway leading to generation of effector T cells with the onset of rapid proliferation and production of effector cytokines; 2) enter into a state of antigenic non-responsiveness known as anergy; or 3) die by apoptosis. The type of response elicited depends on multiple factors including the affinity of the interaction, the duration of the interaction, and the presence or absence of various costimulatory signaling inputs such as those provided by the CD4 coreceptor and the CD28 costimulatory receptor.References- Yanping Huang and Ronald L. Wange (2004). T Cell Receptor Signaling: Beyond Complex Complexes. J. Biol. Chem. 279 (28): 28827-28830.</p>
+        <p>Author: Jonathan Karr</p>
+        <p>Creator: NetworkAnalyzer</p>
+        <p>Created: Tue Mar 31 2009 09:45:48 PM</p>
+      </body>
+    </notes>
+    <annotation>
+      <networkanalyzer:width>800</networkanalyzer:width>
+      <networkanalyzer:height>600</networkanalyzer:height>
+      <networkanalyzer:showPores>true</networkanalyzer:showPores>
+      <networkanalyzer:poreFillColor>10066329</networkanalyzer:poreFillColor>
+      <networkanalyzer:poreStrokeColor>0</networkanalyzer:poreStrokeColor>
+      <networkanalyzer:membraneHeight>25.5</networkanalyzer:membraneHeight>
+      <networkanalyzer:membraneCurvature>25</networkanalyzer:membraneCurvature>
+      <networkanalyzer:minCompartmentHeight>100</networkanalyzer:minCompartmentHeight>
+      <networkanalyzer:ranksep>18</networkanalyzer:ranksep>
+      <networkanalyzer:nodesep>54</networkanalyzer:nodesep>
+      <networkanalyzer:animationFrameRate>20</networkanalyzer:animationFrameRate>
+      <networkanalyzer:maxAnimationLoops>3</networkanalyzer:maxAnimationLoops>
+      <networkanalyzer:exportShowBiomoleculeSelectedHandles>false</networkanalyzer:exportShowBiomoleculeSelectedHandles>
+      <networkanalyzer:exportColorBiomoleculesByValue>false</networkanalyzer:exportColorBiomoleculesByValue>
+      <networkanalyzer:exportAnimationFrameRate>20</networkanalyzer:exportAnimationFrameRate>
+      <networkanalyzer:exportMaxAnimationLoops>3</networkanalyzer:exportMaxAnimationLoops>
+      <networkanalyzer:listOfBiomoleculeStyles>
+        <networkanalyzer:biomoleculeStyle id="Receptor" shape="Receptor" color="0" outline="16724787"/>
+        <networkanalyzer:biomoleculeStyle id="Second_Messenger" shape="Second_Messenger" color="0" outline="10092441"/>
+        <networkanalyzer:biomoleculeStyle id="Stimulus" shape="Stimulus" color="0" outline="16750950"/>
+        <networkanalyzer:biomoleculeStyle id="Transcription_Factor" shape="Transcription_Factor" color="0" outline="10053375"/>
+        <networkanalyzer:biomoleculeStyle id="Annotation" shape="Annotation" color="0" outline="16777215"/>
+        <networkanalyzer:biomoleculeStyle id="Gene_Expression" shape="Gene_Expression" color="0" outline="10066329"/>
+        <networkanalyzer:biomoleculeStyle id="Membrane_Associated_Protein" shape="Membrane_Associated_Protein" color="0" outline="3394815"/>
+      </networkanalyzer:listOfBiomoleculeStyles>
+      <networkanalyzer:listOfEdges>
+        <networkanalyzer:edge from="Peptide_MHC" to="TCR_CD3" sense="true" path="M 114.9565772926706,48.62976206810628 L 116.9123072177668,88.3876927822332"/>
+        <networkanalyzer:edge from="CD40" to="Lck" sense="true" path="M 67.46666666666667,119.95321515467501 L 97.46391695822757,167.96649543200726"/>
+        <networkanalyzer:edge from="TCR_CD3" to="ZAP70" sense="true" path="M 124.51666666666667,119.94488752556238 L 141.0352375434793,155.31590522791228"/>
+        <networkanalyzer:edge from="Lck" to="Itk" sense="true" path="M 128.64496178238278,178.81469748303155 L 213.25503821761723,169.08530251696845"/>
+        <networkanalyzer:edge from="ZAP70" to="Itk" sense="true" path="M 170.44853802024352,168.36863478216225 L 213.15146197975645,167.73136521783778"/>
+        <networkanalyzer:edge from="Itk" to="Akt" sense="true" path="M 253.10560248246446,166.55108289706044 L 520.3443975175355,148.04891710293958"/>
+        <networkanalyzer:edge from="NFAT_cytoplasm" to="NFAT_nucleus" sense="true" path="M 119.44564134654765,362.9996022809431 L 120.40435865345233,504.65039771905685"/>
+        <networkanalyzer:edge from="ERK" to="c_Fos" sense="true" path="M 390.5215516534692,432.92817692193125 L 387.17844834653084,504.8218230780687"/>
+        <networkanalyzer:edge from="PKCt" to="c_Jun" sense="true" path="M 559.9581937100696,150.3110479315744 L 428.4918062899304,503.53895206842554"/>
+        <networkanalyzer:edge from="p50_cytoplasm" to="p50_nucleus" sense="true" path="M 602.6237003546123,380.9438275031929 L 605.7262996453876,499.05617249680705"/>
+        <networkanalyzer:edge from="p65_cytoplasm" to="p65_nucleus" sense="true" path="M 634.5771733948076,379.3447882485596 L 637.5228266051923,501.05521175144037"/>
+        <networkanalyzer:edge from="IkB" to="p50_cytoplasm" sense="false" path="M 610.5602649417717,328.0756731695088 L 607.0397350582282,351.4243268304912"/>
+        <networkanalyzer:edge from="IkB" to="p65_cytoplasm" sense="false" path="M 622.393771302605,327.64446954752725 L 627.2062286973949,350.2555304524728"/>
+        <networkanalyzer:edge from="IKK" to="IkB" sense="false" path="M 603.8374347075456,178.03997509723567 L 613.7625652924543,298.61002490276434"/>
+        <networkanalyzer:edge from="NIK" to="IkB" sense="false" path="M 558.199143875778,271.8229319895494 L 599.000856124222,305.1270680104506"/>
+        <networkanalyzer:edge from="CAMKII" to="IkB" sense="false" path="M 570.9620131643829,218.21554820624812 L 606.737986835617,300.0844517937519"/>
+        <networkanalyzer:edge from="UBC13" to="IkB" sense="false" path="M 664.119812603872,192.1499379376841 L 623.2301873961279,299.7000620623159"/>
+        <networkanalyzer:edge from="RasGRP" to="Ras" sense="true" path="M 388.2170272674987,244.44125147840384 L 388.0829727325013,258.35874852159617"/>
+        <networkanalyzer:edge from="Ras" to="Raf_1" sense="true" path="M 388.3669646595403,288.33245810549124 L 388.6330353404597,303.8175418945088"/>
+        <networkanalyzer:edge from="Raf_1" to="MEK" sense="true" path="M 389.8533909667577,333.798796070772 L 389.99660903324235,355.101203929228"/>
+        <networkanalyzer:edge from="MEK" to="ERK" sense="true" path="M 390.8140388849277,385.094033690994 L 391.0359611150723,402.955966309006"/>
+        <networkanalyzer:edge from="cytoskeleton_reorganization" to="PKCt" sense="true" path="M 416.05,179.34991230634319 L 547.8659183958638,140.4113481943948"/>
+        <networkanalyzer:edge from="Akt" to="COT" sense="true" path="M 532.3385931713503,160.81032342411189 L 520.5114068286496,197.23967657588813"/>
+        <networkanalyzer:edge from="COT" to="NIK" sense="true" path="M 522.2600253822391,224.11353943374567 L 531.9399746177608,250.2864605662543"/>
+        <networkanalyzer:edge from="PKCt" to="CAMKII" sense="true" path="M 565.6574558267184,151.26093161532143 L 563.5925441732816,189.7890683846786"/>
+        <networkanalyzer:edge from="NFAT_nucleus" to="gene_expression_NFAT" sense="true" path="M 121.0823556897066,534.6446852600695 L 121.45104486555314,553.4892405063291"/>
+        <networkanalyzer:edge from="c_Fos" to="gene_expression_ap1" sense="true" path="M 390.55649603004287,534.422877598578 L 394.2461121157324,555.439240506329"/>
+        <networkanalyzer:edge from="c_Jun" to="gene_expression_ap1" sense="true" path="M 413.5325274171593,531.3566652874363 L 405.26004855210687,555.439240506329"/>
+        <networkanalyzer:edge from="p50_nucleus" to="gene_expression_nfkb" sense="true" path="M 610.4292572590823,528.726816562173 L 614.2422250609685,551.689240506329"/>
+        <networkanalyzer:edge from="p65_nucleus" to="gene_expression_nfkb" sense="true" path="M 630.8525586354752,530.0450248754647 L 624.3034358047016,551.689240506329"/>
+        <networkanalyzer:edge from="gene_expression_nfkb" to="IL_2" sense="true" path="M 676.9987341772152,568.0326858335577 L 737.9109595152129,567.500398150133"/>
+        <networkanalyzer:edge from="Nck" to="cytoskeleton_reorganization" sense="true" path="M 297.9089975944121,194.92070093508985 L 376.05,186.9644430326133"/>
+        <networkanalyzer:edge from="Vav1" to="cytoskeleton_reorganization" sense="true" path="M 281.8649955902455,213.15375639241162 L 376.05,189.77128694350915"/>
+      </networkanalyzer:listOfEdges>
+    </annotation>
+    <listOfUnitDefinitions>
+      <unitDefinition id="binary">
+        <listOfUnits>
+          <unit kind="item" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartmentTypes>
+      <compartmentType id="compartment"/>
+      <compartmentType id="membrane"/>
+    </listOfCompartmentTypes>
+    <listOfSpeciesTypes>
+      <speciesType id="Receptor"/>
+      <speciesType id="Second_Messenger"/>
+      <speciesType id="Stimulus"/>
+      <speciesType id="Transcription_Factor"/>
+      <speciesType id="Annotation"/>
+      <speciesType id="Gene_Expression"/>
+      <speciesType id="Membrane_Associated_Protein"/>
+    </listOfSpeciesTypes>
+    <listOfCompartments>
+      <compartment id="Media" compartmentType="compartment" outside="Media_Cytosol_Membrane" spatialDimensions="1" size="1">
+        <annotation>
+          <networkanalyzer:height>101</networkanalyzer:height>
+          <networkanalyzer:color>13421772</networkanalyzer:color>
+          <networkanalyzer:membranecolor>16763955</networkanalyzer:membranecolor>
+          <networkanalyzer:phospholipidbodycolor>16763955</networkanalyzer:phospholipidbodycolor>
+          <networkanalyzer:phospholipidoutlinecolor>13479168</networkanalyzer:phospholipidoutlinecolor>
+        </annotation>
+      </compartment>
+      <compartment id="Cytosol" compartmentType="compartment" outside="Cytosol_Nucleus_Membrane" spatialDimensions="1" size="1">
+        <annotation>
+          <networkanalyzer:height>333</networkanalyzer:height>
+          <networkanalyzer:color>10079487</networkanalyzer:color>
+          <networkanalyzer:membranecolor>16763955</networkanalyzer:membranecolor>
+          <networkanalyzer:phospholipidbodycolor>16763955</networkanalyzer:phospholipidbodycolor>
+          <networkanalyzer:phospholipidoutlinecolor>13479168</networkanalyzer:phospholipidoutlinecolor>
+        </annotation>
+      </compartment>
+      <compartment id="Nucleus" compartmentType="compartment" spatialDimensions="1" size="1">
+        <annotation>
+          <networkanalyzer:height>115</networkanalyzer:height>
+          <networkanalyzer:color>10079487</networkanalyzer:color>
+          <networkanalyzer:membranecolor>16763955</networkanalyzer:membranecolor>
+          <networkanalyzer:phospholipidbodycolor>16763955</networkanalyzer:phospholipidbodycolor>
+          <networkanalyzer:phospholipidoutlinecolor>13479168</networkanalyzer:phospholipidoutlinecolor>
+        </annotation>
+      </compartment>
+      <compartment id="Media_Cytosol_Membrane" compartmentType="membrane" outside="Cytosol" spatialDimensions="1" size="1"/>
+      <compartment id="Cytosol_Nucleus_Membrane" compartmentType="membrane" outside="Nucleus" spatialDimensions="1" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="biomolecule_Peptide_MHC" id="Peptide_MHC" name="Peptide-MHC" speciesType="Stimulus" compartment="Media" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Stimulus</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Peptide-MHC]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>114</networkanalyzer:x>
+          <networkanalyzer:y>30</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Peptide_MHC">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_CD40" id="CD40" name="CD40" speciesType="Receptor" compartment="Media_Cytosol_Membrane" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Receptor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[CD40]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>60</networkanalyzer:x>
+          <networkanalyzer:y>110</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_CD40">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_TCR_CD3" id="TCR_CD3" name="TCR/CD3" speciesType="Receptor" compartment="Media_Cytosol_Membrane" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Receptor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[TCR/CD3]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Peptide_MHC]]></networkanalyzer:regulation>
+          <networkanalyzer:x>117</networkanalyzer:x>
+          <networkanalyzer:y>107</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_TCR_CD3">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Lck" id="Lck" name="Lck" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Lck]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[CD40]]></networkanalyzer:regulation>
+          <networkanalyzer:x>108</networkanalyzer:x>
+          <networkanalyzer:y>180</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Lck">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_ZAP70" id="ZAP70" name="ZAP70" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[ZAP70]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[TCR_CD3]]></networkanalyzer:regulation>
+          <networkanalyzer:x>150</networkanalyzer:x>
+          <networkanalyzer:y>168</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_ZAP70">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Itk" id="Itk" name="Itk" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Itk]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Lck && ZAP70]]></networkanalyzer:regulation>
+          <networkanalyzer:x>233</networkanalyzer:x>
+          <networkanalyzer:y>167</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Itk">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Akt" id="Akt" name="Akt" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Akt]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Itk]]></networkanalyzer:regulation>
+          <networkanalyzer:x>540</networkanalyzer:x>
+          <networkanalyzer:y>147</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Akt">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_NFAT_cytoplasm" id="NFAT_cytoplasm" name="NFAT" speciesType="Transcription_Factor" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[NFAT]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>119</networkanalyzer:x>
+          <networkanalyzer:y>348</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_NFAT_cytoplasm">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_NFAT_nucleus" id="NFAT_nucleus" name="NFAT" speciesType="Transcription_Factor" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[NFAT]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[NFAT_cytoplasm]]></networkanalyzer:regulation>
+          <networkanalyzer:x>120</networkanalyzer:x>
+          <networkanalyzer:y>519</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_NFAT_nucleus">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_c_Fos" id="c_Fos" name="c-Fos" speciesType="Transcription_Factor" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[c-Fos]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[ERK]]></networkanalyzer:regulation>
+          <networkanalyzer:x>386</networkanalyzer:x>
+          <networkanalyzer:y>519</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_c_Fos">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_c_Jun" id="c_Jun" name="c-Jun" speciesType="Transcription_Factor" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[c-Jun]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[PKCt]]></networkanalyzer:regulation>
+          <networkanalyzer:x>421</networkanalyzer:x>
+          <networkanalyzer:y>517</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_c_Jun">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_p50_nucleus" id="p50_nucleus" name="p50" speciesType="Transcription_Factor" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[p50]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[p50_cytoplasm]]></networkanalyzer:regulation>
+          <networkanalyzer:x>606</networkanalyzer:x>
+          <networkanalyzer:y>514</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_p50_nucleus">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_p65_nucleus" id="p65_nucleus" name="p65" speciesType="Transcription_Factor" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[p65]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[p65_cytoplasm]]></networkanalyzer:regulation>
+          <networkanalyzer:x>638</networkanalyzer:x>
+          <networkanalyzer:y>516</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_p65_nucleus">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_p50_cytoplasm" id="p50_cytoplasm" name="p50" speciesType="Transcription_Factor" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[p50]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[!IkB]]></networkanalyzer:regulation>
+          <networkanalyzer:x>602</networkanalyzer:x>
+          <networkanalyzer:y>365</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_p50_cytoplasm">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_p65_cytoplasm" id="p65_cytoplasm" name="p65" speciesType="Transcription_Factor" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[p65]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[!IkB]]></networkanalyzer:regulation>
+          <networkanalyzer:x>634</networkanalyzer:x>
+          <networkanalyzer:y>364</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_p65_cytoplasm">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_IkB" id="IkB" name="I&amp;kappa;B" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[I&kappa;B]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[!(IKK && NIK && CAMKII && UBC13)]]></networkanalyzer:regulation>
+          <networkanalyzer:x>615</networkanalyzer:x>
+          <networkanalyzer:y>313</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_IkB">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_IKK" id="IKK" name="IKK" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[IKK]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>602</networkanalyzer:x>
+          <networkanalyzer:y>163</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_IKK">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_RasGRP" id="RasGRP" name="RasGRP" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[RasGRP]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>388</networkanalyzer:x>
+          <networkanalyzer:y>229</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_RasGRP">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Ras" id="Ras" name="Ras" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Ras]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[RasGRP]]></networkanalyzer:regulation>
+          <networkanalyzer:x>387</networkanalyzer:x>
+          <networkanalyzer:y>273</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Ras">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Raf_1" id="Raf_1" name="Raf-1" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Raf-1]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Ras]]></networkanalyzer:regulation>
+          <networkanalyzer:x>389</networkanalyzer:x>
+          <networkanalyzer:y>318</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Raf_1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_MEK" id="MEK" name="MEK" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[MEK]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Raf_1]]></networkanalyzer:regulation>
+          <networkanalyzer:x>390</networkanalyzer:x>
+          <networkanalyzer:y>370</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_MEK">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_ERK" id="ERK" name="ERK" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[ERK]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[MEK]]></networkanalyzer:regulation>
+          <networkanalyzer:x>391</networkanalyzer:x>
+          <networkanalyzer:y>417</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_ERK">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_PKCt" id="PKCt" name="PKC&amp;theta;" speciesType="Membrane_Associated_Protein" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Membrane_Associated_Protein</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[PKC&theta;]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[cytoskeleton_reorganization]]></networkanalyzer:regulation>
+          <networkanalyzer:x>567</networkanalyzer:x>
+          <networkanalyzer:y>136</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_PKCt">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_COT" id="COT" name="COT" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[COT]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Akt]]></networkanalyzer:regulation>
+          <networkanalyzer:x>512</networkanalyzer:x>
+          <networkanalyzer:y>211</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_COT">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_NIK" id="NIK" name="NIK" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[NIK]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[COT]]></networkanalyzer:regulation>
+          <networkanalyzer:x>541</networkanalyzer:x>
+          <networkanalyzer:y>263</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_NIK">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_CAMKII" id="CAMKII" name="CAMKII" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[CAMKII]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[PKCt]]></networkanalyzer:regulation>
+          <networkanalyzer:x>562</networkanalyzer:x>
+          <networkanalyzer:y>204</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_CAMKII">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_CARMA1" id="CARMA1" name="CARMA1" speciesType="Membrane_Associated_Protein" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Membrane_Associated_Protein</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[CARMA1]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>600</networkanalyzer:x>
+          <networkanalyzer:y>134</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_CARMA1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Bcl10" id="Bcl10" name="Bcl10" speciesType="Membrane_Associated_Protein" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Membrane_Associated_Protein</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Bcl10]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>637</networkanalyzer:x>
+          <networkanalyzer:y>135</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Bcl10">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_MALT1" id="MALT1" name="MALT1" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[MALT1]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>656</networkanalyzer:x>
+          <networkanalyzer:y>157</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_MALT1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_UBC13" id="UBC13" name="UBC13" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[UBC13]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>671</networkanalyzer:x>
+          <networkanalyzer:y>178</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_UBC13">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_gene_expression_NFAT" id="gene_expression_NFAT" name="Gene Expression" speciesType="Gene_Expression" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Gene_Expression</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Gene Expression]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[NFAT_nucleus]]></networkanalyzer:regulation>
+          <networkanalyzer:x>121</networkanalyzer:x>
+          <networkanalyzer:y>570</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_gene_expression_NFAT">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_gene_expression_ap1" id="gene_expression_ap1" name="Gene Expression" speciesType="Gene_Expression" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Gene_Expression</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Gene Expression]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[c_Fos && c_Jun]]></networkanalyzer:regulation>
+          <networkanalyzer:x>398</networkanalyzer:x>
+          <networkanalyzer:y>572</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_gene_expression_ap1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_gene_expression_nfkb" id="gene_expression_nfkb" name="Gene Expression" speciesType="Gene_Expression" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Gene_Expression</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Gene Expression]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[p50_nucleus && p65_nucleus]]></networkanalyzer:regulation>
+          <networkanalyzer:x>617</networkanalyzer:x>
+          <networkanalyzer:y>568</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_gene_expression_nfkb">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_IL_2" id="IL_2" name="IL-2" speciesType="Stimulus" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Stimulus</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[IL-2]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[gene_expression_nfkb]]></networkanalyzer:regulation>
+          <networkanalyzer:x>749</networkanalyzer:x>
+          <networkanalyzer:y>567</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_IL_2">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_PI3K" id="PI3K" name="PI3K" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[PI3K]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>298</networkanalyzer:x>
+          <networkanalyzer:y>157</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_PI3K">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Nck" id="Nck" name="Nck" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Nck]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>278</networkanalyzer:x>
+          <networkanalyzer:y>196</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Nck">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_Vav1" id="Vav1" name="Vav1" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Vav1]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>262</networkanalyzer:x>
+          <networkanalyzer:y>216</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_Vav1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_SLP76" id="SLP76" name="SLP76" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[SLP76]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>248</networkanalyzer:x>
+          <networkanalyzer:y>189</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_SLP76">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_PLCy1" id="PLCy1" name="PLC&amp;gamma;1" speciesType="Membrane_Associated_Protein" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Membrane_Associated_Protein</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[PLC&gamma;1]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>240</networkanalyzer:x>
+          <networkanalyzer:y>138</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_PLCy1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_LAT" id="LAT" name="LAT" speciesType="Membrane_Associated_Protein" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Membrane_Associated_Protein</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[LAT]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>274</networkanalyzer:x>
+          <networkanalyzer:y>139</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_LAT">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_cytoskeleton_reorganization" id="cytoskeleton_reorganization" name="Cytoskeleton Reorganization" speciesType="Annotation" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Annotation</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Cytoskeleton Reorganization]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[Nck && Vav1]]></networkanalyzer:regulation>
+          <networkanalyzer:x>396</networkanalyzer:x>
+          <networkanalyzer:y>185</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_cytoskeleton_reorganization">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfRules>
+      <assignmentRule variable="TCR_CD3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>Peptide_MHC</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Lck">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>CD40</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ZAP70">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>TCR_CD3</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Itk">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <and/>
+            <ci>Lck</ci>
+            <ci>ZAP70</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Akt">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>Itk</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="NFAT_nucleus">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>NFAT_cytoplasm</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="c_Fos">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>ERK</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="c_Jun">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>PKCt</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="p50_nucleus">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>p50_cytoplasm</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="p65_nucleus">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>p65_cytoplasm</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="p50_cytoplasm">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <not/>
+            <ci>IkB</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="p65_cytoplasm">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <not/>
+            <ci>IkB</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="IkB">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <not/>
+            <apply>
+              <and/>
+              <ci>IKK</ci>
+              <ci>NIK</ci>
+              <ci>CAMKII</ci>
+              <ci>UBC13</ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Ras">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>RasGRP</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="Raf_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>Ras</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="MEK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>Raf_1</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ERK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>MEK</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="PKCt">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>cytoskeleton_reorganization</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="COT">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>Akt</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="NIK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>COT</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="CAMKII">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>PKCt</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="gene_expression_NFAT">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>NFAT_nucleus</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="gene_expression_ap1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <and/>
+            <ci>c_Fos</ci>
+            <ci>c_Jun</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="gene_expression_nfkb">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <and/>
+            <ci>p50_nucleus</ci>
+            <ci>p65_nucleus</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="IL_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>gene_expression_nfkb</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="cytoskeleton_reorganization">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <and/>
+            <ci>Nck</ci>
+            <ci>Vav1</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+  </model>
+</sbml>

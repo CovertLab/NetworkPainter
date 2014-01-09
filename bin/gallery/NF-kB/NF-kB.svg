@@ -1,0 +1,1736 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="800" height="600" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <desc>
+    <title>NF-kB</title>
+    <subject>NF-kB (nuclear factor kappa-light-chain-enhancer of activated B cells) is a protein complex that acts as a transcription factor. NF-kB is found in almost all animal cell types and is involved in cellular responses to stimuli such as stress, cytokines, free radicals, ultraviolet irradiation, oxidized LDL, and bacterial or viral antigens. NF-kB plays a key role in regulating the immune response to infection. Consistent with this role, incorrect regulation of NF-kB has been linked to cancer, inflammatory and autoimmune diseases, septic shock, viral infection, and improper immune development. NF-kB has also been implicated in processes of synaptic plasticity and memory.References:- TD Gilmore (2006). Introduction to NF-B: players, pathways, perspectives. Oncogene. 25 (51): 6680-4.- AR Brasier (2006). The NF-B regulatory network. Cardiovasc. Toxicol. 6 (2): 111-30.- ND Perkins (2007). Integrating cell-signalling pathways with NF-B and IKK function. Nat. Rev. Mol. Cell Biol. 8 (1): 49-62.</subject>
+    <author>Jonathan Karr</author>
+    <generator>NetworkAnalyzer</generator>
+    <lastupdated>Fri Apr 3 2009 06:20:13 PM</lastupdated>
+  </desc>
+  <defs>
+    <radialGradient id="fill_0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#CCCCCC" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="fill_1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#99CCFF" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="fill_2">
+      <stop offset="0" stop-color="#CCCCCC" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#CCCCCC" stop-opacity="0.8"/>
+    </radialGradient>
+    <radialGradient id="fill_3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#99CCFF" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="fill_4">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#FFCC00" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="fill_5">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.9" stop-color="#FFCC00" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_6">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#FFCC00" stop-opacity="0.7"/>
+    </radialGradient>
+    <radialGradient id="fill_7">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.9" stop-color="#FFCC00" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_8">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_9">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_10">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#00FF66" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_11">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#00FF66" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_12">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_13">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_14">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#0099FF" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_15">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#0099FF" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_16">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_17">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_18">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#CCCCCC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_19">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#999999" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="fill_20">
+      <stop offset="0.1" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#999999" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="stroke_0">
+      <stop offset="0.05" stop-color="#CCCCCC" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_1">
+      <stop offset="0.05" stop-color="#99CCFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_2">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_3">
+      <stop offset="0.05" stop-color="#99CCFF" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_4">
+      <stop offset="0.05" stop-color="#FFCC00" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_5">
+      <stop offset="0.05" stop-color="#FFCC00" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_6">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_7">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_8">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_9">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_10">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_11">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_12">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_13">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_14">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_15">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_16">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_17">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stroke_18">
+      <stop offset="0.05" stop-color="#000000" stop-opacity="1"/>
+      <stop offset="0.95" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <style type="text/css"><![CDATA[
+  text {
+    text-anchor:middle;
+    alignment-baseline:top;
+    font-family:Arial;
+  }
+  
+]]></style>
+  <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+    <rect x="0" y="0" width="800" height="600" stroke="none" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 0,0 L 0,109 Q 400,84 800,109 L 800,0 z" stroke="url(#stroke_0)" fill="url(#fill_0)"/>
+      </g>
+    </g>
+    <g transform="translate(0 134.5) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 0,0 Q 400,-25 800,0 L 800,297 Q 400,272 0,297 z" stroke="url(#stroke_1)" fill="url(#fill_1)"/>
+      </g>
+      <g transform="translate(0 161.25) rotate(0)" style="opacity:0;">
+        <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+          <path d="M 0,0 Q 400,-25 800,0 L 800,135.75 Q 400,110.75 0,135.75 z" stroke="url(#stroke_2)" fill="url(#fill_2)"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0 457) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 0,143 L 0,0 Q 400,-25 800,0 L 800,143 z" stroke="url(#stroke_3)" fill="url(#fill_3)"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+    <g transform="translate(0 109) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 0,0 Q 400,-25 800,0 L 800,25.5 Q 400,0.5 0,25.5 z" stroke="url(#stroke_4)" fill="url(#fill_4)"/>
+      </g>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <circle cx="5" cy="-1.9772135416666665" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="5" cy="23.522786458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="15" cy="-2.5865885416666665" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="15" cy="22.913411458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="25" cy="-3.1803385416666665" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="25" cy="22.319661458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="35" cy="-3.7584635416666665" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="35" cy="21.741536458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="45" cy="-4.320963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="45" cy="21.179036458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="55" cy="-4.867838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="55" cy="20.632161458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="65" cy="-5.399088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="65" cy="20.100911458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="75" cy="-5.914713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="75" cy="19.585286458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="85" cy="-6.414713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="85" cy="19.085286458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="95" cy="-6.899088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="95" cy="18.600911458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="105" cy="-7.367838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="105" cy="18.132161458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="115" cy="-7.820963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="115" cy="17.679036458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="125" cy="-8.258463541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="125" cy="17.241536458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="135" cy="-8.680338541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="135" cy="16.819661458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="145" cy="-9.086588541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="145" cy="16.413411458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="155" cy="-9.477213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="155" cy="16.022786458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="165" cy="-9.852213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="165" cy="15.647786458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="175" cy="-10.211588541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="175" cy="15.288411458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="185" cy="-10.555338541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="185" cy="14.944661458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="195" cy="-10.883463541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="195" cy="14.616536458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="205" cy="-11.195963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="205" cy="14.304036458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="215" cy="-11.492838541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="215" cy="14.007161458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="225" cy="-11.774088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="225" cy="13.725911458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="235" cy="-12.039713541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="235" cy="13.460286458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="245" cy="-12.289713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="245" cy="13.210286458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="255" cy="-12.524088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="255" cy="12.975911458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="265" cy="-12.742838541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="265" cy="12.757161458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="275" cy="-12.945963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="275" cy="12.554036458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="285" cy="-13.133463541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="285" cy="12.366536458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="295" cy="-13.305338541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="295" cy="12.194661458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="305" cy="-13.461588541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="305" cy="12.038411458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="315" cy="-13.602213541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="315" cy="11.897786458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="325" cy="-13.727213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="325" cy="11.772786458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="335" cy="-13.836588541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="335" cy="11.663411458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="345" cy="-13.930338541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="345" cy="11.569661458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="355" cy="-14.008463541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="355" cy="11.491536458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="365" cy="-14.070963541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="365" cy="11.429036458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="375" cy="-14.117838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="375" cy="11.382161458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="385" cy="-14.149088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="385" cy="11.350911458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="395" cy="-14.164713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="395" cy="11.335286458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="405" cy="-14.164713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="405" cy="11.335286458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="415" cy="-14.149088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="415" cy="11.350911458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="425" cy="-14.117838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="425" cy="11.382161458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="435" cy="-14.070963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="435" cy="11.429036458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="445" cy="-14.008463541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="445" cy="11.491536458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="455" cy="-13.930338541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="455" cy="11.569661458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="465" cy="-13.836588541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="465" cy="11.663411458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="475" cy="-13.727213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="475" cy="11.772786458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="485" cy="-13.602213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="485" cy="11.897786458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="495" cy="-13.461588541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="495" cy="12.038411458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="505" cy="-13.305338541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="505" cy="12.194661458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="515" cy="-13.133463541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="515" cy="12.366536458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="525" cy="-12.945963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="525" cy="12.554036458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="535" cy="-12.742838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="535" cy="12.757161458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="545" cy="-12.524088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="545" cy="12.975911458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="555" cy="-12.289713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="555" cy="13.210286458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="565" cy="-12.039713541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="565" cy="13.460286458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="575" cy="-11.774088541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="575" cy="13.725911458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="585" cy="-11.492838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="585" cy="14.007161458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="595" cy="-11.195963541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="595" cy="14.304036458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="605" cy="-10.883463541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="605" cy="14.616536458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="615" cy="-10.555338541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="615" cy="14.944661458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="625" cy="-10.211588541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="625" cy="15.288411458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="635" cy="-9.852213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="635" cy="15.647786458333334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="645" cy="-9.477213541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="645" cy="16.022786458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="655" cy="-9.086588541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="655" cy="16.413411458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="665" cy="-8.680338541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="665" cy="16.819661458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="675" cy="-8.258463541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="675" cy="17.241536458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="685" cy="-7.820963541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="685" cy="17.679036458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="695" cy="-7.367838541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="695" cy="18.132161458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="705" cy="-6.899088541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="705" cy="18.600911458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="715" cy="-6.414713541666664" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="715" cy="19.085286458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="725" cy="-5.914713541666666" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="725" cy="19.585286458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="735" cy="-5.399088541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="735" cy="20.100911458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="745" cy="-4.867838541666665" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="745" cy="20.632161458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="755" cy="-4.320963541666668" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="755" cy="21.179036458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="765" cy="-3.7584635416666647" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="765" cy="21.741536458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="775" cy="-3.1803385416666665" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="775" cy="22.319661458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="785" cy="-2.5865885416666687" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="785" cy="22.913411458333332" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="795" cy="-1.9772135416666654" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="795" cy="23.522786458333336" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="805" cy="-1.352213541666662" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="805" cy="24.14778645833334" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="1.666666666666667" cy="1.5627170138888886" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="1.666666666666667" cy="27.06271701388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="0.666666666666667" y1="7.562717013888888" x2="0.666666666666667" y2="13.81271701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="2.666666666666667" y1="7.562717013888888" x2="2.666666666666667" y2="13.81271701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="0.666666666666667" y1="14.81271701388889" x2="0.666666666666667" y2="21.06271701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="2.666666666666667" y1="14.81271701388889" x2="2.666666666666667" y2="21.06271701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="11.666666666666668" cy="0.9481336805555552" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="11.666666666666668" cy="26.448133680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="10.666666666666668" y1="6.948133680555555" x2="10.666666666666668" y2="13.198133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="12.666666666666668" y1="6.948133680555555" x2="12.666666666666668" y2="13.198133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="10.666666666666668" y1="14.198133680555555" x2="10.666666666666668" y2="20.448133680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="12.666666666666668" y1="14.198133680555555" x2="12.666666666666668" y2="20.448133680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="21.666666666666668" cy="0.3491753472222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="21.666666666666668" cy="25.84917534722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="20.666666666666668" y1="6.349175347222222" x2="20.666666666666668" y2="12.599175347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="22.666666666666668" y1="6.349175347222222" x2="22.666666666666668" y2="12.599175347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="20.666666666666668" y1="13.599175347222221" x2="20.666666666666668" y2="19.84917534722222" stroke="#CDAD00" fill="none"/>
+        <line x1="22.666666666666668" y1="13.599175347222221" x2="22.666666666666668" y2="19.84917534722222" stroke="#CDAD00" fill="none"/>
+        <circle cx="31.666666666666668" cy="-0.23415798611111116" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="31.666666666666668" cy="25.26584201388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="30.666666666666668" y1="5.765842013888889" x2="30.666666666666668" y2="12.01584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="32.66666666666667" y1="5.765842013888889" x2="32.66666666666667" y2="12.01584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="30.666666666666668" y1="13.01584201388889" x2="30.666666666666668" y2="19.26584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="32.66666666666667" y1="13.01584201388889" x2="32.66666666666667" y2="19.26584201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="41.66666666666667" cy="-0.8018663194444451" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="41.66666666666667" cy="24.698133680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="40.66666666666667" y1="5.198133680555555" x2="40.66666666666667" y2="11.448133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="42.66666666666667" y1="5.198133680555555" x2="42.66666666666667" y2="11.448133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="40.66666666666667" y1="12.448133680555555" x2="40.66666666666667" y2="18.698133680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="42.66666666666667" y1="12.448133680555555" x2="42.66666666666667" y2="18.698133680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="51.66666666666667" cy="-1.3539496527777781" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="51.66666666666667" cy="24.14605034722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="50.66666666666667" y1="4.646050347222221" x2="50.66666666666667" y2="10.896050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="52.66666666666667" y1="4.646050347222221" x2="52.66666666666667" y2="10.896050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="50.66666666666667" y1="11.896050347222221" x2="50.66666666666667" y2="18.14605034722222" stroke="#CDAD00" fill="none"/>
+        <line x1="52.66666666666667" y1="11.896050347222221" x2="52.66666666666667" y2="18.14605034722222" stroke="#CDAD00" fill="none"/>
+        <circle cx="61.66666666666667" cy="-1.8904079861111116" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="61.66666666666667" cy="23.60959201388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="60.66666666666667" y1="4.109592013888888" x2="60.66666666666667" y2="10.35959201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="62.66666666666667" y1="4.109592013888888" x2="62.66666666666667" y2="10.35959201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="60.66666666666667" y1="11.35959201388889" x2="60.66666666666667" y2="17.60959201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="62.66666666666667" y1="11.35959201388889" x2="62.66666666666667" y2="17.60959201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="71.66666666666667" cy="-2.411241319444444" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="71.66666666666667" cy="23.088758680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="70.66666666666667" y1="3.588758680555556" x2="70.66666666666667" y2="9.838758680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="72.66666666666667" y1="3.588758680555556" x2="72.66666666666667" y2="9.838758680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="70.66666666666667" y1="10.838758680555555" x2="70.66666666666667" y2="17.088758680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="72.66666666666667" y1="10.838758680555555" x2="72.66666666666667" y2="17.088758680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="81.66666666666667" cy="-2.916449652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="81.66666666666667" cy="22.58355034722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="80.66666666666667" y1="3.083550347222221" x2="80.66666666666667" y2="9.333550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="82.66666666666667" y1="3.083550347222221" x2="82.66666666666667" y2="9.333550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="80.66666666666667" y1="10.333550347222221" x2="80.66666666666667" y2="16.58355034722222" stroke="#CDAD00" fill="none"/>
+        <line x1="82.66666666666667" y1="10.333550347222221" x2="82.66666666666667" y2="16.58355034722222" stroke="#CDAD00" fill="none"/>
+        <circle cx="91.66666666666667" cy="-3.406032986111112" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="91.66666666666667" cy="22.09396701388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="90.66666666666667" y1="2.593967013888888" x2="90.66666666666667" y2="8.843967013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="92.66666666666667" y1="2.593967013888888" x2="92.66666666666667" y2="8.843967013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="90.66666666666667" y1="9.843967013888888" x2="90.66666666666667" y2="16.09396701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="92.66666666666667" y1="9.843967013888888" x2="92.66666666666667" y2="16.09396701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="101.66666666666667" cy="-3.879991319444444" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="101.66666666666667" cy="21.620008680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="100.66666666666667" y1="2.120008680555556" x2="100.66666666666667" y2="8.370008680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="102.66666666666667" y1="2.120008680555556" x2="102.66666666666667" y2="8.370008680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="100.66666666666667" y1="9.370008680555555" x2="100.66666666666667" y2="15.620008680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="102.66666666666667" y1="9.370008680555555" x2="102.66666666666667" y2="15.620008680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="111.66666666666667" cy="-4.338324652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="111.66666666666667" cy="21.16167534722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="110.66666666666667" y1="1.6616753472222214" x2="110.66666666666667" y2="7.911675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="112.66666666666667" y1="1.6616753472222214" x2="112.66666666666667" y2="7.911675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="110.66666666666667" y1="8.911675347222221" x2="110.66666666666667" y2="15.161675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="112.66666666666667" y1="8.911675347222221" x2="112.66666666666667" y2="15.161675347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="121.66666666666667" cy="-4.7810329861111125" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="121.66666666666667" cy="20.718967013888886" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="120.66666666666667" y1="1.2189670138888875" x2="120.66666666666667" y2="7.4689670138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="122.66666666666667" y1="1.2189670138888875" x2="122.66666666666667" y2="7.4689670138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="120.66666666666667" y1="8.468967013888888" x2="120.66666666666667" y2="14.718967013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="122.66666666666667" y1="8.468967013888888" x2="122.66666666666667" y2="14.718967013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="131.66666666666669" cy="-5.208116319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="131.66666666666669" cy="20.291883680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="130.66666666666669" y1="0.7918836805555536" x2="130.66666666666669" y2="7.041883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="132.66666666666669" y1="0.7918836805555536" x2="132.66666666666669" y2="7.041883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="130.66666666666669" y1="8.041883680555554" x2="130.66666666666669" y2="14.291883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="132.66666666666669" y1="8.041883680555554" x2="132.66666666666669" y2="14.291883680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="141.66666666666669" cy="-5.61957465277778" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="141.66666666666669" cy="19.88042534722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="140.66666666666669" y1="0.38042534722221966" x2="140.66666666666669" y2="6.63042534722222" stroke="#CDAD00" fill="none"/>
+        <line x1="142.66666666666669" y1="0.38042534722221966" x2="142.66666666666669" y2="6.63042534722222" stroke="#CDAD00" fill="none"/>
+        <line x1="140.66666666666669" y1="7.63042534722222" x2="140.66666666666669" y2="13.880425347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="142.66666666666669" y1="7.63042534722222" x2="142.66666666666669" y2="13.880425347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="151.66666666666669" cy="-6.0154079861111125" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="151.66666666666669" cy="19.484592013888886" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="150.66666666666669" y1="-0.015407986111112493" x2="150.66666666666669" y2="6.2345920138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="152.66666666666669" y1="-0.015407986111112493" x2="152.66666666666669" y2="6.2345920138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="150.66666666666669" y1="7.2345920138888875" x2="150.66666666666669" y2="13.484592013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="152.66666666666669" y1="7.2345920138888875" x2="152.66666666666669" y2="13.484592013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="161.66666666666669" cy="-6.395616319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="161.66666666666669" cy="19.104383680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="160.66666666666669" y1="-0.3956163194444464" x2="160.66666666666669" y2="5.854383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="162.66666666666669" y1="-0.3956163194444464" x2="162.66666666666669" y2="5.854383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="160.66666666666669" y1="6.854383680555554" x2="160.66666666666669" y2="13.104383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="162.66666666666669" y1="6.854383680555554" x2="162.66666666666669" y2="13.104383680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="171.66666666666669" cy="-6.760199652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="171.66666666666669" cy="18.73980034722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="170.66666666666669" y1="-0.7601996527777786" x2="170.66666666666669" y2="5.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="172.66666666666669" y1="-0.7601996527777786" x2="172.66666666666669" y2="5.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="170.66666666666669" y1="6.489800347222221" x2="170.66666666666669" y2="12.739800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="172.66666666666669" y1="6.489800347222221" x2="172.66666666666669" y2="12.739800347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="181.66666666666669" cy="-7.1091579861111125" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="181.66666666666669" cy="18.390842013888886" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="180.66666666666669" y1="-1.1091579861111125" x2="180.66666666666669" y2="5.1408420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="182.66666666666669" y1="-1.1091579861111125" x2="182.66666666666669" y2="5.1408420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="180.66666666666669" y1="6.1408420138888875" x2="180.66666666666669" y2="12.390842013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="182.66666666666669" y1="6.1408420138888875" x2="182.66666666666669" y2="12.390842013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="191.66666666666669" cy="-7.442491319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="191.66666666666669" cy="18.057508680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="190.66666666666669" y1="-1.4424913194444464" x2="190.66666666666669" y2="4.807508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="192.66666666666669" y1="-1.4424913194444464" x2="192.66666666666669" y2="4.807508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="190.66666666666669" y1="5.807508680555554" x2="190.66666666666669" y2="12.057508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="192.66666666666669" y1="5.807508680555554" x2="192.66666666666669" y2="12.057508680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="201.66666666666669" cy="-7.760199652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="201.66666666666669" cy="17.73980034722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="200.66666666666669" y1="-1.7601996527777786" x2="200.66666666666669" y2="4.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="202.66666666666669" y1="-1.7601996527777786" x2="202.66666666666669" y2="4.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="200.66666666666669" y1="5.489800347222221" x2="200.66666666666669" y2="11.739800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="202.66666666666669" y1="5.489800347222221" x2="202.66666666666669" y2="11.739800347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="211.66666666666669" cy="-8.06228298611111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="211.66666666666669" cy="17.43771701388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="210.66666666666669" y1="-2.0622829861111107" x2="210.66666666666669" y2="4.187717013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="212.66666666666669" y1="-2.0622829861111107" x2="212.66666666666669" y2="4.187717013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="210.66666666666669" y1="5.187717013888889" x2="210.66666666666669" y2="11.43771701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="212.66666666666669" y1="5.187717013888889" x2="212.66666666666669" y2="11.43771701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="221.66666666666669" cy="-8.348741319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="221.66666666666669" cy="17.151258680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="220.66666666666669" y1="-2.3487413194444464" x2="220.66666666666669" y2="3.9012586805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="222.66666666666669" y1="-2.3487413194444464" x2="222.66666666666669" y2="3.9012586805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="220.66666666666669" y1="4.901258680555554" x2="220.66666666666669" y2="11.151258680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="222.66666666666669" y1="4.901258680555554" x2="222.66666666666669" y2="11.151258680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="231.66666666666669" cy="-8.61957465277778" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="231.66666666666669" cy="16.88042534722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="230.66666666666669" y1="-2.6195746527777803" x2="230.66666666666669" y2="3.6304253472222197" stroke="#CDAD00" fill="none"/>
+        <line x1="232.66666666666669" y1="-2.6195746527777803" x2="232.66666666666669" y2="3.6304253472222197" stroke="#CDAD00" fill="none"/>
+        <line x1="230.66666666666669" y1="4.63042534722222" x2="230.66666666666669" y2="10.880425347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="232.66666666666669" y1="4.63042534722222" x2="232.66666666666669" y2="10.880425347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="241.66666666666669" cy="-8.874782986111112" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="241.66666666666669" cy="16.625217013888886" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="240.66666666666669" y1="-2.8747829861111125" x2="240.66666666666669" y2="3.3752170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="242.66666666666669" y1="-2.8747829861111125" x2="242.66666666666669" y2="3.3752170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="240.66666666666669" y1="4.3752170138888875" x2="240.66666666666669" y2="10.625217013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="242.66666666666669" y1="4.3752170138888875" x2="242.66666666666669" y2="10.625217013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="251.66666666666669" cy="-9.114366319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="251.66666666666669" cy="16.385633680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="250.66666666666669" y1="-3.1143663194444446" x2="250.66666666666669" y2="3.1356336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="252.66666666666669" y1="-3.1143663194444446" x2="252.66666666666669" y2="3.1356336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="250.66666666666669" y1="4.135633680555555" x2="250.66666666666669" y2="10.385633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="252.66666666666669" y1="4.135633680555555" x2="252.66666666666669" y2="10.385633680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="261.6666666666667" cy="-9.338324652777777" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="261.6666666666667" cy="16.16167534722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="260.6666666666667" y1="-3.338324652777777" x2="260.6666666666667" y2="2.911675347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="262.6666666666667" y1="-3.338324652777777" x2="262.6666666666667" y2="2.911675347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="260.6666666666667" y1="3.911675347222223" x2="260.6666666666667" y2="10.161675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="262.6666666666667" y1="3.911675347222223" x2="262.6666666666667" y2="10.161675347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="271.6666666666667" cy="-9.546657986111112" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="271.6666666666667" cy="15.953342013888888" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="270.6666666666667" y1="-3.5466579861111125" x2="270.6666666666667" y2="2.7033420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="272.6666666666667" y1="-3.5466579861111125" x2="272.6666666666667" y2="2.7033420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="270.6666666666667" y1="3.7033420138888875" x2="270.6666666666667" y2="9.953342013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="272.6666666666667" y1="3.7033420138888875" x2="272.6666666666667" y2="9.953342013888888" stroke="#CDAD00" fill="none"/>
+        <circle cx="281.6666666666667" cy="-9.739366319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="281.6666666666667" cy="15.760633680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="280.6666666666667" y1="-3.7393663194444464" x2="280.6666666666667" y2="2.5106336805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="282.6666666666667" y1="-3.7393663194444464" x2="282.6666666666667" y2="2.5106336805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="280.6666666666667" y1="3.5106336805555536" x2="280.6666666666667" y2="9.760633680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="282.6666666666667" y1="3.5106336805555536" x2="282.6666666666667" y2="9.760633680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="291.6666666666667" cy="-9.916449652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="291.6666666666667" cy="15.583550347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="290.6666666666667" y1="-3.9164496527777786" x2="290.6666666666667" y2="2.3335503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="292.6666666666667" y1="-3.9164496527777786" x2="292.6666666666667" y2="2.3335503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="290.6666666666667" y1="3.3335503472222214" x2="290.6666666666667" y2="9.583550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="292.6666666666667" y1="3.3335503472222214" x2="292.6666666666667" y2="9.583550347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="301.6666666666667" cy="-10.07790798611111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="301.6666666666667" cy="15.42209201388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="300.6666666666667" y1="-4.077907986111111" x2="300.6666666666667" y2="2.1720920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="302.6666666666667" y1="-4.077907986111111" x2="302.6666666666667" y2="2.1720920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="300.6666666666667" y1="3.1720920138888893" x2="300.6666666666667" y2="9.42209201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="302.6666666666667" y1="3.1720920138888893" x2="302.6666666666667" y2="9.42209201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="311.6666666666667" cy="-10.223741319444443" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="311.6666666666667" cy="15.276258680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="310.6666666666667" y1="-4.223741319444443" x2="310.6666666666667" y2="2.026258680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="312.6666666666667" y1="-4.223741319444443" x2="312.6666666666667" y2="2.026258680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="310.6666666666667" y1="3.026258680555557" x2="310.6666666666667" y2="9.276258680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="312.6666666666667" y1="3.026258680555557" x2="312.6666666666667" y2="9.276258680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="321.6666666666667" cy="-10.353949652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="321.6666666666667" cy="15.146050347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="320.6666666666667" y1="-4.353949652777779" x2="320.6666666666667" y2="1.8960503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="322.6666666666667" y1="-4.353949652777779" x2="322.6666666666667" y2="1.8960503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="320.6666666666667" y1="2.8960503472222214" x2="320.6666666666667" y2="9.146050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="322.6666666666667" y1="2.8960503472222214" x2="322.6666666666667" y2="9.146050347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="331.6666666666667" cy="-10.468532986111114" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="331.6666666666667" cy="15.031467013888886" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="330.6666666666667" y1="-4.468532986111114" x2="330.6666666666667" y2="1.7814670138888857" stroke="#CDAD00" fill="none"/>
+        <line x1="332.6666666666667" y1="-4.468532986111114" x2="332.6666666666667" y2="1.7814670138888857" stroke="#CDAD00" fill="none"/>
+        <line x1="330.6666666666667" y1="2.7814670138888857" x2="330.6666666666667" y2="9.031467013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="332.6666666666667" y1="2.7814670138888857" x2="332.6666666666667" y2="9.031467013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="341.6666666666667" cy="-10.567491319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="341.6666666666667" cy="14.932508680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="340.6666666666667" y1="-4.567491319444446" x2="340.6666666666667" y2="1.6825086805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="342.6666666666667" y1="-4.567491319444446" x2="342.6666666666667" y2="1.6825086805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="340.6666666666667" y1="2.6825086805555536" x2="340.6666666666667" y2="8.932508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="342.6666666666667" y1="2.6825086805555536" x2="342.6666666666667" y2="8.932508680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="351.6666666666667" cy="-10.650824652777777" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="351.6666666666667" cy="14.849175347222223" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="350.6666666666667" y1="-4.650824652777777" x2="350.6666666666667" y2="1.5991753472222232" stroke="#CDAD00" fill="none"/>
+        <line x1="352.6666666666667" y1="-4.650824652777777" x2="352.6666666666667" y2="1.5991753472222232" stroke="#CDAD00" fill="none"/>
+        <line x1="350.6666666666667" y1="2.599175347222223" x2="350.6666666666667" y2="8.849175347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="352.6666666666667" y1="2.599175347222223" x2="352.6666666666667" y2="8.849175347222223" stroke="#CDAD00" fill="none"/>
+        <circle cx="361.6666666666667" cy="-10.71853298611111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="361.6666666666667" cy="14.78146701388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="360.6666666666667" y1="-4.718532986111111" x2="360.6666666666667" y2="1.5314670138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="362.6666666666667" y1="-4.718532986111111" x2="362.6666666666667" y2="1.5314670138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="360.6666666666667" y1="2.5314670138888893" x2="360.6666666666667" y2="8.78146701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="362.6666666666667" y1="2.5314670138888893" x2="362.6666666666667" y2="8.78146701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="371.6666666666667" cy="-10.770616319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="371.6666666666667" cy="14.729383680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="370.6666666666667" y1="-4.770616319444446" x2="370.6666666666667" y2="1.4793836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="372.6666666666667" y1="-4.770616319444446" x2="372.6666666666667" y2="1.4793836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="370.6666666666667" y1="2.4793836805555536" x2="370.6666666666667" y2="8.729383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="372.6666666666667" y1="2.4793836805555536" x2="372.6666666666667" y2="8.729383680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="381.6666666666667" cy="-10.807074652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="381.6666666666667" cy="14.692925347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="380.6666666666667" y1="-4.807074652777779" x2="380.6666666666667" y2="1.4429253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="382.6666666666667" y1="-4.807074652777779" x2="382.6666666666667" y2="1.4429253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="380.6666666666667" y1="2.4429253472222214" x2="380.6666666666667" y2="8.692925347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="382.6666666666667" y1="2.4429253472222214" x2="382.6666666666667" y2="8.692925347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="391.6666666666667" cy="-10.82790798611111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="391.6666666666667" cy="14.67209201388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="390.6666666666667" y1="-4.827907986111111" x2="390.6666666666667" y2="1.4220920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="392.6666666666667" y1="-4.827907986111111" x2="392.6666666666667" y2="1.4220920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="390.6666666666667" y1="2.4220920138888893" x2="390.6666666666667" y2="8.67209201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="392.6666666666667" y1="2.4220920138888893" x2="392.6666666666667" y2="8.67209201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="401.6666666666667" cy="-10.833116319444446" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="401.6666666666667" cy="14.666883680555554" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="400.6666666666667" y1="-4.833116319444446" x2="400.6666666666667" y2="1.4168836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="402.6666666666667" y1="-4.833116319444446" x2="402.6666666666667" y2="1.4168836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="400.6666666666667" y1="2.4168836805555536" x2="400.6666666666667" y2="8.666883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="402.6666666666667" y1="2.4168836805555536" x2="402.6666666666667" y2="8.666883680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="411.6666666666667" cy="-10.822699652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="411.6666666666667" cy="14.677300347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="410.6666666666667" y1="-4.822699652777779" x2="410.6666666666667" y2="1.4273003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="412.6666666666667" y1="-4.822699652777779" x2="412.6666666666667" y2="1.4273003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="410.6666666666667" y1="2.4273003472222214" x2="410.6666666666667" y2="8.677300347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="412.6666666666667" y1="2.4273003472222214" x2="412.6666666666667" y2="8.677300347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="421.6666666666667" cy="-10.796657986111112" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="421.6666666666667" cy="14.703342013888888" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="420.6666666666667" y1="-4.7966579861111125" x2="420.6666666666667" y2="1.4533420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="422.6666666666667" y1="-4.7966579861111125" x2="422.6666666666667" y2="1.4533420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="420.6666666666667" y1="2.4533420138888875" x2="420.6666666666667" y2="8.703342013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="422.6666666666667" y1="2.4533420138888875" x2="422.6666666666667" y2="8.703342013888888" stroke="#CDAD00" fill="none"/>
+        <circle cx="431.6666666666667" cy="-10.754991319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="431.6666666666667" cy="14.745008680555555" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="430.6666666666667" y1="-4.754991319444445" x2="430.6666666666667" y2="1.4950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="432.6666666666667" y1="-4.754991319444445" x2="432.6666666666667" y2="1.4950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="430.6666666666667" y1="2.4950086805555554" x2="430.6666666666667" y2="8.745008680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="432.6666666666667" y1="2.4950086805555554" x2="432.6666666666667" y2="8.745008680555555" stroke="#CDAD00" fill="none"/>
+        <circle cx="441.6666666666667" cy="-10.697699652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="441.6666666666667" cy="14.802300347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="440.6666666666667" y1="-4.697699652777779" x2="440.6666666666667" y2="1.5523003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="442.6666666666667" y1="-4.697699652777779" x2="442.6666666666667" y2="1.5523003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="440.6666666666667" y1="2.5523003472222214" x2="440.6666666666667" y2="8.802300347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="442.6666666666667" y1="2.5523003472222214" x2="442.6666666666667" y2="8.802300347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="451.6666666666667" cy="-10.624782986111112" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="451.6666666666667" cy="14.875217013888888" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="450.6666666666667" y1="-4.6247829861111125" x2="450.6666666666667" y2="1.6252170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="452.6666666666667" y1="-4.6247829861111125" x2="452.6666666666667" y2="1.6252170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="450.6666666666667" y1="2.6252170138888875" x2="450.6666666666667" y2="8.875217013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="452.6666666666667" y1="2.6252170138888875" x2="452.6666666666667" y2="8.875217013888888" stroke="#CDAD00" fill="none"/>
+        <circle cx="461.6666666666667" cy="-10.536241319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="461.6666666666667" cy="14.963758680555555" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="460.6666666666667" y1="-4.536241319444445" x2="460.6666666666667" y2="1.7137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="462.6666666666667" y1="-4.536241319444445" x2="462.6666666666667" y2="1.7137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="460.6666666666667" y1="2.7137586805555554" x2="460.6666666666667" y2="8.963758680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="462.6666666666667" y1="2.7137586805555554" x2="462.6666666666667" y2="8.963758680555555" stroke="#CDAD00" fill="none"/>
+        <circle cx="471.6666666666667" cy="-10.432074652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="471.6666666666667" cy="15.067925347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="470.6666666666667" y1="-4.432074652777779" x2="470.6666666666667" y2="1.8179253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="472.6666666666667" y1="-4.432074652777779" x2="472.6666666666667" y2="1.8179253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="470.6666666666667" y1="2.8179253472222214" x2="470.6666666666667" y2="9.067925347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="472.6666666666667" y1="2.8179253472222214" x2="472.6666666666667" y2="9.067925347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="481.6666666666667" cy="-10.31228298611111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="481.6666666666667" cy="15.18771701388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="480.6666666666667" y1="-4.312282986111111" x2="480.6666666666667" y2="1.9377170138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="482.6666666666667" y1="-4.312282986111111" x2="482.6666666666667" y2="1.9377170138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="480.6666666666667" y1="2.9377170138888893" x2="480.6666666666667" y2="9.18771701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="482.6666666666667" y1="2.9377170138888893" x2="482.6666666666667" y2="9.18771701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="491.6666666666667" cy="-10.176866319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="491.6666666666667" cy="15.323133680555555" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="490.6666666666667" y1="-4.176866319444445" x2="490.6666666666667" y2="2.0731336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="492.6666666666667" y1="-4.176866319444445" x2="492.6666666666667" y2="2.0731336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="490.6666666666667" y1="3.0731336805555554" x2="490.6666666666667" y2="9.323133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="492.6666666666667" y1="3.0731336805555554" x2="492.6666666666667" y2="9.323133680555555" stroke="#CDAD00" fill="none"/>
+        <circle cx="501.6666666666667" cy="-10.025824652777779" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="501.6666666666667" cy="15.474175347222221" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="500.6666666666667" y1="-4.025824652777779" x2="500.6666666666667" y2="2.2241753472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="502.6666666666667" y1="-4.025824652777779" x2="502.6666666666667" y2="2.2241753472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="500.6666666666667" y1="3.2241753472222214" x2="500.6666666666667" y2="9.474175347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="502.6666666666667" y1="3.2241753472222214" x2="502.6666666666667" y2="9.474175347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="511.6666666666667" cy="-9.85915798611111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="511.6666666666667" cy="15.64084201388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="510.6666666666667" y1="-3.8591579861111107" x2="510.6666666666667" y2="2.3908420138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="512.6666666666667" y1="-3.8591579861111107" x2="512.6666666666667" y2="2.3908420138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="510.6666666666667" y1="3.3908420138888893" x2="510.6666666666667" y2="9.64084201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="512.6666666666667" y1="3.3908420138888893" x2="512.6666666666667" y2="9.64084201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="521.6666666666667" cy="-9.676866319444443" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="521.6666666666667" cy="15.823133680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="520.6666666666667" y1="-3.676866319444443" x2="520.6666666666667" y2="2.573133680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="522.6666666666667" y1="-3.676866319444443" x2="522.6666666666667" y2="2.573133680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="520.6666666666667" y1="3.573133680555557" x2="520.6666666666667" y2="9.823133680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="522.6666666666667" y1="3.573133680555557" x2="522.6666666666667" y2="9.823133680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="531.6666666666667" cy="-9.478949652777777" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="531.6666666666667" cy="16.02105034722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="530.6666666666667" y1="-3.478949652777777" x2="530.6666666666667" y2="2.771050347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="532.6666666666667" y1="-3.478949652777777" x2="532.6666666666667" y2="2.771050347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="530.6666666666667" y1="3.771050347222223" x2="530.6666666666667" y2="10.021050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="532.6666666666667" y1="3.771050347222223" x2="532.6666666666667" y2="10.021050347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="541.6666666666667" cy="-9.265407986111109" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="541.6666666666667" cy="16.234592013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="540.6666666666667" y1="-3.265407986111109" x2="540.6666666666667" y2="2.984592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="542.6666666666667" y1="-3.265407986111109" x2="542.6666666666667" y2="2.984592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="540.6666666666667" y1="3.984592013888891" x2="540.6666666666667" y2="10.234592013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="542.6666666666667" y1="3.984592013888891" x2="542.6666666666667" y2="10.234592013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="551.6666666666667" cy="-9.036241319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="551.6666666666667" cy="16.463758680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="550.6666666666667" y1="-3.0362413194444446" x2="550.6666666666667" y2="3.2137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="552.6666666666667" y1="-3.0362413194444446" x2="552.6666666666667" y2="3.2137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="550.6666666666667" y1="4.213758680555555" x2="550.6666666666667" y2="10.463758680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="552.6666666666667" y1="4.213758680555555" x2="552.6666666666667" y2="10.463758680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="561.6666666666667" cy="-8.791449652777777" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="561.6666666666667" cy="16.70855034722222" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="560.6666666666667" y1="-2.791449652777777" x2="560.6666666666667" y2="3.458550347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="562.6666666666667" y1="-2.791449652777777" x2="562.6666666666667" y2="3.458550347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="560.6666666666667" y1="4.458550347222223" x2="560.6666666666667" y2="10.708550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="562.6666666666667" y1="4.458550347222223" x2="562.6666666666667" y2="10.708550347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="571.6666666666667" cy="-8.531032986111109" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="571.6666666666667" cy="16.968967013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="570.6666666666667" y1="-2.531032986111109" x2="570.6666666666667" y2="3.718967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="572.6666666666667" y1="-2.531032986111109" x2="572.6666666666667" y2="3.718967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="570.6666666666667" y1="4.718967013888891" x2="570.6666666666667" y2="10.968967013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="572.6666666666667" y1="4.718967013888891" x2="572.6666666666667" y2="10.968967013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="581.6666666666667" cy="-8.254991319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="581.6666666666667" cy="17.245008680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="580.6666666666667" y1="-2.2549913194444446" x2="580.6666666666667" y2="3.9950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="582.6666666666667" y1="-2.2549913194444446" x2="582.6666666666667" y2="3.9950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="580.6666666666667" y1="4.995008680555555" x2="580.6666666666667" y2="11.245008680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="582.6666666666667" y1="4.995008680555555" x2="582.6666666666667" y2="11.245008680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="591.6666666666667" cy="-7.963324652777775" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="591.6666666666667" cy="17.536675347222225" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="590.6666666666667" y1="-1.963324652777775" x2="590.6666666666667" y2="4.286675347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="592.6666666666667" y1="-1.963324652777775" x2="592.6666666666667" y2="4.286675347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="590.6666666666667" y1="5.286675347222225" x2="590.6666666666667" y2="11.536675347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="592.6666666666667" y1="5.286675347222225" x2="592.6666666666667" y2="11.536675347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="601.6666666666667" cy="-7.656032986111109" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="601.6666666666667" cy="17.843967013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="600.6666666666667" y1="-1.656032986111109" x2="600.6666666666667" y2="4.593967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="602.6666666666667" y1="-1.656032986111109" x2="602.6666666666667" y2="4.593967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="600.6666666666667" y1="5.593967013888891" x2="600.6666666666667" y2="11.843967013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="602.6666666666667" y1="5.593967013888891" x2="602.6666666666667" y2="11.843967013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="611.6666666666667" cy="-7.333116319444445" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="611.6666666666667" cy="18.166883680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="610.6666666666667" y1="-1.3331163194444446" x2="610.6666666666667" y2="4.916883680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="612.6666666666667" y1="-1.3331163194444446" x2="612.6666666666667" y2="4.916883680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="610.6666666666667" y1="5.916883680555555" x2="610.6666666666667" y2="12.166883680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="612.6666666666667" y1="5.916883680555555" x2="612.6666666666667" y2="12.166883680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="621.6666666666667" cy="-6.994574652777775" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="621.6666666666667" cy="18.505425347222225" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="620.6666666666667" y1="-0.994574652777775" x2="620.6666666666667" y2="5.255425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="622.6666666666667" y1="-0.994574652777775" x2="622.6666666666667" y2="5.255425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="620.6666666666667" y1="6.255425347222225" x2="620.6666666666667" y2="12.505425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="622.6666666666667" y1="6.255425347222225" x2="622.6666666666667" y2="12.505425347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="631.6666666666667" cy="-6.640407986111109" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="631.6666666666667" cy="18.859592013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="630.6666666666667" y1="-0.6404079861111089" x2="630.6666666666667" y2="5.609592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="632.6666666666667" y1="-0.6404079861111089" x2="632.6666666666667" y2="5.609592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="630.6666666666667" y1="6.609592013888891" x2="630.6666666666667" y2="12.859592013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="632.6666666666667" y1="6.609592013888891" x2="632.6666666666667" y2="12.859592013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="641.6666666666667" cy="-6.270616319444439" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="641.6666666666667" cy="19.22938368055556" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="640.6666666666667" y1="-0.2706163194444393" x2="640.6666666666667" y2="5.979383680555561" stroke="#CDAD00" fill="none"/>
+        <line x1="642.6666666666667" y1="-0.2706163194444393" x2="642.6666666666667" y2="5.979383680555561" stroke="#CDAD00" fill="none"/>
+        <line x1="640.6666666666667" y1="6.979383680555561" x2="640.6666666666667" y2="13.22938368055556" stroke="#CDAD00" fill="none"/>
+        <line x1="642.6666666666667" y1="6.979383680555561" x2="642.6666666666667" y2="13.22938368055556" stroke="#CDAD00" fill="none"/>
+        <circle cx="651.6666666666667" cy="-5.885199652777775" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="651.6666666666667" cy="19.614800347222225" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="650.6666666666667" y1="0.11480034722222499" x2="650.6666666666667" y2="6.364800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="652.6666666666667" y1="0.11480034722222499" x2="652.6666666666667" y2="6.364800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="650.6666666666667" y1="7.364800347222225" x2="650.6666666666667" y2="13.614800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="652.6666666666667" y1="7.364800347222225" x2="652.6666666666667" y2="13.614800347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="661.6666666666667" cy="-5.484157986111111" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="661.6666666666667" cy="20.01584201388889" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="660.6666666666667" y1="0.5158420138888893" x2="660.6666666666667" y2="6.765842013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="662.6666666666667" y1="0.5158420138888893" x2="662.6666666666667" y2="6.765842013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="660.6666666666667" y1="7.765842013888889" x2="660.6666666666667" y2="14.01584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="662.6666666666667" y1="7.765842013888889" x2="662.6666666666667" y2="14.01584201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="671.6666666666667" cy="-5.067491319444441" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="671.6666666666667" cy="20.432508680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="670.6666666666667" y1="0.9325086805555589" x2="670.6666666666667" y2="7.182508680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="672.6666666666667" y1="0.9325086805555589" x2="672.6666666666667" y2="7.182508680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="670.6666666666667" y1="8.182508680555559" x2="670.6666666666667" y2="14.432508680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="672.6666666666667" y1="8.182508680555559" x2="672.6666666666667" y2="14.432508680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="681.6666666666667" cy="-4.635199652777775" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="681.6666666666667" cy="20.864800347222225" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="680.6666666666667" y1="1.364800347222225" x2="680.6666666666667" y2="7.614800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="682.6666666666667" y1="1.364800347222225" x2="682.6666666666667" y2="7.614800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="680.6666666666667" y1="8.614800347222225" x2="680.6666666666667" y2="14.864800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="682.6666666666667" y1="8.614800347222225" x2="682.6666666666667" y2="14.864800347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="691.6666666666667" cy="-4.187282986111105" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="691.6666666666667" cy="21.312717013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="690.6666666666667" y1="1.8127170138888946" x2="690.6666666666667" y2="8.062717013888895" stroke="#CDAD00" fill="none"/>
+        <line x1="692.6666666666667" y1="1.8127170138888946" x2="692.6666666666667" y2="8.062717013888895" stroke="#CDAD00" fill="none"/>
+        <line x1="690.6666666666667" y1="9.062717013888895" x2="690.6666666666667" y2="15.312717013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="692.6666666666667" y1="9.062717013888895" x2="692.6666666666667" y2="15.312717013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="701.6666666666667" cy="-3.7237413194444406" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="701.6666666666667" cy="21.77625868055556" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="700.6666666666667" y1="2.2762586805555594" x2="700.6666666666667" y2="8.526258680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="702.6666666666667" y1="2.2762586805555594" x2="702.6666666666667" y2="8.526258680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="700.6666666666667" y1="9.526258680555559" x2="700.6666666666667" y2="15.77625868055556" stroke="#CDAD00" fill="none"/>
+        <line x1="702.6666666666667" y1="9.526258680555559" x2="702.6666666666667" y2="15.77625868055556" stroke="#CDAD00" fill="none"/>
+        <circle cx="711.6666666666667" cy="-3.2445746527777755" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="711.6666666666667" cy="22.255425347222225" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="710.6666666666667" y1="2.7554253472222245" x2="710.6666666666667" y2="9.005425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="712.6666666666667" y1="2.7554253472222245" x2="712.6666666666667" y2="9.005425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="710.6666666666667" y1="10.005425347222225" x2="710.6666666666667" y2="16.255425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="712.6666666666667" y1="10.005425347222225" x2="712.6666666666667" y2="16.255425347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="721.6666666666667" cy="-2.7497829861111067" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="721.6666666666667" cy="22.750217013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="720.6666666666667" y1="3.2502170138888933" x2="720.6666666666667" y2="9.500217013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="722.6666666666667" y1="3.2502170138888933" x2="722.6666666666667" y2="9.500217013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="720.6666666666667" y1="10.500217013888893" x2="720.6666666666667" y2="16.750217013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="722.6666666666667" y1="10.500217013888893" x2="722.6666666666667" y2="16.750217013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="731.6666666666667" cy="-2.239366319444441" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="731.6666666666667" cy="23.260633680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="730.6666666666667" y1="3.760633680555559" x2="730.6666666666667" y2="10.010633680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="732.6666666666667" y1="3.760633680555559" x2="732.6666666666667" y2="10.010633680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="730.6666666666667" y1="11.010633680555559" x2="730.6666666666667" y2="17.260633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="732.6666666666667" y1="11.010633680555559" x2="732.6666666666667" y2="17.260633680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="741.6666666666667" cy="-1.7133246527777715" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="741.6666666666667" cy="23.78667534722223" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="740.6666666666667" y1="4.2866753472222285" x2="740.6666666666667" y2="10.536675347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="742.6666666666667" y1="4.2866753472222285" x2="742.6666666666667" y2="10.536675347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="740.6666666666667" y1="11.536675347222229" x2="740.6666666666667" y2="17.78667534722223" stroke="#CDAD00" fill="none"/>
+        <line x1="742.6666666666667" y1="11.536675347222229" x2="742.6666666666667" y2="17.78667534722223" stroke="#CDAD00" fill="none"/>
+        <circle cx="751.6666666666667" cy="-1.1716579861111067" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="751.6666666666667" cy="24.328342013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="750.6666666666667" y1="4.828342013888893" x2="750.6666666666667" y2="11.078342013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="752.6666666666667" y1="4.828342013888893" x2="752.6666666666667" y2="11.078342013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="750.6666666666667" y1="12.078342013888893" x2="750.6666666666667" y2="18.328342013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="752.6666666666667" y1="12.078342013888893" x2="752.6666666666667" y2="18.328342013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="761.6666666666667" cy="-0.614366319444442" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="761.6666666666667" cy="24.885633680555557" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="760.6666666666667" y1="5.385633680555558" x2="760.6666666666667" y2="11.635633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="762.6666666666667" y1="5.385633680555558" x2="762.6666666666667" y2="11.635633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="760.6666666666667" y1="12.635633680555557" x2="760.6666666666667" y2="18.885633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="762.6666666666667" y1="12.635633680555557" x2="762.6666666666667" y2="18.885633680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="771.6666666666667" cy="-0.04144965277777235" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="771.6666666666667" cy="25.45855034722223" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="770.6666666666667" y1="5.958550347222228" x2="770.6666666666667" y2="12.208550347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="772.6666666666667" y1="5.958550347222228" x2="772.6666666666667" y2="12.208550347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="770.6666666666667" y1="13.208550347222229" x2="770.6666666666667" y2="19.45855034722223" stroke="#CDAD00" fill="none"/>
+        <line x1="772.6666666666667" y1="13.208550347222229" x2="772.6666666666667" y2="19.45855034722223" stroke="#CDAD00" fill="none"/>
+        <circle cx="781.6666666666667" cy="0.5470920138888926" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="781.6666666666667" cy="26.047092013888893" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="780.6666666666667" y1="6.547092013888893" x2="780.6666666666667" y2="12.797092013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="782.6666666666667" y1="6.547092013888893" x2="782.6666666666667" y2="12.797092013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="780.6666666666667" y1="13.797092013888893" x2="780.6666666666667" y2="20.047092013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="782.6666666666667" y1="13.797092013888893" x2="782.6666666666667" y2="20.047092013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="791.6666666666667" cy="1.1512586805555625" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="791.6666666666667" cy="26.651258680555564" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="790.6666666666667" y1="7.1512586805555625" x2="790.6666666666667" y2="13.401258680555562" stroke="#CDAD00" fill="none"/>
+        <line x1="792.6666666666667" y1="7.1512586805555625" x2="792.6666666666667" y2="13.401258680555562" stroke="#CDAD00" fill="none"/>
+        <line x1="790.6666666666667" y1="14.401258680555562" x2="790.6666666666667" y2="20.651258680555564" stroke="#CDAD00" fill="none"/>
+        <line x1="792.6666666666667" y1="14.401258680555562" x2="792.6666666666667" y2="20.651258680555564" stroke="#CDAD00" fill="none"/>
+        <circle cx="801.6666666666667" cy="1.7710503472222272" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <circle cx="801.6666666666667" cy="27.27105034722223" r="5" stroke="#CDAD00" fill="url(#fill_5)"/>
+        <line x1="800.6666666666667" y1="7.771050347222227" x2="800.6666666666667" y2="14.021050347222227" stroke="#CDAD00" fill="none"/>
+        <line x1="802.6666666666667" y1="7.771050347222227" x2="802.6666666666667" y2="14.021050347222227" stroke="#CDAD00" fill="none"/>
+        <line x1="800.6666666666667" y1="15.021050347222227" x2="800.6666666666667" y2="21.27105034722223" stroke="#CDAD00" fill="none"/>
+        <line x1="802.6666666666667" y1="15.021050347222227" x2="802.6666666666667" y2="21.27105034722223" stroke="#CDAD00" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(0 431.5) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 0,0 Q 400,-25 800,0 L 800,25.5 Q 400,0.5 0,25.5 z" stroke="url(#stroke_5)" fill="url(#fill_6)"/>
+      </g>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <circle cx="5" cy="-1.9772135416666665" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="5" cy="23.522786458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="15" cy="-2.5865885416666665" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="15" cy="22.913411458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="25" cy="-3.1803385416666665" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="25" cy="22.319661458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="35" cy="-3.7584635416666665" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="35" cy="21.741536458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="45" cy="-4.320963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="45" cy="21.179036458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="55" cy="-4.867838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="55" cy="20.632161458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="65" cy="-5.399088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="65" cy="20.100911458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="75" cy="-5.914713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="75" cy="19.585286458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="85" cy="-6.414713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="85" cy="19.085286458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="95" cy="-6.899088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="95" cy="18.600911458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="105" cy="-7.367838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="105" cy="18.132161458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="115" cy="-7.820963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="115" cy="17.679036458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="125" cy="-8.258463541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="125" cy="17.241536458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="135" cy="-8.680338541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="135" cy="16.819661458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="145" cy="-9.086588541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="145" cy="16.413411458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="155" cy="-9.477213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="155" cy="16.022786458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="165" cy="-9.852213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="165" cy="15.647786458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="175" cy="-10.211588541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="175" cy="15.288411458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="185" cy="-10.555338541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="185" cy="14.944661458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="195" cy="-10.883463541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="195" cy="14.616536458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="205" cy="-11.195963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="205" cy="14.304036458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="215" cy="-11.492838541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="215" cy="14.007161458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="225" cy="-11.774088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="225" cy="13.725911458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="235" cy="-12.039713541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="235" cy="13.460286458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="245" cy="-12.289713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="245" cy="13.210286458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="255" cy="-12.524088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="255" cy="12.975911458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="265" cy="-12.742838541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="265" cy="12.757161458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="275" cy="-12.945963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="275" cy="12.554036458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="285" cy="-13.133463541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="285" cy="12.366536458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="295" cy="-13.305338541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="295" cy="12.194661458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="305" cy="-13.461588541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="305" cy="12.038411458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="315" cy="-13.602213541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="315" cy="11.897786458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="325" cy="-13.727213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="325" cy="11.772786458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="335" cy="-13.836588541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="335" cy="11.663411458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="345" cy="-13.930338541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="345" cy="11.569661458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="355" cy="-14.008463541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="355" cy="11.491536458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="365" cy="-14.070963541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="365" cy="11.429036458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="375" cy="-14.117838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="375" cy="11.382161458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="385" cy="-14.149088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="385" cy="11.350911458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="395" cy="-14.164713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="395" cy="11.335286458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="405" cy="-14.164713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="405" cy="11.335286458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="415" cy="-14.149088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="415" cy="11.350911458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="425" cy="-14.117838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="425" cy="11.382161458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="435" cy="-14.070963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="435" cy="11.429036458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="445" cy="-14.008463541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="445" cy="11.491536458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="455" cy="-13.930338541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="455" cy="11.569661458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="465" cy="-13.836588541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="465" cy="11.663411458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="475" cy="-13.727213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="475" cy="11.772786458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="485" cy="-13.602213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="485" cy="11.897786458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="495" cy="-13.461588541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="495" cy="12.038411458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="505" cy="-13.305338541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="505" cy="12.194661458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="515" cy="-13.133463541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="515" cy="12.366536458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="525" cy="-12.945963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="525" cy="12.554036458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="535" cy="-12.742838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="535" cy="12.757161458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="545" cy="-12.524088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="545" cy="12.975911458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="555" cy="-12.289713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="555" cy="13.210286458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="565" cy="-12.039713541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="565" cy="13.460286458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="575" cy="-11.774088541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="575" cy="13.725911458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="585" cy="-11.492838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="585" cy="14.007161458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="595" cy="-11.195963541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="595" cy="14.304036458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="605" cy="-10.883463541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="605" cy="14.616536458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="615" cy="-10.555338541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="615" cy="14.944661458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="625" cy="-10.211588541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="625" cy="15.288411458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="635" cy="-9.852213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="635" cy="15.647786458333334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="645" cy="-9.477213541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="645" cy="16.022786458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="655" cy="-9.086588541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="655" cy="16.413411458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="665" cy="-8.680338541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="665" cy="16.819661458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="675" cy="-8.258463541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="675" cy="17.241536458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="685" cy="-7.820963541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="685" cy="17.679036458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="695" cy="-7.367838541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="695" cy="18.132161458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="705" cy="-6.899088541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="705" cy="18.600911458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="715" cy="-6.414713541666664" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="715" cy="19.085286458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="725" cy="-5.914713541666666" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="725" cy="19.585286458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="735" cy="-5.399088541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="735" cy="20.100911458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="745" cy="-4.867838541666665" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="745" cy="20.632161458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="755" cy="-4.320963541666668" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="755" cy="21.179036458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="765" cy="-3.7584635416666647" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="765" cy="21.741536458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="775" cy="-3.1803385416666665" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="775" cy="22.319661458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="785" cy="-2.5865885416666687" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="785" cy="22.913411458333332" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="795" cy="-1.9772135416666654" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="795" cy="23.522786458333336" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="805" cy="-1.352213541666662" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="805" cy="24.14778645833334" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="1.666666666666667" cy="1.5627170138888886" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="1.666666666666667" cy="27.06271701388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="0.666666666666667" y1="7.562717013888888" x2="0.666666666666667" y2="13.81271701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="2.666666666666667" y1="7.562717013888888" x2="2.666666666666667" y2="13.81271701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="0.666666666666667" y1="14.81271701388889" x2="0.666666666666667" y2="21.06271701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="2.666666666666667" y1="14.81271701388889" x2="2.666666666666667" y2="21.06271701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="11.666666666666668" cy="0.9481336805555552" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="11.666666666666668" cy="26.448133680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="10.666666666666668" y1="6.948133680555555" x2="10.666666666666668" y2="13.198133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="12.666666666666668" y1="6.948133680555555" x2="12.666666666666668" y2="13.198133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="10.666666666666668" y1="14.198133680555555" x2="10.666666666666668" y2="20.448133680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="12.666666666666668" y1="14.198133680555555" x2="12.666666666666668" y2="20.448133680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="21.666666666666668" cy="0.3491753472222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="21.666666666666668" cy="25.84917534722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="20.666666666666668" y1="6.349175347222222" x2="20.666666666666668" y2="12.599175347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="22.666666666666668" y1="6.349175347222222" x2="22.666666666666668" y2="12.599175347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="20.666666666666668" y1="13.599175347222221" x2="20.666666666666668" y2="19.84917534722222" stroke="#CDAD00" fill="none"/>
+        <line x1="22.666666666666668" y1="13.599175347222221" x2="22.666666666666668" y2="19.84917534722222" stroke="#CDAD00" fill="none"/>
+        <circle cx="31.666666666666668" cy="-0.23415798611111116" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="31.666666666666668" cy="25.26584201388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="30.666666666666668" y1="5.765842013888889" x2="30.666666666666668" y2="12.01584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="32.66666666666667" y1="5.765842013888889" x2="32.66666666666667" y2="12.01584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="30.666666666666668" y1="13.01584201388889" x2="30.666666666666668" y2="19.26584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="32.66666666666667" y1="13.01584201388889" x2="32.66666666666667" y2="19.26584201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="41.66666666666667" cy="-0.8018663194444451" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="41.66666666666667" cy="24.698133680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="40.66666666666667" y1="5.198133680555555" x2="40.66666666666667" y2="11.448133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="42.66666666666667" y1="5.198133680555555" x2="42.66666666666667" y2="11.448133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="40.66666666666667" y1="12.448133680555555" x2="40.66666666666667" y2="18.698133680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="42.66666666666667" y1="12.448133680555555" x2="42.66666666666667" y2="18.698133680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="51.66666666666667" cy="-1.3539496527777781" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="51.66666666666667" cy="24.14605034722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="50.66666666666667" y1="4.646050347222221" x2="50.66666666666667" y2="10.896050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="52.66666666666667" y1="4.646050347222221" x2="52.66666666666667" y2="10.896050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="50.66666666666667" y1="11.896050347222221" x2="50.66666666666667" y2="18.14605034722222" stroke="#CDAD00" fill="none"/>
+        <line x1="52.66666666666667" y1="11.896050347222221" x2="52.66666666666667" y2="18.14605034722222" stroke="#CDAD00" fill="none"/>
+        <circle cx="61.66666666666667" cy="-1.8904079861111116" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="61.66666666666667" cy="23.60959201388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="60.66666666666667" y1="4.109592013888888" x2="60.66666666666667" y2="10.35959201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="62.66666666666667" y1="4.109592013888888" x2="62.66666666666667" y2="10.35959201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="60.66666666666667" y1="11.35959201388889" x2="60.66666666666667" y2="17.60959201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="62.66666666666667" y1="11.35959201388889" x2="62.66666666666667" y2="17.60959201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="71.66666666666667" cy="-2.411241319444444" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="71.66666666666667" cy="23.088758680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="70.66666666666667" y1="3.588758680555556" x2="70.66666666666667" y2="9.838758680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="72.66666666666667" y1="3.588758680555556" x2="72.66666666666667" y2="9.838758680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="70.66666666666667" y1="10.838758680555555" x2="70.66666666666667" y2="17.088758680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="72.66666666666667" y1="10.838758680555555" x2="72.66666666666667" y2="17.088758680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="81.66666666666667" cy="-2.916449652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="81.66666666666667" cy="22.58355034722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="80.66666666666667" y1="3.083550347222221" x2="80.66666666666667" y2="9.333550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="82.66666666666667" y1="3.083550347222221" x2="82.66666666666667" y2="9.333550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="80.66666666666667" y1="10.333550347222221" x2="80.66666666666667" y2="16.58355034722222" stroke="#CDAD00" fill="none"/>
+        <line x1="82.66666666666667" y1="10.333550347222221" x2="82.66666666666667" y2="16.58355034722222" stroke="#CDAD00" fill="none"/>
+        <circle cx="91.66666666666667" cy="-3.406032986111112" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="91.66666666666667" cy="22.09396701388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="90.66666666666667" y1="2.593967013888888" x2="90.66666666666667" y2="8.843967013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="92.66666666666667" y1="2.593967013888888" x2="92.66666666666667" y2="8.843967013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="90.66666666666667" y1="9.843967013888888" x2="90.66666666666667" y2="16.09396701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="92.66666666666667" y1="9.843967013888888" x2="92.66666666666667" y2="16.09396701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="101.66666666666667" cy="-3.879991319444444" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="101.66666666666667" cy="21.620008680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="100.66666666666667" y1="2.120008680555556" x2="100.66666666666667" y2="8.370008680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="102.66666666666667" y1="2.120008680555556" x2="102.66666666666667" y2="8.370008680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="100.66666666666667" y1="9.370008680555555" x2="100.66666666666667" y2="15.620008680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="102.66666666666667" y1="9.370008680555555" x2="102.66666666666667" y2="15.620008680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="111.66666666666667" cy="-4.338324652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="111.66666666666667" cy="21.16167534722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="110.66666666666667" y1="1.6616753472222214" x2="110.66666666666667" y2="7.911675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="112.66666666666667" y1="1.6616753472222214" x2="112.66666666666667" y2="7.911675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="110.66666666666667" y1="8.911675347222221" x2="110.66666666666667" y2="15.161675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="112.66666666666667" y1="8.911675347222221" x2="112.66666666666667" y2="15.161675347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="121.66666666666667" cy="-4.7810329861111125" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="121.66666666666667" cy="20.718967013888886" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="120.66666666666667" y1="1.2189670138888875" x2="120.66666666666667" y2="7.4689670138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="122.66666666666667" y1="1.2189670138888875" x2="122.66666666666667" y2="7.4689670138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="120.66666666666667" y1="8.468967013888888" x2="120.66666666666667" y2="14.718967013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="122.66666666666667" y1="8.468967013888888" x2="122.66666666666667" y2="14.718967013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="131.66666666666669" cy="-5.208116319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="131.66666666666669" cy="20.291883680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="130.66666666666669" y1="0.7918836805555536" x2="130.66666666666669" y2="7.041883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="132.66666666666669" y1="0.7918836805555536" x2="132.66666666666669" y2="7.041883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="130.66666666666669" y1="8.041883680555554" x2="130.66666666666669" y2="14.291883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="132.66666666666669" y1="8.041883680555554" x2="132.66666666666669" y2="14.291883680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="141.66666666666669" cy="-5.61957465277778" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="141.66666666666669" cy="19.88042534722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="140.66666666666669" y1="0.38042534722221966" x2="140.66666666666669" y2="6.63042534722222" stroke="#CDAD00" fill="none"/>
+        <line x1="142.66666666666669" y1="0.38042534722221966" x2="142.66666666666669" y2="6.63042534722222" stroke="#CDAD00" fill="none"/>
+        <line x1="140.66666666666669" y1="7.63042534722222" x2="140.66666666666669" y2="13.880425347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="142.66666666666669" y1="7.63042534722222" x2="142.66666666666669" y2="13.880425347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="151.66666666666669" cy="-6.0154079861111125" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="151.66666666666669" cy="19.484592013888886" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="150.66666666666669" y1="-0.015407986111112493" x2="150.66666666666669" y2="6.2345920138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="152.66666666666669" y1="-0.015407986111112493" x2="152.66666666666669" y2="6.2345920138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="150.66666666666669" y1="7.2345920138888875" x2="150.66666666666669" y2="13.484592013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="152.66666666666669" y1="7.2345920138888875" x2="152.66666666666669" y2="13.484592013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="161.66666666666669" cy="-6.395616319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="161.66666666666669" cy="19.104383680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="160.66666666666669" y1="-0.3956163194444464" x2="160.66666666666669" y2="5.854383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="162.66666666666669" y1="-0.3956163194444464" x2="162.66666666666669" y2="5.854383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="160.66666666666669" y1="6.854383680555554" x2="160.66666666666669" y2="13.104383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="162.66666666666669" y1="6.854383680555554" x2="162.66666666666669" y2="13.104383680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="171.66666666666669" cy="-6.760199652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="171.66666666666669" cy="18.73980034722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="170.66666666666669" y1="-0.7601996527777786" x2="170.66666666666669" y2="5.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="172.66666666666669" y1="-0.7601996527777786" x2="172.66666666666669" y2="5.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="170.66666666666669" y1="6.489800347222221" x2="170.66666666666669" y2="12.739800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="172.66666666666669" y1="6.489800347222221" x2="172.66666666666669" y2="12.739800347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="181.66666666666669" cy="-7.1091579861111125" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="181.66666666666669" cy="18.390842013888886" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="180.66666666666669" y1="-1.1091579861111125" x2="180.66666666666669" y2="5.1408420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="182.66666666666669" y1="-1.1091579861111125" x2="182.66666666666669" y2="5.1408420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="180.66666666666669" y1="6.1408420138888875" x2="180.66666666666669" y2="12.390842013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="182.66666666666669" y1="6.1408420138888875" x2="182.66666666666669" y2="12.390842013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="191.66666666666669" cy="-7.442491319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="191.66666666666669" cy="18.057508680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="190.66666666666669" y1="-1.4424913194444464" x2="190.66666666666669" y2="4.807508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="192.66666666666669" y1="-1.4424913194444464" x2="192.66666666666669" y2="4.807508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="190.66666666666669" y1="5.807508680555554" x2="190.66666666666669" y2="12.057508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="192.66666666666669" y1="5.807508680555554" x2="192.66666666666669" y2="12.057508680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="201.66666666666669" cy="-7.760199652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="201.66666666666669" cy="17.73980034722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="200.66666666666669" y1="-1.7601996527777786" x2="200.66666666666669" y2="4.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="202.66666666666669" y1="-1.7601996527777786" x2="202.66666666666669" y2="4.489800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="200.66666666666669" y1="5.489800347222221" x2="200.66666666666669" y2="11.739800347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="202.66666666666669" y1="5.489800347222221" x2="202.66666666666669" y2="11.739800347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="211.66666666666669" cy="-8.06228298611111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="211.66666666666669" cy="17.43771701388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="210.66666666666669" y1="-2.0622829861111107" x2="210.66666666666669" y2="4.187717013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="212.66666666666669" y1="-2.0622829861111107" x2="212.66666666666669" y2="4.187717013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="210.66666666666669" y1="5.187717013888889" x2="210.66666666666669" y2="11.43771701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="212.66666666666669" y1="5.187717013888889" x2="212.66666666666669" y2="11.43771701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="221.66666666666669" cy="-8.348741319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="221.66666666666669" cy="17.151258680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="220.66666666666669" y1="-2.3487413194444464" x2="220.66666666666669" y2="3.9012586805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="222.66666666666669" y1="-2.3487413194444464" x2="222.66666666666669" y2="3.9012586805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="220.66666666666669" y1="4.901258680555554" x2="220.66666666666669" y2="11.151258680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="222.66666666666669" y1="4.901258680555554" x2="222.66666666666669" y2="11.151258680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="231.66666666666669" cy="-8.61957465277778" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="231.66666666666669" cy="16.88042534722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="230.66666666666669" y1="-2.6195746527777803" x2="230.66666666666669" y2="3.6304253472222197" stroke="#CDAD00" fill="none"/>
+        <line x1="232.66666666666669" y1="-2.6195746527777803" x2="232.66666666666669" y2="3.6304253472222197" stroke="#CDAD00" fill="none"/>
+        <line x1="230.66666666666669" y1="4.63042534722222" x2="230.66666666666669" y2="10.880425347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="232.66666666666669" y1="4.63042534722222" x2="232.66666666666669" y2="10.880425347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="241.66666666666669" cy="-8.874782986111112" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="241.66666666666669" cy="16.625217013888886" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="240.66666666666669" y1="-2.8747829861111125" x2="240.66666666666669" y2="3.3752170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="242.66666666666669" y1="-2.8747829861111125" x2="242.66666666666669" y2="3.3752170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="240.66666666666669" y1="4.3752170138888875" x2="240.66666666666669" y2="10.625217013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="242.66666666666669" y1="4.3752170138888875" x2="242.66666666666669" y2="10.625217013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="251.66666666666669" cy="-9.114366319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="251.66666666666669" cy="16.385633680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="250.66666666666669" y1="-3.1143663194444446" x2="250.66666666666669" y2="3.1356336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="252.66666666666669" y1="-3.1143663194444446" x2="252.66666666666669" y2="3.1356336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="250.66666666666669" y1="4.135633680555555" x2="250.66666666666669" y2="10.385633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="252.66666666666669" y1="4.135633680555555" x2="252.66666666666669" y2="10.385633680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="261.6666666666667" cy="-9.338324652777777" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="261.6666666666667" cy="16.16167534722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="260.6666666666667" y1="-3.338324652777777" x2="260.6666666666667" y2="2.911675347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="262.6666666666667" y1="-3.338324652777777" x2="262.6666666666667" y2="2.911675347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="260.6666666666667" y1="3.911675347222223" x2="260.6666666666667" y2="10.161675347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="262.6666666666667" y1="3.911675347222223" x2="262.6666666666667" y2="10.161675347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="271.6666666666667" cy="-9.546657986111112" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="271.6666666666667" cy="15.953342013888888" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="270.6666666666667" y1="-3.5466579861111125" x2="270.6666666666667" y2="2.7033420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="272.6666666666667" y1="-3.5466579861111125" x2="272.6666666666667" y2="2.7033420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="270.6666666666667" y1="3.7033420138888875" x2="270.6666666666667" y2="9.953342013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="272.6666666666667" y1="3.7033420138888875" x2="272.6666666666667" y2="9.953342013888888" stroke="#CDAD00" fill="none"/>
+        <circle cx="281.6666666666667" cy="-9.739366319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="281.6666666666667" cy="15.760633680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="280.6666666666667" y1="-3.7393663194444464" x2="280.6666666666667" y2="2.5106336805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="282.6666666666667" y1="-3.7393663194444464" x2="282.6666666666667" y2="2.5106336805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="280.6666666666667" y1="3.5106336805555536" x2="280.6666666666667" y2="9.760633680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="282.6666666666667" y1="3.5106336805555536" x2="282.6666666666667" y2="9.760633680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="291.6666666666667" cy="-9.916449652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="291.6666666666667" cy="15.583550347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="290.6666666666667" y1="-3.9164496527777786" x2="290.6666666666667" y2="2.3335503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="292.6666666666667" y1="-3.9164496527777786" x2="292.6666666666667" y2="2.3335503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="290.6666666666667" y1="3.3335503472222214" x2="290.6666666666667" y2="9.583550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="292.6666666666667" y1="3.3335503472222214" x2="292.6666666666667" y2="9.583550347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="301.6666666666667" cy="-10.07790798611111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="301.6666666666667" cy="15.42209201388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="300.6666666666667" y1="-4.077907986111111" x2="300.6666666666667" y2="2.1720920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="302.6666666666667" y1="-4.077907986111111" x2="302.6666666666667" y2="2.1720920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="300.6666666666667" y1="3.1720920138888893" x2="300.6666666666667" y2="9.42209201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="302.6666666666667" y1="3.1720920138888893" x2="302.6666666666667" y2="9.42209201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="311.6666666666667" cy="-10.223741319444443" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="311.6666666666667" cy="15.276258680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="310.6666666666667" y1="-4.223741319444443" x2="310.6666666666667" y2="2.026258680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="312.6666666666667" y1="-4.223741319444443" x2="312.6666666666667" y2="2.026258680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="310.6666666666667" y1="3.026258680555557" x2="310.6666666666667" y2="9.276258680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="312.6666666666667" y1="3.026258680555557" x2="312.6666666666667" y2="9.276258680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="321.6666666666667" cy="-10.353949652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="321.6666666666667" cy="15.146050347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="320.6666666666667" y1="-4.353949652777779" x2="320.6666666666667" y2="1.8960503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="322.6666666666667" y1="-4.353949652777779" x2="322.6666666666667" y2="1.8960503472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="320.6666666666667" y1="2.8960503472222214" x2="320.6666666666667" y2="9.146050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="322.6666666666667" y1="2.8960503472222214" x2="322.6666666666667" y2="9.146050347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="331.6666666666667" cy="-10.468532986111114" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="331.6666666666667" cy="15.031467013888886" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="330.6666666666667" y1="-4.468532986111114" x2="330.6666666666667" y2="1.7814670138888857" stroke="#CDAD00" fill="none"/>
+        <line x1="332.6666666666667" y1="-4.468532986111114" x2="332.6666666666667" y2="1.7814670138888857" stroke="#CDAD00" fill="none"/>
+        <line x1="330.6666666666667" y1="2.7814670138888857" x2="330.6666666666667" y2="9.031467013888886" stroke="#CDAD00" fill="none"/>
+        <line x1="332.6666666666667" y1="2.7814670138888857" x2="332.6666666666667" y2="9.031467013888886" stroke="#CDAD00" fill="none"/>
+        <circle cx="341.6666666666667" cy="-10.567491319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="341.6666666666667" cy="14.932508680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="340.6666666666667" y1="-4.567491319444446" x2="340.6666666666667" y2="1.6825086805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="342.6666666666667" y1="-4.567491319444446" x2="342.6666666666667" y2="1.6825086805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="340.6666666666667" y1="2.6825086805555536" x2="340.6666666666667" y2="8.932508680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="342.6666666666667" y1="2.6825086805555536" x2="342.6666666666667" y2="8.932508680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="351.6666666666667" cy="-10.650824652777777" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="351.6666666666667" cy="14.849175347222223" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="350.6666666666667" y1="-4.650824652777777" x2="350.6666666666667" y2="1.5991753472222232" stroke="#CDAD00" fill="none"/>
+        <line x1="352.6666666666667" y1="-4.650824652777777" x2="352.6666666666667" y2="1.5991753472222232" stroke="#CDAD00" fill="none"/>
+        <line x1="350.6666666666667" y1="2.599175347222223" x2="350.6666666666667" y2="8.849175347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="352.6666666666667" y1="2.599175347222223" x2="352.6666666666667" y2="8.849175347222223" stroke="#CDAD00" fill="none"/>
+        <circle cx="361.6666666666667" cy="-10.71853298611111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="361.6666666666667" cy="14.78146701388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="360.6666666666667" y1="-4.718532986111111" x2="360.6666666666667" y2="1.5314670138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="362.6666666666667" y1="-4.718532986111111" x2="362.6666666666667" y2="1.5314670138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="360.6666666666667" y1="2.5314670138888893" x2="360.6666666666667" y2="8.78146701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="362.6666666666667" y1="2.5314670138888893" x2="362.6666666666667" y2="8.78146701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="371.6666666666667" cy="-10.770616319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="371.6666666666667" cy="14.729383680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="370.6666666666667" y1="-4.770616319444446" x2="370.6666666666667" y2="1.4793836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="372.6666666666667" y1="-4.770616319444446" x2="372.6666666666667" y2="1.4793836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="370.6666666666667" y1="2.4793836805555536" x2="370.6666666666667" y2="8.729383680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="372.6666666666667" y1="2.4793836805555536" x2="372.6666666666667" y2="8.729383680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="381.6666666666667" cy="-10.807074652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="381.6666666666667" cy="14.692925347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="380.6666666666667" y1="-4.807074652777779" x2="380.6666666666667" y2="1.4429253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="382.6666666666667" y1="-4.807074652777779" x2="382.6666666666667" y2="1.4429253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="380.6666666666667" y1="2.4429253472222214" x2="380.6666666666667" y2="8.692925347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="382.6666666666667" y1="2.4429253472222214" x2="382.6666666666667" y2="8.692925347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="391.6666666666667" cy="-10.82790798611111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="391.6666666666667" cy="14.67209201388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="390.6666666666667" y1="-4.827907986111111" x2="390.6666666666667" y2="1.4220920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="392.6666666666667" y1="-4.827907986111111" x2="392.6666666666667" y2="1.4220920138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="390.6666666666667" y1="2.4220920138888893" x2="390.6666666666667" y2="8.67209201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="392.6666666666667" y1="2.4220920138888893" x2="392.6666666666667" y2="8.67209201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="401.6666666666667" cy="-10.833116319444446" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="401.6666666666667" cy="14.666883680555554" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="400.6666666666667" y1="-4.833116319444446" x2="400.6666666666667" y2="1.4168836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="402.6666666666667" y1="-4.833116319444446" x2="402.6666666666667" y2="1.4168836805555536" stroke="#CDAD00" fill="none"/>
+        <line x1="400.6666666666667" y1="2.4168836805555536" x2="400.6666666666667" y2="8.666883680555554" stroke="#CDAD00" fill="none"/>
+        <line x1="402.6666666666667" y1="2.4168836805555536" x2="402.6666666666667" y2="8.666883680555554" stroke="#CDAD00" fill="none"/>
+        <circle cx="411.6666666666667" cy="-10.822699652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="411.6666666666667" cy="14.677300347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="410.6666666666667" y1="-4.822699652777779" x2="410.6666666666667" y2="1.4273003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="412.6666666666667" y1="-4.822699652777779" x2="412.6666666666667" y2="1.4273003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="410.6666666666667" y1="2.4273003472222214" x2="410.6666666666667" y2="8.677300347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="412.6666666666667" y1="2.4273003472222214" x2="412.6666666666667" y2="8.677300347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="421.6666666666667" cy="-10.796657986111112" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="421.6666666666667" cy="14.703342013888888" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="420.6666666666667" y1="-4.7966579861111125" x2="420.6666666666667" y2="1.4533420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="422.6666666666667" y1="-4.7966579861111125" x2="422.6666666666667" y2="1.4533420138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="420.6666666666667" y1="2.4533420138888875" x2="420.6666666666667" y2="8.703342013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="422.6666666666667" y1="2.4533420138888875" x2="422.6666666666667" y2="8.703342013888888" stroke="#CDAD00" fill="none"/>
+        <circle cx="431.6666666666667" cy="-10.754991319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="431.6666666666667" cy="14.745008680555555" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="430.6666666666667" y1="-4.754991319444445" x2="430.6666666666667" y2="1.4950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="432.6666666666667" y1="-4.754991319444445" x2="432.6666666666667" y2="1.4950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="430.6666666666667" y1="2.4950086805555554" x2="430.6666666666667" y2="8.745008680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="432.6666666666667" y1="2.4950086805555554" x2="432.6666666666667" y2="8.745008680555555" stroke="#CDAD00" fill="none"/>
+        <circle cx="441.6666666666667" cy="-10.697699652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="441.6666666666667" cy="14.802300347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="440.6666666666667" y1="-4.697699652777779" x2="440.6666666666667" y2="1.5523003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="442.6666666666667" y1="-4.697699652777779" x2="442.6666666666667" y2="1.5523003472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="440.6666666666667" y1="2.5523003472222214" x2="440.6666666666667" y2="8.802300347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="442.6666666666667" y1="2.5523003472222214" x2="442.6666666666667" y2="8.802300347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="451.6666666666667" cy="-10.624782986111112" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="451.6666666666667" cy="14.875217013888888" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="450.6666666666667" y1="-4.6247829861111125" x2="450.6666666666667" y2="1.6252170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="452.6666666666667" y1="-4.6247829861111125" x2="452.6666666666667" y2="1.6252170138888875" stroke="#CDAD00" fill="none"/>
+        <line x1="450.6666666666667" y1="2.6252170138888875" x2="450.6666666666667" y2="8.875217013888888" stroke="#CDAD00" fill="none"/>
+        <line x1="452.6666666666667" y1="2.6252170138888875" x2="452.6666666666667" y2="8.875217013888888" stroke="#CDAD00" fill="none"/>
+        <circle cx="461.6666666666667" cy="-10.536241319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="461.6666666666667" cy="14.963758680555555" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="460.6666666666667" y1="-4.536241319444445" x2="460.6666666666667" y2="1.7137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="462.6666666666667" y1="-4.536241319444445" x2="462.6666666666667" y2="1.7137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="460.6666666666667" y1="2.7137586805555554" x2="460.6666666666667" y2="8.963758680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="462.6666666666667" y1="2.7137586805555554" x2="462.6666666666667" y2="8.963758680555555" stroke="#CDAD00" fill="none"/>
+        <circle cx="471.6666666666667" cy="-10.432074652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="471.6666666666667" cy="15.067925347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="470.6666666666667" y1="-4.432074652777779" x2="470.6666666666667" y2="1.8179253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="472.6666666666667" y1="-4.432074652777779" x2="472.6666666666667" y2="1.8179253472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="470.6666666666667" y1="2.8179253472222214" x2="470.6666666666667" y2="9.067925347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="472.6666666666667" y1="2.8179253472222214" x2="472.6666666666667" y2="9.067925347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="481.6666666666667" cy="-10.31228298611111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="481.6666666666667" cy="15.18771701388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="480.6666666666667" y1="-4.312282986111111" x2="480.6666666666667" y2="1.9377170138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="482.6666666666667" y1="-4.312282986111111" x2="482.6666666666667" y2="1.9377170138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="480.6666666666667" y1="2.9377170138888893" x2="480.6666666666667" y2="9.18771701388889" stroke="#CDAD00" fill="none"/>
+        <line x1="482.6666666666667" y1="2.9377170138888893" x2="482.6666666666667" y2="9.18771701388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="491.6666666666667" cy="-10.176866319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="491.6666666666667" cy="15.323133680555555" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="490.6666666666667" y1="-4.176866319444445" x2="490.6666666666667" y2="2.0731336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="492.6666666666667" y1="-4.176866319444445" x2="492.6666666666667" y2="2.0731336805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="490.6666666666667" y1="3.0731336805555554" x2="490.6666666666667" y2="9.323133680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="492.6666666666667" y1="3.0731336805555554" x2="492.6666666666667" y2="9.323133680555555" stroke="#CDAD00" fill="none"/>
+        <circle cx="501.6666666666667" cy="-10.025824652777779" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="501.6666666666667" cy="15.474175347222221" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="500.6666666666667" y1="-4.025824652777779" x2="500.6666666666667" y2="2.2241753472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="502.6666666666667" y1="-4.025824652777779" x2="502.6666666666667" y2="2.2241753472222214" stroke="#CDAD00" fill="none"/>
+        <line x1="500.6666666666667" y1="3.2241753472222214" x2="500.6666666666667" y2="9.474175347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="502.6666666666667" y1="3.2241753472222214" x2="502.6666666666667" y2="9.474175347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="511.6666666666667" cy="-9.85915798611111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="511.6666666666667" cy="15.64084201388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="510.6666666666667" y1="-3.8591579861111107" x2="510.6666666666667" y2="2.3908420138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="512.6666666666667" y1="-3.8591579861111107" x2="512.6666666666667" y2="2.3908420138888893" stroke="#CDAD00" fill="none"/>
+        <line x1="510.6666666666667" y1="3.3908420138888893" x2="510.6666666666667" y2="9.64084201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="512.6666666666667" y1="3.3908420138888893" x2="512.6666666666667" y2="9.64084201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="521.6666666666667" cy="-9.676866319444443" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="521.6666666666667" cy="15.823133680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="520.6666666666667" y1="-3.676866319444443" x2="520.6666666666667" y2="2.573133680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="522.6666666666667" y1="-3.676866319444443" x2="522.6666666666667" y2="2.573133680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="520.6666666666667" y1="3.573133680555557" x2="520.6666666666667" y2="9.823133680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="522.6666666666667" y1="3.573133680555557" x2="522.6666666666667" y2="9.823133680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="531.6666666666667" cy="-9.478949652777777" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="531.6666666666667" cy="16.02105034722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="530.6666666666667" y1="-3.478949652777777" x2="530.6666666666667" y2="2.771050347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="532.6666666666667" y1="-3.478949652777777" x2="532.6666666666667" y2="2.771050347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="530.6666666666667" y1="3.771050347222223" x2="530.6666666666667" y2="10.021050347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="532.6666666666667" y1="3.771050347222223" x2="532.6666666666667" y2="10.021050347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="541.6666666666667" cy="-9.265407986111109" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="541.6666666666667" cy="16.234592013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="540.6666666666667" y1="-3.265407986111109" x2="540.6666666666667" y2="2.984592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="542.6666666666667" y1="-3.265407986111109" x2="542.6666666666667" y2="2.984592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="540.6666666666667" y1="3.984592013888891" x2="540.6666666666667" y2="10.234592013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="542.6666666666667" y1="3.984592013888891" x2="542.6666666666667" y2="10.234592013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="551.6666666666667" cy="-9.036241319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="551.6666666666667" cy="16.463758680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="550.6666666666667" y1="-3.0362413194444446" x2="550.6666666666667" y2="3.2137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="552.6666666666667" y1="-3.0362413194444446" x2="552.6666666666667" y2="3.2137586805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="550.6666666666667" y1="4.213758680555555" x2="550.6666666666667" y2="10.463758680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="552.6666666666667" y1="4.213758680555555" x2="552.6666666666667" y2="10.463758680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="561.6666666666667" cy="-8.791449652777777" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="561.6666666666667" cy="16.70855034722222" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="560.6666666666667" y1="-2.791449652777777" x2="560.6666666666667" y2="3.458550347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="562.6666666666667" y1="-2.791449652777777" x2="562.6666666666667" y2="3.458550347222223" stroke="#CDAD00" fill="none"/>
+        <line x1="560.6666666666667" y1="4.458550347222223" x2="560.6666666666667" y2="10.708550347222221" stroke="#CDAD00" fill="none"/>
+        <line x1="562.6666666666667" y1="4.458550347222223" x2="562.6666666666667" y2="10.708550347222221" stroke="#CDAD00" fill="none"/>
+        <circle cx="571.6666666666667" cy="-8.531032986111109" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="571.6666666666667" cy="16.968967013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="570.6666666666667" y1="-2.531032986111109" x2="570.6666666666667" y2="3.718967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="572.6666666666667" y1="-2.531032986111109" x2="572.6666666666667" y2="3.718967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="570.6666666666667" y1="4.718967013888891" x2="570.6666666666667" y2="10.968967013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="572.6666666666667" y1="4.718967013888891" x2="572.6666666666667" y2="10.968967013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="581.6666666666667" cy="-8.254991319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="581.6666666666667" cy="17.245008680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="580.6666666666667" y1="-2.2549913194444446" x2="580.6666666666667" y2="3.9950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="582.6666666666667" y1="-2.2549913194444446" x2="582.6666666666667" y2="3.9950086805555554" stroke="#CDAD00" fill="none"/>
+        <line x1="580.6666666666667" y1="4.995008680555555" x2="580.6666666666667" y2="11.245008680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="582.6666666666667" y1="4.995008680555555" x2="582.6666666666667" y2="11.245008680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="591.6666666666667" cy="-7.963324652777775" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="591.6666666666667" cy="17.536675347222225" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="590.6666666666667" y1="-1.963324652777775" x2="590.6666666666667" y2="4.286675347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="592.6666666666667" y1="-1.963324652777775" x2="592.6666666666667" y2="4.286675347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="590.6666666666667" y1="5.286675347222225" x2="590.6666666666667" y2="11.536675347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="592.6666666666667" y1="5.286675347222225" x2="592.6666666666667" y2="11.536675347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="601.6666666666667" cy="-7.656032986111109" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="601.6666666666667" cy="17.843967013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="600.6666666666667" y1="-1.656032986111109" x2="600.6666666666667" y2="4.593967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="602.6666666666667" y1="-1.656032986111109" x2="602.6666666666667" y2="4.593967013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="600.6666666666667" y1="5.593967013888891" x2="600.6666666666667" y2="11.843967013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="602.6666666666667" y1="5.593967013888891" x2="602.6666666666667" y2="11.843967013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="611.6666666666667" cy="-7.333116319444445" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="611.6666666666667" cy="18.166883680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="610.6666666666667" y1="-1.3331163194444446" x2="610.6666666666667" y2="4.916883680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="612.6666666666667" y1="-1.3331163194444446" x2="612.6666666666667" y2="4.916883680555555" stroke="#CDAD00" fill="none"/>
+        <line x1="610.6666666666667" y1="5.916883680555555" x2="610.6666666666667" y2="12.166883680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="612.6666666666667" y1="5.916883680555555" x2="612.6666666666667" y2="12.166883680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="621.6666666666667" cy="-6.994574652777775" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="621.6666666666667" cy="18.505425347222225" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="620.6666666666667" y1="-0.994574652777775" x2="620.6666666666667" y2="5.255425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="622.6666666666667" y1="-0.994574652777775" x2="622.6666666666667" y2="5.255425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="620.6666666666667" y1="6.255425347222225" x2="620.6666666666667" y2="12.505425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="622.6666666666667" y1="6.255425347222225" x2="622.6666666666667" y2="12.505425347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="631.6666666666667" cy="-6.640407986111109" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="631.6666666666667" cy="18.859592013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="630.6666666666667" y1="-0.6404079861111089" x2="630.6666666666667" y2="5.609592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="632.6666666666667" y1="-0.6404079861111089" x2="632.6666666666667" y2="5.609592013888891" stroke="#CDAD00" fill="none"/>
+        <line x1="630.6666666666667" y1="6.609592013888891" x2="630.6666666666667" y2="12.859592013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="632.6666666666667" y1="6.609592013888891" x2="632.6666666666667" y2="12.859592013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="641.6666666666667" cy="-6.270616319444439" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="641.6666666666667" cy="19.22938368055556" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="640.6666666666667" y1="-0.2706163194444393" x2="640.6666666666667" y2="5.979383680555561" stroke="#CDAD00" fill="none"/>
+        <line x1="642.6666666666667" y1="-0.2706163194444393" x2="642.6666666666667" y2="5.979383680555561" stroke="#CDAD00" fill="none"/>
+        <line x1="640.6666666666667" y1="6.979383680555561" x2="640.6666666666667" y2="13.22938368055556" stroke="#CDAD00" fill="none"/>
+        <line x1="642.6666666666667" y1="6.979383680555561" x2="642.6666666666667" y2="13.22938368055556" stroke="#CDAD00" fill="none"/>
+        <circle cx="651.6666666666667" cy="-5.885199652777775" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="651.6666666666667" cy="19.614800347222225" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="650.6666666666667" y1="0.11480034722222499" x2="650.6666666666667" y2="6.364800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="652.6666666666667" y1="0.11480034722222499" x2="652.6666666666667" y2="6.364800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="650.6666666666667" y1="7.364800347222225" x2="650.6666666666667" y2="13.614800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="652.6666666666667" y1="7.364800347222225" x2="652.6666666666667" y2="13.614800347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="661.6666666666667" cy="-5.484157986111111" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="661.6666666666667" cy="20.01584201388889" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="660.6666666666667" y1="0.5158420138888893" x2="660.6666666666667" y2="6.765842013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="662.6666666666667" y1="0.5158420138888893" x2="662.6666666666667" y2="6.765842013888889" stroke="#CDAD00" fill="none"/>
+        <line x1="660.6666666666667" y1="7.765842013888889" x2="660.6666666666667" y2="14.01584201388889" stroke="#CDAD00" fill="none"/>
+        <line x1="662.6666666666667" y1="7.765842013888889" x2="662.6666666666667" y2="14.01584201388889" stroke="#CDAD00" fill="none"/>
+        <circle cx="671.6666666666667" cy="-5.067491319444441" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="671.6666666666667" cy="20.432508680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="670.6666666666667" y1="0.9325086805555589" x2="670.6666666666667" y2="7.182508680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="672.6666666666667" y1="0.9325086805555589" x2="672.6666666666667" y2="7.182508680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="670.6666666666667" y1="8.182508680555559" x2="670.6666666666667" y2="14.432508680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="672.6666666666667" y1="8.182508680555559" x2="672.6666666666667" y2="14.432508680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="681.6666666666667" cy="-4.635199652777775" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="681.6666666666667" cy="20.864800347222225" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="680.6666666666667" y1="1.364800347222225" x2="680.6666666666667" y2="7.614800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="682.6666666666667" y1="1.364800347222225" x2="682.6666666666667" y2="7.614800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="680.6666666666667" y1="8.614800347222225" x2="680.6666666666667" y2="14.864800347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="682.6666666666667" y1="8.614800347222225" x2="682.6666666666667" y2="14.864800347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="691.6666666666667" cy="-4.187282986111105" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="691.6666666666667" cy="21.312717013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="690.6666666666667" y1="1.8127170138888946" x2="690.6666666666667" y2="8.062717013888895" stroke="#CDAD00" fill="none"/>
+        <line x1="692.6666666666667" y1="1.8127170138888946" x2="692.6666666666667" y2="8.062717013888895" stroke="#CDAD00" fill="none"/>
+        <line x1="690.6666666666667" y1="9.062717013888895" x2="690.6666666666667" y2="15.312717013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="692.6666666666667" y1="9.062717013888895" x2="692.6666666666667" y2="15.312717013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="701.6666666666667" cy="-3.7237413194444406" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="701.6666666666667" cy="21.77625868055556" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="700.6666666666667" y1="2.2762586805555594" x2="700.6666666666667" y2="8.526258680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="702.6666666666667" y1="2.2762586805555594" x2="702.6666666666667" y2="8.526258680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="700.6666666666667" y1="9.526258680555559" x2="700.6666666666667" y2="15.77625868055556" stroke="#CDAD00" fill="none"/>
+        <line x1="702.6666666666667" y1="9.526258680555559" x2="702.6666666666667" y2="15.77625868055556" stroke="#CDAD00" fill="none"/>
+        <circle cx="711.6666666666667" cy="-3.2445746527777755" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="711.6666666666667" cy="22.255425347222225" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="710.6666666666667" y1="2.7554253472222245" x2="710.6666666666667" y2="9.005425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="712.6666666666667" y1="2.7554253472222245" x2="712.6666666666667" y2="9.005425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="710.6666666666667" y1="10.005425347222225" x2="710.6666666666667" y2="16.255425347222225" stroke="#CDAD00" fill="none"/>
+        <line x1="712.6666666666667" y1="10.005425347222225" x2="712.6666666666667" y2="16.255425347222225" stroke="#CDAD00" fill="none"/>
+        <circle cx="721.6666666666667" cy="-2.7497829861111067" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="721.6666666666667" cy="22.750217013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="720.6666666666667" y1="3.2502170138888933" x2="720.6666666666667" y2="9.500217013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="722.6666666666667" y1="3.2502170138888933" x2="722.6666666666667" y2="9.500217013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="720.6666666666667" y1="10.500217013888893" x2="720.6666666666667" y2="16.750217013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="722.6666666666667" y1="10.500217013888893" x2="722.6666666666667" y2="16.750217013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="731.6666666666667" cy="-2.239366319444441" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="731.6666666666667" cy="23.260633680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="730.6666666666667" y1="3.760633680555559" x2="730.6666666666667" y2="10.010633680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="732.6666666666667" y1="3.760633680555559" x2="732.6666666666667" y2="10.010633680555559" stroke="#CDAD00" fill="none"/>
+        <line x1="730.6666666666667" y1="11.010633680555559" x2="730.6666666666667" y2="17.260633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="732.6666666666667" y1="11.010633680555559" x2="732.6666666666667" y2="17.260633680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="741.6666666666667" cy="-1.7133246527777715" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="741.6666666666667" cy="23.78667534722223" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="740.6666666666667" y1="4.2866753472222285" x2="740.6666666666667" y2="10.536675347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="742.6666666666667" y1="4.2866753472222285" x2="742.6666666666667" y2="10.536675347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="740.6666666666667" y1="11.536675347222229" x2="740.6666666666667" y2="17.78667534722223" stroke="#CDAD00" fill="none"/>
+        <line x1="742.6666666666667" y1="11.536675347222229" x2="742.6666666666667" y2="17.78667534722223" stroke="#CDAD00" fill="none"/>
+        <circle cx="751.6666666666667" cy="-1.1716579861111067" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="751.6666666666667" cy="24.328342013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="750.6666666666667" y1="4.828342013888893" x2="750.6666666666667" y2="11.078342013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="752.6666666666667" y1="4.828342013888893" x2="752.6666666666667" y2="11.078342013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="750.6666666666667" y1="12.078342013888893" x2="750.6666666666667" y2="18.328342013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="752.6666666666667" y1="12.078342013888893" x2="752.6666666666667" y2="18.328342013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="761.6666666666667" cy="-0.614366319444442" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="761.6666666666667" cy="24.885633680555557" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="760.6666666666667" y1="5.385633680555558" x2="760.6666666666667" y2="11.635633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="762.6666666666667" y1="5.385633680555558" x2="762.6666666666667" y2="11.635633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="760.6666666666667" y1="12.635633680555557" x2="760.6666666666667" y2="18.885633680555557" stroke="#CDAD00" fill="none"/>
+        <line x1="762.6666666666667" y1="12.635633680555557" x2="762.6666666666667" y2="18.885633680555557" stroke="#CDAD00" fill="none"/>
+        <circle cx="771.6666666666667" cy="-0.04144965277777235" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="771.6666666666667" cy="25.45855034722223" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="770.6666666666667" y1="5.958550347222228" x2="770.6666666666667" y2="12.208550347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="772.6666666666667" y1="5.958550347222228" x2="772.6666666666667" y2="12.208550347222229" stroke="#CDAD00" fill="none"/>
+        <line x1="770.6666666666667" y1="13.208550347222229" x2="770.6666666666667" y2="19.45855034722223" stroke="#CDAD00" fill="none"/>
+        <line x1="772.6666666666667" y1="13.208550347222229" x2="772.6666666666667" y2="19.45855034722223" stroke="#CDAD00" fill="none"/>
+        <circle cx="781.6666666666667" cy="0.5470920138888926" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="781.6666666666667" cy="26.047092013888893" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="780.6666666666667" y1="6.547092013888893" x2="780.6666666666667" y2="12.797092013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="782.6666666666667" y1="6.547092013888893" x2="782.6666666666667" y2="12.797092013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="780.6666666666667" y1="13.797092013888893" x2="780.6666666666667" y2="20.047092013888893" stroke="#CDAD00" fill="none"/>
+        <line x1="782.6666666666667" y1="13.797092013888893" x2="782.6666666666667" y2="20.047092013888893" stroke="#CDAD00" fill="none"/>
+        <circle cx="791.6666666666667" cy="1.1512586805555625" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="791.6666666666667" cy="26.651258680555564" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="790.6666666666667" y1="7.1512586805555625" x2="790.6666666666667" y2="13.401258680555562" stroke="#CDAD00" fill="none"/>
+        <line x1="792.6666666666667" y1="7.1512586805555625" x2="792.6666666666667" y2="13.401258680555562" stroke="#CDAD00" fill="none"/>
+        <line x1="790.6666666666667" y1="14.401258680555562" x2="790.6666666666667" y2="20.651258680555564" stroke="#CDAD00" fill="none"/>
+        <line x1="792.6666666666667" y1="14.401258680555562" x2="792.6666666666667" y2="20.651258680555564" stroke="#CDAD00" fill="none"/>
+        <circle cx="801.6666666666667" cy="1.7710503472222272" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <circle cx="801.6666666666667" cy="27.27105034722223" r="5" stroke="#CDAD00" fill="url(#fill_7)"/>
+        <line x1="800.6666666666667" y1="7.771050347222227" x2="800.6666666666667" y2="14.021050347222227" stroke="#CDAD00" fill="none"/>
+        <line x1="802.6666666666667" y1="7.771050347222227" x2="802.6666666666667" y2="14.021050347222227" stroke="#CDAD00" fill="none"/>
+        <line x1="800.6666666666667" y1="15.021050347222227" x2="800.6666666666667" y2="21.27105034722223" stroke="#CDAD00" fill="none"/>
+        <line x1="802.6666666666667" y1="15.021050347222227" x2="802.6666666666667" y2="21.27105034722223" stroke="#CDAD00" fill="none"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 134.60518087657763,42.480514681888295 L 142.00119940029987,96.74880059970016" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(142 96.7) rotate(-7.760810249883235)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 363.9694563242515,38.97348033484023 L 365.0740032768979,89.72599672310213" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(365.05 89.7) rotate(-1.2467537437846232)" style="opacity:1;">
+        <polygon points="7,-4.2861222383783204e-16 7,-4 -7,-4 -7,-4.2861222383783204e-16" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 151.06666666666666,118.73978240302743 L 233.39605157925945,175.70074638067496" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(233.35 175.7) rotate(-55.3219285433229)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 358.8333333333333,113.61253610629691 L 266.89276945913014,175.80281473056283" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(266.85 175.8) rotate(55.924860666517105)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 275.05016536401484,284.03247010701693 L 286.2998346359851,343.66752989298305" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(286.25 343.65) rotate(-10.682844625319063)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 254.77649580126797,198.5341812488448 L 265.97350419873203,254.81581875115515" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(265.95 254.8) rotate(-11.251855359707378)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 297.34890497395253,372.44683834781233 L 337.40109502604747,495.50316165218766" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(337.4 495.5) rotate(-18.028956043070224)" style="opacity:1;">
+        <polygon points="7,-4.2861222383783204e-16 7,-4 -7,-4 -7,-4.2861222383783204e-16" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <g transform="translate(611.6 435.2) rotate(1.8939646582352851)" style="opacity:1;">
+          <path d="M -18.115942028985508,-20.28985507246377 q 18.115942028985508,-7.246376811594203 36.231884057971016,0 l -1.8115942028985508,1.8115942028985508 q -16.304347826086957,-7.246376811594203 -32.608695652173914,0 l -1.8115942028985508,-1.8115942028985508 z" stroke="none" fill="url(#fill_8)"/>
+          <path d="M -16.304347826086957,-18.47826086956522 q 16.304347826086957,-7.246376811594203 32.608695652173914,0 v 43.47826086956522 q -16.304347826086957,-7.246376811594203 -32.608695652173914,0 v -43.47826086956522 z" stroke="none" fill="url(#fill_8)"/>
+          <path d="M -18.115942028985508,-20.28985507246377 l 1.8115942028985508,1.8115942028985508 v 43.47826086956522 l -1.8115942028985508,-1.8115942028985508 v -43.47826086956522 z" stroke="none" fill="url(#fill_8)"/>
+          <path d="M 18.115942028985508,-20.28985507246377 v 43.47826086956522 l -1.8115942028985508,1.8115942028985508 v -43.47826086956522 l 1.8115942028985508,-1.8115942028985508 z" stroke="none" fill="url(#fill_8)"/>
+          <path d="M -18.115942028985508,-20.28985507246377 q 18.115942028985508,-7.246376811594203 36.231884057971016,0 l -1.8115942028985508,1.8115942028985508 q -16.304347826086957,-7.246376811594203 -32.608695652173914,0 l -1.8115942028985508,-1.8115942028985508 v 43.47826086956522 l 1.8115942028985508,1.8115942028985508 v -43.47826086956522 m 32.608695652173914,0 v 43.47826086956522 l 1.8115942028985508,-1.8115942028985508 v -43.47826086956522 m -1.8115942028985508,45.289855072463766 q -16.304347826086957,-7.246376811594203 -32.608695652173914,0" stroke="url(#stroke_6)" fill="none"/>
+        </g>
+      </g>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 580.5680436847103,501.65 L 640.4319563152897,373.7" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(640.4 373.7) rotate(-154.92653624993136)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 653.8853813559323,343.7 L 681.5146186440678,279.3" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(681.5 279.3) rotate(-156.7794374385296)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 362.00854782132905,516.2521542002467 L 414.00273209844454,543.939240506329" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(414 543.9) rotate(-61.964541530181435)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+    <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;"/>
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M 496.1944292329085,543.939240506329 L 553.55,523.7055333599681" stroke="#000000" fill="none"/>
+      </g>
+      <g transform="translate(553.55 523.7) rotate(-109.43165282533947)" style="opacity:1;">
+        <polygon points="0,0 5.740251485476347,-13.858192987669302 -5.740251485476347,-13.858192987669302" stroke="none" fill="#000000"/>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+    <g transform="translate(448.4 560.8) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M -57.87341772151899,0 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -55.139240506329116,4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -52.40506329113924,9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -35.54430379746835,9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -32.810126582278485,4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -30.07594936708861,0 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -27.341772151898738,-4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -24.9873417721519,-9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -9.569620253164553,-9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -6.835443037974684,-4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -3.1898734177215213,0 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -0.4556962025316413,4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 2.278481012658228,9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 19.139240506329116,9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 21.873417721518987,4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 24.607594936708868,0 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 27.341772151898738,-4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 30.075949367088604,-9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 45.11392405063292,-9.113924050632912 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M 47.84810126582279,-4.556962025316456 h 6.835443037974684 v -1.6708860759493673 h -6.835443037974684 z" stroke="url(#stroke_7)" fill="url(#fill_9)"/>
+        <path d="M -31.898734177215193,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 v -5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M -31.898734177215193,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 v -5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M -22.78481012658228,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 v -5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M -22.78481012658228,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 v -5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M -22.78481012658228,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 v 5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M -22.78481012658228,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 m 0,5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M -31.898734177215193,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 v 5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M -31.898734177215193,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 m 0,5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M 22.78481012658228,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 v -5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M 22.78481012658228,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 m 0,-5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M 31.898734177215193,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 v -5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M 31.898734177215193,2.278481012658228 q -13.670886075949369,27.341772151898738 -27.341772151898738,0 m 0,-5.4683544303797476 q 13.670886075949369,27.341772151898738 27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M 31.898734177215193,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 v 5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M 31.898734177215193,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 v 5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+        <path d="M 22.78481012658228,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 v 5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0 z" stroke="none" fill="url(#fill_9)"/>
+        <path d="M 22.78481012658228,-3.1898734177215187 q 13.670886075949369,-27.341772151898738 27.341772151898738,0 v 5.4683544303797476 q -13.670886075949369,-27.341772151898738 -27.341772151898738,0" stroke="url(#stroke_7)" fill="none"/>
+      </g>
+      <text x="0.02499999999999858" y="26.45" font-size="10">Gene Expression</text>
+    </g>
+    <g transform="translate(270.65 269.4) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <ellipse cx="0" cy="0" rx="20" ry="15" stroke="url(#stroke_8)" fill="url(#fill_10)"/>
+      </g>
+      <text x="0" y="4" font-size="10">IκBα</text>
+    </g>
+    <g transform="translate(250.1 183.95) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <ellipse cx="0" cy="0" rx="20" ry="15" stroke="url(#stroke_9)" fill="url(#fill_11)"/>
+      </g>
+      <text x="0.025000000000000355" y="4" font-size="10">IKK</text>
+    </g>
+    <g transform="translate(647.45 358.7) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <rect x="-20" y="-15" width="40" height="30" stroke="url(#stroke_10)" fill="url(#fill_12)"/>
+      </g>
+      <text x="0" y="4" font-size="10">mRNA</text>
+    </g>
+    <g transform="translate(573.55 516.65) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <rect x="-20" y="-15" width="40" height="30" stroke="url(#stroke_11)" fill="url(#fill_13)"/>
+      </g>
+      <text x="0" y="4" font-size="10">mRNA</text>
+    </g>
+    <g transform="translate(290.7 358.3) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <ellipse cx="0" cy="0" rx="20" ry="15" stroke="url(#stroke_12)" fill="url(#fill_14)"/>
+      </g>
+      <text x="0.02499999999999858" y="4" font-size="10">NF-κB</text>
+    </g>
+    <g transform="translate(344.05 509.65) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <ellipse cx="0" cy="0" rx="20" ry="15" stroke="url(#stroke_13)" fill="url(#fill_15)"/>
+      </g>
+      <text x="0.02499999999999858" y="4" font-size="10">NF-κB</text>
+    </g>
+    <g transform="translate(687.95 264.3) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <rect x="-20" y="-15" width="40" height="30" stroke="url(#stroke_14)" fill="url(#fill_16)"/>
+      </g>
+      <text x="0" y="4" font-size="10">Protein</text>
+    </g>
+    <g transform="translate(144.4 114.35) rotate(-2.2870347679249647)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M -24.999999999999996,-33.33333333333333 h 16.666666666666664 l 8.333333333333332,16.666666666666664 l 8.333333333333332,-16.666666666666664 h 16.666666666666664 l -16.666666666666664,33.33333333333333 v 33.33333333333333 h -16.666666666666664 v -33.33333333333333 l -16.666666666666664,-33.33333333333333 z" stroke="url(#stroke_15)" fill="url(#fill_17)"/>
+      </g>
+      <text x="0.02499999999999858" y="4" font-size="10">Receptor</text>
+    </g>
+    <g transform="translate(365.5 109.3) rotate(-0.30885706978505106)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <path d="M -24.999999999999996,-33.33333333333333 h 16.666666666666664 l 8.333333333333332,16.666666666666664 l 8.333333333333332,-16.666666666666664 h 16.666666666666664 l -16.666666666666664,33.33333333333333 v 33.33333333333333 h -16.666666666666664 v -33.33333333333333 l -16.666666666666664,-33.33333333333333 z" stroke="url(#stroke_16)" fill="url(#fill_18)"/>
+      </g>
+      <text x="0.02499999999999858" y="4" font-size="10">Receptor</text>
+    </g>
+    <g transform="translate(132.4 26.3) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <polygon points="1.2246063538223773e-15,20 -17.320508075688775,-9.999999999999993 17.320508075688767,-10.000000000000009 1.2246063538223773e-15,20 1.2246063538223773e-15,20" stroke="url(#stroke_17)" fill="url(#fill_19)"/>
+      </g>
+      <text x="0" y="4" font-size="10">Signal</text>
+    </g>
+    <g transform="translate(363.55 19.7) rotate(0)" style="opacity:1;">
+      <g transform="translate(0 0) rotate(0)" style="opacity:1;">
+        <polygon points="1.2246063538223773e-15,20 -17.320508075688775,-9.999999999999993 17.320508075688767,-10.000000000000009 1.2246063538223773e-15,20 1.2246063538223773e-15,20" stroke="url(#stroke_18)" fill="url(#fill_20)"/>
+      </g>
+      <text x="0" y="4" font-size="10">Signal</text>
+    </g>
+  </g>
+</svg>

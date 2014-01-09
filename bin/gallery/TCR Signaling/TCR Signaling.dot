@@ -1,0 +1,125 @@
+digraph G {
+  /*
+   * Name: TCR Signaling
+   * Author: Jonathan Karr
+   * Generator: NetworkAnalyzer
+   * Generated: Tue Mar 31 2009 09:43:31 PM
+   */
+
+  size="11.11111111111111,8.333333333333334!";
+  clusterrank=global;
+  nodesep=0.75;
+  ranksep=0.25;
+  rankdir=TB;
+  center=true;
+  ratio="fill";
+  margin=0;
+  fontname=Arial;
+  charset=latin1;
+
+  node [fixedsize="true"];
+  edge [color="#000000"];
+
+  subgraph "cluster_compartment_Media" {
+    style=invis
+    "Peptide_MHC" [label="Peptide-MHC",comments="",shape="box",class="filled",fillcolor="#FF9966",color="#000000",fontsize="10",pos="1.5840277777777778,0.41944444444444445",width="0.49513888888888896",height="0.4298611111111111"];
+     
+  }
+
+  subgraph "cluster_compartment_Cytosol" {
+    style=invis
+    "Lck" [label="Lck",comments="CD40",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="1.5104166666666667,2.504861111111111",width="0.5687500000000001",height="0.4305555555555556"];
+    "ZAP70" [label="ZAP70",comments="TCR_CD3",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="2.089583333333333,2.3409722222222222",width="0.5687500000000001",height="0.4305555555555556"];
+    "Itk" [label="Itk",comments="Lck && ZAP70",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="3.2381944444444444,2.3270833333333334",width="0.5694444444444444",height="0.4305555555555556"];
+    "Akt" [label="Akt",comments="Itk",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="7.504166666666666,2.042361111111111",width="0.5687500000000001",height="0.43125"];
+    "NFAT_cytoplasm" [label="NFAT",comments="",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="1.6569444444444443,4.833333333333333",width="0.5694444444444444",height="0.4305555555555556"];
+    "p50_cytoplasm" [label="p50",comments="!IkB",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="8.361805555555556,5.082638888888889",width="0.5694444444444444",height="0.4305555555555556"];
+    "p65_cytoplasm" [label="p65",comments="!IkB",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="8.806249999999999,5.060416666666667",width="0.5694444444444444",height="0.4305555555555556"];
+    "IkB" [label="I&#954;B",comments="!(IKK && NIK && CAMKII && UBC13)",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="8.549305555555556,4.354861111111111",width="0.5694444444444444",height="0.43125"];
+    "IKK" [label="IKK",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="8.361805555555556,2.2652777777777775",width="0.5694444444444444",height="0.4305555555555556"];
+    "RasGRP" [label="RasGRP",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="5.401388888888889,3.1868055555555554",width="0.5694444444444444",height="0.4305555555555556"];
+    "Ras" [label="Ras",comments="RasGRP",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="5.3805555555555555,3.796527777777778",width="0.5694444444444444",height="0.43125"];
+    "Raf_1" [label="Raf-1",comments="Ras",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="5.411111111111111,4.427777777777778",width="0.5687500000000001",height="0.4305555555555556"];
+    "MEK" [label="MEK",comments="Raf_1",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="5.420138888888889,5.140277777777778",width="0.5694444444444444",height="0.4305555555555556"];
+    "ERK" [label="ERK",comments="MEK",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="5.438888888888889,5.804861111111111",width="0.5694444444444444",height="0.4305555555555556"];
+    "PKCt" [label="PKC&#952;",comments="cytoskeleton_reorganization",shape="box",class="filled",fillcolor="#33CCFF",color="#000000",fontsize="10",pos="7.876388888888889,1.8930555555555557",width="0.5694444444444444",height="0.43125"];
+    "COT" [label="COT",comments="Akt",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="7.1187499999999995,2.9305555555555554",width="0.5694444444444444",height="0.43125"];
+    "NIK" [label="NIK",comments="COT",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="7.522916666666666,3.658333333333333",width="0.5687500000000001",height="0.4305555555555556"];
+    "CAMKII" [label="CAMKII",comments="PKCt",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="7.807638888888889,2.84375",width="0.5687500000000001",height="0.43125"];
+    "CARMA1" [label="CARMA1",comments="",shape="box",class="filled",fillcolor="#33CCFF",color="#000000",fontsize="10",pos="8.340972222222222,1.8729166666666666",width="0.5694444444444444",height="0.4305555555555556"];
+    "Bcl10" [label="Bcl10",comments="",shape="box",class="filled",fillcolor="#33CCFF",color="#000000",fontsize="10",pos="8.847916666666666,1.8784722222222223",width="0.5694444444444444",height="0.4305555555555556"];
+    "MALT1" [label="MALT1",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="9.111805555555556,2.189583333333333",width="0.5694444444444444",height="0.4305555555555556"];
+    "UBC13" [label="UBC13",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="9.330555555555556,2.476388888888889",width="0.5687500000000001",height="0.43125"];
+    "PI3K" [label="PI3K",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="4.152083333333334,2.1861111111111113",width="0.5687500000000001",height="0.43125"];
+    "Nck" [label="Nck",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="3.861111111111111,2.7270833333333333",width="0.5694444444444444",height="0.4305555555555556"];
+    "Vav1" [label="Vav1",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="3.644444444444444,3.0083333333333333",width="0.5687500000000001",height="0.43125"];
+    "SLP76" [label="SLP76",comments="",shape="box",class="filled",fillcolor="#99FF99",color="#000000",fontsize="10",pos="3.457638888888889,2.6354166666666665",width="0.5694444444444444",height="0.43125"];
+    "PLCy1" [label="PLC&#947;1",comments="",shape="box",class="filled",fillcolor="#33CCFF",color="#000000",fontsize="10",pos="3.3444444444444446,1.9229166666666666",width="0.5694444444444444",height="0.43125"];
+    "LAT" [label="LAT",comments="",shape="box",class="filled",fillcolor="#33CCFF",color="#000000",fontsize="10",pos="3.8152777777777778,1.9319444444444445",width="0.5687500000000001",height="0.4305555555555556"];
+    "cytoskeleton_reorganization" [label="Cytoskeleton Reorganization",comments="Nck && Vav1",shape="box",class="filled",fillcolor="#FFFFFF",color="#000000",fontsize="10",pos="5.500694444444445,2.570138888888889",width="0.5687500000000001",height="0.4305555555555556"];
+     "Lck"->"Itk" [arrowhead="normal"];
+    "ZAP70"->"Itk" [arrowhead="normal"];
+    "Itk"->"Akt" [arrowhead="normal"];
+    "IkB"->"p50_cytoplasm" [arrowhead="tee"];
+    "IkB"->"p65_cytoplasm" [arrowhead="tee"];
+    "IKK"->"IkB" [arrowhead="tee"];
+    "NIK"->"IkB" [arrowhead="tee"];
+    "CAMKII"->"IkB" [arrowhead="tee"];
+    "UBC13"->"IkB" [arrowhead="tee"];
+    "RasGRP"->"Ras" [arrowhead="normal"];
+    "Ras"->"Raf_1" [arrowhead="normal"];
+    "Raf_1"->"MEK" [arrowhead="normal"];
+    "MEK"->"ERK" [arrowhead="normal"];
+    "cytoskeleton_reorganization"->"PKCt" [arrowhead="normal"];
+    "Akt"->"COT" [arrowhead="normal"];
+    "COT"->"NIK" [arrowhead="normal"];
+    "PKCt"->"CAMKII" [arrowhead="normal"];
+    "Nck"->"cytoskeleton_reorganization" [arrowhead="normal"];
+    "Vav1"->"cytoskeleton_reorganization" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_compartment_Nucleus" {
+    style=invis
+    "NFAT_nucleus" [label="NFAT",comments="NFAT_cytoplasm",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="1.6743055555555555,7.217361111111111",width="0.5687500000000001",height="0.4305555555555556"];
+    "c_Fos" [label="c-Fos",comments="ERK",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="5.362500000000001,7.219444444444444",width="0.5687500000000001",height="0.4305555555555556"];
+    "c_Jun" [label="c-Jun",comments="PKCt",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="5.852083333333334,7.188194444444444",width="0.5694444444444444",height="0.43125"];
+    "p50_nucleus" [label="p50",comments="p50_cytoplasm",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="8.420833333333333,7.1395833333333325",width="0.5687500000000001",height="0.4305555555555556"];
+    "p65_nucleus" [label="p65",comments="p65_cytoplasm",shape="box",class="filled",fillcolor="#9966FF",color="#000000",fontsize="10",pos="8.861805555555556,7.16736111111111",width="0.5694444444444444",height="0.43125"];
+    "gene_expression_NFAT" [label="Gene Expression",comments="NFAT_nucleus",shape="box",class="filled",fillcolor="#999999",color="#000000",fontsize="10",pos="1.6930555555555555,7.921527777777778",width="1.6597222222222223",height="0.4708333333333333"];
+    "gene_expression_ap1" [label="Gene Expression",comments="c_Fos && c_Jun",shape="box",class="filled",fillcolor="#999999",color="#000000",fontsize="10",pos="5.529166666666667,7.94861111111111",width="1.6590277777777778",height="0.47013888888888883"];
+    "gene_expression_nfkb" [label="Gene Expression",comments="p50_nucleus && p65_nucleus",shape="box",class="filled",fillcolor="#999999",color="#000000",fontsize="10",pos="8.580555555555556,7.896527777777777",width="1.6590277777777778",height="0.4708333333333333"];
+    "IL_2" [label="IL-2",comments="gene_expression_nfkb",shape="box",class="filled",fillcolor="#FF9966",color="#000000",fontsize="10",pos="10.408333333333333,7.8805555555555555",width="0.49513888888888896",height="0.4305555555555556"];
+     "NFAT_nucleus"->"gene_expression_NFAT" [arrowhead="normal"];
+    "c_Fos"->"gene_expression_ap1" [arrowhead="normal"];
+    "c_Jun"->"gene_expression_ap1" [arrowhead="normal"];
+    "p50_nucleus"->"gene_expression_nfkb" [arrowhead="normal"];
+    "p65_nucleus"->"gene_expression_nfkb" [arrowhead="normal"];
+    "gene_expression_nfkb"->"IL_2" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_membrane_Media-Cytosol" {
+    style=invis
+    "CD40" [label="CD40",comments="",shape="box",class="filled",fillcolor="#FF3333",color="#000000",fontsize="10",pos="0.8444444444444444,1.5305555555555557",width="0.7083333333333334",height="0.9402777777777778"];
+    "TCR_CD3" [label="TCR/CD3",comments="Peptide_MHC",shape="box",class="filled",fillcolor="#FF3333",color="#000000",fontsize="10",pos="1.6368055555555554,1.4923611111111112",width="0.7090277777777777",height="0.9402777777777778"];
+    
+  }
+  {rank=same;CD40;TCR_CD3}
+
+  subgraph "cluster_membrane_Cytosol-Nucleus" {
+    style=invis
+    "hidden3" [style="invis",label="",shape="plaintext",fixedsize="true",width="0.01",height="0.3541666666666667"];
+    
+  }
+  {rank=same;}
+
+  "Peptide_MHC"->"TCR_CD3" [arrowhead="normal"];
+  "CD40"->"Lck" [arrowhead="normal"];
+  "TCR_CD3"->"ZAP70" [arrowhead="normal"];
+  "NFAT_cytoplasm"->"NFAT_nucleus" [arrowhead="normal"];
+  "ERK"->"c_Fos" [arrowhead="normal"];
+  "PKCt"->"c_Jun" [arrowhead="normal"];
+  "p50_cytoplasm"->"p50_nucleus" [arrowhead="normal"];
+  "p65_cytoplasm"->"p65_nucleus" [arrowhead="normal"];
+  "IkB"->"hidden3" [style="invis"];
+  "hidden3"->"NFAT_nucleus" [style="invis"];
+}

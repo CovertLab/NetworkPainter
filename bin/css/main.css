@@ -1,0 +1,129 @@
+/**
+ *
+ * Web application template
+ *
+ * @author Luka Cvrk, www.solucija.com
+ * @author Jonathan Karr, jkarr@stanford.edu
+ * @affiliation Covert Lab, Department of Bioengineering, Stanford University
+ * @lastupdated 3/27/2009
+ */
+
+*{ margin: 0; padding: 0; }*
+body { margin: 50px 0 0; background: #e5e5e5 url(../images/bg.gif) repeat-x; font: .74em "Trebuchet MS", Arial, Sans-Serif; color: #4C565E;}
+	h1 { font-size: 3em; font-weight: normal; float: left; cursor:default;}
+	h1 a { text-decoration: none;}
+	h2 { font-size: 2em; font-weight: bold; margin: 0 0 .5em; cursor:default;}
+	h3 { font-size: 1.5em; border-bottom: 1px solid #aaa; margin: 0 0 .3em;margin-top:15px;cursor:default;}
+	p  { margin: 0 0 0.5em 0; line-height: 1.6em;}
+    ul,ol { list-style-position:outside;padding-left:16px;margin-top:0px;padding-top:0px;padding-bottom:5px;}        
+    ol{padding-left:22px;}
+	em {cursor: default; }
+	a { color: #4C565E; }
+	a:hover { color: #4C565E; text-decoration: none; }
+	img { border: 0; }
+	.red { color: #325693; }
+        .error{color:red;}
+        .error a{color:red}
+        .steelblue{color: #325693;}
+        .textcolor .lightgray{color: #4C565E;}
+        .darkgray{color: #161A1C;}
+        .textunderline{color: #aaa;}
+        input{background:rgb(200,200,200);border:1px solid #4C565E;width:200px;}
+        input:focus{outline:2px solid #9cf;background-color:#fff;}      
+        button{position:relative;left:.4em;border:none;cursor:pointer;font-weight:bold;background:none;color:fff;}
+        button div{padding:0 1em 0 0;margin:-.5em -.3em -.5em -.4em;height:44px;background: url(../images/button-l.gif) no-repeat right;}
+        button:focus div{background: url(../images/button-l-focus.gif) no-repeat right;}
+        button span{display:block;white-space:nowrap;padding:0 0 0 .7em;height:44px;color:#fff;line-height:40px;
+			background:url(../images/button-r.gif) no-repeat left;}
+        button:focus span{background:url(../images/button-r-focus.gif) no-repeat left;}
+        .help{background:url(../images/help.gif) no-repeat left;margin-left:4px;margin-right:4px;padding-left:16px;}
+ 
+	
+.wrap { width: 750px; margin: 0 auto auto auto; clear:both;}
+.page {margin-top:20px; margin-bottom:20px;}
+        li.features{margin:5px;}
+        li.help1, li.tutorial1{margin:10px;}
+        li.help2, li.tutorial2{margin:0px;padding-top:0px;padding-bottom:0px;}
+        ol.help2, ol.tutorial2{margin:0px;padding-top:0px;padding-bottom:0px;}
+		ol.help3, ol.tutorial3{margin:0px;padding-top:0px;padding-bottom:0px;}
+		ol.help4, ol.tutorial4{margin:0px;padding-top:0px;padding-bottom:0px;}
+ 
+#header { width: 750px; height: 40px; margin: 0 auto; }
+	#header #menu  {position:relative;margin-left:auto;padding-left:390px;padding-top:12px;z-index:1000;}
+		#menu ul {float:left;list-style:none;margin:0px;padding:2px;padding-left:10px;}
+		#menu ul li a{
+                  text-decoration: none;
+                  font-size: 13px;
+                }
+                #menu ul .submenu a{}
+		#menu ul .submenu a:hover{border-bottom: 2px solid #aaa; }
+                #menu ul .top a{}
+                #menu ul .top a:hover{border-bottom:2px solid #aaa;}
+		#menu ul .active a {color: #325693;font-style:italic;font-weight:bold;}
+		#menu ul .active a:hover {border-bottom:2px solid #325693;}
+		#menu ul .submenu {display:none;}
+                #menu ul:hover .submenu{display:block;margin:0px;padding:0px;}
+ 
+#teaser {clear: both; height: 200px; background: url(../images/teaserbg.gif) repeat-x;}
+	.box {float: left; padding: 60px 0 0; width: 330px; color: #fff; height:140px; }
+	.box p { line-height: 1.3em;}
+	#image { float: right; width: 388px; position: relative; top: 0px; background: url(../images/logo.gif) no-repeat top right; height: 200px; z-index:1;}
+	.h2{color:#fff;font-weight:normal;}
+	
+#bar {height: 40px; margin: 0 0 30px; padding: 0 0 0 0; background: url(../images/bar.gif) repeat-x;}
+	.step { cursor: default;color: #fff; padding: 10px 0 0 16px; margin: 0 10px 0 0; font-size: 1.4em; float: left; text-align: center; background: url(../images/step.gif) no-repeat; height: 40px; }
+	.stepNum { color: #fff; padding: 0 14px 0 0; }
+	
+.col { float: left; width: 428px; margin: -15px 30px 16px 0;  cursor:default;}
+	.last {width:288px; float: right; margin: -15px 0; }
+	.info { border: 1px solid #aaa; background: rgb(200,200,200); padding: 7px; margin-top:15px;}
+
+#footer { clear: both; width: 750px; margin: 0 auto; padding: 5px 15px 15px 15px; border-top: 1px solid #aaa; font-size:.9em; cursor:default;}	
+	#footer .right { float: right; margin: 0 0 0 0;}
+	#footer .left {line-height:1.2em;}
+	#footer a {text-decoration: none; }
+	#footer a:hover {text-decoration: underline; }
+	
+/* added by Jonathan Karr */
+td{
+	vertical-align:top;
+}
+.example, .tutorial{
+	padding:0px;
+	margin:0px;
+	padding-bottom:20px;
+	margin-top:15px;
+}
+.example img,  .tutorial img{
+	padding:0px;	
+	margin:0px;
+	border:1px #aaa solid;
+}
+embed, object{
+	padding:0px;
+	margin:0px;
+	margin-bottom:-8px;
+}
+
+.example table, .tutorial table{	
+}
+.example td, .tutorial td{
+	vertical-align:top;
+	padding:0px;
+	margin:0px;
+}
+.example td p, .example li, .tutorial td p, .tutorial li{
+	line-height:16px;
+	padding-bottom:4px;
+}
+.example .references, .tutorial .references{
+	margin-top:-10px;
+	margin-left:4px;
+}
+
+.documentation{
+	margin-bottom:30px;
+}
+.documentation td{
+	text-align:center;
+}

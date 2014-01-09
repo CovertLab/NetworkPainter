@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!---
+  Web-based GUI for flow cytometry data visualization and analysis. Loads and saves network and 
+  experiments from/to database. Supports collaboration and publishing. Has methods for exporting
+  networks and experiments to several formats (NetworkManager, ExperimentManager). Has methods
+  for loading a network from a pathway database (eg. KEGG, Reactome).
+  
+  <img src="../../../../uml/application.png"/>
+  
+  <img src="../../../../uml/db_schema.png"/>
+  
+  <p>Also contains inline help, tutorial, and metadata.</p>
+
+  <p>Compilation:<br/>
+  >> build.bat</p>
+
+  <p>Requirements to compile (all free; all open source except parts of Flex SDK)
+  <ul>
+  <li>Adobe Flex SDK 3 with 3rd party libraries</li>
+  <li>Accelerator Menu Bar<br/>
+	<a href="http://www.rphelan.com/2008/03/17/flex-menu-accelerators/">http://www.rphelan.com/2008/03/17/flex-menu-accelerators/</a></li>
+  <li>AlivePDF v0.1.4.6<br/>
+    <a href="http://alivepdf.bytearray.org/">http://alivepdf.bytearray.org/</a></li>
+  <li>AS3FlexDB v1.4.0<br/>
+	<a href="http://code.google.com/p/as3flexdb/">http://code.google.com/p/as3flexdb/</a></li>
+  <li>as3gif v0.1<br/>
+    <a href="http://code.google.com/p/as3gif/">http://code.google.com/p/as3gif/</a></li>
+  <li>Bezier r136<br/>
+    <a href="http://code.google.com/p/bezier/wiki/Main">http://code.google.com/p/bezier/wiki/Main</a></li>
+  <li>Degrafa vBeta3.1<br/>
+	<a href="http://degrafa.org/">http://degrafa.org/</a></li>
+  <li>FlexLib v2.4<br/>
+    <a href="http://code.google.com/p/flexlib/">http://code.google.com/p/flexlib/</a></li>
+  <li>Monkey Patches<br/>
+    <a href="http://blog.flexmonkeypatches.com/2008/09/10/flex-custom-tooltip-speech-bubble/">http://blog.flexmonkeypatches.com/2008/09/10/flex-custom-tooltip-speech-bubble/</a></li>
+  <li>printf<br/>
+	<a href="http://code.google.com/p/printf-as3/">http://code.google.com/p/printf-as3/</a></li>
+  <li>Tweener<br/>
+	<a href="http://code.google.com/p/tweener/">http://code.google.com/p/tweener/</a></li>
+  </ul>
+
+  Server Requirements to run:
+  <ul>
+  <li>AMFPHP v1.9 beta 2<br/>
+    <a href="http://www.amfphp.org/">http://www.amfphp.org/</a></li>
+  <li>Apache v2.2.4
+    <a href="http://httpd.apache.org/download.cgi">http://httpd.apache.org/download.cgi</a></li>
+  <li>CytoBank<br/>
+    <a href="http://www.cytobank.org/">http://www.cytobank.org/</a></li>
+  <li>GraphViz v2.20.3.1<br/>
+    <a href="http://www.graphviz.org/">http://www.graphviz.org/</a></li>
+  -	InkScape v0.46<br/>
+    <a href="http://www.inkscape.org/">http://www.inkscape.org/</a></li>
+  <li>KEGG Pathway vKGML 0.6<br/>
+    <a href="http://www.genome.jp/kegg/">http://www.genome.jp/kegg/</a></li>
+  <li>MySQL v5.0.41<br/>
+    <a href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</a></li>
+  <li>PHP v5.2.2<br/>
+    <a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a></li>	
+  <li>PHP Thumb v1.7.9 <br/>
+	<a href="http://phpthumb.sourceforge.net/">http://phpthumb.sourceforge.net/</a></li>
+  </ul>
+  
+  Client Requirements to run:
+  <ul>
+  <li>Adode Flash player 10<br/>
+    Certain features such as exporting which require FileReference.save will not work in Flash 9</li>
+  </ul>
+
+  @author Jonathan Karr, jkarr@stanford.edu
+  @author Harendra Guturu, hguturu@stanford.edu
+  @author Ed Chen, chened@stanford.edu
+  @affilitation: Covert Lab, Department of Bioengineering, Stanford University
+  @lastupdated: 3/23/2009
+-->
+<mx:Application 
+	xmlns:diagram_panel="edu.stanford.covertlab.diagram.panel.*"
+	xmlns:diagram_core="edu.stanford.covertlab.diagram.core.*"
+    xmlns:diagram_toolbar="edu.stanford.covertlab.diagram.toolbar.*"
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:rphelan="com.rphelan.controls.*"
+    width="100%" height="100%" 
+    horizontalScrollPolicy="off" verticalScrollPolicy="off"
+    preloader="edu.stanford.covertlab.networkpainter.preloader.Preloader"
+	creationComplete="diagram.completeInitialization();creationCompleteHandler();"
+	applicationComplete="applicationCompleteHandler();">
+
+    <!-- style -->
+    <mx:Style source="edu/stanford/covertlab/style/silver.css"/>
+
+    <!-- script -->
+    <mx:Script>
+	<![CDATA[
+		import edu.stanford.covertlab.diagram.event.DiagramEvent;
+		import edu.stanford.covertlab.networkpainter.event.NetworkManagerEvent;
+		import edu.stanford.covertlab.manager.UserManager;
+		import edu.stanford.covertlab.networkpainter.data.AboutData;
+		import edu.stanford.covertlab.networkpainter.data.HelpData;	
+		import edu.stanford.covertlab.networkpainter.data.TutorialData;
+		import edu.stanford.covertlab.networkpainter.manager.ExperimentManager;
+		import edu.stanford.covertlab.networkpainter.manager.NetworkManager;
+		import edu.stanford.covertlab.window.AboutWindow;
+		import edu.stanford.covertlab.window.HelpSection;
+		import edu.stanford.covertlab.window.HelpWindow;
+		import edu.stanford.covertlab.window.TutorialWindow;
+		import flash.events.Event;
+		import flash.events.FullScreenEvent;
+		import flash.events.KeyboardEvent;
+		import flash.net.navigateToURL;
+		import flash.net.URLRequest;
+		import mx.collections.ArrayCollection;
+		import mx.controls.Alert;
+		import mx.events.IndexChangedEvent;
+		import mx.managers.ToolTipManager;
+		import phi.db.Database;
+		import phi.interfaces.IDatabase;
+		
+		//data
+		public var aboutData:Object;
+		public var helpData:HelpSection;
+		public var tutorialData:Object;
+
+		//popup windows
+		public var tutorialWindow:TutorialWindow;
+		public var helpWindow:HelpWindow;
+		public var aboutWindow:AboutWindow;
+					
+		//database
+		private var db:IDatabase;
+		
+		//managers
+		[Bindable] private var userManager:UserManager;
+		[Bindable] private var networkManager:NetworkManager;
+		[Bindable] private var experimentManager:ExperimentManager;
+		
+		//fullscreen
+		[Bindable] private var fullScreen:Boolean;
+		
+		/*************************************************************
+		 * initialization
+		 ************************************************************/
+		private function creationCompleteHandler():void {
+			//ToolTip show, hide delays
+			ToolTipManager.showDelay = 600;
+			ToolTipManager.hideDelay = 3500;
+			
+			//style alert windows
+			Alert.buttonHeight = 16;
+						
+			//connect to database
+			db = Database.getInstance();
+			db.connect("conn", "networkpainter", "networkpainter", "localhost", "networkpainter", true);
+			
+			//initialize security
+			userManager = new UserManager(this, db);
+			diagram.addEventListener(DiagramEvent.USER_INTERACTION, userManager.setLastUserActivity);
+			
+			//network database interaction
+			networkManager = new NetworkManager(this, userManager, diagram, db);
+			
+			//experiment database interaction
+			experimentManager = new ExperimentManager(this, userManager, networkManager, diagram, db);
+			networkManager.experimentManager = experimentManager;
+			
+			//data
+			aboutData = new AboutData();
+			helpData = new HelpData();
+			tutorialData = new TutorialData();
+			
+			//popup windows
+			tutorialWindow = new TutorialWindow(this, tutorialData, aboutData);
+			helpWindow = new HelpWindow(this, helpData, aboutData);
+			aboutWindow = new AboutWindow(this, aboutData);
+			
+			//page title
+			pageTitle = aboutData.applicationName;
+		}
+		
+		private function applicationCompleteHandler():void {
+			//setup key bindings
+			stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
+			
+			//fullscreen
+			stage.addEventListener(FullScreenEvent.FULL_SCREEN, fullScreenHandler);
+		}
+		
+		/*************************************************************
+		 * key binding
+		 ************************************************************/
+		//Note: flash security blocks key events except escape in fullscreen mode
+		private function keyDown( event:KeyboardEvent ):void
+		{		
+			//alt key pressed
+			if (event.altKey) return;
+			
+			//shift and control keys pressed
+			if (event.shiftKey && event.ctrlKey) {
+				switch(event.charCode) {
+					case 's'.charCodeAt(): mainMenuHandler('saveNetworkAs'); break;
+				}
+				return;
+			}
+			
+			//control key pressed
+			if (event.ctrlKey) {
+				switch(event.charCode) {
+					case 'f'.charCodeAt(): mainMenuHandler('find'); break;
+					case 'a'.charCodeAt(): mainMenuHandler('selectAll'); break;
+					case 'x'.charCodeAt(): mainMenuHandler('cut'); break;
+					case 'c'.charCodeAt(): mainMenuHandler('copy'); break;
+					case 'v'.charCodeAt(): mainMenuHandler('paste'); break;
+					case 'z'.charCodeAt(): mainMenuHandler('undo'); break;
+					case 'y'.charCodeAt(): mainMenuHandler('redo'); break;
+					case '='.charCodeAt(): mainMenuHandler('zoomIn'); break;
+					case '-'.charCodeAt(): mainMenuHandler('zoomOut'); break;
+					case '0'.charCodeAt(): mainMenuHandler('zoomReset'); break;
+					//case 'p'.charCodeAt(): mainMenuHandler('printNetwork'); break;
+					case 'n'.charCodeAt(): mainMenuHandler('newNetwork'); break;
+					case 'o'.charCodeAt(): mainMenuHandler('openNetwork'); break;
+					case 's'.charCodeAt(): mainMenuHandler('saveNetwork'); break;
+				}
+				return;
+			}
+			
+			//control, shift, alt keys not pressed
+			switch(event.keyCode) {
+				case Keyboard.F1: mainMenuHandler('openTutorial'); break;
+				case Keyboard.F11: mainMenuHandler('toggleFullScreen'); break;
+			}
+		}
+		
+		/*************************************************************
+		 * fullscreen mode
+		 ************************************************************/
+		private function toggleFullScreen():void {
+			if (stage.displayState == StageDisplayState.NORMAL) stage.displayState = StageDisplayState.FULL_SCREEN;
+			else stage.displayState = StageDisplayState.NORMAL;
+		}
+
+		private function fullScreenHandler(event:FullScreenEvent):void {
+			fullScreen = diagram.fullScreen = event.fullScreen;
+			mainMenu.visible = !fullScreen;
+			if (fullScreen) {
+				mainMenu.setStyle('paddingBottom', 0);
+				mainMenu.maxHeight = 0;
+				box.setStyle('paddingTop', 0);
+				box.setStyle('paddingBottom', 0);
+				box.setStyle('paddingLeft', 0);
+				box.setStyle('paddingRight', 0);
+				tabWindow.setStyle('tabHeight', 0);
+				tabWindow.setStyle('paddingTop', 0);
+				tabWindow.setStyle('borderStyle', 'none');
+			}else {
+				mainMenu.maxHeight = 1000;
+				mainMenu.setStyle('paddingBottom', 10);
+				box.setStyle('paddingTop', 10);
+				box.setStyle('paddingBottom', 1);
+				box.setStyle('paddingLeft', 1);
+				box.setStyle('paddingRight', 1);
+				tabWindow.setStyle('tabHeight', undefined);
+				tabWindow.setStyle('paddingTop', 10);
+				tabWindow.setStyle('verticalGap', 6);
+				tabWindow.setStyle('borderStyle', 'solid');
+			}
+		}
+	
+		/*************************************************************
+		 * main menu
+		 ************************************************************/
+		private function mainMenuHandler(click:String,data:String=''):void {
+			switch(click) {
+				
+			//users
+			case 'editUserAccount':
+				if (!userManager.isGuest)
+					userManager.userAccountWindow.open();
+				break;
+			case 'logoff':
+				userManager.logoffWindow.open();
+				break;
+			
+			//networks
+			case 'newNetwork':
+				networkManager.newNetwork();
+				break;
+			case 'openNetwork':
+				networkManager.openNetworkWindow.open();
+				break;
+			case 'saveNetwork':
+				if (!userManager.isGuest)
+					networkManager.saveNetwork();
+				break;
+			case 'saveNetworkAs':
+				if (!userManager.isGuest)
+					networkManager.saveAsNetworkWindow.open();
+				break;
+			case 'importNetwork':
+				networkManager.importNetwork(data);
+				break;	
+			case 'exportNetwork':
+				networkManager.exportNetwork(data);
+				break;
+			case 'exportExperiment':
+				experimentManager.exportExperiment(data);
+				break;
+			case 'exportColorScale':
+				experimentManager.exportColorScale(data);
+				break;
+			case 'printNetwork':
+				networkManager.print();
+				break;
+				
+			//diagram
+			case 'undo': diagram.historyManager.undo(); break;
+			case 'redo': diagram.historyManager.redo(); break;
+			case 'cut': diagram.cut(); break;
+			case 'copy': diagram.copy(); break;	break;
+			case 'paste': diagram.paste(); break;
+			case 'selectAll': diagram.selectAllBiomolecules(); break;
+			case 'find': diagram.openFindBiomoleculeWindow(); break;
+			
+			//networks
+			case 'autoLayout':
+				diagram.autoLayoutDiagram();
+				break;
+			case 'editNetworkProperties':
+				networkManager.networkPropertiesWindow.open();
+				break;
+			case 'manageNetworks':
+				if (!userManager.isGuest)
+					networkManager.manageNetworksWindow.open();
+				break;				
+			
+			//experiments
+			case 'viewComparisonHeatmaps':
+				diagram.toggleComparisonHeatmaps();
+				break;
+			case 'manageExperiments':
+				experimentManager.manageExperimentsWindow.open();
+				break;
+			case 'configureAxes':
+				experimentManager.configureAxesWindow.open();
+				break;
+			
+			//views
+			case 'zoomIn': diagram.zoomIn(); break;
+			case 'zoomOut': diagram.zoomOut(); break;
+			case 'zoomFit': diagram.zoomFit(); break;
+			case 'zoomReset': diagram.zoomReset(); break;
+			case 'toggleOverview': diagram.toggleOverview(); break;
+			case 'toggleColorScale': experimentManager.colorScale.toggleVisibility(); break;
+			case 'toggleFullScreen': toggleFullScreen(); break;
+				
+			//help
+			case 'openTutorial':
+				navigateToURL(new URLRequest("tutorial.php"), "help");
+				//tutorialWindow.open();
+				break;
+			case 'openHelp':
+				navigateToURL(new URLRequest("help.php"), "help");
+				//helpWindow.open();
+				break;
+			case 'openAbout':
+				aboutWindow.open();
+				break;
+			}
+		}		
+		
+		/*************************************************************
+		 * editor
+		 ************************************************************/
+		private function mainTabNavigatorChange(event:IndexChangedEvent):void {
+			biomoleculesPanel.clearInputs();
+			compartmentPanel.clearInputs();
+			stylesPanel.clearInputs();
+		}
+		
+	]]>
+	</mx:Script>
+
+	<!-- main menu -->
+	<rphelan:AcceleratorMenuBar id="mainMenu" width="100%" labelField="@label" styleName="mainMenu"
+		itemClick="mainMenuHandler(event.item.@click,event.item.@data);">
+		<mx:XMLList id="mainMenuData">
+			<menuitem label="File">
+				<menuitem label="New" click="newNetwork" accelerator="Ctrl+N" />
+				<menuitem label="Open" click="openNetwork" accelerator="Ctrl+O"/>
+				<menuitem type="separator"/>
+				<menuitem label="Save" click="saveNetwork" accelerator="Ctrl+S" enabled="{!userManager.isGuest}"/>
+				<menuitem label="Save as ..." click="saveNetworkAs" accelerator="Shift+Ctrl+S" enabled="{!userManager.isGuest}"/>
+				<menuitem type="separator"/>
+				<menuitem label="Import">
+					<menuitem label="From JSON" data="json" click="importNetwork"/>
+					<menuitem label="From KEGG" data="kegg" click="importNetwork"/>
+				</menuitem>				
+				<menuitem label="Export">
+					<menuitem label="Image">
+						<menuitem label="dot" data="dot" click="exportNetwork" />
+						<menuitem label="gif" data="gif" click="exportNetwork" />
+						<menuitem label="jpg" data="jpg" click="exportNetwork" />
+						<menuitem label="pdf" data="pdf" click="exportNetwork" />
+						<menuitem label="png" data="png" click="exportNetwork" />
+						<menuitem label="svg" data="svg" click="exportNetwork" />						
+					</menuitem>
+					<menuitem label="Animation" enabled="{diagram.measurementLoaded}">						
+						<menuitem label="gif" data="gif" click="exportExperiment" />
+						<menuitem label="pdf" data="pdf" click="exportExperiment" />
+						<menuitem label="svg" data="svg" click="exportExperiment" />
+						<menuitem label="swf" data="swf" click="exportExperiment" />
+					</menuitem>
+					<menuitem label="Color Scale" enabled="{diagram.measurementLoaded}">
+						<menuitem label="gif" data="gif" click="exportColorScale" />
+						<menuitem label="jpg" data="jpg" click="exportColorScale" />
+						<menuitem label="pdf" data="pdf" click="exportColorScale" />
+						<menuitem label="png" data="png" click="exportColorScale" />
+						<menuitem label="svg" data="svg" click="exportColorScale" />						
+					</menuitem>
+					<menuitem label="Simulation">
+						<menuitem label="Boolean (m)" data="booleansimulation" click="exportExperiment" />
+					</menuitem>
+					<menuitem label="Exchange Formats">
+						<menuitem label="BioPax" data="biopax" click="exportNetwork" />
+						<menuitem label="CellML" data="cellml" click="exportNetwork" />
+						<menuitem label="JSON" data="json" click="exportNetwork" />
+						<menuitem label="SBML" data="sbml" click="exportNetwork" />						
+					</menuitem>
+				</menuitem>
+				<!--<menuitem label="Print" click="printNetwork" accelerator="Ctrl+P"/>-->
+				<menuitem type="separator"/>
+				<menuitem label="User Account ..." click="editUserAccount" enabled="{!userManager.isGuest}" />
+				<menuitem label="Exit" click="logoff" />
+			</menuitem>
+			<menuitem label="Edit">
+				<menuitem label="Undo" click="undo" enabled="{diagram.historyManager.undoEnabled}" accelerator="Ctrl+Z"/>
+				<menuitem label="Redo" click="redo" enabled="{diagram.historyManager.redoEnabled}" accelerator="Ctrl+Y"/>
+				<menuitem type="separator"/>
+				<menuitem label="Cut" click="cut" enabled="{diagram.cutEnabled}" accelerator="Ctrl+X"/>
+				<menuitem label="Copy" click="copy" enabled="{diagram.copyEnabled}" accelerator="Ctrl+C"/>
+				<menuitem label="Paste" click="paste" enabled="{diagram.pasteEnabled}" accelerator="Ctrl+V"/>
+				<menuitem label="Select All" click="selectAll" accelerator="Ctrl+A"/>
+				<menuitem type="separator"/>
+				<menuitem label="Find" click="find" accelerator="Ctrl+F"/>
+			</menuitem>
+			<menuitem label="Network">				
+				<menuitem label="Auto Layout Diagram" click="autoLayout" />
+				<menuitem label="Edit Properties" click="editNetworkProperties" />
+				<menuitem type="separator"/>
+				<menuitem label="Manage Networks ..." click="manageNetworks" enabled="{!userManager.isGuest}" />
+			</menuitem>
+			<menuitem label="Experiment">
+				<menuitem label="Manage Experiments ..." click="manageExperiments" />
+				<menuitem label="Configure Axes ..." click="configureAxes" />
+				<menuitem type="separator"/>
+				<menuitem label="View Comparison Heatmaps" click="viewComparisonHeatmaps" enabled="{diagram.measurementLoaded}" type="check" toggled="{diagram.comparisonHeatmapsVisible}" />
+			</menuitem>
+			<menuitem label="View">
+				<menuitem label="Zoom">
+					<menuitem label="Zoom In" click="zoomIn" accelerator="Ctrl++" enabled="{diagram.zoomInEnabled}" />
+					<menuitem label="Zoom Out" click="zoomOut" accelerator="Ctrl+-" enabled="{diagram.zoomOutEnabled}"/>
+					<menuitem label="Fit To Screen" click="zoomFit"/>
+					<menuitem type="separator"/>
+					<menuitem label="Reset" click="zoomReset" accelerator="Ctrl+0"/>					
+				</menuitem>
+				<menuitem type="separator"/>
+				<menuitem label="Overview" type="check" toggled="{diagram.overviewVisible}" click="toggleOverview"/>
+				<menuitem label="Color Scale" type="check" toggled="{experimentManager.colorScale.visible}" click="toggleColorScale"/>
+				<menuitem label="Fullscreen" type="check" toggled="{fullScreen}" click="toggleFullScreen" accelerator="F11"/>
+			</menuitem>
+			<menuitem label="Help">
+				<menuitem label="Tutorial" click="openTutorial" accelerator="F1"/>
+				<menuitem label="Contents" click="openHelp" />
+				<menuitem label="About" click="openAbout" />
+			</menuitem>
+		</mx:XMLList>
+	</rphelan:AcceleratorMenuBar>
+
+	<!-- tabs -->
+	<mx:Box id="box" height="100%" width="100%" paddingTop="10" paddingBottom="1" paddingRight="1" paddingLeft="1">
+		<mx:TabNavigator id="tabWindow" width="100%" height="100%" paddingTop="10" styleName="MainTabNavigator" change="mainTabNavigatorChange(event);">
+			<diagram_core:Diagram id="diagram" label="Layout" styleName="MainTab"/>
+			<mx:HBox id="editor" label="Editor" paddingLeft="10" paddingTop="0" paddingRight="10" paddingBottom="10" horizontalGap="20">
+				<diagram_panel:BiomoleculesPanel id="biomoleculesPanel" diagram="{diagram}" width="60%" height="100%" />
+				<mx:VBox width="40%" height="100%" verticalGap="20">
+					<diagram_panel:CompartmentsPanel id="compartmentPanel" diagram="{diagram}" width="100%" height="33%" />
+					<diagram_panel:StylesPanel id="stylesPanel" diagram="{diagram}" width="100%" height="33%" />
+					<diagram_panel:AdvancedOptionsPanel id="advancedOptionsPanel" diagram="{diagram}" width="100%" height="34%" />
+				</mx:VBox>
+			</mx:HBox>
+		</mx:TabNavigator>
+	</mx:Box>
+</mx:Application>

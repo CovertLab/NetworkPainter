@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml level="2" version="4" xmlns="http://www.sbml.org/sbml/level2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:networkanalyzer="http://covertlab.stanford.edu/projects/networkanalyzer/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <model id="NF-kB">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>Title: NF-kB</p>
+        <p>Subject: NF-kB (nuclear factor kappa-light-chain-enhancer of activated B cells) is a protein complex that acts as a transcription factor. NF-kB is found in almost all animal cell types and is involved in cellular responses to stimuli such as stress, cytokines, free radicals, ultraviolet irradiation, oxidized LDL, and bacterial or viral antigens. NF-kB plays a key role in regulating the immune response to infection. Consistent with this role, incorrect regulation of NF-kB has been linked to cancer, inflammatory and autoimmune diseases, septic shock, viral infection, and improper immune development. NF-kB has also been implicated in processes of synaptic plasticity and memory.References:- TD Gilmore (2006). Introduction to NF-B: players, pathways, perspectives. Oncogene. 25 (51): 6680-4.- AR Brasier (2006). The NF-B regulatory network. Cardiovasc. Toxicol. 6 (2): 111-30.- ND Perkins (2007). Integrating cell-signalling pathways with NF-B and IKK function. Nat. Rev. Mol. Cell Biol. 8 (1): 49-62.</p>
+        <p>Author: Jonathan Karr</p>
+        <p>Creator: NetworkAnalyzer</p>
+        <p>Created: Tue Mar 31 2009 07:29:48 PM</p>
+      </body>
+    </notes>
+    <annotation>
+      <networkanalyzer:width>800</networkanalyzer:width>
+      <networkanalyzer:height>600</networkanalyzer:height>
+      <networkanalyzer:showPores>true</networkanalyzer:showPores>
+      <networkanalyzer:poreFillColor>13421772</networkanalyzer:poreFillColor>
+      <networkanalyzer:poreStrokeColor>0</networkanalyzer:poreStrokeColor>
+      <networkanalyzer:membraneHeight>25.5</networkanalyzer:membraneHeight>
+      <networkanalyzer:membraneCurvature>25</networkanalyzer:membraneCurvature>
+      <networkanalyzer:minCompartmentHeight>100</networkanalyzer:minCompartmentHeight>
+      <networkanalyzer:ranksep>18</networkanalyzer:ranksep>
+      <networkanalyzer:nodesep>54</networkanalyzer:nodesep>
+      <networkanalyzer:animationFrameRate>20</networkanalyzer:animationFrameRate>
+      <networkanalyzer:maxAnimationLoops>0</networkanalyzer:maxAnimationLoops>
+      <networkanalyzer:exportShowBiomoleculeSelectedHandles>true</networkanalyzer:exportShowBiomoleculeSelectedHandles>
+      <networkanalyzer:exportColorBiomoleculesByValue>true</networkanalyzer:exportColorBiomoleculesByValue>
+      <networkanalyzer:exportAnimationFrameRate>20</networkanalyzer:exportAnimationFrameRate>
+      <networkanalyzer:exportMaxAnimationLoops>0</networkanalyzer:exportMaxAnimationLoops>
+      <networkanalyzer:listOfBiomoleculeStyles>
+        <networkanalyzer:biomoleculeStyle id="Receptor" shape="Receptor" color="0" outline="13421772"/>
+        <networkanalyzer:biomoleculeStyle id="Second_Messenger" shape="Second_Messenger" color="0" outline="65382"/>
+        <networkanalyzer:biomoleculeStyle id="Signal" shape="Signal" color="0" outline="10066329"/>
+        <networkanalyzer:biomoleculeStyle id="Transcription_Factor" shape="Transcription_Factor" color="0" outline="39423"/>
+        <networkanalyzer:biomoleculeStyle id="Annotation" shape="Annotation" color="0" outline="13421772"/>
+        <networkanalyzer:biomoleculeStyle id="Gene_Expression" shape="Gene_Expression" color="0" outline="13421772"/>
+      </networkanalyzer:listOfBiomoleculeStyles>
+      <networkanalyzer:listOfEdges>
+        <networkanalyzer:edge from="signal1" to="receptor1" sense="true" path="M 133.5703727707709,44.27285489722965 L 136.9272461456672,95.82275385433279"/>
+        <networkanalyzer:edge from="signal2" to="receptor2" sense="true" path="M 363.96945632425155,38.97348033484023 L 365.0740032768979,89.72599672310213"/>
+        <networkanalyzer:edge from="receptor1" to="IKK" sense="true" path="M 144.81666666666666,110.31184477266144 L 236.91752753780202,178.29244156298995"/>
+        <networkanalyzer:edge from="receptor2" to="IKK" sense="true" path="M 358.8333333333333,105.44625092798812 L 269.0817465758547,177.78415919288764"/>
+        <networkanalyzer:edge from="ikba" to="nfkb_cytoplasm" sense="false" path="M 275.05016536401484,284.03247010701693 L 286.2998346359851,343.66752989298305"/>
+        <networkanalyzer:edge from="IKK" to="ikba" sense="false" path="M 257.3797784190002,201.62673407959352 L 266.52022158099976,254.72326592040645"/>
+        <networkanalyzer:edge from="nfkb_cytoplasm" to="nfkb_nucleus" sense="true" path="M 297.34890497395253,372.44683834781233 L 337.40109502604747,495.50316165218766"/>
+        <networkanalyzer:edge from="mRNA_nucleus" to="mRNA_cytoplasm" sense="true" path="M 580.5680436847103,501.65 L 640.4319563152897,373.7"/>
+        <networkanalyzer:edge from="mRNA_cytoplasm" to="protein" sense="true" path="M 653.8853813559323,343.7 L 681.5146186440678,279.3"/>
+        <networkanalyzer:edge from="gene_expression" to="mRNA_nucleus" sense="true" path="M 362.00854782132905,516.2521542002467 L 414.00273209844454,543.939240506329"/>
+        <networkanalyzer:edge from="nfkb_nucleus" to="gene_expression" sense="true" path="M 496.1944292329085,543.939240506329 L 553.55,523.7055333599681"/>
+      </networkanalyzer:listOfEdges>
+    </annotation>
+    <listOfUnitDefinitions>
+      <unitDefinition id="binary">
+        <listOfUnits>
+          <unit kind="item" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartmentTypes>
+      <compartmentType id="compartment"/>
+      <compartmentType id="membrane"/>
+    </listOfCompartmentTypes>
+    <listOfSpeciesTypes>
+      <speciesType id="Receptor"/>
+      <speciesType id="Second_Messenger"/>
+      <speciesType id="Signal"/>
+      <speciesType id="Transcription_Factor"/>
+      <speciesType id="Annotation"/>
+      <speciesType id="Gene_Expression"/>
+    </listOfSpeciesTypes>
+    <listOfCompartments>
+      <compartment id="Media" compartmentType="compartment" outside="Media_Cytosol_Membrane" spatialDimensions="1" size="1">
+        <annotation>
+          <networkanalyzer:height>109</networkanalyzer:height>
+          <networkanalyzer:color>13421772</networkanalyzer:color>
+          <networkanalyzer:membranecolor>16763904</networkanalyzer:membranecolor>
+          <networkanalyzer:phospholipidbodycolor>16763904</networkanalyzer:phospholipidbodycolor>
+          <networkanalyzer:phospholipidoutlinecolor>13479168</networkanalyzer:phospholipidoutlinecolor>
+        </annotation>
+      </compartment>
+      <compartment id="Cytosol" compartmentType="compartment" outside="Cytosol_Nucleus_Membrane" spatialDimensions="1" size="1">
+        <annotation>
+          <networkanalyzer:height>297</networkanalyzer:height>
+          <networkanalyzer:color>10079487</networkanalyzer:color>
+          <networkanalyzer:membranecolor>16763904</networkanalyzer:membranecolor>
+          <networkanalyzer:phospholipidbodycolor>16763904</networkanalyzer:phospholipidbodycolor>
+          <networkanalyzer:phospholipidoutlinecolor>13479168</networkanalyzer:phospholipidoutlinecolor>
+        </annotation>
+      </compartment>
+      <compartment id="Nucleus" compartmentType="compartment" spatialDimensions="1" size="1">
+        <annotation>
+          <networkanalyzer:height>143</networkanalyzer:height>
+          <networkanalyzer:color>10079487</networkanalyzer:color>
+          <networkanalyzer:membranecolor>65535</networkanalyzer:membranecolor>
+          <networkanalyzer:phospholipidbodycolor>16766720</networkanalyzer:phospholipidbodycolor>
+          <networkanalyzer:phospholipidoutlinecolor>13479168</networkanalyzer:phospholipidoutlinecolor>
+        </annotation>
+      </compartment>
+      <compartment id="Media_Cytosol_Membrane" compartmentType="membrane" outside="Cytosol" spatialDimensions="1" size="1"/>
+      <compartment id="Cytosol_Nucleus_Membrane" compartmentType="membrane" outside="Nucleus" spatialDimensions="1" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="biomolecule_receptor1" id="receptor1" name="Receptor" speciesType="Receptor" compartment="Media_Cytosol_Membrane" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Receptor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Receptor]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[signal1]]></networkanalyzer:regulation>
+          <networkanalyzer:x>138</networkanalyzer:x>
+          <networkanalyzer:y>114</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_receptor1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_receptor2" id="receptor2" name="Receptor" speciesType="Receptor" compartment="Media_Cytosol_Membrane" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Receptor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Receptor]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[signal2]]></networkanalyzer:regulation>
+          <networkanalyzer:x>365</networkanalyzer:x>
+          <networkanalyzer:y>109</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_receptor2">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_signal1" id="signal1" name="Signal" speciesType="Signal" compartment="Media" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Signal</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Signal]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>132</networkanalyzer:x>
+          <networkanalyzer:y>26</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_signal1">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_signal2" id="signal2" name="Signal" speciesType="Signal" compartment="Media" substanceUnits="binary" hasOnlySubstanceUnits="true" initialAmount="false">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Signal</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Signal]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[]]></networkanalyzer:regulation>
+          <networkanalyzer:x>363</networkanalyzer:x>
+          <networkanalyzer:y>19</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_signal2">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_IKK" id="IKK" name="IKK" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[IKK]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[receptor1 || receptor2]]></networkanalyzer:regulation>
+          <networkanalyzer:x>253</networkanalyzer:x>
+          <networkanalyzer:y>186</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_IKK">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_nfkb_cytoplasm" id="nfkb_cytoplasm" name="NF-&amp;kappa;B" speciesType="Transcription_Factor" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[NF-&kappa;B]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[!ikba]]></networkanalyzer:regulation>
+          <networkanalyzer:x>290</networkanalyzer:x>
+          <networkanalyzer:y>358</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_nfkb_cytoplasm">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_ikba" id="ikba" name="I&amp;kappa;B&amp;alpha;" speciesType="Second_Messenger" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Second_Messenger</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[I&kappa;B&alpha;]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[!IKK]]></networkanalyzer:regulation>
+          <networkanalyzer:x>270</networkanalyzer:x>
+          <networkanalyzer:y>269</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_ikba">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_nfkb_nucleus" id="nfkb_nucleus" name="NF-&amp;kappa;B" speciesType="Transcription_Factor" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Transcription_Factor</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[NF-&kappa;B]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[nfkb_cytoplasm]]></networkanalyzer:regulation>
+          <networkanalyzer:x>344</networkanalyzer:x>
+          <networkanalyzer:y>509</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_nfkb_nucleus">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_mRNA_cytoplasm" id="mRNA_cytoplasm" name="mRNA" speciesType="Annotation" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Annotation</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[mRNA]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[mRNA_nucleus]]></networkanalyzer:regulation>
+          <networkanalyzer:x>647</networkanalyzer:x>
+          <networkanalyzer:y>358</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_mRNA_cytoplasm">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_protein" id="protein" name="Protein" speciesType="Annotation" compartment="Cytosol" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Annotation</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Protein]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[mRNA_cytoplasm]]></networkanalyzer:regulation>
+          <networkanalyzer:x>687</networkanalyzer:x>
+          <networkanalyzer:y>264</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_protein">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_mRNA_nucleus" id="mRNA_nucleus" name="mRNA" speciesType="Annotation" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Annotation</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[mRNA]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[gene_expression]]></networkanalyzer:regulation>
+          <networkanalyzer:x>573</networkanalyzer:x>
+          <networkanalyzer:y>516</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_mRNA_nucleus">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="biomolecule_gene_expression" id="gene_expression" name="Gene Expression" speciesType="Gene_Expression" compartment="Nucleus" substanceUnits="binary" hasOnlySubstanceUnits="true">
+        <annotation>
+          <networkanalyzer:biomoleculeStyle>Gene_Expression</networkanalyzer:biomoleculeStyle>
+          <networkanalyzer:label><![CDATA[Gene Expression]]></networkanalyzer:label>
+          <networkanalyzer:regulation><![CDATA[nfkb_nucleus]]></networkanalyzer:regulation>
+          <networkanalyzer:x>448</networkanalyzer:x>
+          <networkanalyzer:y>560</networkanalyzer:y>
+          <rdf:RDF>
+            <rdf:Description rdf:about="#biomolecule_gene_expression">
+              <dc:Subject><![CDATA[]]></dc:Subject>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfRules>
+      <assignmentRule variable="receptor1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>signal1</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="receptor2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>signal2</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="IKK">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <or/>
+            <ci>receptor1</ci>
+            <ci>receptor2</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="nfkb_cytoplasm">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <not/>
+            <ci>ikba</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="ikba">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <not/>
+            <ci>IKK</ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="nfkb_nucleus">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>nfkb_cytoplasm</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mRNA_cytoplasm">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>mRNA_nucleus</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="protein">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>mRNA_cytoplasm</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="mRNA_nucleus">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>gene_expression</ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="gene_expression">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci>nfkb_nucleus</ci>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+  </model>
+</sbml>

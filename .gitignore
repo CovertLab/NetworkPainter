@@ -1,0 +1,11 @@
+#compiled files
+bin/NetworkPainter.swf
+bin/pub/
+obj/
+docs/
+
+#data files
+amfphp/services/KEGG/KGML/*.xml
+
+#temporary files
+bin/services/tmp/

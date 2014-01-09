@@ -1,0 +1,87 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+<xml>
+  <exportMaxAnimationLoops>0</exportMaxAnimationLoops>
+  <description><![CDATA[NF-kB (nuclear factor kappa-light-chain-enhancer of activated B cells) is a protein complex that acts as a transcription factor. NF-kB is found in almost all animal cell types and is involved in cellular responses to stimuli such as stress, cytokines, free radicals, ultraviolet irradiation, oxidized LDL, and bacterial or viral antigens. NF-kB plays a key role in regulating the immune response to infection. Consistent with this role, incorrect regulation of NF-kB has been linked to cancer, inflammatory and autoimmune diseases, septic shock, viral infection, and improper immune development. NF-kB has also been implicated in processes of synaptic plasticity and memory.References:- TD Gilmore (2006). Introduction to NF-B: players, pathways, perspectives. Oncogene. 25 (51): 6680-4.- AR Brasier (2006). The NF-B regulatory network. Cardiovasc. Toxicol. 6 (2): 111-30.- ND Perkins (2007). Integrating cell-signalling pathways with NF-B and IKK function. Nat. Rev. Mol. Cell Biol. 8 (1): 49-62.]]></description>
+  <comparisonXAxis><![CDATA[Conditions]]></comparisonXAxis>
+  <minCompartmentHeight>100</minCompartmentHeight>
+  <comparisonYAxisControl><![CDATA[None]]></comparisonYAxisControl>
+  <generator><![CDATA[NetworkPainter]]></generator>
+  <ranksep>18</ranksep>
+  <exportShowBiomoleculeSelectedHandles>true</exportShowBiomoleculeSelectedHandles>
+  <colormap><![CDATA[CytoBank Blue-Yellow]]></colormap>
+  <poreStrokeColor>0</poreStrokeColor>
+  <perturbations>
+    <perturbation condition="aBCR H2O2" activity="Off" biomoleculeid="3" experimentid="560"/>
+    <perturbation condition="aBCR" activity="On" biomoleculeid="2" experimentid="560"/>
+  </perturbations>
+  <comparisonYAxis><![CDATA[Individuals]]></comparisonYAxis>
+  <statistic><![CDATA[Arcsinh Medians]]></statistic>
+  <publicstatus><![CDATA[Yes]]></publicstatus>
+  <nodesep>54</nodesep>
+  <biomoleculeAxisControl><![CDATA[None]]></biomoleculeAxisControl>
+  <exportColorBiomoleculesByValue>true</exportColorBiomoleculesByValue>
+  <generated><![CDATA[Tue Mar 31 2009 07:29:53 PM]]></generated>
+  <compartments>
+    <compartment phospholipidoutlinecolor="13479168" membranecolor="16763904" phospholipidbodycolor="16763904" height="109" name="Media" color="13421772"/>
+    <compartment phospholipidoutlinecolor="13479168" membranecolor="16763904" phospholipidbodycolor="16763904" height="297" name="Cytosol" color="10079487"/>
+    <compartment phospholipidoutlinecolor="13479168" membranecolor="65535" phospholipidbodycolor="16766720" height="143" name="Nucleus" color="10079487"/>
+  </compartments>
+  <dynamicRange>NaN</dynamicRange>
+  <showPores>true</showPores>
+  <animationAxis><![CDATA[Timepoints]]></animationAxis>
+  <comparisonXAxisControl><![CDATA[None]]></comparisonXAxisControl>
+  <biomoleculestyles>
+    <biomoleculestyle outline="0" shape="Y-Receptor" name="Receptor" color="13421772"/>
+    <biomoleculestyle outline="0" shape="Ellipse" name="Second_Messenger" color="65382"/>
+    <biomoleculestyle outline="0" shape="Inverted Triangle" name="Signal" color="10066329"/>
+    <biomoleculestyle outline="0" shape="Ellipse" name="Transcription_Factor" color="39423"/>
+    <biomoleculestyle outline="0" shape="Rectangle" name="Annotation" color="13421772"/>
+    <biomoleculestyle outline="0" shape="DNA" name="Gene_Expression" color="13421772"/>
+  </biomoleculestyles>
+  <animationAxisControl><![CDATA[First]]></animationAxisControl>
+  <poreFillColor>13421772</poreFillColor>
+  <biomoleculeAxis><![CDATA[Channels]]></biomoleculeAxis>
+  <associations>
+    <association biomoleculeid="6" experimentid="560" channel="Lambda-FITC"/>
+    <association biomoleculeid="7" experimentid="560" channel="p-Erk12-Ax647"/>
+    <association biomoleculeid="5" experimentid="560" channel="CD20c-PercPCy5.5"/>
+    <association biomoleculeid="4" experimentid="560" channel="Bcl2-PE"/>
+  </associations>
+  <animationFrameRate>20</animationFrameRate>
+  <equation><![CDATA[Difference]]></equation>
+  <exportAnimationFrameRate>20</exportAnimationFrameRate>
+  <height>600</height>
+  <membraneCurvature>25</membraneCurvature>
+  <edges>
+    <edge sense="true" tobiomoleculeid="0" path="M 133.5703727707709,44.27285489722965 L 136.9272461456672,95.82275385433279" frombiomoleculeid="2"/>
+    <edge sense="true" tobiomoleculeid="1" path="M 363.96945632425155,38.97348033484023 L 365.0740032768979,89.72599672310213" frombiomoleculeid="3"/>
+    <edge sense="true" tobiomoleculeid="4" path="M 144.81666666666666,110.31184477266144 L 236.91752753780202,178.29244156298995" frombiomoleculeid="0"/>
+    <edge sense="true" tobiomoleculeid="4" path="M 358.8333333333333,105.44625092798812 L 269.0817465758547,177.78415919288764" frombiomoleculeid="1"/>
+    <edge sense="false" tobiomoleculeid="5" path="M 275.05016536401484,284.03247010701693 L 286.2998346359851,343.66752989298305" frombiomoleculeid="6"/>
+    <edge sense="false" tobiomoleculeid="6" path="M 257.3797784190002,201.62673407959352 L 266.52022158099976,254.72326592040645" frombiomoleculeid="4"/>
+    <edge sense="true" tobiomoleculeid="7" path="M 297.34890497395253,372.44683834781233 L 337.40109502604747,495.50316165218766" frombiomoleculeid="5"/>
+    <edge sense="true" tobiomoleculeid="8" path="M 580.5680436847103,501.65 L 640.4319563152897,373.7" frombiomoleculeid="10"/>
+    <edge sense="true" tobiomoleculeid="9" path="M 653.8853813559323,343.7 L 681.5146186440678,279.3" frombiomoleculeid="8"/>
+    <edge sense="true" tobiomoleculeid="10" path="M 362.00854782132905,516.2521542002467 L 414.00273209844454,543.939240506329" frombiomoleculeid="11"/>
+    <edge sense="true" tobiomoleculeid="11" path="M 496.1944292329085,543.939240506329 L 553.55,523.7055333599681" frombiomoleculeid="7"/>
+  </edges>
+  <width>800</width>
+  <biomolecules>
+    <biomolecule label="Receptor" x="138.15" y="114.6" biomoleculestyleid="0" compartmentid="1" comments="" name="receptor1" regulation="signal1"/>
+    <biomolecule label="Receptor" x="365.5" y="109.3" biomoleculestyleid="0" compartmentid="1" comments="" name="receptor2" regulation="signal2"/>
+    <biomolecule label="Signal" x="132.4" y="26.3" biomoleculestyleid="2" compartmentid="0" comments="" name="signal1" regulation=""/>
+    <biomolecule label="Signal" x="363.55" y="19.7" biomoleculestyleid="2" compartmentid="0" comments="" name="signal2" regulation=""/>
+    <biomolecule label="IKK" x="253.25" y="186.95" biomoleculestyleid="1" compartmentid="2" comments="" name="IKK" regulation="receptor1 || receptor2"/>
+    <biomolecule label="NF-&amp;kappa;B" x="290.7" y="358.3" biomoleculestyleid="3" compartmentid="2" comments="" name="nfkb_cytoplasm" regulation="!ikba"/>
+    <biomolecule label="I&amp;kappa;B&amp;alpha;" x="270.65" y="269.4" biomoleculestyleid="1" compartmentid="2" comments="" name="ikba" regulation="!IKK"/>
+    <biomolecule label="NF-&amp;kappa;B" x="344.05" y="509.65" biomoleculestyleid="3" compartmentid="4" comments="" name="nfkb_nucleus" regulation="nfkb_cytoplasm"/>
+    <biomolecule label="mRNA" x="647.45" y="358.7" biomoleculestyleid="4" compartmentid="2" comments="" name="mRNA_cytoplasm" regulation="mRNA_nucleus"/>
+    <biomolecule label="Protein" x="687.95" y="264.3" biomoleculestyleid="4" compartmentid="2" comments="" name="protein" regulation="mRNA_cytoplasm"/>
+    <biomolecule label="mRNA" x="573.55" y="516.65" biomoleculestyleid="4" compartmentid="4" comments="" name="mRNA_nucleus" regulation="gene_expression"/>
+    <biomolecule label="Gene Expression" x="448.4" y="560.8" biomoleculestyleid="5" compartmentid="4" comments="" name="gene_expression" regulation="nfkb_nucleus"/>
+  </biomolecules>
+  <name><![CDATA[NF-kB]]></name>
+  <owner><![CDATA[Jonathan Karr]]></owner>
+  <maxAnimationLoops>0</maxAnimationLoops>
+  <membraneHeight>25.5</membraneHeight>
+</xml>

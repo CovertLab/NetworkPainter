@@ -1,0 +1,135 @@
+digraph G {
+  /*
+   * Name: PBMC immune signaling
+   * Author: Jonathan Karr
+   * Generator: NetworkAnalyzer
+   * Generated: Tue Jan 29 2013 07:01:13 PM
+   */
+
+  size="11.11111111111111,8.333333333333334!";
+  clusterrank=global;
+  nodesep=0.75;
+  ranksep=0.25;
+  rankdir=TB;
+  center=true;
+  ratio="fill";
+  margin=0;
+  fontname=Arial;
+  charset=latin1;
+
+  node [fixedsize="true"];
+  edge [color="#000000"];
+
+  subgraph "cluster_compartment_Media" {
+    style=invis
+    "hidden0" [style="invis",label="",shape="plaintext",fixedsize="true",width="0.01",height="1.3888888888888888"];
+     
+  }
+
+  subgraph "cluster_compartment_Cytosol" {
+    style=invis
+    "AKT" [label="AKT",comments="PI3K",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="5.085416666666666,3.4583333333333335",width="0.5701388888888889",height="0.4305555555555556"];
+    "BLNK" [label="BLNK",comments="SYK",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="6.547222222222222,2.745138888888889",width="0.5694444444444444",height="0.4305555555555556"];
+    "BTK" [label="BTK",comments="SYK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="3.869444444444445,2.020138888888889",width="0.5701388888888889",height="0.4305555555555556"];
+    "GRB_SOS" [label="GRB/SOS",comments="BLNK || PLC",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="6.5680555555555555,3.4895833333333335",width="0.5694444444444444",height="0.4305555555555556"];
+    "IkB" [label="I&#954;B",comments="IKK",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="8.95625,5.807638888888889",width="0.5694444444444444",height="0.43125"];
+    "IKK" [label="IKK",comments="PKC",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="8.949305555555556,5.043749999999999",width="0.5701388888888889",height="0.43125"];
+    "JAK" [label="JAK",comments="",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="2.134027777777778,4.411111111111111",width="0.5694444444444444",height="0.4305555555555556"];
+    "LAT" [label="LAT",comments="Zap70",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="10.463194444444445,3.5965277777777778",width="0.5694444444444444",height="0.4305555555555556"];
+    "MEK" [label="MEK",comments="RAF",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="6.526388888888889,5.768750000000001",width="0.5694444444444444",height="0.4305555555555556"];
+    "MEKK" [label="MEKK",comments="PKC",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="7.751388888888889,5.050000000000001",width="0.5694444444444444",height="0.4305555555555556"];
+    "MKK" [label="MKK",comments="MEKK",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="7.754861111111111,5.779861111111111",width="0.5694444444444444",height="0.4305555555555556"];
+    "mTOR" [label="mTOR",comments="AKT",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="5.095833333333333,4.313888888888889",width="0.5701388888888889",height="0.4305555555555556"];
+    "PI3K" [label="PI3K",comments="BTK",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="5.085416666666666,2.448611111111111",width="0.5701388888888889",height="0.4305555555555556"];
+    "PKC" [label="PKC",comments="PLC",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="8.275694444444445,4.302777777777778",width="0.5701388888888889",height="0.4305555555555556"];
+    "PLC" [label="PLC",comments="BTK || PI3K || BLNK || LAT || Zap70",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="8.240972222222222,2.0180555555555557",width="0.5694444444444444",height="0.4305555555555556"];
+    "RAF" [label="RAF",comments="RAS",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="6.536111111111111,5.026388888888889",width="0.5701388888888889",height="0.4305555555555556"];
+    "RAS" [label="RAS",comments="GRB_SOS || PKC",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="6.561805555555555,4.304166666666666",width="0.5694444444444444",height="0.4305555555555556"];
+    "RSK" [label="RSK",comments="ERK",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="5.738888888888889,5.810416666666667",width="0.5694444444444444",height="0.4305555555555556"];
+    "SFK" [label="SFK",comments="SHP",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="1.120138888888889,4.448611111111111",width="0.5694444444444444",height="0.4305555555555556"];
+    "SHP" [label="SHP",comments="CD22 && !SFK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="1.1319444444444444,2.472916666666667",width="0.5694444444444444",height="0.4305555555555556"];
+    "SLP76" [label="SLP76",comments="LAT",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="9.36111111111111,3.588194444444445",width="0.5694444444444444",height="0.43125"];
+    "SYK" [label="SYK",comments="BCR || SFK",shape="box",class="filled",fillcolor="#ED9EA0",color="#000000",fontsize="10",pos="2.707638888888889,2.7513888888888887",width="0.5694444444444444",height="0.4305555555555556"];
+    "Zap70" [label="Zap70",comments="TCR",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="10.465277777777779,2.6125",width="0.5701388888888889",height="0.4305555555555556"];
+     "PI3K"->"AKT" [arrowhead="normal"];
+    "SYK"->"BLNK" [arrowhead="normal"];
+    "SYK"->"BTK" [arrowhead="normal"];
+    "BLNK"->"GRB_SOS" [arrowhead="normal"];
+    "PLC"->"GRB_SOS" [arrowhead="normal"];
+    "IKK"->"IkB" [arrowhead="normal"];
+    "PKC"->"IKK" [arrowhead="normal"];
+    "Zap70"->"LAT" [arrowhead="normal"];
+    "RAF"->"MEK" [arrowhead="normal"];
+    "PKC"->"MEKK" [arrowhead="normal"];
+    "MEKK"->"MKK" [arrowhead="normal"];
+    "AKT"->"mTOR" [arrowhead="normal"];
+    "BTK"->"PI3K" [arrowhead="normal"];
+    "PLC"->"PKC" [arrowhead="normal"];
+    "BTK"->"PLC" [arrowhead="normal"];
+    "PI3K"->"PLC" [arrowhead="normal"];
+    "BLNK"->"PLC" [arrowhead="normal"];
+    "LAT"->"PLC" [arrowhead="normal"];
+    "Zap70"->"PLC" [arrowhead="normal"];
+    "RAS"->"RAF" [arrowhead="normal"];
+    "GRB_SOS"->"RAS" [arrowhead="normal"];
+    "PKC"->"RAS" [arrowhead="normal"];
+    "SHP"->"SFK" [arrowhead="normal"];
+    "SFK"->"SHP" [arrowhead="tee"];
+    "LAT"->"SLP76" [arrowhead="normal"];
+    "SFK"->"SYK" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_compartment_Nucleus" {
+    style=invis
+    "ERK" [label="ERK",comments="MEK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="6.550694444444444,6.995138888888889",width="0.5694444444444444",height="0.4305555555555556"];
+    "GeneExpression" [label="Gene expression",comments="STAT1 || STAT3 || STAT5 || S6 || ERK || p38 || NFkB",shape="box",class="filled",fillcolor="#FFD700",color="#000000",fontsize="10",pos="5.788194444444445,7.934722222222222",width="1.6597222222222223",height="0.47013888888888883"];
+    "NFkB" [label="NF&#954;B",comments="IkB",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="8.965277777777779,6.954861111111111",width="0.5701388888888889",height="0.4305555555555556"];
+    "p38" [label="p38",comments="MKK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="7.767361111111111,6.934027777777778",width="0.5701388888888889",height="0.4305555555555556"];
+    "S6" [label="S6",comments="mTOR || RSK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="5.097222222222222,6.970833333333333",width="0.5701388888888889",height="0.4305555555555556"];
+    "STAT1" [label="STAT1",comments="SFK || JAK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="0.4895833333333333,6.977777777777778",width="0.5694444444444444",height="0.43125"];
+    "STAT3" [label="STAT3",comments="SFK || JAK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="1.542361111111111,6.959027777777778",width="0.5701388888888889",height="0.4305555555555556"];
+    "STAT5" [label="STAT5",comments="SFK || JAK",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="2.629861111111111,6.9743055555555555",width="0.5701388888888889",height="0.4305555555555556"];
+     "STAT1"->"GeneExpression" [arrowhead="normal"];
+    "STAT3"->"GeneExpression" [arrowhead="normal"];
+    "STAT5"->"GeneExpression" [arrowhead="normal"];
+    "S6"->"GeneExpression" [arrowhead="normal"];
+    "ERK"->"GeneExpression" [arrowhead="normal"];
+    "p38"->"GeneExpression" [arrowhead="normal"];
+    "NFkB"->"GeneExpression" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_membrane_Media-Cytosol" {
+    style=invis
+    "BCR" [label="BCR",comments="",shape="box",class="filled",fillcolor="#83C667",color="#000000",fontsize="10",pos="2.7972222222222225,1.4347222222222222",width="0.7090277777777777",height="0.9402777777777778"];
+    "CD22" [label="CD22",comments="",shape="box",class="filled",fillcolor="#83C667",color="#000000",fontsize="10",pos="1.1013888888888888,1.5034722222222223",width="0.7083333333333334",height="0.9402777777777778"];
+    "TCR" [label="TCR",comments="",shape="box",class="filled",fillcolor="#83C667",color="#000000",fontsize="10",pos="10.46875,1.5277777777777777",width="0.7083333333333334",height="0.9409722222222222"];
+    
+  }
+  {rank=same;BCR;CD22;TCR}
+
+  subgraph "cluster_membrane_Cytosol-Nucleus" {
+    style=invis
+    "hidden3" [style="invis",label="",shape="plaintext",fixedsize="true",width="0.01",height="0.3541666666666667"];
+    
+  }
+  {rank=same;}
+
+  "MEK"->"ERK" [arrowhead="normal"];
+  "IkB"->"NFkB" [arrowhead="normal"];
+  "MKK"->"p38" [arrowhead="normal"];
+  "RSK"->"ERK" [arrowhead="normal",dir="back"];
+  "mTOR"->"S6" [arrowhead="normal"];
+  "RSK"->"S6" [arrowhead="normal"];
+  "CD22"->"SHP" [arrowhead="normal"];
+  "SFK"->"STAT1" [arrowhead="normal"];
+  "JAK"->"STAT1" [arrowhead="normal"];
+  "SFK"->"STAT3" [arrowhead="normal"];
+  "JAK"->"STAT3" [arrowhead="normal"];
+  "SFK"->"STAT5" [arrowhead="normal"];
+  "JAK"->"STAT5" [arrowhead="normal"];
+  "BCR"->"SYK" [arrowhead="normal"];
+  "TCR"->"Zap70" [arrowhead="normal"];
+  "hidden0"->"BCR" [style="invis"];
+  "PLC"->"hidden3" [style="invis"];
+  "hidden3"->"S6" [style="invis"];
+}

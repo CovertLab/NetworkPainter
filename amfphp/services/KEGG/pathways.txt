@@ -1,0 +1,262 @@
+ID	Name	Category Number	Category Name	Category	Last Updated
+map00010	Glycolysis / Gluconeogenesis	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	20-Mar-09
+map00020	Citrate cycle (TCA cycle)	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	13-Jan-09
+map00030	Pentose phosphate pathway	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	15-Jan-09
+map00031	Inositol metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	29-Jan-09
+map00040	Pentose and glucuronate interconversions	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	14-Mar-09
+map00051	Fructose and mannose metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	18-Mar-09
+map00052	Galactose metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	28-Jan-09
+map00053	Ascorbate and aldarate metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	28-Jan-09
+map00500	Starch and sucrose metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	14-Mar-09
+map00520	Nucleotide sugars metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	13-Feb-09
+map00530	Aminosugars metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	28-Jan-09
+map00562	Inositol phosphate metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	23-Jan-09
+map00620	Pyruvate metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	13-Mar-09
+map00630	Glyoxylate and dicarboxylate metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	16-Jan-09
+map00640	Propanoate metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	16-Jan-09
+map00650	Butanoate metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	18-Mar-09
+map00660	C5-Branched dibasic acid metabolism	1.1	Carbohydrate Metabolism	1.1 Carbohydrate Metabolism	16-Jan-09
+map00190	Oxidative phosphorylation	1.2	Energy Metabolism	1.2 Energy Metabolism	21-Feb-09
+map00195	Photosynthesis	1.2	Energy Metabolism	1.2 Energy Metabolism	21-Mar-09
+map00196	Photosynthesis - antenna proteins	1.2	Energy Metabolism	1.2 Energy Metabolism	21-Mar-09
+map00680	Methane metabolism	1.2	Energy Metabolism	1.2 Energy Metabolism	15-Jan-09
+map00710	Carbon fixation in photosynthetic organisms	1.2	Energy Metabolism	1.2 Energy Metabolism	28-Jan-09
+map00720	Reductive carboxylate cycle (CO2 fixation)	1.2	Energy Metabolism	1.2 Energy Metabolism	15-Jan-09
+map00910	Nitrogen metabolism	1.2	Energy Metabolism	1.2 Energy Metabolism	3-Feb-09
+map00920	Sulfur metabolism	1.2	Energy Metabolism	1.2 Energy Metabolism	18-Feb-09
+map00061	Fatty acid biosynthesis	1.3	Lipid Metabolism	1.3 Lipid Metabolism	21-Jan-09
+map00062	Fatty acid elongation in mitochondria	1.3	Lipid Metabolism	1.3 Lipid Metabolism	5-Feb-09
+map00071	Fatty acid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	18-Mar-09
+map00072	Synthesis and degradation of ketone bodies	1.3	Lipid Metabolism	1.3 Lipid Metabolism	30-Jan-09
+map00100	Biosynthesis of steroids	1.3	Lipid Metabolism	1.3 Lipid Metabolism	5-Feb-09
+map00120	Bile acid biosynthesis	1.3	Lipid Metabolism	1.3 Lipid Metabolism	6-Mar-09
+map00140	C21-Steroid hormone metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	31-Jan-09
+map00150	Androgen and estrogen metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	21-Feb-09
+map00561	Glycerolipid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	23-Jan-09
+map00564	Glycerophospholipid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	6-Mar-09
+map00565	Ether lipid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	24-Jan-09
+map00590	Arachidonic acid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	19-Mar-09
+map00591	Linoleic acid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	23-Jan-09
+map00592	alpha-Linolenic acid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	31-Jan-09
+map00600	Sphingolipid metabolism	1.3	Lipid Metabolism	1.3 Lipid Metabolism	24-Feb-09
+map01040	Biosynthesis of unsaturated fatty acids	1.3	Lipid Metabolism	1.3 Lipid Metabolism	21-Mar-09
+map00230	Purine metabolism	1.4	Nucleotide Metabolism	1.4 Nucleotide Metabolism	10-Mar-09
+map00240	Pyrimidine metabolism	1.4	Nucleotide Metabolism	1.4 Nucleotide Metabolism	18-Mar-09
+map00220	Urea cycle and metabolism of amino groups	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	3-Mar-09
+map00251	Glutamate metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	29-Jan-09
+map00252	Alanine and aspartate metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	28-Jan-09
+map00260	Glycine, serine and threonine metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	29-Jan-09
+map00271	Methionine metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	13-Mar-09
+map00272	Cysteine metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	14-Feb-09
+map00280	Valine, leucine and isoleucine degradation	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	18-Mar-09
+map00290	Valine, leucine and isoleucine biosynthesis	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	3-Feb-09
+map00300	Lysine biosynthesis	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	3-Feb-09
+map00310	Lysine degradation	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	18-Mar-09
+map00330	Arginine and proline metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	5-Feb-09
+map00340	Histidine metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	12-Mar-09
+map00350	Tyrosine metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	3-Mar-09
+map00360	Phenylalanine metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	18-Mar-09
+map00380	Tryptophan metabolism	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	20-Mar-09
+map00400	Phenylalanine, tyrosine and tryptophan biosynthesis	1.5	Amino Acid Metabolism	1.5 Amino Acid Metabolism	20-Mar-09
+map00410	beta-Alanine metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	13-Feb-09
+map00430	Taurine and hypotaurine metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	3-Mar-09
+map00440	Aminophosphonate metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	13-Feb-09
+map00450	Selenoamino acid metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	21-Feb-09
+map00460	Cyanoamino acid metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	11-Feb-09
+map00471	D-Glutamine and D-glutamate metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	13-Feb-09
+map00472	D-Arginine and D-ornithine metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	7-Feb-09
+map00473	D-Alanine metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	7-Feb-09
+map00480	Glutathione metabolism	1.6	Metabolism of Other Amino Acids	1.6 Metabolism of Other Amino Acids	22-Jan-09
+map00510	N-Glycan biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	18-Mar-09
+map00511	N-Glycan degradation	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	21-Mar-09
+map00512	O-Glycan biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	17-Mar-09
+map00513	High-mannose type N-glycan biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	24-Feb-09
+map00531	Glycosaminoglycan degradation	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	10-Feb-09
+map00532	Chondroitin sulfate biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	17-Mar-09
+map00533	Keratan sulfate biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	21-Mar-09
+map00534	Heparan sulfate biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	3-Mar-09
+map00540	Lipopolysaccharide biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	17-Feb-09
+map00550	Peptidoglycan biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	5-Feb-09
+map00563	Glycosylphosphatidylinositol(GPI)-anchor biosynthesis	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	10-Feb-09
+map00601	Glycosphingolipid biosynthesis - lacto and neolacto series	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	24-Feb-09
+map00603	Glycosphingolipid biosynthesis - globo series	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	10-Feb-09
+map00604	Glycosphingolipid biosynthesis - ganglio series	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	10-Feb-09
+map01030	Glycan structures - biosynthesis 1	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	21-Mar-09
+map01031	Glycan structures - biosynthesis 2	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	21-Mar-09
+map01032	Glycan structures - degradation	1.7	Glycan Biosynthesis and Metabolism	1.7 Glycan Biosynthesis and Metabolism	21-Mar-09
+map00522	Biosynthesis of 12-, 14- and 16-membered macrolides	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	14-Feb-09
+map00523	Polyketide sugar unit biosynthesis	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	13-Feb-09
+map01051	Biosynthesis of ansamycins	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	3-Feb-09
+map01052	Type I polyketide structures	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	21-Mar-09
+map01053	Biosynthesis of siderophore group nonribosomal peptides	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	6-Feb-09
+map01054	Nonribosomal peptide structures	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	21-Mar-09
+map01055	Biosynthesis of vancomycin group antibiotics	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	11-Feb-09
+map01056	Biosynthesis of type II polyketide backbone	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	11-Feb-09
+map01057	Biosynthesis of type II polyketide products	1.8	Biosynthesis of Polyketides and Nonribosomal Peptides	1.8 Biosynthesis of Polyketides and Nonribosomal Peptides	11-Feb-09
+map00130	Ubiquinone biosynthesis	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	18-Mar-09
+map00670	One carbon pool by folate	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	7-Mar-09
+map00730	Thiamine metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	21-Feb-09
+map00740	Riboflavin metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	28-Jan-09
+map00750	Vitamin B6 metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	4-Feb-09
+map00760	Nicotinate and nicotinamide metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	30-Jan-09
+map00770	Pantothenate and CoA biosynthesis	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	29-Jan-09
+map00780	Biotin metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	29-Jan-09
+map00785	Lipoic acid metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	15-Jan-09
+map00790	Folate biosynthesis	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	29-Jan-09
+map00830	Retinol metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	7-Feb-09
+map00860	Porphyrin and chlorophyll metabolism	1.9	Metabolism of Cofactors and Vitamins	1.9 Metabolism of Cofactors and Vitamins	19-Mar-09
+map00231	Puromycin biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	6-Feb-09
+map00232	Caffeine metabolism	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	13-Feb-09
+map00253	Tetracycline biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	10-Feb-09
+map00311	Penicillin and cephalosporin biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	5-Feb-09
+map00312	beta-Lactam resistance	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	21-Mar-09
+map00331	Clavulanic acid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	5-Feb-09
+map00401	Novobiocin biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	13-Feb-09
+map00402	Benzoxazinone biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	14-Mar-09
+map00521	Streptomycin biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	14-Jan-09
+map00900	Terpenoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	4-Feb-09
+map00901	Indole and ipecac alkaloid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	3-Feb-09
+map00902	Monoterpenoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	14-Feb-09
+map00903	Limonene and pinene degradation	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	3-Feb-09
+map00904	Diterpenoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	4-Feb-09
+map00905	Brassinosteroid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	3-Feb-09
+map00906	Carotenoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	25-Feb-09
+map00908	Zeatin biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	4-Feb-09
+map00940	Phenylpropanoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	14-Mar-09
+map00941	Flavonoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	5-Feb-09
+map00942	Anthocyanin biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	6-Feb-09
+map00943	Isoflavonoid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	6-Feb-09
+map00950	Alkaloid biosynthesis I	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	27-Feb-09
+map00960	Alkaloid biosynthesis II	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	19-Mar-09
+map00981	Insect hormone biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	11-Feb-09
+map01058	Acridone alkaloid biosynthesis	1.1	Biosynthesis of Secondary Metabolites	1.1 Biosynthesis of Secondary Metabolites	25-Feb-09
+map00281	Geraniol degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	19-Mar-09
+map00351	1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane (DDT) degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	14-Mar-09
+map00361	gamma-Hexachlorocyclohexane degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	5-Feb-09
+map00362	Benzoate degradation via hydroxylation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	19-Jan-09
+map00363	Bisphenol A degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	30-Jan-09
+map00364	Fluorobenzoate degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	7-Mar-09
+map00621	Biphenyl degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	15-Jan-09
+map00622	Toluene and xylene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	13-Mar-09
+map00623	2,4-Dichlorobenzoate degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	15-Jan-09
+map00624	1- and 2-Methylnaphthalene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	15-Jan-09
+map00625	Tetrachloroethene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00626	Naphthalene and anthracene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	15-Jan-09
+map00627	1,4-Dichlorobenzene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00628	Fluorene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00629	Carbazole degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	15-Jan-09
+map00631	1,2-Dichloroethane degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00632	Benzoate degradation via CoA ligation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00633	Trinitrotoluene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00641	3-Chloroacrylic acid degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00642	Ethylbenzene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00643	Styrene degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	16-Jan-09
+map00791	Atrazine degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	24-Feb-09
+map00930	Caprolactam degradation	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	18-Mar-09
+map00980	Metabolism of xenobiotics by cytochrome P450	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	11-Feb-09
+map00982	Drug metabolism - cytochrome P450	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	11-Feb-09
+map00983	Drug metabolism - other enzymes	1.11	Xenobiotics Biodegradation and Metabolism	1.11 Xenobiotics Biodegradation and Metabolism	11-Feb-09
+map03020	RNA polymerase	2.1	Transcription	2.1 Transcription	21-Mar-09
+map03022	Basal transcription factors	2.1	Transcription	2.1 Transcription	21-Mar-09
+map03010	Ribosome	2.2	Translation	2.2 Translation	21-Mar-09
+map03050	Proteasome	2.3	Sorting and Degradation	2.3 Sorting and Degradation	21-Mar-09
+map03060	Protein export	2.3	Sorting and Degradation	2.3 Sorting and Degradation	21-Mar-09
+map03070	Type III secretion system	2.3	Sorting and Degradation	2.3 Sorting and Degradation	21-Mar-09
+map03080	Type IV secretion system	2.3	Sorting and Degradation	2.3 Sorting and Degradation	21-Mar-09
+map03090	Type II secretion system	2.3	Sorting and Degradation	2.3 Sorting and Degradation	21-Mar-09
+map04120	Ubiquitin mediated proteolysis	2.3	Sorting and Degradation	2.3 Sorting and Degradation	21-Mar-09
+map04130	SNARE interactions in vesicular transport	2.3	Sorting and Degradation	2.3 Sorting and Degradation	30-Jan-09
+map04140	Regulation of autophagy	2.3	Sorting and Degradation	2.3 Sorting and Degradation	30-Jan-09
+map03030	DNA replication	2.4	Replication and Repair	2.4 Replication and Repair	21-Mar-09
+map03410	Base excision repair	2.4	Replication and Repair	2.4 Replication and Repair	21-Mar-09
+map03420	Nucleotide excision repair	2.4	Replication and Repair	2.4 Replication and Repair	21-Mar-09
+map03430	Mismatch repair	2.4	Replication and Repair	2.4 Replication and Repair	21-Mar-09
+map03440	Homologous recombination	2.4	Replication and Repair	2.4 Replication and Repair	21-Mar-09
+map03450	Non-homologous end-joining	2.4	Replication and Repair	2.4 Replication and Repair	21-Mar-09
+map02010	ABC transporters	3.1	Membrane Transport	3.1 Membrane Transport	13-Mar-09
+map02060	Phosphotransferase system (PTS)	3.1	Membrane Transport	3.1 Membrane Transport	4-Feb-09
+map02020	Two-component system	3.2	Signal Transduction	3.2 Signal Transduction	17-Mar-09
+map04010	MAPK signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	2-Feb-09
+map04011	MAPK signaling pathway - yeast	3.2	Signal Transduction	3.2 Signal Transduction	20-Jan-09
+map04012	ErbB signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	2-Feb-09
+map04013	MAPK signaling pathway - fruit fly	3.2	Signal Transduction	3.2 Signal Transduction	20-Jan-09
+map04020	Calcium signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	2-Feb-09
+map04070	Phosphatidylinositol signaling system	3.2	Signal Transduction	3.2 Signal Transduction	27-Jan-09
+map04150	mTOR signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	25-Feb-09
+map04310	Wnt signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	4-Feb-09
+map04330	Notch signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	31-Jan-09
+map04340	Hedgehog signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	31-Jan-09
+map04350	TGF-beta signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	3-Feb-09
+map04370	VEGF signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	31-Jan-09
+map04630	Jak-STAT signaling pathway	3.2	Signal Transduction	3.2 Signal Transduction	23-Jan-09
+map04060	Cytokine-cytokine receptor interaction	3.3	Signaling Molecules and Interaction	3.3 Signaling Molecules and Interaction	24-Jan-09
+map04080	Neuroactive ligand-receptor interaction	3.3	Signaling Molecules and Interaction	3.3 Signaling Molecules and Interaction	28-Jan-09
+map04512	ECM-receptor interaction	3.3	Signaling Molecules and Interaction	3.3 Signaling Molecules and Interaction	29-Jan-09
+map04514	Cell adhesion molecules (CAMs)	3.3	Signaling Molecules and Interaction	3.3 Signaling Molecules and Interaction	29-Jan-09
+map02030	Bacterial chemotaxis	4.1	Cell Motility	4.1 Cell Motility	28-Jan-09
+map02040	Flagellar assembly	4.1	Cell Motility	4.1 Cell Motility	21-Mar-09
+map04810	Regulation of actin cytoskeleton	4.1	Cell Motility	4.1 Cell Motility	7-Feb-09
+map04110	Cell cycle	4.2	Cell Growth and Death	4.2 Cell Growth and Death	5-Feb-09
+map04111	Cell cycle - yeast	4.2	Cell Growth and Death	4.2 Cell Growth and Death	5-Feb-09
+map04115	p53 signaling pathway	4.2	Cell Growth and Death	4.2 Cell Growth and Death	29-Jan-09
+map04210	Apoptosis	4.2	Cell Growth and Death	4.2 Cell Growth and Death	3-Feb-09
+map04510	Focal adhesion	4.3	Cell Communication	4.3 Cell Communication	31-Jan-09
+map04520	Adherens junction	4.3	Cell Communication	4.3 Cell Communication	13-Feb-09
+map04530	Tight junction	4.3	Cell Communication	4.3 Cell Communication	31-Jan-09
+map04540	Gap junction	4.3	Cell Communication	4.3 Cell Communication	3-Feb-09
+map03320	PPAR signaling pathway	4.4	Endocrine System	4.4 Endocrine System	18-Mar-09
+map04614	Renin-angiotensin system	4.4	Endocrine System	4.4 Endocrine System	21-Mar-09
+map04910	Insulin signaling pathway	4.4	Endocrine System	4.4 Endocrine System	6-Feb-09
+map04912	GnRH signaling pathway	4.4	Endocrine System	4.4 Endocrine System	4-Feb-09
+map04914	Progesterone-mediated oocyte maturation	4.4	Endocrine System	4.4 Endocrine System	31-Jan-09
+map04916	Melanogenesis	4.4	Endocrine System	4.4 Endocrine System	30-Jan-09
+map04920	Adipocytokine signaling pathway	4.4	Endocrine System	4.4 Endocrine System	5-Feb-09
+map04610	Complement and coagulation cascades	4.5	Immune System	4.5 Immune System	4-Feb-09
+map04612	Antigen processing and presentation	4.5	Immune System	4.5 Immune System	29-Jan-09
+map04620	Toll-like receptor signaling pathway	4.5	Immune System	4.5 Immune System	28-Jan-09
+map04640	Hematopoietic cell lineage	4.5	Immune System	4.5 Immune System	21-Mar-09
+map04650	Natural killer cell mediated cytotoxicity	4.5	Immune System	4.5 Immune System	11-Feb-09
+map04660	T cell receptor signaling pathway	4.5	Immune System	4.5 Immune System	30-Jan-09
+map04662	B cell receptor signaling pathway	4.5	Immune System	4.5 Immune System	3-Feb-09
+map04664	Fc epsilon RI signaling pathway	4.5	Immune System	4.5 Immune System	31-Jan-09
+map04670	Leukocyte transendothelial migration	4.5	Immune System	4.5 Immune System	30-Jan-09
+map04720	Long-term potentiation	4.6	Nervous System	4.6 Nervous System	30-Jan-09
+map04730	Long-term depression	4.6	Nervous System	4.6 Nervous System	29-Jan-09
+map04740	Olfactory transduction	4.7	Sensory System	4.7 Sensory System	30-Jan-09
+map04742	Taste transduction	4.7	Sensory System	4.7 Sensory System	30-Jan-09
+map04320	Dorso-ventral axis formation	4.8	Development	4.8 Development	31-Jan-09
+map04360	Axon guidance	4.8	Development	4.8 Development	3-Feb-09
+map04710	Circadian rhythm	4.9	Behavior	4.9 Behavior	29-Jan-09
+map05210	Colorectal cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05211	Renal cell carcinoma	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05212	Pancreatic cancer	5.1	Cancers	5.1 Cancers	3-Feb-09
+map05213	Endometrial cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05214	Glioma	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05215	Prostate cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05216	Thyroid cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05217	Basal cell carcinoma	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05218	Melanoma	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05219	Bladder cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05220	Chronic myeloid leukemia	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05221	Acute myeloid leukemia	5.1	Cancers	5.1 Cancers	27-Jan-09
+map05222	Small cell lung cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05223	Non-small cell lung cancer	5.1	Cancers	5.1 Cancers	26-Jan-09
+map05310	Asthma	5.2	Immune Disorders	5.2 Immune Disorders	27-Jan-09
+map05320	Autoimmune thyroid disease	5.2	Immune Disorders	5.2 Immune Disorders	27-Jan-09
+map05322	Systemic lupus erythematosus	5.2	Immune Disorders	5.2 Immune Disorders	27-Jan-09
+map05330	Allograft rejection	5.2	Immune Disorders	5.2 Immune Disorders	27-Jan-09
+map05332	Graft-versus-host disease	5.2	Immune Disorders	5.2 Immune Disorders	27-Jan-09
+map05340	Primary immunodeficiency	5.2	Immune Disorders	5.2 Immune Disorders	21-Mar-09
+map05010	Alzheimer's disease	5.3	Neurodegenerative Diseases	5.3 Neurodegenerative Diseases	11-Mar-09
+map05012	Parkinson's disease	5.3	Neurodegenerative Diseases	5.3 Neurodegenerative Diseases	15-Jan-09
+map05014	Amyotrophic lateral sclerosis (ALS)	5.3	Neurodegenerative Diseases	5.3 Neurodegenerative Diseases	25-Dec-08
+map05040	Huntington's disease	5.3	Neurodegenerative Diseases	5.3 Neurodegenerative Diseases	26-Jan-09
+map05050	Dentatorubropallidoluysian atrophy (DRPLA)	5.3	Neurodegenerative Diseases	5.3 Neurodegenerative Diseases	31-Jan-09
+map05060	Prion diseases	5.3	Neurodegenerative Diseases	5.3 Neurodegenerative Diseases	24-Jan-09
+map04930	Type II diabetes mellitus	5.4	Metabolic Disorders	5.4 Metabolic Disorders	5-Feb-09
+map04940	Type I diabetes mellitus	5.4	Metabolic Disorders	5.4 Metabolic Disorders	30-Jan-09
+map04950	Maturity onset diabetes of the young	5.4	Metabolic Disorders	5.4 Metabolic Disorders	5-Feb-09
+map05110	Vibrio cholerae infection	5.5	Infectious Diseases	5.5 Infectious Diseases	3-Feb-09
+map05111	Vibrio cholerae pathogenic cycle	5.5	Infectious Diseases	5.5 Infectious Diseases	27-Jan-09
+map05120	Epithelial cell signaling in Helicobacter pylori infection	5.5	Infectious Diseases	5.5 Infectious Diseases	3-Feb-09
+map05130	Pathogenic Escherichia coli infection	5.5	Infectious Diseases	5.5 Infectious Diseases	30-Jan-09

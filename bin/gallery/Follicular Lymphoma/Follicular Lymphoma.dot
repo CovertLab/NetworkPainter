@@ -1,0 +1,225 @@
+digraph G {
+  /*
+   * Name: Follicular Lymphoma Network
+   * Author: Ed Chen, Harendra Guturu, Jonathan Karr
+   * Generator: NetworkAnalyzer
+   * Generated: Tue Mar 31 2009 01:36:44 PM
+   */
+
+  size="13.88888888888889,8.333333333333334!";
+  clusterrank=global;
+  nodesep=0.75;
+  ranksep=0.25;
+  rankdir=TB;
+  center=true;
+  ratio="fill";
+  margin=0;
+  fontname=Arial;
+  charset=latin1;
+
+  node [fixedsize="true"];
+  edge [color="#000000"];
+
+  subgraph "cluster_compartment_Media" {
+    style=invis
+    "hidden0" [style="invis",label="",shape="plaintext",fixedsize="true",width="0.01",height="0.5555555555555556"];
+     
+  }
+
+  subgraph "cluster_compartment_Cytosol" {
+    style=invis
+    "CXCR4" [label="CXCR4",comments="SDF1",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="0.7229166666666667,1.804861111111111",width="0.5694444444444444",height="0.4298611111111111"];
+    "IL2Rb" [label="IL2R&#946;",comments="IL2 || gC",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="1.6319444444444444,2.242361111111111",width="0.5687500000000001",height="0.4298611111111111"];
+    "gC" [label="&#947;C",comments="IL2 || IL7 || IL15 || IL4 || IL13",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="2.341666666666667,1.7666666666666666",width="0.5694444444444444",height="0.4305555555555556"];
+    "gp130" [label="gp130",comments="IL6",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="3.8249999999999997,1.7597222222222222",width="0.5694444444444444",height="0.4305555555555556"];
+    "Iga_b" [label="Ig&#945;/&#946;",comments="aBCR || H2O2",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="8.325,1.7201388888888889",width="0.5687500000000001",height="0.4298611111111111"];
+    "SHP1" [label="SHP1",comments="Iga_b || aBCR || H2O2",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="9.320833333333333,1.8111111111111111",width="0.5694444444444444",height="0.4298611111111111"];
+    "CD19" [label="CD19",comments="",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.082638888888889,1.8451388888888889",width="0.5694444444444444",height="0.4298611111111111"];
+    "TRAF6" [label="TRAF6",comments="CpG || CD40L",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.884027777777778,1.8743055555555554",width="0.5694444444444444",height="0.4298611111111111"];
+    "TLR9" [label="TLR9",comments="CD40L || CpG",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="12.977777777777778,1.804861111111111",width="0.5694444444444444",height="0.4298611111111111"];
+    "IRAK1_4" [label="IRAK1/4",comments="TRAF6 || TLR9",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="12.406944444444443,2.8305555555555557",width="0.5694444444444444",height="0.4298611111111111"];
+    "LynLck" [label="Lyn/Lck",comments="IL2Rb || Iga_b || SHP1 || CD19",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="6.469444444444445,2.3569444444444443",width="0.5694444444444444",height="0.4305555555555556"];
+    "Jak2" [label="Jak2",comments="CXCR4 || gp130 || IFNg || LynLck",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="1.8347222222222221,3.5687499999999996",width="0.5687500000000001",height="0.4298611111111111"];
+    "Jak3" [label="Jak3",comments="gC",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="2.4847222222222225,2.622916666666667",width="0.5687500000000001",height="0.4298611111111111"];
+    "Jak1" [label="Jak1",comments="gC || gp130 || IL10 || IFNg || IFNabd || LynLck",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="3.622916666666667,3.4069444444444446",width="0.5694444444444444",height="0.4305555555555556"];
+    "Tyk2" [label="Tyk2",comments="gp130 || IL10 || IFNabd",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="4.715277777777778,3.273611111111111",width="0.5687500000000001",height="0.4298611111111111"];
+    "Shc" [label="Shc",comments="IL2Rb || gp130",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="5.740972222222222,3.0770833333333334",width="0.5687500000000001",height="0.4305555555555556"];
+    "BtkItk" [label="Btk/Itk",comments="LynLck",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="8.068750000000001,2.4805555555555556",width="0.5694444444444444",height="0.4298611111111111"];
+    "SykZap" [label="Syk/Zap",comments="IL2Rb || LynLck || BtkItk",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="7.265277777777778,2.913888888888889",width="0.5687500000000001",height="0.4298611111111111"];
+    "PIP3" [label="PIP<sub>3</sub>",comments="BtkItk || CD19",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="10.203472222222222,3.0145833333333334",width="0.5694444444444444",height="0.4305555555555556"];
+    "PLCg2" [label="PLC&#947;2",comments="LynLck || SykZap || BtkItk || PIP3 || Ca2plus",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="6.709027777777778,3.615277777777778",width="0.5687500000000001",height="0.4298611111111111"];
+    "Ca2plus" [label="Ca++",comments="PMAi || PIP3",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="9.343055555555557,3.363888888888889",width="0.5694444444444444",height="0.4305555555555556"];
+    "DAG" [label="DAG",comments="PLCg2",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="8.127083333333333,3.7993055555555557",width="0.5694444444444444",height="0.4298611111111111"];
+    "cCbl" [label="cCbl",comments="",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.74861111111111,3.2215277777777778",width="0.5694444444444444",height="0.4305555555555556"];
+    "Vav" [label="Vav",comments="CD19 || cCbl",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.449305555555556,4.527083333333334",width="0.5687500000000001",height="0.4305555555555556"];
+    "BLNK" [label="BLNK",comments="PLCg2 || SykZap",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="7.418749999999999,4.239583333333333",width="0.5694444444444444",height="0.4298611111111111"];
+    "Grb2" [label="Grb2",comments="Shc || BLNK",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="6.28125,4.333333333333333",width="0.5694444444444444",height="0.4298611111111111"];
+    "SHIP" [label="SHIP",comments="Grb2 || BLNK || PIP3",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="10.350000000000001,4.534027777777777",width="0.5694444444444444",height="0.4305555555555556"];
+    "SOS" [label="SOS",comments="Grb2",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="6.549305555555556,5.100694444444445",width="0.5694444444444444",height="0.4298611111111111"];
+    "PKC" [label="PKC",comments="DAG || PMAi || Ca2plus",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="8.588888888888889,4.682638888888889",width="0.5694444444444444",height="0.4298611111111111"];
+    "Ras" [label="Ras",comments="SOS || DAG || PKC",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="7.4319444444444445,5.268055555555556",width="0.5687500000000001",height="0.4298611111111111"];
+    "NIK" [label="NIK",comments="TRAF6",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="10.442361111111111,5.196527777777778",width="0.5687500000000001",height="0.4305555555555556"];
+    "Rac" [label="Rac",comments="Vav",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.676388888888889,5.197222222222222",width="0.5694444444444444",height="0.4298611111111111"];
+    "MEKK" [label="MEKK",comments="Rac",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.936805555555557,5.794444444444444",width="0.5694444444444444",height="0.4298611111111111"];
+    "MKK3_5_6" [label="MKK3/5/6",comments="MEKK || IRAK1_4",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="12.872916666666667,6.221527777777777",width="0.5687500000000001",height="0.4298611111111111"];
+    "MKK4_7" [label="MKK4/7",comments="MEKK",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="11.148611111111112,6.18125",width="0.5687500000000001",height="0.4298611111111111"];
+    "Raf1" [label="Raf-1",comments="Ras",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="6.886111111111111,5.778472222222223",width="0.5694444444444444",height="0.4298611111111111"];
+    "MEK1_2" [label="MEK1/2",comments="Raf1",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="6.90625,6.436111111111111",width="0.5694444444444444",height="0.4298611111111111"];
+    "IKK" [label="IKK",comments="PKC || NIK",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="8.120138888888889,5.579861111111111",width="0.5694444444444444",height="0.4298611111111111"];
+    "CaM" [label="CaM",comments="Ca2plus",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="9.023611111111112,5.913888888888889",width="0.5687500000000001",height="0.4298611111111111"];
+    "Akt" [label="Akt",comments="PIP3",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="9.822222222222223,5.647916666666666",width="0.5694444444444444",height="0.4298611111111111"];
+    "GSK3b" [label="GSK3&#946;",comments="Akt",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="9.51875,6.358333333333333",width="0.5694444444444444",height="0.4298611111111111"];
+    "mTOR" [label="mTOR",comments="Akt",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="10.279166666666667,6.258333333333334",width="0.5694444444444444",height="0.4298611111111111"];
+    "IkB" [label="I&#954;B",comments="IKK",shape="box",class="filled",fillcolor="#0000FF",color="#000000",fontsize="10",pos="8.082638888888889,6.414583333333334",width="0.5694444444444444",height="0.4298611111111111"];
+     "gC"->"IL2Rb" [arrowhead="normal"];
+    "Iga_b"->"SHP1" [arrowhead="normal"];
+    "TRAF6"->"IRAK1_4" [arrowhead="normal"];
+    "TLR9"->"IRAK1_4" [arrowhead="normal"];
+    "IL2Rb"->"LynLck" [arrowhead="normal"];
+    "Iga_b"->"LynLck" [arrowhead="normal"];
+    "SHP1"->"LynLck" [arrowhead="normal"];
+    "CD19"->"LynLck" [arrowhead="normal"];
+    "CXCR4"->"Jak2" [arrowhead="normal"];
+    "gp130"->"Jak2" [arrowhead="normal"];
+    "LynLck"->"Jak2" [arrowhead="normal"];
+    "gC"->"Jak3" [arrowhead="normal"];
+    "gC"->"Jak1" [arrowhead="normal"];
+    "gp130"->"Jak1" [arrowhead="normal"];
+    "LynLck"->"Jak1" [arrowhead="normal"];
+    "gp130"->"Tyk2" [arrowhead="normal"];
+    "IL2Rb"->"Shc" [arrowhead="normal"];
+    "gp130"->"Shc" [arrowhead="normal"];
+    "LynLck"->"BtkItk" [arrowhead="normal"];
+    "IL2Rb"->"SykZap" [arrowhead="normal"];
+    "LynLck"->"SykZap" [arrowhead="normal"];
+    "BtkItk"->"SykZap" [arrowhead="normal"];
+    "BtkItk"->"PIP3" [arrowhead="normal"];
+    "CD19"->"PIP3" [arrowhead="normal"];
+    "LynLck"->"PLCg2" [arrowhead="normal"];
+    "SykZap"->"PLCg2" [arrowhead="normal"];
+    "BtkItk"->"PLCg2" [arrowhead="normal"];
+    "PIP3"->"PLCg2" [arrowhead="normal"];
+    "Ca2plus"->"PLCg2" [arrowhead="normal"];
+    "PIP3"->"Ca2plus" [arrowhead="normal"];
+    "PLCg2"->"DAG" [arrowhead="normal"];
+    "CD19"->"Vav" [arrowhead="normal"];
+    "cCbl"->"Vav" [arrowhead="normal"];
+    "PLCg2"->"BLNK" [arrowhead="normal"];
+    "SykZap"->"BLNK" [arrowhead="normal"];
+    "Shc"->"Grb2" [arrowhead="normal"];
+    "BLNK"->"Grb2" [arrowhead="normal"];
+    "Grb2"->"SHIP" [arrowhead="normal"];
+    "BLNK"->"SHIP" [arrowhead="normal"];
+    "PIP3"->"SHIP" [arrowhead="normal"];
+    "Grb2"->"SOS" [arrowhead="normal"];
+    "DAG"->"PKC" [arrowhead="normal"];
+    "Ca2plus"->"PKC" [arrowhead="normal"];
+    "SOS"->"Ras" [arrowhead="normal"];
+    "DAG"->"Ras" [arrowhead="normal"];
+    "PKC"->"Ras" [arrowhead="normal"];
+    "TRAF6"->"NIK" [arrowhead="normal"];
+    "Vav"->"Rac" [arrowhead="normal"];
+    "Rac"->"MEKK" [arrowhead="normal"];
+    "MEKK"->"MKK3_5_6" [arrowhead="normal"];
+    "IRAK1_4"->"MKK3_5_6" [arrowhead="normal"];
+    "MEKK"->"MKK4_7" [arrowhead="normal"];
+    "Ras"->"Raf1" [arrowhead="normal"];
+    "Raf1"->"MEK1_2" [arrowhead="normal"];
+    "PKC"->"IKK" [arrowhead="normal"];
+    "NIK"->"IKK" [arrowhead="normal"];
+    "Ca2plus"->"CaM" [arrowhead="normal"];
+    "PIP3"->"Akt" [arrowhead="normal"];
+    "Akt"->"GSK3b" [arrowhead="normal"];
+    "Akt"->"mTOR" [arrowhead="normal"];
+    "IKK"->"IkB" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_compartment_Nucleus" {
+    style=invis
+    "Stat1" [label="Stat1",comments="Jak2 || Jak1 || LynLck",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="1.3541666666666667,7.739583333333333",width="0.5694444444444444",height="0.4298611111111111"];
+    "Stat5" [label="Stat5",comments="Jak2 || Jak1 || LynLck",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="2.6666666666666665,7.720833333333333",width="0.5694444444444444",height="0.4305555555555556"];
+    "Stat6" [label="Stat6",comments="Jak3 || Jak1",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="3.8833333333333337,7.654861111111111",width="0.5694444444444444",height="0.4298611111111111"];
+    "Stat3" [label="Stat3",comments="Jak1 || Tyk2 || LynLck",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="5.184027777777778,7.615972222222222",width="0.5694444444444444",height="0.4298611111111111"];
+    "Erk1_2" [label="Erk1/2",comments="MEK1_2",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="6.9,7.495138888888889",width="0.5687500000000001",height="0.4298611111111111"];
+    "MFkB" [label="NF&#954;B",comments="IkB",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="8.095833333333333,7.547222222222222",width="0.5694444444444444",height="0.4305555555555556"];
+    "NFAT" [label="NFAT",comments="CaM || GSK3b",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="9.290972222222223,7.5770833333333325",width="0.5687500000000001",height="0.4298611111111111"];
+    "S6" [label="S6",comments="mTOR",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="10.318750000000001,7.629166666666666",width="0.5694444444444444",height="0.4305555555555556"];
+    "JNK1_2" [label="JNK1/2",comments="MKK4_7",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="11.196527777777778,7.661111111111111",width="0.5687500000000001",height="0.4298611111111111"];
+    "p38" [label="p38",comments="MKK3_5_6",shape="box",class="filled",fillcolor="#00FF00",color="#000000",fontsize="10",pos="12.835416666666667,7.6875",width="0.5694444444444444",height="0.4298611111111111"];
+     
+  }
+
+  subgraph "cluster_membrane_Media-Cytosol" {
+    style=invis
+    "SDF1" [label="SDF-1",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="0.6125,0.9805555555555555",width="1.167361111111111",height="1.0326388888888889"];
+    "IL2" [label="IL-2",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="1.7013888888888888,0.9354166666666666",width="1.167361111111111",height="1.0319444444444443"];
+    "IL7" [label="IL-7",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="2.720833333333333,0.9006944444444444",width="1.167361111111111",height="1.0319444444444443"];
+    "IL15" [label="IL-15",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="3.720833333333333,0.8736111111111111",width="1.1680555555555554",height="1.0319444444444443"];
+    "IL4" [label="IL-4",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="4.489583333333333,0.8583333333333333",width="1.1680555555555554",height="1.0326388888888889"];
+    "IL13" [label="IL-13",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="5.295138888888889,0.8465277777777778",width="1.167361111111111",height="1.0319444444444443"];
+    "IL6" [label="IL-6",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="6.063194444444445,0.8395833333333333",width="1.167361111111111",height="1.0319444444444443"];
+    "IL10" [label="IL-10",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="6.823611111111111,0.8368055555555556",width="1.167361111111111",height="1.0319444444444443"];
+    "IFNg" [label="IFN&#947;",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="7.647916666666666,0.8381944444444445",width="1.167361111111111",height="1.0319444444444443"];
+    "IFNabd" [label="IFN&#945;&#946;&#947;",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="8.390972222222222,0.84375",width="1.1680555555555554",height="1.0326388888888889"];
+    "aBCR" [label="&#945;BCR",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="9.165277777777778,0.8541666666666666",width="1.167361111111111",height="1.03125"];
+    "H2O2" [label="H<sub>2</sub>O<sub>2</sub>",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="9.977777777777778,0.8694444444444445",width="1.1680555555555554",height="1.0319444444444443"];
+    "PMAi" [label="PMA/i",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="10.752083333333333,0.8888888888888888",width="1.167361111111111",height="1.0326388888888889"];
+    "CD40L" [label="CD40L",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="11.756944444444445,0.9201388888888888",width="1.167361111111111",height="1.0326388888888889"];
+    "CpG" [label="CpG",comments="",shape="box",class="filled",fillcolor="#FF0000",color="#000000",fontsize="10",pos="12.90625,0.9645833333333333",width="1.167361111111111",height="1.0319444444444443"];
+    
+  }
+  {rank=same;SDF1;IL2;IL7;IL15;IL4;IL13;IL6;IL10;IFNg;IFNabd;aBCR;H2O2;PMAi;CD40L;CpG}
+
+  subgraph "cluster_membrane_Cytosol-Nucleus" {
+    style=invis
+    "hidden3" [style="invis",label="",shape="plaintext",fixedsize="true",width="0.01",height="0.3541666666666667"];
+    
+  }
+  {rank=same;}
+
+  "SDF1"->"CXCR4" [arrowhead="normal"];
+  "IL2"->"IL2Rb" [arrowhead="normal"];
+  "IL2"->"gC" [arrowhead="normal"];
+  "IL7"->"gC" [arrowhead="normal"];
+  "IL15"->"gC" [arrowhead="normal"];
+  "IL4"->"gC" [arrowhead="normal"];
+  "IL13"->"gC" [arrowhead="normal"];
+  "IL6"->"gp130" [arrowhead="normal"];
+  "aBCR"->"Iga_b" [arrowhead="normal"];
+  "H2O2"->"Iga_b" [arrowhead="normal"];
+  "aBCR"->"SHP1" [arrowhead="normal"];
+  "H2O2"->"SHP1" [arrowhead="normal"];
+  "CpG"->"TRAF6" [arrowhead="normal"];
+  "CD40L"->"TRAF6" [arrowhead="normal"];
+  "CD40L"->"TLR9" [arrowhead="normal"];
+  "CpG"->"TLR9" [arrowhead="normal"];
+  "IFNg"->"Jak2" [arrowhead="normal"];
+  "IL10"->"Jak1" [arrowhead="normal"];
+  "IFNg"->"Jak1" [arrowhead="normal"];
+  "IFNabd"->"Jak1" [arrowhead="normal"];
+  "IL10"->"Tyk2" [arrowhead="normal"];
+  "IFNabd"->"Tyk2" [arrowhead="normal"];
+  "PMAi"->"Ca2plus" [arrowhead="normal"];
+  "PMAi"->"PKC" [arrowhead="normal"];
+  "Jak2"->"Stat1" [arrowhead="normal"];
+  "Jak1"->"Stat1" [arrowhead="normal"];
+  "LynLck"->"Stat1" [arrowhead="normal"];
+  "Jak2"->"Stat5" [arrowhead="normal"];
+  "Jak1"->"Stat5" [arrowhead="normal"];
+  "LynLck"->"Stat5" [arrowhead="normal"];
+  "Jak3"->"Stat6" [arrowhead="normal"];
+  "Jak1"->"Stat6" [arrowhead="normal"];
+  "Jak1"->"Stat3" [arrowhead="normal"];
+  "Tyk2"->"Stat3" [arrowhead="normal"];
+  "LynLck"->"Stat3" [arrowhead="normal"];
+  "MEK1_2"->"Erk1_2" [arrowhead="normal"];
+  "IkB"->"MFkB" [arrowhead="normal"];
+  "CaM"->"NFAT" [arrowhead="normal"];
+  "GSK3b"->"NFAT" [arrowhead="normal"];
+  "mTOR"->"S6" [arrowhead="normal"];
+  "MKK4_7"->"JNK1_2" [arrowhead="normal"];
+  "MKK3_5_6"->"p38" [arrowhead="normal"];
+  "hidden0"->"SDF1" [style="invis"];
+  "Jak1"->"hidden3" [style="invis"];
+  "hidden3"->"Stat1" [style="invis"];
+}

@@ -1,0 +1,3 @@
+digraph G{
+  testnode [label="",shape="egg",style=filled,fontcolor=black,fillcolor=orange,color=black];
+}

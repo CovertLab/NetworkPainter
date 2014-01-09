@@ -1,0 +1,64 @@
+﻿TODO
+======================
+- movie export
+  - open source video capture solution
+  - sharp ffmeg
+    - http://www.bytescout.com/ffmpegscout_avi_to_swf.html
+  - make compatible with apache as service -- possibly give people application and instructions to
+    convert to video on their local machine?
+  - make into gui app
+    - select swf file
+	- file if swf supports external interface
+	- resize swf
+	- combobox to select format
+- hide passwords
+
+BUGS
+======================
+
+
+feature discussion
+======================
+- do we need exportMaxAnimationLoops, exportAnimationFrameRate?
+- usePreloader="false" with exported animation?
+- viewer always in "fullscreenmode"?
+- CytoBank/Experiment features
+	- how do ratio, fold change differ?
+	- how to allow user to specify control value calculation
+	- additional colormaps?
+	- what color to display unobserved elements, NaN's?
+	- do we need improved charts?
+		- log scale  
+		- automatic axis scaling
+		- histogram	
+	- controls for clustering/leaf ordering?
+		- distance metric (euclidean, city block, hamming, etc.)
+		- linkage (single, complete, average)
+		- use optimal leaf ordering
+	- What preloaded networks would be useful?
+	- authentication/security
+
+future features
+=====================
+- additional shapes
+  - rod
+- more complete style control
+  - animation alpha
+  - edge color, weight
+  - font family, size, color
+  - label offset
+  - second gradient color in membrane, biomolecule, phospholipid gradient fills and strokes
+- move all bin/services to /services
+  - auto layout (move to /services/AMFPHP/services/GraphViz)
+  - compile animation (move to /services/NetworkAnalyzer)
+  - svg rasterizes (move to /services/inkscape)
+  - getVars
+  - endSession
+- evidence/reference management
+- bayesian inference, NCA
+
+architecture discussion
+======================
+- network, experiment classes?
+- remove animation from diagram class?
+- database service?, integrate network and experiment managers?

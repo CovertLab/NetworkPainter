@@ -1,0 +1,141 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+<xml>
+  <exportMaxAnimationLoops>3</exportMaxAnimationLoops>
+  <description><![CDATA[The adaptive phase of the immune response begins with engagement on CD4+ helper T cells of the T cell antigen receptor (TCR) by its ligand, a small foreign peptide bound to a cell surface protein of the class II major histocompatibility complex (peptide-MHC) expressed on an antigen-presenting cell. This engagement initiates a series of biochemical events that can differentially signal the naive T cell to: 1) enter into a pathway leading to generation of effector T cells with the onset of rapid proliferation and production of effector cytokines; 2) enter into a state of antigenic non-responsiveness known as anergy; or 3) die by apoptosis. The type of response elicited depends on multiple factors including the affinity of the interaction, the duration of the interaction, and the presence or absence of various costimulatory signaling inputs such as those provided by the CD4 coreceptor and the CD28 costimulatory receptor.References- Yanping Huang and Ronald L. Wange (2004). T Cell Receptor Signaling: Beyond Complex Complexes. J. Biol. Chem. 279 (28): 28827-28830.]]></description>
+  <comparisonYAxis><![CDATA[Individuals]]></comparisonYAxis>
+  <minCompartmentHeight>100</minCompartmentHeight>
+  <comparisonYAxisControl><![CDATA[None]]></comparisonYAxisControl>
+  <generator><![CDATA[NetworkPainter]]></generator>
+  <ranksep>18</ranksep>
+  <exportShowBiomoleculeSelectedHandles>false</exportShowBiomoleculeSelectedHandles>
+  <owner><![CDATA[Jonathan Karr]]></owner>
+  <poreStrokeColor>0</poreStrokeColor>
+  <perturbations>
+    <perturbation condition="aBCR" activity="On" biomoleculeid="0" experimentid="560"/>
+    <perturbation condition="aBCR H2O2" activity="Off" biomoleculeid="33" experimentid="560"/>
+  </perturbations>
+  <statistic><![CDATA[Arcsinh Medians]]></statistic>
+  <width>800</width>
+  <nodesep>54</nodesep>
+  <biomoleculeAxisControl><![CDATA[None]]></biomoleculeAxisControl>
+  <exportColorBiomoleculesByValue>false</exportColorBiomoleculesByValue>
+  <generated><![CDATA[Tue Mar 31 2009 09:45:54 PM]]></generated>
+  <colormap><![CDATA[CytoBank Blue-Yellow]]></colormap>
+  <compartments>
+    <compartment membranecolor="16763955" height="101" phospholipidoutlinecolor="13479168" name="Media" phospholipidbodycolor="16763955" color="13421772"/>
+    <compartment membranecolor="16763955" height="333" phospholipidoutlinecolor="13479168" name="Cytosol" phospholipidbodycolor="16763955" color="10079487"/>
+    <compartment membranecolor="16763955" height="115" phospholipidoutlinecolor="13479168" name="Nucleus" phospholipidbodycolor="16763955" color="10079487"/>
+  </compartments>
+  <dynamicRange>NaN</dynamicRange>
+  <showPores>true</showPores>
+  <animationAxis><![CDATA[Timepoints]]></animationAxis>
+  <comparisonXAxisControl><![CDATA[None]]></comparisonXAxisControl>
+  <biomoleculestyles>
+    <biomoleculestyle outline="0" shape="Y-Receptor" name="Receptor" color="16724787"/>
+    <biomoleculestyle outline="0" shape="Ellipse" name="Second_Messenger" color="10092441"/>
+    <biomoleculestyle outline="0" shape="Inverted Triangle" name="Stimulus" color="16750950"/>
+    <biomoleculestyle outline="0" shape="Ellipse" name="Transcription_Factor" color="10053375"/>
+    <biomoleculestyle outline="0" shape="Rectangle" name="Annotation" color="16777215"/>
+    <biomoleculestyle outline="0" shape="DNA" name="Gene_Expression" color="10066329"/>
+    <biomoleculestyle outline="0" shape="Ellipse" name="Membrane_Associated_Protein" color="3394815"/>
+  </biomoleculestyles>
+  <publicstatus><![CDATA[Yes]]></publicstatus>
+  <poreFillColor>10066329</poreFillColor>
+  <height>600</height>
+  <associations>
+    <association biomoleculeid="36" experimentid="560" channel="p-Syk-Ax647"/>
+    <association biomoleculeid="21" experimentid="560" channel="CD20c-PercPCy5.5"/>
+    <association biomoleculeid="20" experimentid="560" channel="Lambda-FITC"/>
+    <association biomoleculeid="14" experimentid="560" channel="p-Erk12-Ax647"/>
+    <association biomoleculeid="13" experimentid="560" channel="p-Erk12-Ax647"/>
+    <association biomoleculeid="7" experimentid="560" channel="Bcl2-PE"/>
+  </associations>
+  <animationFrameRate>20</animationFrameRate>
+  <animationAxisControl><![CDATA[First]]></animationAxisControl>
+  <exportAnimationFrameRate>20</exportAnimationFrameRate>
+  <biomoleculeAxis><![CDATA[Channels]]></biomoleculeAxis>
+  <name><![CDATA[TCR Signaling]]></name>
+  <membraneCurvature>25</membraneCurvature>
+  <edges>
+    <edge sense="true" tobiomoleculeid="2" path="M 114.9565772926706,48.62976206810628 L 116.9123072177668,88.3876927822332" frombiomoleculeid="0"/>
+    <edge sense="true" tobiomoleculeid="3" path="M 67.46666666666667,119.95321515467501 L 97.46391695822757,167.96649543200726" frombiomoleculeid="1"/>
+    <edge sense="true" tobiomoleculeid="4" path="M 124.51666666666667,119.94488752556238 L 141.0352375434793,155.31590522791228" frombiomoleculeid="2"/>
+    <edge sense="true" tobiomoleculeid="5" path="M 128.64496178238278,178.81469748303155 L 213.25503821761723,169.08530251696845" frombiomoleculeid="3"/>
+    <edge sense="true" tobiomoleculeid="5" path="M 170.44853802024352,168.36863478216225 L 213.15146197975645,167.73136521783778" frombiomoleculeid="4"/>
+    <edge sense="true" tobiomoleculeid="6" path="M 253.10560248246446,166.55108289706044 L 520.3443975175355,148.04891710293958" frombiomoleculeid="5"/>
+    <edge sense="true" tobiomoleculeid="8" path="M 119.44564134654765,362.9996022809431 L 120.40435865345233,504.65039771905685" frombiomoleculeid="7"/>
+    <edge sense="true" tobiomoleculeid="9" path="M 390.5215516534692,432.92817692193125 L 387.17844834653084,504.8218230780687" frombiomoleculeid="21"/>
+    <edge sense="true" tobiomoleculeid="10" path="M 559.9581937100696,150.3110479315744 L 428.4918062899304,503.53895206842554" frombiomoleculeid="22"/>
+    <edge sense="true" tobiomoleculeid="11" path="M 602.6237003546123,380.9438275031929 L 605.7262996453876,499.05617249680705" frombiomoleculeid="13"/>
+    <edge sense="true" tobiomoleculeid="12" path="M 634.5771733948076,379.3447882485596 L 637.5228266051923,501.05521175144037" frombiomoleculeid="14"/>
+    <edge sense="false" tobiomoleculeid="13" path="M 610.5602649417717,328.0756731695088 L 607.0397350582282,351.4243268304912" frombiomoleculeid="15"/>
+    <edge sense="false" tobiomoleculeid="14" path="M 622.393771302605,327.64446954752725 L 627.2062286973949,350.2555304524728" frombiomoleculeid="15"/>
+    <edge sense="false" tobiomoleculeid="15" path="M 603.8374347075456,178.03997509723567 L 613.7625652924543,298.61002490276434" frombiomoleculeid="16"/>
+    <edge sense="false" tobiomoleculeid="15" path="M 558.199143875778,271.8229319895494 L 599.000856124222,305.1270680104506" frombiomoleculeid="24"/>
+    <edge sense="false" tobiomoleculeid="15" path="M 570.9620131643829,218.21554820624812 L 606.737986835617,300.0844517937519" frombiomoleculeid="25"/>
+    <edge sense="false" tobiomoleculeid="15" path="M 664.119812603872,192.1499379376841 L 623.2301873961279,299.7000620623159" frombiomoleculeid="29"/>
+    <edge sense="true" tobiomoleculeid="18" path="M 388.2170272674987,244.44125147840384 L 388.0829727325013,258.35874852159617" frombiomoleculeid="17"/>
+    <edge sense="true" tobiomoleculeid="19" path="M 388.3669646595403,288.33245810549124 L 388.6330353404597,303.8175418945088" frombiomoleculeid="18"/>
+    <edge sense="true" tobiomoleculeid="20" path="M 389.8533909667577,333.798796070772 L 389.99660903324235,355.101203929228" frombiomoleculeid="19"/>
+    <edge sense="true" tobiomoleculeid="21" path="M 390.8140388849277,385.094033690994 L 391.0359611150723,402.955966309006" frombiomoleculeid="20"/>
+    <edge sense="true" tobiomoleculeid="22" path="M 416.05,179.34991230634319 L 547.8659183958638,140.4113481943948" frombiomoleculeid="40"/>
+    <edge sense="true" tobiomoleculeid="23" path="M 532.3385931713503,160.81032342411189 L 520.5114068286496,197.23967657588813" frombiomoleculeid="6"/>
+    <edge sense="true" tobiomoleculeid="24" path="M 522.2600253822391,224.11353943374567 L 531.9399746177608,250.2864605662543" frombiomoleculeid="23"/>
+    <edge sense="true" tobiomoleculeid="25" path="M 565.6574558267184,151.26093161532143 L 563.5925441732816,189.7890683846786" frombiomoleculeid="22"/>
+    <edge sense="true" tobiomoleculeid="30" path="M 121.0823556897066,534.6446852600695 L 121.45104486555314,553.4892405063291" frombiomoleculeid="8"/>
+    <edge sense="true" tobiomoleculeid="31" path="M 390.55649603004287,534.422877598578 L 394.2461121157324,555.439240506329" frombiomoleculeid="9"/>
+    <edge sense="true" tobiomoleculeid="31" path="M 413.5325274171593,531.3566652874363 L 405.26004855210687,555.439240506329" frombiomoleculeid="10"/>
+    <edge sense="true" tobiomoleculeid="32" path="M 610.4292572590823,528.726816562173 L 614.2422250609685,551.689240506329" frombiomoleculeid="11"/>
+    <edge sense="true" tobiomoleculeid="32" path="M 630.8525586354752,530.0450248754647 L 624.3034358047016,551.689240506329" frombiomoleculeid="12"/>
+    <edge sense="true" tobiomoleculeid="33" path="M 676.9987341772152,568.0326858335577 L 737.9109595152129,567.500398150133" frombiomoleculeid="32"/>
+    <edge sense="true" tobiomoleculeid="40" path="M 297.9089975944121,194.92070093508985 L 376.05,186.9644430326133" frombiomoleculeid="35"/>
+    <edge sense="true" tobiomoleculeid="40" path="M 281.8649955902455,213.15375639241162 L 376.05,189.77128694350915" frombiomoleculeid="36"/>
+  </edges>
+  <equation><![CDATA[Difference]]></equation>
+  <biomolecules>
+    <biomolecule label="Peptide-MHC" x="114.05" y="30.2" biomoleculestyleid="2" compartmentid="0" comments="" name="Peptide_MHC" regulation=""/>
+    <biomolecule label="CD40" x="60.8" y="110.2" biomoleculestyleid="0" compartmentid="1" comments="" name="CD40" regulation=""/>
+    <biomolecule label="TCR/CD3" x="117.85" y="107.45" biomoleculestyleid="0" compartmentid="1" comments="" name="TCR_CD3" regulation="Peptide_MHC"/>
+    <biomolecule label="Lck" x="108.75" y="180.35" biomoleculestyleid="1" compartmentid="2" comments="" name="Lck" regulation="CD40"/>
+    <biomolecule label="ZAP70" x="150.45" y="168.55" biomoleculestyleid="1" compartmentid="2" comments="" name="ZAP70" regulation="TCR_CD3"/>
+    <biomolecule label="Itk" x="233.15" y="167.55" biomoleculestyleid="1" compartmentid="2" comments="" name="Itk" regulation="Lck &amp;&amp; ZAP70"/>
+    <biomolecule label="Akt" x="540.3" y="147.05" biomoleculestyleid="1" compartmentid="2" comments="" name="Akt" regulation="Itk"/>
+    <biomolecule label="NFAT" x="119.3" y="348" biomoleculestyleid="3" compartmentid="2" comments="" name="NFAT_cytoplasm" regulation=""/>
+    <biomolecule label="NFAT" x="120.55" y="519.65" biomoleculestyleid="3" compartmentid="4" comments="" name="NFAT_nucleus" regulation="NFAT_cytoplasm"/>
+    <biomolecule label="c-Fos" x="386.1" y="519.8" biomoleculestyleid="3" compartmentid="4" comments="" name="c_Fos" regulation="ERK"/>
+    <biomolecule label="c-Jun" x="421.35" y="517.55" biomoleculestyleid="3" compartmentid="4" comments="" name="c_Jun" regulation="PKCt"/>
+    <biomolecule label="p50" x="606.3" y="514.05" biomoleculestyleid="3" compartmentid="4" comments="" name="p50_nucleus" regulation="p50_cytoplasm"/>
+    <biomolecule label="p65" x="638.05" y="516.05" biomoleculestyleid="3" compartmentid="4" comments="" name="p65_nucleus" regulation="p65_cytoplasm"/>
+    <biomolecule label="p50" x="602.05" y="365.95" biomoleculestyleid="3" compartmentid="2" comments="" name="p50_cytoplasm" regulation="!IkB"/>
+    <biomolecule label="p65" x="634.05" y="364.35" biomoleculestyleid="3" compartmentid="2" comments="" name="p65_cytoplasm" regulation="!IkB"/>
+    <biomolecule label="I&amp;kappa;B" x="615.55" y="313.55" biomoleculestyleid="1" compartmentid="2" comments="" name="IkB" regulation="!(IKK &amp;&amp; NIK &amp;&amp; CAMKII &amp;&amp; UBC13)"/>
+    <biomolecule label="IKK" x="602.05" y="163.1" biomoleculestyleid="1" compartmentid="2" comments="" name="IKK" regulation=""/>
+    <biomolecule label="RasGRP" x="388.9" y="229.45" biomoleculestyleid="1" compartmentid="2" comments="" name="RasGRP" regulation=""/>
+    <biomolecule label="Ras" x="387.4" y="273.35" biomoleculestyleid="1" compartmentid="2" comments="" name="Ras" regulation="RasGRP"/>
+    <biomolecule label="Raf-1" x="389.6" y="318.8" biomoleculestyleid="1" compartmentid="2" comments="" name="Raf_1" regulation="Ras"/>
+    <biomolecule label="MEK" x="390.25" y="370.1" biomoleculestyleid="1" compartmentid="2" comments="" name="MEK" regulation="Raf_1"/>
+    <biomolecule label="ERK" x="391.6" y="417.95" biomoleculestyleid="1" compartmentid="2" comments="" name="ERK" regulation="MEK"/>
+    <biomolecule label="PKC&amp;theta;" x="567.1" y="136.3" biomoleculestyleid="6" compartmentid="2" comments="" name="PKCt" regulation="cytoskeleton_reorganization"/>
+    <biomolecule label="COT" x="512.55" y="211" biomoleculestyleid="1" compartmentid="2" comments="" name="COT" regulation="Akt"/>
+    <biomolecule label="NIK" x="541.65" y="263.4" biomoleculestyleid="1" compartmentid="2" comments="" name="NIK" regulation="COT"/>
+    <biomolecule label="CAMKII" x="562.15" y="204.75" biomoleculestyleid="1" compartmentid="2" comments="" name="CAMKII" regulation="PKCt"/>
+    <biomolecule label="CARMA1" x="600.55" y="134.85" biomoleculestyleid="6" compartmentid="2" comments="" name="CARMA1" regulation=""/>
+    <biomolecule label="Bcl10" x="637.05" y="135.25" biomoleculestyleid="6" compartmentid="2" comments="" name="Bcl10" regulation=""/>
+    <biomolecule label="MALT1" x="656.05" y="157.65" biomoleculestyleid="1" compartmentid="2" comments="" name="MALT1" regulation=""/>
+    <biomolecule label="UBC13" x="671.8" y="178.3" biomoleculestyleid="1" compartmentid="2" comments="" name="UBC13" regulation=""/>
+    <biomolecule label="Gene Expression" x="121.9" y="570.35" biomoleculestyleid="5" compartmentid="4" comments="" name="gene_expression_NFAT" regulation="NFAT_nucleus"/>
+    <biomolecule label="Gene Expression" x="398.1" y="572.3" biomoleculestyleid="5" compartmentid="4" comments="" name="gene_expression_ap1" regulation="c_Fos &amp;&amp; c_Jun"/>
+    <biomolecule label="Gene Expression" x="617.8" y="568.55" biomoleculestyleid="5" compartmentid="4" comments="" name="gene_expression_nfkb" regulation="p50_nucleus &amp;&amp; p65_nucleus"/>
+    <biomolecule label="IL-2" x="749.4" y="567.4" biomoleculestyleid="2" compartmentid="4" comments="" name="IL_2" regulation="gene_expression_nfkb"/>
+    <biomolecule label="PI3K" x="298.95" y="157.4" biomoleculestyleid="1" compartmentid="2" comments="" name="PI3K" regulation=""/>
+    <biomolecule label="Nck" x="278" y="196.35" biomoleculestyleid="1" compartmentid="2" comments="" name="Nck" regulation=""/>
+    <biomolecule label="Vav1" x="262.4" y="216.6" biomoleculestyleid="1" compartmentid="2" comments="" name="Vav1" regulation=""/>
+    <biomolecule label="SLP76" x="248.95" y="189.75" biomoleculestyleid="1" compartmentid="2" comments="" name="SLP76" regulation=""/>
+    <biomolecule label="PLC&amp;gamma;1" x="240.8" y="138.45" biomoleculestyleid="6" compartmentid="2" comments="" name="PLCy1" regulation=""/>
+    <biomolecule label="LAT" x="274.7" y="139.1" biomoleculestyleid="6" compartmentid="2" comments="" name="LAT" regulation=""/>
+    <biomolecule label="Cytoskeleton Reorganization" x="396.05" y="185.05" biomoleculestyleid="4" compartmentid="2" comments="" name="cytoskeleton_reorganization" regulation="Nck &amp;&amp; Vav1"/>
+  </biomolecules>
+  <comparisonXAxis><![CDATA[Conditions]]></comparisonXAxis>
+  <maxAnimationLoops>3</maxAnimationLoops>
+  <membraneHeight>25.5</membraneHeight>
+</xml>

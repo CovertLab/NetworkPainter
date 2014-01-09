@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!---
+NetworkPainter meta data.
+<ul>
+<li>application name, description, keywords</li>
+<li>version, release date</li>
+<li>url</li>
+<li>developers</li>
+<li>third party software</li>
+<li>requirements</li>
+</ul>
+
+Displayed in about window and on website.
+
+@see edu.stanford.covertlab.window.AboutWindow
+	
+@author Jonathan Karr, jkarr@stanford.edu
+@affiliation Covert Lab, Department of Bioengineering, Stanford University
+@lastupdated 3/23/2009	
+-->
+<mx:Object xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:String id="applicationName">NetworkPainter</mx:String>
+	<mx:String id="version">0.4</mx:String>
+	<mx:String id="releaseDate">Jan. 30, 2013</mx:String>
+	<mx:String id="url">http://covertlab.stanford.edu/projects/NetworkPainter</mx:String>
+	<mx:String id="email">covertlab-server@stanford.edu</mx:String>	
+	<mx:String id="description"><![CDATA[<applicationName/> is a web-based software program for collaboratively drawing and painting pathway diagrams with high-dimensional data including flow and mass cytometry.]]></mx:String>
+	<mx:String id="newStuff"><![CDATA[<applicationName/> is under active development. Check back as new features are added.]]></mx:String>
+	<mx:String id="infoMsg"><![CDATA[<applicationName/> is live! Help us test and improve the new software. Please send comments and suggestions to <contact/>.]]></mx:String>
+	<mx:ArrayCollection id="keywords">
+		<mx:String>systems biology</mx:String>
+		<mx:String>software</mx:String>
+		<mx:String>collaboration</mx:String>
+		<mx:String>open access</mx:String>
+		<mx:String>graphics</mx:String>
+		<mx:String>animations</mx:String>
+		<mx:String>network diagrams</mx:String>
+		<mx:String>bayesian</mx:String>
+		<mx:String>boolean</mx:String>
+		<mx:String>ODE</mx:String>
+		<mx:String>mass action kinetics</mx:String>
+		<mx:String>flow cytometry</mx:String>
+		<mx:String>data analysis</mx:String>
+		<mx:String>visualization</mx:String>
+	</mx:ArrayCollection>
+	<mx:ArrayCollection id="features">		
+		<mx:Object feature="Hypothesis-driven data analysis" 
+			comment="Describe prior knowledge about biological systems as network diagrams."/>
+		<mx:Object feature="Animate experimental time courses" 
+			comment="Animate signaling nodes with high-dimensional data such as flow cytometry."/>		
+		<mx:Object feature="Cytobank integration" 
+			comment="Easily visualize flow cytometry experiments stored in Cytobank."/>		
+		<mx:Object feature="Automatic diagram layout" 
+			comment="Create graphically stunning network diagrams quickly and easily using our automatic diagram layout tool."/>
+		<mx:Object feature="Create stunning graphics"
+			comment="Create publication quality graphics in gif, jpg, pdf, png svg, and swf formats."/>
+		<mx:Object feature="Computational simulation" 
+			comment="Generate MATLAB code for Boolean network simulations."/>		
+		<mx:Object feature="Collaborate with colleagues"
+			comment="Manage user access to diagrams. Diagrams are stored on our server and accessible from any computer."/>
+		<mx:Object feature="Open access"
+			comment="Share diagrams and animations with the world by publishing them to the &lt;applicationName/&gt; gallery."/>
+		<mx:Object feature="Export to common exchange formats" 
+			comment="BioPax, CellML, and SBML."/>
+	</mx:ArrayCollection>
+	<mx:ArrayCollection id="developers">
+		<mx:Object foreName="Jonathan" lastName="Karr" position="Graduate Student, Biophysics &amp; Medicine, Stanford University" email="jkarr@stanford.edu"/>
+		<mx:Object foreName="Harendra" lastName="Guturu" position="Graduate Student, Electrical Engineering, Stanford University" email="hguturu@stanford.edu"/>
+		<mx:Object foreName="Ed" lastName="Chen" position="Graduate Student, Bioengineering, Stanford University" email="chened@stanford.edu"/>		
+		<mx:Object foreName="Jonathan" lastName="Irish" position="Assistant Professor, Cancer Biology, Vanderbilt University" email="jonathan.irish@vanderbilt.edu"/>
+		<mx:Object foreName="Nikesh" lastName="Kotecha" position="CEO, Cytobank Inc." email="nikesh@cytobank.org"/>		
+		<mx:Object foreName="Markus" lastName="Covert" position="Assistant Professor, Bioengineering, Stanford University" email="mcovert@stanford.edu"/>
+	</mx:ArrayCollection>
+	<mx:ArrayCollection id="thirdPartySoftware">
+		<mx:Object software="Accelerator Menu Bar" version="" url="http://www.rphelan.com/2008/03/17/flex-menu-accelerators/"/>
+		<mx:Object software="Actionscript UTF-8" version="" url="http://www.webtoolkit.info/actionscript-utf8.html"/>
+		<mx:Object software="AlivePDF" version="0.1.4.6" url="http://alivepdf.bytearray.org/"/>
+		<mx:Object software="AMFPHP" version="1.9 beta 2" url="http://www.amfphp.org/"/>
+		<mx:Object software="Apache" version="2.2.4" url="http://httpd.apache.org/download.cgi"/>
+		<mx:Object software="AS3 Zip" version="105" url="http://nochump.com/blog/archives/15"/>
+		<mx:Object software="AS3FlexDB" version="1.4.0" url="http://code.google.com/p/as3flexdb/"/>
+		<mx:Object software="as3gif" version="0.1" url="http://code.google.com/p/as3gif/"/>		
+		<mx:Object software="AxShockwaveFlashObjects" version="" url=""/>
+		<mx:Object software="Bezier" version="r136" url="http://code.google.com/p/bezier/wiki/Main"/>
+		<mx:Object software="Degrafa" version="Beta 3.1" url="http://degrafa.org/"/>
+		<mx:Object software="FAMFAMFAM Silk Icons" version="1.3" url="http://www.famfamfam.com/lab/icons/silk/"/>
+		<mx:Object software="FFmpeg" version="R 16537" url="http://www.ffmpeg.org/"/>
+		<mx:Object software="FlashDevelop" version="3.0.0" url="http://www.flashdevelop.org/community/"/>
+		<mx:Object software="Flash External Interface Proxy" version="1.0" url="http://livedocs.adobe.com/flex/3/html/help.html?content=19_External_Interface_10.html"/> 
+		<mx:Object software="Flex" version="3.2" url="http://opensource.adobe.com/wiki/display/flexsdk/Download+Flex+3"/>
+		<mx:Object software="FlexLib" version="2.4" url="http://code.google.com/p/flexlib/"/>
+		<mx:Object software="Flex Slider" version="" url="http://proofofconcepts.wordpress.com/2008/07/17/skinning-a-flex-slider/"/>
+		<mx:Object software="GraphViz" version="2.20.3.1" url="http://www.graphviz.org/"/>
+		<mx:Object software="InkScape" version="0.46" url="http://www.inkscape.org/"/>
+		<mx:Object software="JavaScript ToolTips" version="5.1" url="http://www.walterzorn.com/tooltip/tooltip_e.htm"/>		
+		<mx:Object software="KEGG PATHWAY" version="KGML 0.6" url="http://www.genome.jp/kegg/"/>				
+		<mx:Object software="MATLAB" version="2008a" url="http://www.mathworks.com/products/matlab/"/>	
+		<mx:Object software="Microsoft Visual C#" version="2008" url="http://msdn.microsoft.com/en-us/vcsharp/default.aspx"/>
+		<mx:Object software="Monkey Patches" version="" url="http://blog.flexmonkeypatches.com/2008/09/10/flex-custom-tooltip-speech-bubble/"/>	
+		<mx:Object software="MySQL" version="5.0.41" url="http://dev.mysql.com/downloads/"/>		
+		<mx:Object software="PHP" version="5.2.2" url="http://www.php.net/downloads.php"/>
+		<mx:Object software="PHP Thumb" version="1.7.9" url="http://phpthumb.sourceforge.net/"/>
+		<mx:Object software="printf" version="rev 6" url="http://code.google.com/p/printf-as3/"/>		
+		<mx:Object software="Screen2Video" version="5.1" url="http://www.viscomsoft.com/products/screen2video/"/>		
+		<mx:Object software="Solucija" version="" url="http://www.solucija.com/free-templates"/>
+		<mx:Object software="Subversion" version="1.6.1" url="http://subversion.tigris.org/"/>
+		<mx:Object software="TextFieldUtil" version="" url="http://jasonbejot.com/superscript-and-subscript-in-actionscript"/>
+		<mx:Object software="TortoiseSVN" version="1.6.1" url="http://tortoisesvn.tigris.org/"/>
+		<mx:Object software="Tweener" version="1.31.74" url="http://code.google.com/p/tweener/"/>
+		<mx:Object software="Wink" version="2.0 build 1060" url="http://www.debugmode.com/wink/"/>
+		<mx:Object software="XML_MXML" version="0.3.0" url="http://pear.php.net/package/XML_MXML/download"/>
+    </mx:ArrayCollection>
+	<mx:ArrayCollection id="requirements">
+		<mx:Object requirement="Web-browser"/>
+		<mx:Object requirement="Adobe Flash version 10.0 or higher"/>
+	</mx:ArrayCollection>
+	<mx:String id="acknowledgements"><![CDATA[<applicationName/> was supported by an NIH Director's Pioneer Award (5DP1LM01150-05), a NIH K99/R00 grant (CA125994-01A1), and a Hellman Faculty Scholarship to M.W.C; NDSEG, NSF, and Stanford Graduate Fellowships to J.R.K.; and NSF and Stanford Graduate Fellowships to H.G.]]></mx:String>
+	<mx:String id="disclaimer"><![CDATA[The <applicationName/> team or Stanford does not warrant or assume any legal liability or 
+	responsibility for the accuracy, completeness, or usefulness of any information displayed on this website.]]></mx:String>
+</mx:Object>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="158" height="46" viewBox="0 0 158 46">
+<defs>
+<linearGradient id='renderingstyle_body1' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='5%' style='stop-color:gold;stop-opacity:1' />
+  <stop offset='75%' style='stop-color:orange;stop-opacity:1' />
+</linearGradient>
+<linearGradient id='renderingstyle_body3' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='25%' style='stop-color:orange;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:gold;stop-opacity:1' />
+</linearGradient>
+<linearGradient id='renderingstyle_body2' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='5%' style='stop-color:orange;stop-opacity:1' />
+  <stop offset='75%' style='stop-color:gold;stop-opacity:1' />
+</linearGradient>
+<linearGradient id='renderingstyle_body4' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='25%' style='stop-color:gold;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</linearGradient>
+<radialGradient id='renderingstyle_edge2' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
+  <stop offset='5%' style='stop-color:lightblue;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:blue;stop-opacity:1' />
+</radialGradient>
+</defs>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 2.8,23 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 6.4,29 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 10,35 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 32.2,35 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 35.8,29 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 39.4,23 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 43,17 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 46.1,11 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 66.4,11 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 70,17 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 74.8,23 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 78.4,29 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 82,35 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 104.2,35 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 107.8,29 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 111.4,23 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 115,17 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 118.6,11 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 138.4,11 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_edge2);stroke:black;" d="M 142,17 h 9 v -2.2 h -9 z"/>
+<path style="fill:url(#renderingstyle_body1);stroke:black;" d="M 37,26 q -18,36 -36,0 v -7.2 q 18,36 36,0"/>
+<path style="fill:url(#renderingstyle_body2);stroke:black;" d="M 49,26 q -18,36 -36,0 v -7.2 q 18,36 36,0"/>
+<path style="fill:url(#renderingstyle_body4);stroke:none;" d="M 49,18.8 q 18,-36 36,0 v 7.2 q -18,-36 -36,0"/>
+<path style="fill:none;stroke:black;" d="M 49,18.8 q 18,-36 36,0 m 0,7.2 q -18,-36 -36,0"/>
+<path style="fill:url(#renderingstyle_body3);stroke:none;" d="M 37,18.8 q 18,-36 36,0 v 7.2 q -18,-36 -36,0"/>
+<path style="fill:none;stroke:black;" d="M 37,18.8 q 18,-36 36,0 m 0,7.2 q -18,-36 -36,0"/>
+<path style="fill:url(#renderingstyle_body1);stroke:none;" d="M 109,26 q -18,36 -36,0 v -7.2 q 18,36 36,0"/>
+<path style="fill:none;stroke:black;" d="M 109,26 q -18,36 -36,0 m 0,-7.2 q 18,36 36,0"/>
+<path style="fill:url(#renderingstyle_body2);stroke:none;" d="M 121,26 q -18,36 -36,0 v -7.2 q 18,36 36,0"/>
+<path style="fill:none;stroke:black;" d="M 121,26 q -18,36 -36,0 m 0,-7.2 q 18,36 36,0"/>
+<path style="fill:url(#renderingstyle_body4);stroke:black;" d="M 121,18.8 q 18,-36 36,0 v 7.2 q -18,-36 -36,0"/>
+<path style="fill:url(#renderingstyle_body3);stroke:black;" d="M 109,18.8 q 18,-36 36,0 v 7.2 q -18,-36 -36,0"/>
+</svg>

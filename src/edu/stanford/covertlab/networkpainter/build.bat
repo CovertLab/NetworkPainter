@@ -1,0 +1,1 @@
+mxmlc -load-config+=../../../../../obj/NetworkPainterConfig.xml -incremental=true -benchmark=false -compiler.services=../../../../../services-config.xml -use-network=true -default-script-limits=1000,60 -o ../../../../../bin/NetworkPainter.swf

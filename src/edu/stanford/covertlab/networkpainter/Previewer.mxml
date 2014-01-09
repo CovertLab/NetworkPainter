@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!---
+Simplified version of application which only displays a network with experiment
+data loaded. Does not allow user to edit network. Doesn't have any functionality
+for loading a network from a database or saving a network to a database. Displays
+the hard-coded network in data.Network and experiment in data.Experiment. Also
+doesn't have menu or full toolbars. No form view. Toolbars are hidden by default, 
+and revealed on mouse over. Doesn't not require network access. Suitabled for
+embedding into websites, powerpoint, etc.
+
+<p>Has the following features:
+<ul>zooming, panning
+<li>fullscreen</li>
+<li>animation play, pause, stop controls</li>
+<li>animation timeline</li>
+<li>about window contained metadata about the network and experiment loaded compiled
+    with the viewer and the application that created the viewer.</li>
+</ul></p>
+
+@see edu.stanford.covertlab.networkpainter.viewer.AboutWindow
+	
+@author Jonathan Karr, jkarr@stanford.edu
+@affiliation Covert Lab, Department of Bioengineering, Stanford University
+@lastupdated 3/23/2009
+-->
+<mx:Application 
+	xmlns:diagram_core="edu.stanford.covertlab.diagram.core.*"
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+    width="100%" height="100%" 
+    horizontalScrollPolicy="off" verticalScrollPolicy="off"
+    preloader="edu.stanford.covertlab.networkpainter.preloader.Preloader"
+	preinitialize="preinitializeHandler(event);"
+	creationComplete="diagram.completeInitialization();creationCompleteHandler(event);"
+	applicationComplete="applicationCompleteHandler(event);">
+
+    <!-- style -->
+    <mx:Style source="edu/stanford/covertlab/style/silver.css"/>
+
+    <!-- script -->
+    <mx:Script>
+	<![CDATA[
+		[Embed(source = "viewer/data/Network.json", mimeType = "application/octet-stream")] private var Network:Class;
+		[Embed(source = "viewer/data/Experiment.json", mimeType = "application/octet-stream")] private var Experiment:Class;		
+		
+		import com.adobe.serialization.json.JSON;
+		import edu.stanford.covertlab.networkpainter.data.AboutData;
+		import edu.stanford.covertlab.window.AboutWindow;
+		import flash.events.Event;
+		import flash.utils.ByteArray;
+		import mx.collections.ArrayCollection;
+		import mx.events.FlexEvent;
+		
+		//data
+		public var aboutData:Object;
+		
+		//popup window
+		public var aboutWindow:AboutWindow;
+
+		/*************************************************************
+		 * initialization
+		 ************************************************************/
+		private function preinitializeHandler(event:FlexEvent):void {
+		}
+		 
+		private function creationCompleteHandler(event:FlexEvent):void {
+			//data
+			aboutData = new AboutData();			
+			
+			//page title
+			pageTitle = aboutData.applicationName;
+		}
+		
+		private function applicationCompleteHandler(event:FlexEvent):void {
+			var i:uint;
+			var tmp:ByteArray;
+								
+			//turn off diagram editing, set full screen mode to true
+			diagram.editingEnabled = false;
+			diagram.panZoomEnabled = false;
+			diagram.fullScreenMode = true;
+			diagram.disableOverview();
+			diagram.fullScreenControlToolBar.visible = false;						
+			diagram.fullScreenAnimationToolBar.hideButtons();
+			diagram.fullScreenAnimationToolBar.alpha = 1;
+			diagram.fullScreenAnimationToolBar.enabled = false;
+			
+			//load network
+			tmp = new Network();
+			var network:Object = JSON.decode(tmp.readUTFBytes(tmp.length));
+			network.biomoleculestyles = new ArrayCollection(network.biomoleculestyles);
+			network.compartments = new ArrayCollection(network.compartments);
+			network.biomolecules = new ArrayCollection(network.biomolecules);
+			network.edges = new ArrayCollection(network.edges);
+			network.animationFrameRate = network.exportAnimationFrameRate;
+			network.loopAnimation = true;
+			diagram.loadNetwork(network);			
+			
+			tmp = new Experiment();
+			var experiment:Object = JSON.decode(tmp.readUTFBytes(tmp.length));
+			for (i = 0; i < experiment.biomoleculeAssociations.length; i++) {
+				experiment.biomoleculeAssociations[i]['biomolecule'] = diagram.biomolecules.getItemAt(experiment.biomoleculeAssociations[i]['biomoleculeid']);
+			}
+			
+			diagram.loadMeasurement(
+				experiment.biomoleculeAssociations, 
+				experiment.animationAxis, 
+				experiment.measurement, 
+				true);
+				
+			diagram.zoomFit( -1, -1, 0);
+			
+			//popup windows
+			aboutWindow = new AboutWindow(this, aboutData);
+		}
+	]]>
+	</mx:Script>
+
+	<diagram_core:Diagram id="diagram" />
+</mx:Application>

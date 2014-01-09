@@ -1,0 +1,74 @@
+digraph G {
+  /*
+   * Name: NF-kB
+   * Author: Jonathan Karr
+   * Generator: NetworkAnalyzer
+   * Generated: Tue Mar 31 2009 07:24:59 PM
+   */
+
+  size="11.11111111111111,8.333333333333334!";
+  clusterrank=global;
+  nodesep=0.75;
+  ranksep=0.25;
+  rankdir=TB;
+  center=true;
+  ratio="fill";
+  margin=0;
+  fontname=Arial;
+  charset=latin1;
+
+  node [fixedsize="true"];
+  edge [color="#000000"];
+
+  subgraph "cluster_compartment_Media" {
+    style=invis
+    "signal1" [label="Signal",comments="",shape="box",class="filled",fillcolor="#999999",color="#000000",fontsize="10",pos="1.838888888888889,0.3652777777777778",width="0.49513888888888896",height="0.4305555555555556"];
+    "signal2" [label="Signal",comments="",shape="box",class="filled",fillcolor="#999999",color="#000000",fontsize="10",pos="5.049305555555556,0.2736111111111111",width="0.49513888888888896",height="0.4305555555555556"];
+     
+  }
+
+  subgraph "cluster_compartment_Cytosol" {
+    style=invis
+    "IKK" [label="IKK",comments="receptor1 || receptor2",shape="box",class="filled",fillcolor="#00FF66",color="#000000",fontsize="10",pos="3.517361111111111,2.5965277777777778",width="0.5694444444444444",height="0.4305555555555556"];
+    "nfkb_cytoplasm" [label="NF-&#954;B",comments="!ikba",shape="box",class="filled",fillcolor="#0099FF",color="#000000",fontsize="10",pos="4.0375,4.976388888888889",width="0.5694444444444444",height="0.4298611111111111"];
+    "ikba" [label="I&#954;B&#945;",comments="!IKK",shape="box",class="filled",fillcolor="#00FF66",color="#000000",fontsize="10",pos="3.7590277777777774,3.7416666666666663",width="0.5694444444444444",height="0.4305555555555556"];
+    "mRNA_cytoplasm" [label="mRNA",comments="mRNA_nucleus",shape="box",class="filled",fillcolor="#CCCCCC",color="#000000",fontsize="10",pos="8.992361111111112,4.981944444444444",width="0.5694444444444444",height="0.4305555555555556"];
+    "protein" [label="Protein",comments="mRNA_cytoplasm",shape="box",class="filled",fillcolor="#CCCCCC",color="#000000",fontsize="10",pos="9.554861111111112,3.6708333333333334",width="0.5694444444444444",height="0.4305555555555556"];
+     "ikba"->"nfkb_cytoplasm" [arrowhead="tee"];
+    "IKK"->"ikba" [arrowhead="tee"];
+    "mRNA_cytoplasm"->"protein" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_compartment_Nucleus" {
+    style=invis
+    "nfkb_nucleus" [label="NF-&#954;B",comments="nfkb_cytoplasm",shape="box",class="filled",fillcolor="#0099FF",color="#000000",fontsize="10",pos="4.778472222222223,7.078472222222222",width="0.5701388888888889",height="0.4298611111111111"];
+    "mRNA_nucleus" [label="mRNA",comments="gene_expression",shape="box",class="filled",fillcolor="#CCCCCC",color="#000000",fontsize="10",pos="7.965972222222222,7.175694444444444",width="0.5701388888888889",height="0.4305555555555556"];
+    "gene_expression" [label="Gene Expression",comments="nfkb_nucleus",shape="box",class="filled",fillcolor="#CCCCCC",color="#000000",fontsize="10",pos="6.227777777777778,7.788888888888888",width="1.6597222222222223",height="0.4708333333333333"];
+     "gene_expression"->"mRNA_nucleus" [arrowhead="normal"];
+    "nfkb_nucleus"->"gene_expression" [arrowhead="normal"];
+  }
+
+  subgraph "cluster_membrane_Media-Cytosol" {
+    style=invis
+    "receptor1" [label="Receptor",comments="signal1",shape="box",class="filled",fillcolor="#CCCCCC",color="#000000",fontsize="10",pos="1.9187500000000002,1.5916666666666666",width="0.7083333333333334",height="0.9402777777777778"];
+    "receptor2" [label="Receptor",comments="signal2",shape="box",class="filled",fillcolor="#CCCCCC",color="#000000",fontsize="10",pos="5.076388888888889,1.5180555555555555",width="0.7083333333333334",height="0.9409722222222222"];
+    
+  }
+  {rank=same;receptor1;receptor2}
+
+  subgraph "cluster_membrane_Cytosol-Nucleus" {
+    style=invis
+    "hidden3" [style="invis",label="",shape="plaintext",fixedsize="true",width="0.01",height="0.3541666666666667"];
+    
+  }
+  {rank=same;}
+
+  "signal1"->"receptor1" [arrowhead="normal"];
+  "signal2"->"receptor2" [arrowhead="normal"];
+  "receptor1"->"IKK" [arrowhead="normal"];
+  "receptor2"->"IKK" [arrowhead="normal"];
+  "nfkb_cytoplasm"->"nfkb_nucleus" [arrowhead="normal"];
+  "mRNA_cytoplasm"->"mRNA_nucleus" [arrowhead="normal",dir="back"];
+  "IKK"->"hidden3" [style="invis"];
+  "hidden3"->"nfkb_nucleus" [style="invis"];
+}

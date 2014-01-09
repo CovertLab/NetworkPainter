@@ -1,0 +1,238 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+<xml>
+  <animationAxis><![CDATA[Timepoints]]></animationAxis>
+  <equation><![CDATA[Difference]]></equation>
+  <maxAnimationLoops>3</maxAnimationLoops>
+  <ranksep>18</ranksep>
+  <animationAxisControl><![CDATA[First]]></animationAxisControl>
+  <exportColorBiomoleculesByValue>false</exportColorBiomoleculesByValue>
+  <compartments>
+    <compartment membranecolor="65280" height="60" phospholipidoutlinecolor="13479168" name="Media" phospholipidbodycolor="16766720" color="255"/>
+    <compartment membranecolor="16711935" height="417" phospholipidoutlinecolor="13479168" name="Cytosol" phospholipidbodycolor="16766720" color="16776960"/>
+    <compartment membranecolor="65535" height="72" phospholipidoutlinecolor="13479168" name="Nucleus" phospholipidbodycolor="16766720" color="16711680"/>
+  </compartments>
+  <animationFrameRate>20</animationFrameRate>
+  <height>600</height>
+  <biomoleculeAxisControl><![CDATA[None]]></biomoleculeAxisControl>
+  <width>1000</width>
+  <membraneHeight>25.5</membraneHeight>
+  <statistic><![CDATA[Arcsinh Medians]]></statistic>
+  <exportShowBiomoleculeSelectedHandles>false</exportShowBiomoleculeSelectedHandles>
+  <generator><![CDATA[NetworkPainter]]></generator>
+  <comparisonXAxisControl><![CDATA[None]]></comparisonXAxisControl>
+  <nodesep>54</nodesep>
+  <poreStrokeColor>0</poreStrokeColor>
+  <description><![CDATA[]]></description>
+  <minCompartmentHeight>40</minCompartmentHeight>
+  <biomoleculeAxis><![CDATA[Channels]]></biomoleculeAxis>
+  <perturbations>
+    <perturbation condition="aBCR" activity="On" biomoleculeid="26" experimentid="560"/>
+    <perturbation condition="aBCR H2O2" activity="On" experimentid="1208" biomoleculeid="27" conditionid="1" activityid="0"/>
+    <perturbation condition="aBCR" activity="On" experimentid="1208" biomoleculeid="26" conditionid="0" activityid="0"/>
+    <perturbation condition="aBCR H2O2" activity="On" biomoleculeid="27" experimentid="560"/>
+  </perturbations>
+  <associations>
+    <association channel="p-Erk12-Ax647" biomoleculeid="61" experimentid="560"/>
+    <association channel="Lambda-FITC" biomoleculeid="4" experimentid="560"/>
+    <association channel="p-Syk-Ax647" biomoleculeid="32" experimentid="560"/>
+    <association channel="p-Erk12-Ax647" biomoleculeid="61" experimentid="1208" channelid="2"/>
+    <association channel="p-Syk-Ax647" biomoleculeid="32" experimentid="1208" channelid="1"/>
+    <association channel="CD20c-PercPCy5.5" biomoleculeid="6" experimentid="1208" channelid="6"/>
+    <association channel="Lambda-FITC" biomoleculeid="4" experimentid="1208" channelid="4"/>
+  </associations>
+  <biomoleculestyles>
+    <biomoleculestyle name="Receptor" outline="0" shape="Ig" color="16711680"/>
+    <biomoleculestyle name="Second_Messenger" outline="0" shape="Ellipse" color="65280"/>
+    <biomoleculestyle name="Stimulus" outline="16776960" shape="Inverted Triangle" color="0"/>
+    <biomoleculestyle name="Transcription_Factor" outline="0" shape="Ellipse" color="255"/>
+    <biomoleculestyle name="Annotation" outline="0" shape="Rectangle" color="16777215"/>
+  </biomoleculestyles>
+  <generated><![CDATA[Tue Mar 31 2009 02:26:12 PM]]></generated>
+  <showPores>true</showPores>
+  <comparisonYAxis><![CDATA[Individuals]]></comparisonYAxis>
+  <poreFillColor>16766720</poreFillColor>
+  <colormap><![CDATA[CytoBank Blue-Yellow]]></colormap>
+  <comparisonYAxisControl><![CDATA[None]]></comparisonYAxisControl>
+  <owner><![CDATA[Ed Chen, Harendra Guturu, Jonathan Karr]]></owner>
+  <exportAnimationFrameRate>20</exportAnimationFrameRate>
+  <comparisonXAxis><![CDATA[Conditions]]></comparisonXAxis>
+  <edges>
+    <edge path="M 46.329110529463584,87.2412213740458 L 49.39469330363998,115.08278750670121" frombiomoleculeid="11" sense="true" tobiomoleculeid="0"/>
+    <edge path="M 121.61576932125153,83.9912213740458 L 118.56120225295778,146.4711301995009" frombiomoleculeid="12" sense="true" tobiomoleculeid="1"/>
+    <edge path="M 151.98655511951986,135.55142593673844 L 134.11344488048013,153.09857406326157" frombiomoleculeid="2" sense="true" tobiomoleculeid="1"/>
+    <edge path="M 129.67557251908397,76.66579208822506 L 156.39555207901822,115.31654759103971" frombiomoleculeid="12" sense="true" tobiomoleculeid="2"/>
+    <edge path="M 191.47251908396947,74.96184744009167 L 176.62177138722302,113.45941082435836" frombiomoleculeid="13" sense="true" tobiomoleculeid="2"/>
+    <edge path="M 263.4725190839694,65.76693880061192 L 185.38777357674147,119.04702537020786" frombiomoleculeid="14" sense="true" tobiomoleculeid="2"/>
+    <edge path="M 318.743529402582,63.70574314304001 L 187.02057775072134,121.35758591223484" frombiomoleculeid="15" sense="true" tobiomoleculeid="2"/>
+    <edge path="M 376.3609456726124,62.473159413070434 L 187.69478506683396,122.73833936981748" frombiomoleculeid="16" sense="true" tobiomoleculeid="2"/>
+    <edge path="M 432.00590042095513,62.31811416141313 L 293.89783807167225,120.99654775559283" frombiomoleculeid="17" sense="true" tobiomoleculeid="3"/>
+    <edge path="M 655.4725190839695,66.06286669610749 L 613.3275898727501,113.08489386075249" frombiomoleculeid="26" sense="true" tobiomoleculeid="4"/>
+    <edge path="M 713.9725190839695,64.8788504714863 L 617.1827162077609,116.98534852273932" frombiomoleculeid="27" sense="true" tobiomoleculeid="4"/>
+    <edge path="M 619.317065280903,125.21461064424597 L 651.182934719097,129.03538935575403" frombiomoleculeid="4" sense="true" tobiomoleculeid="5"/>
+    <edge path="M 662.6051042001352,78.1412213740458 L 667.8910318274602,115.594336578929" frombiomoleculeid="26" sense="true" tobiomoleculeid="5"/>
+    <edge path="M 713.9725190839695,68.94636799380275 L 682.5432534904546,118.09789767463812" frombiomoleculeid="27" sense="true" tobiomoleculeid="5"/>
+    <edge path="M 924.8225190839695,73.39021739130435 L 870.5903440110382,124.97792935404549" frombiomoleculeid="30" sense="true" tobiomoleculeid="7"/>
+    <edge path="M 848.7164072135738,82.8912213740458 L 853.0095609452666,120.08129810982109" frombiomoleculeid="29" sense="true" tobiomoleculeid="7"/>
+    <edge path="M 853.675572519084,71.4500451588811 L 918.2053837598303,121.14797735069274" frombiomoleculeid="29" sense="true" tobiomoleculeid="8"/>
+    <edge path="M 930.6665667781213,86.0912213740458 L 932.7036555000633,115.00405210007196" frombiomoleculeid="30" sense="true" tobiomoleculeid="8"/>
+    <edge path="M 865.245787009486,148.11075568930505 L 883.704212990514,190.63924431069495" frombiomoleculeid="7" sense="true" tobiomoleculeid="9"/>
+    <edge path="M 924.6740842214676,143.05691387307684 L 903.0259157785323,190.69308612692316" frombiomoleculeid="8" sense="true" tobiomoleculeid="9"/>
+    <edge path="M 137.49439186770877,161.8051975299496 L 445.80560813229124,169.34480247005038" frombiomoleculeid="1" sense="true" tobiomoleculeid="10"/>
+    <edge path="M 580.4830056921089,128.71907291738475 L 484.71699430789107,164.83092708261523" frombiomoleculeid="4" sense="true" tobiomoleculeid="10"/>
+    <edge path="M 651.456670573945,133.22020036450547 L 485.4433294260551,166.87979963549452" frombiomoleculeid="5" sense="true" tobiomoleculeid="10"/>
+    <edge path="M 778.0719606597165,134.5040096711338 L 485.67803934028353,168.0459903288662" frombiomoleculeid="6" sense="true" tobiomoleculeid="10"/>
+    <edge path="M 62.71456769871786,142.6395699350765 L 121.43543230128213,244.26043006492347" frombiomoleculeid="0" sense="true" tobiomoleculeid="21"/>
+    <edge path="M 260.60003026637554,136.7891280066534 L 146.8999697336244,246.86087199334656" frombiomoleculeid="3" sense="true" tobiomoleculeid="21"/>
+    <edge path="M 546.2225190839695,62.429662520825715 L 150.20244654347286,250.57273147094713" frombiomoleculeid="19" sense="true" tobiomoleculeid="21"/>
+    <edge path="M 446.45045927758395,173.49438289188822 L 151.44954072241606,253.15561710811176" frombiomoleculeid="10" sense="true" tobiomoleculeid="21"/>
+    <edge path="M 171.89576271362662,141.99493480303988 L 175.60423728637338,174.0550651969601" frombiomoleculeid="2" sense="true" tobiomoleculeid="22"/>
+    <edge path="M 180.91158586592306,139.0211243151668 L 248.53841413407696,233.47887568483324" frombiomoleculeid="2" sense="true" tobiomoleculeid="23"/>
+    <edge path="M 272.9646329091639,141.58837819449255 L 263.2853670908361,230.41162180550748" frombiomoleculeid="3" sense="true" tobiomoleculeid="23"/>
+    <edge path="M 486.87251908396945,63.80524123893014 L 276.4445734733275,235.90823664166007" frombiomoleculeid="18" sense="true" tobiomoleculeid="23"/>
+    <edge path="M 546.2225190839695,63.17561282063439 L 277.70920198173417,237.230358678774" frombiomoleculeid="19" sense="true" tobiomoleculeid="23"/>
+    <edge path="M 599.7225190839695,63.130109534090984 L 278.4659261915942,238.19756951938822" frombiomoleculeid="20" sense="true" tobiomoleculeid="23"/>
+    <edge path="M 447.03587460671173,174.89114862063647 L 279.6141253932883,240.10885137936353" frombiomoleculeid="10" sense="true" tobiomoleculeid="23"/>
+    <edge path="M 285.5383288391187,139.62992796564677 L 329.36167116088126,222.7700720343532" frombiomoleculeid="3" sense="true" tobiomoleculeid="24"/>
+    <edge path="M 486.87251908396945,65.36726960947007 L 352.5859707633317,224.35645469156842" frombiomoleculeid="18" sense="true" tobiomoleculeid="24"/>
+    <edge path="M 599.7225190839695,63.676838413979 L 356.1840394136479,227.4281144093585" frombiomoleculeid="20" sense="true" tobiomoleculeid="24"/>
+    <edge path="M 137.09967571292515,164.43615982004428 L 393.7503242870749,218.56384017995572" frombiomoleculeid="1" sense="true" tobiomoleculeid="25"/>
+    <edge path="M 291.88031560524183,135.19850272829206 L 396.86968439475817,213.05149727170794" frombiomoleculeid="3" sense="true" tobiomoleculeid="25"/>
+    <edge path="M 485.7405281239863,170.85590990210687 L 561.0094718760138,177.4440900978931" frombiomoleculeid="10" sense="true" tobiomoleculeid="31"/>
+    <edge path="M 137.35939576089342,163.22552105221743 L 503.24060423910663,208.02447894778257" frombiomoleculeid="1" sense="true" tobiomoleculeid="32"/>
+    <edge path="M 482.185981773059,178.30049566884378 L 506.71401822694105,201.19950433115622" frombiomoleculeid="10" sense="true" tobiomoleculeid="32"/>
+    <edge path="M 563.3469329189444,185.72034174065175 L 540.7030670810557,202.67965825934826" frombiomoleculeid="31" sense="true" tobiomoleculeid="32"/>
+    <edge path="M 600.3521072248668,182.2402619850169 L 715.2478927751332,213.4097380149831" frombiomoleculeid="31" sense="true" tobiomoleculeid="33"/>
+    <edge path="M 785.9317811035338,144.83973970476842 L 746.6682188964662,205.0602602952316" frombiomoleculeid="6" sense="true" tobiomoleculeid="33"/>
+    <edge path="M 469.5407474139147,184.43529198698573 L 479.30925258608534,245.56470801301427" frombiomoleculeid="10" sense="true" tobiomoleculeid="34"/>
+    <edge path="M 510.6724342037391,221.55266053766246 L 495.47756579626093,248.54733946233756" frombiomoleculeid="32" sense="true" tobiomoleculeid="34"/>
+    <edge path="M 565.5945776806315,188.2108631523934 L 498.40542231936865,250.68913684760662" frombiomoleculeid="31" sense="true" tobiomoleculeid="34"/>
+    <edge path="M 714.9391039324572,219.59122492524213 L 502.7608960675428,257.75877507475786" frombiomoleculeid="33" sense="true" tobiomoleculeid="34"/>
+    <edge path="M 652.7904684001866,243.6251088397968 L 502.95953159981343,258.87489116020316" frombiomoleculeid="35" sense="true" tobiomoleculeid="34"/>
+    <edge path="M 769.7225190839695,71.77700442815812 L 682.5949310158218,229.1644403128184" frombiomoleculeid="28" sense="true" tobiomoleculeid="35"/>
+    <edge path="M 716.1188762069951,222.69234580380234 L 691.2311237930048,236.55765419619766" frombiomoleculeid="33" sense="true" tobiomoleculeid="35"/>
+    <edge path="M 502.8836830370069,262.23043315553633 L 565.316316962993,271.6195668444637" frombiomoleculeid="34" sense="true" tobiomoleculeid="36"/>
+    <edge path="M 800.6591329306289,147.71174911660307 L 821.6408670693712,311.0882508833969" frombiomoleculeid="6" sense="true" tobiomoleculeid="38"/>
+    <edge path="M 841.430834906437,246.5707025102641 L 828.819165093563,311.32929748973584" frombiomoleculeid="37" sense="true" tobiomoleculeid="38"/>
+    <edge path="M 498.0668934324296,270.2071823843597 L 519.1331065675704,295.3428176156403" frombiomoleculeid="34" sense="true" tobiomoleculeid="39"/>
+    <edge path="M 525.3999873218735,224.70048347553066 L 531.8500126781265,290.3495165244693" frombiomoleculeid="32" sense="true" tobiomoleculeid="39"/>
+    <edge path="M 421.2516692955151,235.3296784276222 L 444.3483307044849,298.22032157237777" frombiomoleculeid="25" sense="true" tobiomoleculeid="40"/>
+    <edge path="M 514.2175824746759,306.4820862481313 L 472.1824175253242,310.7679137518687" frombiomoleculeid="39" sense="true" tobiomoleculeid="40"/>
+    <edge path="M 472.2257139390282,312.73898890532246 L 725.2242860609718,325.71101109467753" frombiomoleculeid="40" sense="true" tobiomoleculeid="41"/>
+    <edge path="M 554.0498549440542,306.7492072665741 L 725.3001450559458,324.9507927334259" frombiomoleculeid="39" sense="true" tobiomoleculeid="41"/>
+    <edge path="M 736.5697958788664,231.9807347735539 L 743.2802041211336,311.51926522644607" frombiomoleculeid="33" sense="true" tobiomoleculeid="41"/>
+    <edge path="M 458.84559056762043,326.1608696448586 L 464.9544094323796,353.0891303551414" frombiomoleculeid="40" sense="true" tobiomoleculeid="42"/>
+    <edge path="M 594.4160790509028,286.8429916008441 L 609.1339209490972,323.8570083991559" frombiomoleculeid="36" sense="true" tobiomoleculeid="43"/>
+    <edge path="M 769.7225190839695,71.76479237376397 L 628.306677223452,324.11945962960226" frombiomoleculeid="28" sense="true" tobiomoleculeid="43"/>
+    <edge path="M 662.7713143868,255.22111462670367 L 628.3286856132,324.12888537329627" frombiomoleculeid="35" sense="true" tobiomoleculeid="43"/>
+    <edge path="M 491.1998768657069,370.04442584065816 L 515.4501231342931,376.50557415934185" frombiomoleculeid="42" sense="true" tobiomoleculeid="44"/>
+    <edge path="M 576.5941522443474,287.10815534705694 L 543.6558477556526,365.7418446529431" frombiomoleculeid="36" sense="true" tobiomoleculeid="44"/>
+    <edge path="M 600.5545077505827,343.9223964433938 L 552.9454922494173,372.5276035566062" frombiomoleculeid="43" sense="true" tobiomoleculeid="44"/>
+    <edge path="M 847.688381210112,148.71025444032674 L 759.811618789888,360.3897455596732" frombiomoleculeid="7" sense="true" tobiomoleculeid="45"/>
+    <edge path="M 830.7686967424869,340.15651916628394 L 834.2813032575132,359.99348083371603" frombiomoleculeid="38" sense="true" tobiomoleculeid="46"/>
+    <edge path="M 848.6940049677889,387.9496885445969 L 851.4559950322111,403.4503114554031" frombiomoleculeid="46" sense="true" tobiomoleculeid="47"/>
+    <edge path="M 877.6457550040873,423.4261068216879 L 908.6542449959128,441.7238931783121" frombiomoleculeid="47" sense="true" tobiomoleculeid="48"/>
+    <edge path="M 896.022724052637,218.6603519549478 L 924.1272759473629,433.08964804505223" frombiomoleculeid="9" sense="true" tobiomoleculeid="48"/>
+    <edge path="M 841.4955101887284,423.80835957591074 L 820.6544898112717,438.44164042408926" frombiomoleculeid="47" sense="true" tobiomoleculeid="49"/>
+    <edge path="M 520.4918801219106,389.54519857862186 L 510.4081198780894,405.80480142137816" frombiomoleculeid="44" sense="true" tobiomoleculeid="50"/>
+    <edge path="M 496.41217342978763,431.0429716726429 L 496.6378265702124,448.40702832735707" frombiomoleculeid="50" sense="true" tobiomoleculeid="51"/>
+    <edge path="M 609.1388345192944,350.44491755674625 L 593.9111654807056,388.45508244325373" frombiomoleculeid="43" sense="true" tobiomoleculeid="52"/>
+    <edge path="M 732.1170417172559,376.59301576825834 L 604.3829582827441,399.3069842317416" frombiomoleculeid="45" sense="true" tobiomoleculeid="52"/>
+    <edge path="M 670.2139841594711,257.0836687496013 L 652.186015840529,410.9163312503987" frombiomoleculeid="35" sense="true" tobiomoleculeid="53"/>
+    <edge path="M 731.7843082339574,231.89522291917152 L 710.0656917660426,391.80477708082844" frombiomoleculeid="33" sense="true" tobiomoleculeid="54"/>
+    <edge path="M 699.3433179205919,420.44414033278247 L 693.2066820794082,444.0058596672175" frombiomoleculeid="54" sense="true" tobiomoleculeid="55"/>
+    <edge path="M 719.1854230802899,418.6581917411566 L 728.1145769197102,438.5918082588434" frombiomoleculeid="54" sense="true" tobiomoleculeid="56"/>
+    <edge path="M 129.81078252466375,271.85141635498854 L 99.78921747533624,542.3485836450114" frombiomoleculeid="21" sense="true" tobiomoleculeid="57"/>
+    <edge path="M 251.57219472962458,258.58839005552625 L 106.77780527037544,543.9616099444737" frombiomoleculeid="23" sense="true" tobiomoleculeid="57"/>
+    <edge path="M 452.02250396897466,180.57320510485445 L 111.27749603102532,546.3767948951455" frombiomoleculeid="10" sense="true" tobiomoleculeid="57"/>
+    <edge path="M 136.029260602072,271.6576684931897 L 188.070739397928,541.1923315068103" frombiomoleculeid="21" sense="true" tobiomoleculeid="58"/>
+    <edge path="M 256.5217087910258,259.94452341511334 L 196.32829120897426,541.2554765848867" frombiomoleculeid="23" sense="true" tobiomoleculeid="58"/>
+    <edge path="M 454.23285564454983,181.93675442861993 L 203.56714435545015,543.66324557138" frombiomoleculeid="10" sense="true" tobiomoleculeid="58"/>
+    <edge path="M 184.25589467564936,203.3021398286079 L 274.2441053243507,536.6978601713921" frombiomoleculeid="22" sense="true" tobiomoleculeid="59"/>
+    <edge path="M 262.073793716928,260.2718923328968 L 278.37620628307207,536.1781076671032" frombiomoleculeid="23" sense="true" tobiomoleculeid="59"/>
+    <edge path="M 267.8049521123424,259.36382276008914 L 366.29504788765763,534.2861772399109" frombiomoleculeid="23" sense="true" tobiomoleculeid="60"/>
+    <edge path="M 341.6464935786088,250.6133603856008 L 371.1035064213912,533.4366396143992" frombiomoleculeid="24" sense="true" tobiomoleculeid="60"/>
+    <edge path="M 461.0513685545285,184.27106399374225 L 377.9986314454715,533.7789360062578" frombiomoleculeid="10" sense="true" tobiomoleculeid="60"/>
+    <edge path="M 497.1319692685635,478.39973878672123 L 496.9180307314365,524.6502612132787" frombiomoleculeid="51" sense="true" tobiomoleculeid="61"/>
+    <edge path="M 583.7524028428741,416.73488587312994 L 582.847597157126,446.8651141268701" frombiomoleculeid="52" sense="true" tobiomoleculeid="62"/>
+    <edge path="M 582.1829700910303,476.84898230803964 L 582.6670299089698,528.4010176919603" frombiomoleculeid="62" sense="true" tobiomoleculeid="63"/>
+    <edge path="M 652.8742795204145,440.6098690611542 L 665.7757204795856,530.7401309388458" frombiomoleculeid="53" sense="true" tobiomoleculeid="64"/>
+    <edge path="M 681.6757278818222,472.5446971815595 L 672.6242721181778,530.8053028184404" frombiomoleculeid="55" sense="true" tobiomoleculeid="64"/>
+    <edge path="M 740.6772669899085,465.5937505010447 L 742.3727330100916,534.3062494989553" frombiomoleculeid="56" sense="true" tobiomoleculeid="65"/>
+    <edge path="M 803.3472440944199,460.0421431000961 L 805.5027559055801,536.6078568999039" frombiomoleculeid="49" sense="true" tobiomoleculeid="66"/>
+    <edge path="M 926.3385614289215,462.945094771483 L 924.6614385710785,538.504905228517" frombiomoleculeid="48" sense="true" tobiomoleculeid="67"/>
+  </edges>
+  <dynamicRange>NaN</dynamicRange>
+  <membraneCurvature>25</membraneCurvature>
+  <biomolecules>
+    <biomolecule compartmentid="2" label="CXCR4" x="52.05" y="129.95" comments="" regulation="SDF1" name="CXCR4" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="IL2R&amp;beta;" x="117.5" y="161.45" comments="" regulation="IL2 || gC" name="IL2Rb" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="&amp;gamma;C" x="168.6" y="127.2" comments="" regulation="IL2 || IL7 || IL15 || IL4 || IL13" name="gC" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="gp130" x="275.4" y="126.7" comments="" regulation="IL6" name="gp130" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Ig&amp;alpha;/&amp;beta;" x="599.4" y="123.85" comments="" regulation="aBCR || H2O2" name="Iga_b" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="SHP1" x="671.1" y="130.4" comments="" regulation="Iga_b || aBCR || H2O2" name="SHP1" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="CD19" x="797.95" y="132.85" comments="" regulation="" name="CD19" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="TRAF6" x="855.65" y="134.95" comments="" regulation="CpG || CD40L" name="TRAF6" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="TLR9" x="934.4" y="129.95" comments="" regulation="CD40L || CpG" name="TLR9" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="IRAK1/4" x="893.3" y="203.8" comments="" regulation="TRAF6 || TLR9" name="IRAK1_4" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Lyn/Lck" x="465.8" y="169.7" comments="" regulation="IL2Rb || Iga_b || SHP1 || CD19" name="LynLck" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="1" label="SDF-1" x="44.1" y="70.6" comments="" regulation="" name="SDF1" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-2" x="122.5" y="67.35" comments="" regulation="" name="IL2" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-7" x="195.9" y="64.85" comments="" regulation="" name="IL7" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-15" x="267.9" y="62.9" comments="" regulation="" name="IL15" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-4" x="323.25" y="61.8" comments="" regulation="" name="IL4" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-13" x="381.25" y="60.95" comments="" regulation="" name="IL13" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-6" x="436.55" y="60.45" comments="" regulation="" name="IL6" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IL-10" x="491.3" y="60.25" comments="" regulation="" name="IL10" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IFN&amp;gamma;" x="550.65" y="60.35" comments="" regulation="" name="IFNg" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="IFN&amp;alpha;&amp;beta;&amp;gamma;" x="604.15" y="60.75" comments="" regulation="" name="IFNabd" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="2" label="Jak2" x="132.1" y="256.95" comments="" regulation="CXCR4 || gp130 || IFNg || LynLck" name="Jak2" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Jak3" x="178.9" y="188.85" comments="" regulation="gC" name="Jak3" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Jak1" x="260.85" y="245.3" comments="" regulation="gC || gp130 || IL10 || IFNg || IFNabd || LynLck" name="Jak1" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Tyk2" x="339.5" y="235.7" comments="" regulation="gp130 || IL10 || IFNabd" name="Tyk2" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Shc" x="413.35" y="221.55" comments="" regulation="IL2Rb || gp130" name="Shc" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="1" label="&amp;alpha;BCR" x="659.9" y="61.5" comments="" regulation="" name="aBCR" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="H&lt;sub>2&lt;/sub>O&lt;sub>2&lt;/sub>" x="718.4" y="62.6" comments="" regulation="" name="H2O2" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="PMA/i" x="774.15" y="64" comments="" regulation="" name="PMAi" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="CD40L" x="846.5" y="66.25" comments="" regulation="" name="CD40L" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="1" label="CpG" x="929.25" y="69.45" comments="" regulation="" name="CpG" biomoleculestyleid="0"/>
+    <biomolecule compartmentid="2" label="Btk/Itk" x="580.95" y="178.6" comments="" regulation="LynLck" name="BtkItk" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Syk/Zap" x="523.1" y="209.8" comments="" regulation="IL2Rb || LynLck || BtkItk" name="SykZap" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="PIP&lt;sub>3&lt;/sub>" x="734.65" y="217.05" comments="" regulation="BtkItk || CD19" name="PIP3" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="PLC&amp;gamma;2" x="483.05" y="260.3" comments="" regulation="LynLck || SykZap || BtkItk || PIP3 || Ca2plus" name="PLCg2" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Ca++" x="672.7" y="242.2" comments="" regulation="PMAi || PIP3" name="Ca2plus" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="DAG" x="585.15" y="273.55" comments="" regulation="PLCg2" name="DAG" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="cCbl" x="845.9" y="231.95" comments="" regulation="" name="cCbl" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Vav" x="824.35" y="325.95" comments="" regulation="CD19 || cCbl" name="Vav" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="BLNK" x="534.15" y="305.25" comments="" regulation="PLCg2 || SykZap" name="BLNK" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Grb2" x="452.25" y="312" comments="" regulation="Shc || BLNK" name="Grb2" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="SHIP" x="745.2" y="326.45" comments="" regulation="Grb2 || BLNK || PIP3" name="SHIP" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="SOS" x="471.55" y="367.25" comments="" regulation="Grb2" name="SOS" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="PKC" x="618.4" y="337.15" comments="" regulation="DAG || PMAi || Ca2plus" name="PKC" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Ras" x="535.1" y="379.3" comments="" regulation="SOS || DAG || PKC" name="Ras" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="NIK" x="751.85" y="374.15" comments="" regulation="TRAF6" name="NIK" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Rac" x="840.7" y="374.2" comments="" regulation="Vav" name="Rac" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="MEKK" x="859.45" y="417.2" comments="" regulation="Rac" name="MEKK" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="MKK3/5/6" x="926.85" y="447.95" comments="" regulation="MEKK || IRAK1_4" name="MKK3_5_6" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="MKK4/7" x="802.7" y="445.05" comments="" regulation="MEKK" name="MKK4_7" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Raf-1" x="495.8" y="416.05" comments="" regulation="Ras" name="Raf1" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="MEK1/2" x="497.25" y="463.4" comments="" regulation="Raf1" name="MEK1_2" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="IKK" x="584.65" y="401.75" comments="" regulation="PKC || NIK" name="IKK" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="CaM" x="649.7" y="425.8" comments="" regulation="Ca2plus" name="CaM" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="Akt" x="707.2" y="406.65" comments="" regulation="PIP3" name="Akt" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="GSK3&amp;beta;" x="685.35" y="457.8" comments="" regulation="Akt" name="GSK3b" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="2" label="mTOR" x="740.1" y="450.6" comments="" regulation="Akt" name="mTOR" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="4" label="Stat1" x="97.5" y="557.25" comments="" regulation="Jak2 || Jak1 || LynLck" name="Stat1" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="Stat5" x="192" y="555.9" comments="" regulation="Jak2 || Jak1 || LynLck" name="Stat5" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="Stat6" x="279.6" y="551.15" comments="" regulation="Jak3 || Jak1" name="Stat6" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="Stat3" x="373.25" y="548.35" comments="" regulation="Jak1 || Tyk2 || LynLck" name="Stat3" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="Erk1/2" x="496.8" y="539.65" comments="" regulation="MEK1_2" name="Erk1_2" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="2" label="I&amp;kappa;B" x="581.95" y="461.85" comments="" regulation="IKK" name="IkB" biomoleculestyleid="3"/>
+    <biomolecule compartmentid="4" label="NF&amp;kappa;B" x="582.9" y="543.4" comments="" regulation="IkB" name="MFkB" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="NFAT" x="668.95" y="545.55" comments="" regulation="CaM || GSK3b" name="NFAT" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="S6" x="742.95" y="549.3" comments="" regulation="mTOR" name="S6" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="JNK1/2" x="806.15" y="551.6" comments="" regulation="MKK4_7" name="JNK1_2" biomoleculestyleid="1"/>
+    <biomolecule compartmentid="4" label="p38" x="924.15" y="553.5" comments="" regulation="MKK3_5_6" name="p38" biomoleculestyleid="1"/>
+  </biomolecules>
+  <name><![CDATA[Follicular Lymphoma Network]]></name>
+  <exportMaxAnimationLoops>3</exportMaxAnimationLoops>
+</xml>

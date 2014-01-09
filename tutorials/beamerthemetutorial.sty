@@ -1,0 +1,97 @@
+% LaTex stylesheet for tutorials
+%
+% @author Jonathan Karr, jkarr@stanford.edu
+% @affiliation Covert Lab, Department of Bioengineering, Stanford University
+% @lastupdated 4/5/2009
+\ProvidesPackage{beamerthemetutorial}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+\usepackage[overlay,absolute]{textpos}
+\usepackage{graphics,graphicx,url,amsmath}
+\usepackage{movie15}
+
+\useoutertheme{shadow}
+\usetheme{Madrid}
+\setbeamercovered{transparent=0}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{.1cm}{9.0cm}
+
+%source in bottom right
+\newcommand{\sourcebr}[1]{
+  \begin{textblock}{12.6}(0,-.4)
+  \tiny
+  \flushright{#1}
+  \end{textblock}}
+
+%source in bottom left
+\newcommand{\sourcebl}[1]{
+  \begin{textblock}{12.6}(0,0)
+  \raggedright
+  \tiny
+  #1
+  \end{textblock}}
+
+%et al
+\newcommand{\etal}{\textit{et al.}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{lgray}{rgb}{0.9,0.9,.9}
+\definecolor{dgray}{rgb}{0.8,0.8,.8}
+\definecolor{ddgray}{rgb}{0.7,0.7,.7}
+
+\DefineNamedColor{named}{NetworkPainterBlue}{RGB}{50,86,147}
+\DefineNamedColor{named}{NetworkPainterGreen}{RGB}{51,135,148}
+\DefineNamedColor{named}{BlueViolet}{RGB}{138,43,226}
+\DefineNamedColor{named}{SpringGreen}{RGB}{50,205,50}
+\DefineNamedColor{named}{mylightgray}{RGB}{224,224,224}
+\DefineNamedColor{named}{mydarkgray}{RGB}{175,175,175}
+\setbeamercolor*{structure}{fg=NetworkPainterBlue,bg=black}
+\setbeamercolor*{structure2}{fg=white,bg=NetworkPainterBlue}
+\setbeamercolor*{structure3}{fg=white,bg=NetworkPainterBlue}
+\setbeamercolor{frametitle right}{parent=subsection in head/foot} 
+\setbeamercolor{block title}{fg=white,bg=NetworkPainterBlue}
+\setbeamercolor{block body}{use=structure3,bg=structure3.bg!10}
+\setbeamercolor{block text}{fg=NetworkPainterBlue,bg=black}
+\setbeamercolor*{author in head/foot}{parent=palette primary}
+\setbeamercolor{bibliography entry journal}{fg=black,bg=black}
+
+\setbeamercolor{block title example}{bg=BlueViolet,fg=white}
+\setbeamercolor{block body example}{bg=BlueViolet!10,fg=black}
+\setbeamercolor{example text}{fg=BlueViolet,bg=black}
+
+\setbeamercolor{block title three}{bg=SpringGreen,fg=white}
+\setbeamercolor{block body three}{bg=SpringGreen!10,fg=black}
+\setbeamercolor{three text}{fg=SpringGreen,bg=black}
+
+\setbeamercolor{block title four}{bg=orange,fg=white}
+\setbeamercolor{block body four}{bg=orange!10,fg=black}
+\setbeamercolor{four text}{fg=orange,bg=black}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{footline}{}
+
+\makeatletter
+\long\def\beamer@@frametitle[#1]#2{%
+  \beamer@ifempty{#2}{}{%
+    \gdef\insertframetitle{\centering{#2\ifnum\beamer@autobreakcount>0\relax{}\space\usebeamertemplate*{frametitle continuation}\fi}}%
+  \gdef\beamer@frametitle{#2}%
+  \gdef\beamer@shortframetitle{#1}%
+}%
+}
+\makeatother 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster"
+%%% End: 

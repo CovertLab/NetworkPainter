@@ -1,0 +1,4 @@
+ Options +FollowSymLinks
+ RewriteEngine On
+ RewriteRule ^KarrEtAl2013Fig1$  http://%{SERVER_NAME}/projects/NetworkAnalyzer/bin/view.php?networkID=132
+ 

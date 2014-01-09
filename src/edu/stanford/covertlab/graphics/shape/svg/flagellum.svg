@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="45" height="32" viewBox="0 0 45 32">
+<defs>
+<radialGradient id='renderingstyle_body' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
+  <stop offset='5%' style='stop-color:white;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</radialGradient>
+<linearGradient id='renderingstyle_edge' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='25%' style='stop-color:black;stop-opacity:.3' />
+  <stop offset='95%' style='stop-color:black;stop-opacity:1' />
+</linearGradient>
+</defs>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 0,1
+q 15,2 30,0
+v 30
+q -15,2 -30,0
+v -30
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 0,1
+q 15,2 30,0
+q -15,-2 -30,0
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 10,1
+q 5,1 10,0
+v -5
+q 2,-8 10,-10
+h 15
+v -10
+h -25
+q -8,2 -10,10
+v 15
+"/>
+<path style="fill:none;stroke:url(#renderingstyle_edge);" d="
+M 0,1
+q 15,2 30,0
+v 30
+q -15,2 -30,0
+v -30
+q 15,-2 30,0
+m -20,0
+q 5,1 10,0
+v -5
+q 2,-8 10,-10
+h 15
+v -10
+h -25
+q -8,2 -10,10
+v 15
+"/>
+</svg>

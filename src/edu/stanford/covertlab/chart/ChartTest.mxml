@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--- 
+Simple application used to test chart class.
+
+@see Chart
+
+@author Jonathan Karr, jkarr@stanford.edu
+@affiliation Covert Lab, Department of Bioengineering, Stanford University
+@lastupdated 3/23/2009
+-->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	backgroundColor="#FFFFFF"
+	creationComplete="creationCompleteHandler()">
+
+	<mx:Script>
+		<![CDATA[
+		import edu.stanford.covertlab.chart.Chart;
+		import edu.stanford.covertlab.colormap.Colormap;
+		
+		private function creationCompleteHandler():void {
+			var yAxis:Object = { name:'Channel', tickLabels:['Syk','Erk','FL1-A','CD20','Bcl2','IgL','Side','Forw'] };
+			var xAxis:Object = { name:'Time', tickLabels:['0m', '4m', '16m', '60m', '90m'] };
+			var colormapScale:Array = [ -1.5, 0, 1.5];
+			
+			var data:Array = [
+				new Point(1, 10),
+				new Point(2, 5),
+				new Point(3, 7),
+				new Point(4, 3), 
+				new Point(5,8)];
+			
+			var chart:Chart = new Chart(Chart.CHARTTYPE_AREA, 
+				xAxis, yAxis, data,
+				Colormap.CYTOBANK_BLUE_YELLOW,colormapScale);
+			addChild(chart);
+		}
+		]]>
+	</mx:Script>
+</mx:Application>

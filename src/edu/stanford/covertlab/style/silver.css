@@ -1,0 +1,510 @@
+/**
+ * Style definitions.
+ * <ul>
+ * <li>Main application</li>
+ * <li>Tool bars</li>
+ * <li>PopUp windows</li>
+ * <li>Embedded fonts</li>
+ * </ul>
+ *
+ * @author Jonathan Karr, jkarr@stanford.edu
+ * @affiliation Covert Lab, Department of Bioengineering, Stanford University
+ * @lastupdated 3/23/2009
+ */
+
+/**
+ * Application 
+ */
+Application {
+	paddingLeft: 0;
+	paddingRight: 0;
+	paddingTop: 0;
+	paddingBottom: 0;
+	verticalGap:0;
+	backgroundColor: #CCCCCC;
+	fontFamily:EmbeddedArial;
+}
+
+.MainTabNavigator {
+	backgroundColor: #CCCCCC;
+}
+
+VBox.MainTab{
+	paddingBottom:10;
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+}
+
+AcceleratorMenuBar{
+	paddingLeft:0;
+	paddingRight:0;
+	paddingBottom:10;
+	fillColors:#CCCCCC,#666666;
+	fillAlphas:0.8,0.6;
+	borderColor:#B7BABC;
+	borderThickness:1;
+}
+
+/** 
+ * toolbars
+ */
+
+Docker
+{
+	paddingRight:0;
+	paddingLeft: 0;
+	paddingTop:0;
+	paddingBottom:0;
+	dockingAreaStyleName: "dockingArea";
+	rowStyleName: "dockingRow";	
+}
+
+.dockingArea
+{
+	horizontalScrollPolicy: "off";
+	dropShadowEnabled: false;	
+	paddingBottom:1;
+	paddingTop:1;
+	backgroundColor:#AAAAAA;
+	backgroundAlpha:0.4;
+	borderStyle:none;
+	verticalGap:1;
+}
+
+.dockingRow
+{
+	horizontalGap: 4;
+	paddingTop:0;
+	paddingBottom:0;
+}
+
+.docked
+{
+	backgroundColor:#AAAAAA;
+	backgroundAlpha:0.2;
+	borderStyle:solid;	
+	borderColor:#999999;
+	cornerRadius:4;
+	verticalAlign:middle;
+	paddingBottom:3;
+	paddingTop:2;
+	paddingRight:4;
+}	
+
+.undocked
+{
+	backgroundColor:none;
+	borderStyle:none;	
+	cornerRadius:0;
+}	
+
+.popedup
+{
+	borderStyle: "default";
+	borderThickness:0;
+	borderThicknessRight:0;
+	borderThicknessLeft:0;
+	borderThicknessTop:0;
+	borderThicknessBottom:0;
+	borderAlpha:1;
+	headerHeight: 18;
+	backgroundColor:#E7E7E7;
+	cornerRadius: 6;	
+	dropShadowEnabled: true;
+	headerColors:#999999,#999999;
+	footerColors:#E7E7E7,#E7E7E7;
+	paddingBottom: 4;
+	paddingLeft: 4;
+	paddingRight: 4;
+	paddingTop: 4;
+	verticalGap:2;
+}
+
+/**
+ * Alert window 
+ */
+Alert{
+	buttonStyleName:'AlertButton';	
+	titleStyleName:'AlertTitle';
+	messageStyleName:'AlertMessage';
+	borderThickness:0;
+	borderThicknessRight:0;
+	borderThicknessLeft:0;
+	borderThicknessTop:0;
+	borderThicknessBottom:0;
+	borderAlpha:1;
+	headerHeight: 18;
+	backgroundColor:#E7E7E7;
+	cornerRadius: 6;	
+	dropShadowEnabled: true;
+	headerColors:#999999,#999999;
+	footerColors:#E7E7E7,#E7E7E7;
+	paddingBottom: 4;
+	paddingLeft: 4;
+	paddingRight: 4;
+	paddingTop: 4;
+	verticalGap:2;
+	controlBarStyleName:'TitleWindowControlBar';
+}
+
+.AlertButton{
+	paddingTop:0;
+	paddingBottom:0;
+	paddingRight:0;
+	paddingLeft:0;
+	fillColors:#999999,#999999;
+	fillAlphas:1,0.7;
+}
+
+.AlertMessage{
+	color:#0B333C;
+}
+
+.AlertTitle{
+	color:#0B333C;
+	fontWeight:bold;
+}
+
+/**
+ * tooltip
+ */
+ToolTip{	
+    borderThickness:0;
+	borderThicknessRight:0;
+	borderThicknessLeft:0;
+	borderThicknessTop:0;
+	borderThicknessBottom:0;
+	borderAlpha:1;
+    backgroundColor: #E7E7E7;
+    dropShadowEnabled: true;
+    cornerRadius: 6;
+}
+
+/**
+ * Default styles for components
+ */
+Form{
+	paddingTop:4;
+	paddingBottom:-2;
+	paddingLeft:4;
+	paddingRight:4;
+	verticalGap:2;
+	indicatorGap:4;
+	horizontalScrollPolicy:off;
+	verticalScrollPolicy:off;
+}
+
+FormItem{
+	paddingTop:0;
+	paddingBottom:0;
+	paddingRight:0;
+	paddingLeft:0;
+	indicatorGap:2;
+	horizontalGap:4;
+	labelStyleName:'FormItemLabel';
+}
+
+.FormItemLabel{
+	fontWeight:bold;
+}
+
+ComboBox{
+	borderStyle: solid;
+	cornerRadius:0;
+	paddingTop:0;
+	paddingBottom:0;
+	paddingLeft:0;
+	paddingRight:0;
+	fillColors:#FFFFFF,#FFFFFF;
+	fillAlphas:1,1;
+	fontWeight:normal;
+	textInputStyleName:'ComboBoxTextInput';
+	dropdownStyleName:'ComboBoxDropDown';
+}
+
+.ComboBoxTextInput{
+	borderStyle: solid;
+	paddingTop:1;
+	paddingBottom:0;
+	paddingLeft:0;
+	paddingRight:0;		
+	focusThickness:0;
+	backgroundAlpha:1;
+}
+
+.ComboBoxDropDown{
+	paddingTop:3;
+}
+
+TextInput{
+	borderStyle: solid;
+	paddingTop:2;
+	paddingBottom:0;
+	paddingLeft:0;
+	paddingRight:0;		
+	focusThickness:0;
+	backgroundAlpha:1;
+}
+
+TextArea{
+	borderStyle: solid;
+	paddingTop:0;
+	paddingBottom:0;
+	paddingLeft:0;
+	paddingRight:0;		
+	focusThickness:0;
+	backgroundAlpha:1;
+}
+
+DataGrid{
+	paddingTop:0;
+	paddingBottom:0;
+	paddingRight:0;
+	paddingLeft:0;
+	headerStyleName:'DataGridHeader';
+}
+
+.DataGridHeader{
+	paddingTop:0;
+	paddingBottom:0;
+	paddingRight:4;
+	paddingLeft:4;
+	fontWeight:bold;
+}
+
+List{
+	paddingTop:-2;
+	paddingBottom:0;
+}
+
+ListItemRenderer{
+}
+
+Accordion{
+	headerStyleName:'AccordionButton';
+	headerHeight:18;
+	backgroundColor:#E7E7E7;
+}
+
+.AccordionButton{
+	paddingTop:2;
+	paddingBottom:0;
+	paddingRight:0;
+	paddingLeft:0;
+	fillColors:#999999,#999999;
+	fillAlphas:1,0.7;
+	borderStyle:solid;
+	borderThickness:1;
+	borderAlpha:1;
+	borderColor:#666666;
+}
+
+ControlBar{
+	horizontalAlign:right;
+	verticalAlign:top;
+}
+
+Panel{
+	borderThickness:2;
+	borderThicknessRight:6;
+	borderThicknessLeft:6;
+	borderThicknessTop:2;
+	borderThicknessBottom:6;	
+	headerHeight: 18;
+	paddingBottom: 4;
+	paddingLeft: 4;
+	paddingRight: 4;
+	paddingTop: 4;
+	controlBarStyleName:'PanelControlBar';
+}
+
+.PanelControlBar{
+	paddingTop:0;
+	paddingBottom:6;
+	paddingLeft:6;
+	paddingRight:6;
+	verticalAlign:top;
+}
+
+ImageBorder{
+	borderThickness:4;
+	borderAlpha:1;
+	borderColor:#999999;
+	cornerRadius:6;
+}
+
+/**
+ * From Flex 3 Style Explorer
+ * http://examples.adobe.com/flex3/consulting/styleexplorer/srcview/index.html
+ */
+VSlider{
+	thumbUpSkin:Embed(source="../image/vsliderThumb.png");
+	thumbOverSkin:Embed(source="../image/vsliderThumb_over.png");
+	thumbDownSkin:Embed(source="../image/vsliderThumb_down.png");
+	thumbDisabledSkin:Embed(source="../image/vsliderThumb_disabled.png");
+}
+
+HSlider{
+	thumbUpSkin:Embed(source="../image/sliderThumb.png");	
+	thumbOverSkin:Embed(source="../image/sliderThumb_over.png");
+	thumbDownSkin:Embed(source="../image/sliderThumb_down.png");
+	thumbDisabledSkin:Embed(source="../image/sliderThumb_disabled.png");
+}
+
+/**
+ * Errors
+ */
+.ErrorMsg{
+	paddingTop:0;
+	paddingBottom:0;
+	paddingLeft:0;
+	paddingRight:0;
+	color:#FF0000;
+	fontWeight:bold;
+}
+
+/**
+ * PopUp Window (tighter style than default)
+ */
+TitleWindow{
+	borderThickness:0;
+	borderThicknessRight:0;
+	borderThicknessLeft:0;
+	borderThicknessTop:0;
+	borderThicknessBottom:0;
+	borderAlpha:1;
+	headerHeight: 18;
+	backgroundColor:#E7E7E7;
+	cornerRadius: 6;	
+	dropShadowEnabled: true;
+	headerColors:#999999,#999999;
+	footerColors:#E7E7E7,#E7E7E7;
+	paddingBottom: 4;
+	paddingLeft: 4;
+	paddingRight: 4;
+	paddingTop: 4;
+	verticalGap:2;
+	controlBarStyleName:'TitleWindowControlBar';
+}
+
+.TitleWindowControlBar{
+	paddingTop:0;
+	paddingBottom:2;
+	paddingLeft:2;
+	paddingRight:2;
+}
+
+.TitleWindowForm{
+	paddingTop:2;
+	paddingBottom:-4;
+	paddingLeft:2;
+	paddingRight:2;
+	verticalGap:-2;
+	indicatorGap:4;
+	horizontalScrollPolicy:off;
+	verticalScrollPolicy:off;
+}
+
+.TitleWindowFormHeading{
+	paddingTop:0;
+	paddingBottom:0;
+}
+
+.TitleWindowFormItem{
+	horizontalGap:2;
+}
+
+.TitleWindowTextInput{
+	paddingTop:-3;
+}
+
+.TitleWindowTextArea{
+}
+
+.TitleWindowComboBox{
+	paddingTop:2;
+}
+
+.TitleWindowButton{
+	paddingTop:0;
+	paddingBottom:0;
+	paddingRight:0;
+	paddingLeft:0;
+	fillColors:#999999,#999999;
+	fillAlphas:1,0.7;
+	disabledColor:#999999;
+}
+
+.TitleWindowAccordion{
+}
+
+.TitleWindowDataGrid{
+}
+
+.TitleWindowList{
+}
+
+.TitleWindowListItemRenderer{
+}
+
+/**
+ * Embedded Fonts
+ *
+ * The ArialSup and ArialSub font are necessary to get superscripting and subscripting.
+ * The other fonts are necessary to maintain consistency wit the superscript and
+ * subscript fonts. Embedding these assets add 0.5 mb to the compiled swf.
+ *
+ *  Sources
+ *  <ul>
+ *  <li>ArialSup, ArialSub; <a href="http://www.helpmaster.info/hlp-enhancements-suarial.htm">http://www.helpmaster.info/hlp-enhancements-suarial.htm</a></li>
+ *  <li>Arial, ArialBD, ArialBI, ArialI: MS Windows XP</li>
+ *  </ul>
+ */
+@font-face {
+    src: url('../font/Arial.ttf');
+    fontFamily: EmbeddedArial;
+    fontStyle: normal;
+    fontWeight: normal;
+    advancedAntiAliasing: true;
+}
+
+@font-face {
+    src: url('../font/ArialBD.ttf');
+    fontFamily: EmbeddedArial;
+    fontStyle: normal;
+    fontWeight: bold;
+    advancedAntiAliasing: true;
+}
+
+@font-face {
+    src: url('../font/ArialBI.ttf');
+    fontFamily: EmbeddedArial;
+    fontStyle: italic;
+    fontWeight: bold;
+    advancedAntiAliasing: true;
+}
+
+@font-face {
+    src: url('../font/ArialI.ttf');
+    fontFamily: EmbeddedArial;
+    fontStyle: italic;
+    fontWeight: normal;
+    advancedAntiAliasing: true;
+}
+
+@font-face {
+    src: url('../font/ArialSub.ttf');
+    fontFamily: EmbeddedArialSub;
+    fontStyle: normal;
+    fontWeight: normal;
+    advancedAntiAliasing: true;
+}
+
+@font-face {
+    src: url('../font/ArialSup.ttf');
+    fontFamily: EmbeddedArialSup;
+    fontStyle: normal;
+    fontWeight: normal;
+    advancedAntiAliasing: true;
+}

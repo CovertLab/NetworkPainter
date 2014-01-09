@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="137" height="121" viewBox="0 0 137 121">
+<defs>
+<radialGradient id='renderingstyle_body' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
+  <stop offset='5%' style='stop-color:white;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</radialGradient>
+<linearGradient id='renderingstyle_edge' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='25%' style='stop-color:black;stop-opacity:.3' />
+  <stop offset='95%' style='stop-color:black;stop-opacity:1' />
+</linearGradient>
+</defs>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M63,55
+h10
+v10
+h-10
+v-10
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 38,35
+l-3,3
+l2,2
+l3,-3
+l-2,-2
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 98,35
+l3,3
+l-2,2
+l-3,-3
+l2,-2
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 13,10
+l 10,-10
+l 40,40
+v 80
+h -14.1421
+v -74.1421
+l -35.8579,-35.8579
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 123,10
+l -10,-10
+l -40,40
+v 80
+h 14.1421
+v -74.1421
+l 35.8579,-35.8579
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 10,13
+l -10,10
+l 35,35
+l 10,-10
+l -35,-35
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 126,13
+l 10,10
+l -35,35
+l -10,-10
+l 35,-35
+"/>
+<path style="fill:none;stroke:url(#renderingstyle_edge);" d="
+M63,55
+h10
+v10
+h-10
+v-10
+M38,35
+l-3,3
+l2,2
+l3,-3
+l-2,-2
+M98,35
+l3,3
+l-2,2
+l-3,-3
+l2,-2
+M 13,10
+l 10,-10
+l 40,40
+v 80
+h -14.1421
+v -74.1421
+l -35.8579,-35.8579
+M 123,10
+l -10,-10
+l -40,40
+v 80
+h 14.1421
+v -74.1421
+l 35.8579,-35.8579
+M 13,10
+m -3,3
+l -10,10
+l 35,35
+l 10,-10
+l -35,-35
+M 123,10
+m 3,3
+l 10,10
+l -35,35
+l -10,-10
+l 35,-35
+"/>
+</svg>

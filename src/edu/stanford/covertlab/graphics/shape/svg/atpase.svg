@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="30" height="32" viewBox="0 0 30 32">
+<defs>
+<radialGradient id='renderingstyle_body' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
+  <stop offset='5%' style='stop-color:white;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</radialGradient>
+<linearGradient id='renderingstyle_edge' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='25%' style='stop-color:black;stop-opacity:.3' />
+  <stop offset='95%' style='stop-color:black;stop-opacity:1' />
+</linearGradient>
+</defs>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 30,1
+v 30
+q -15,2 -30,0
+v -30
+q 15,-2 30,0
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 0,1
+q 15,2 30,0
+q -15,-2 -30,0
+"/>
+<path style="fill:url(#renderingstyle_body);stroke:none;" d="
+M 10,1
+q 5,1 10,0
+v -10
+h -10
+v 10
+"/>
+<path style="fill:none;stroke:url(#renderingstyle_edge);" d="
+M 0,1
+q 15,-2 30,0
+v 30
+q -15,2 -30,0
+v -30
+q 15,2 30,0
+m -20,0
+q 5,1 10,0
+v -10
+h -10
+v 10
+"/>
+<ellipse style="fill:url(#renderingstyle_body);stroke:url(#renderingstyle_edge);" cx="15" cy="-19" rx="8" ry="10"/>
+<ellipse style="fill:url(#renderingstyle_body);stroke:url(#renderingstyle_edge);" cx="11" cy="-17" rx="8" ry="10"/>
+<ellipse style="fill:url(#renderingstyle_body);stroke:url(#renderingstyle_edge);" cx="19" cy="-17" rx="8" ry="10"/>
+<ellipse style="fill:url(#renderingstyle_body);stroke:url(#renderingstyle_edge);" cx="15" cy="-14" rx="8" ry="10"/>
+</svg>

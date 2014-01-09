@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model cmeta:id="PBMC_immune signaling" name="PBMC immune signaling" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:cmeta="http://www.cellml.org/metadata/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:RDF>
+    <rdf:Description rdf:about="#PBMC_immune signaling">
+      <dc:Title><![CDATA[PBMC immune signaling]]></dc:Title>
+      <dc:Subject><![CDATA[This diagram depicts the human peripheral blood mononuclear cell (PBMC) immune signaling network. PBMCs are a critical component of the immune system, helping fight infection and adapt to intruders. The diagram is modified from Figure S6 of Bodenmiller et al., 2012.]]></dc:Subject>
+      <dc:Contributor><![CDATA[Jonathan Karr]]></dc:Contributor>
+      <dc:Creator><![CDATA[NetworkAnalyzer]]></dc:Creator>
+      <dc:Date><![CDATA[Tue Jan 29 2013 07:03:18 PM]]></dc:Date>
+    </rdf:Description>
+  </rdf:RDF>
+  <units name="binary">
+    <unit multiplier="1" units="dimensionless"/>
+  </units>
+  <component name="Media"/>
+  <component name="Cytosol"/>
+  <component name="Nucleus"/>
+  <component name="Media_Cytosol_Membrane"/>
+  <component name="Cytosol_Nucleus_Membrane"/>
+  <component name="AKT">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="AKT" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="PI3K"/>
+    <math cmeta:id="AKT_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>AKT</ci>
+        <ci>PI3K</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="BCR">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[B-cell receptor]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="BCR" initial_value="0"/>
+  </component>
+  <component name="BLNK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="BLNK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="SYK"/>
+    <math cmeta:id="BLNK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>BLNK</ci>
+        <ci>SYK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="BTK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="BTK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="SYK"/>
+    <math cmeta:id="BTK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>BTK</ci>
+        <ci>SYK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="CD22">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="CD22" initial_value="0"/>
+  </component>
+  <component name="ERK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="ERK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="MEK"/>
+    <math cmeta:id="ERK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>ERK</ci>
+        <ci>MEK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="GeneExpression">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="GeneExpression" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="STAT1"/>
+    <variable units="binary" public_interface="in" name="STAT3"/>
+    <variable units="binary" public_interface="in" name="STAT5"/>
+    <variable units="binary" public_interface="in" name="S6"/>
+    <variable units="binary" public_interface="in" name="ERK"/>
+    <variable units="binary" public_interface="in" name="p38"/>
+    <variable units="binary" public_interface="in" name="NFkB"/>
+    <math cmeta:id="GeneExpression_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>GeneExpression</ci>
+        <apply>
+          <or/>
+          <ci>STAT1</ci>
+          <ci>STAT3</ci>
+          <ci>STAT5</ci>
+          <ci>S6</ci>
+          <ci>ERK</ci>
+          <ci>p38</ci>
+          <ci>NFkB</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="GRB_SOS">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="GRB_SOS" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="BLNK"/>
+    <variable units="binary" public_interface="in" name="PLC"/>
+    <math cmeta:id="GRB_SOS_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>GRB_SOS</ci>
+        <apply>
+          <or/>
+          <ci>BLNK</ci>
+          <ci>PLC</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="IkB">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="IkB" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="IKK"/>
+    <math cmeta:id="IkB_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>IkB</ci>
+        <ci>IKK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="IKK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="IKK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="PKC"/>
+    <math cmeta:id="IKK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>IKK</ci>
+        <ci>PKC</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="JAK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="JAK" initial_value="0"/>
+  </component>
+  <component name="LAT">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="LAT" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="Zap70"/>
+    <math cmeta:id="LAT_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>LAT</ci>
+        <ci>Zap70</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="MEK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="MEK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="RAF"/>
+    <math cmeta:id="MEK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>MEK</ci>
+        <ci>RAF</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="MEKK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="MEKK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="PKC"/>
+    <math cmeta:id="MEKK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>MEKK</ci>
+        <ci>PKC</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="MKK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="MKK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="MEKK"/>
+    <math cmeta:id="MKK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>MKK</ci>
+        <ci>MEKK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="mTOR">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="mTOR" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="AKT"/>
+    <math cmeta:id="mTOR_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>mTOR</ci>
+        <ci>AKT</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="NFkB">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="NFkB" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="IkB"/>
+    <math cmeta:id="NFkB_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>NFkB</ci>
+        <ci>IkB</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="p38">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="p38" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="MKK"/>
+    <math cmeta:id="p38_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>p38</ci>
+        <ci>MKK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="PI3K">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="PI3K" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="BTK"/>
+    <math cmeta:id="PI3K_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>PI3K</ci>
+        <ci>BTK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="PKC">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="PKC" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="PLC"/>
+    <math cmeta:id="PKC_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>PKC</ci>
+        <ci>PLC</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="PLC">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="PLC" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="BTK"/>
+    <variable units="binary" public_interface="in" name="PI3K"/>
+    <variable units="binary" public_interface="in" name="BLNK"/>
+    <variable units="binary" public_interface="in" name="LAT"/>
+    <variable units="binary" public_interface="in" name="Zap70"/>
+    <math cmeta:id="PLC_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>PLC</ci>
+        <apply>
+          <or/>
+          <ci>BTK</ci>
+          <ci>PI3K</ci>
+          <ci>BLNK</ci>
+          <ci>LAT</ci>
+          <ci>Zap70</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="RAF">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="RAF" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="RAS"/>
+    <math cmeta:id="RAF_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>RAF</ci>
+        <ci>RAS</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="RAS">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="RAS" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="GRB_SOS"/>
+    <variable units="binary" public_interface="in" name="PKC"/>
+    <math cmeta:id="RAS_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>RAS</ci>
+        <apply>
+          <or/>
+          <ci>GRB_SOS</ci>
+          <ci>PKC</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="RSK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="RSK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="ERK"/>
+    <math cmeta:id="RSK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>RSK</ci>
+        <ci>ERK</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="S6">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="S6" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="mTOR"/>
+    <variable units="binary" public_interface="in" name="RSK"/>
+    <math cmeta:id="S6_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>S6</ci>
+        <apply>
+          <or/>
+          <ci>mTOR</ci>
+          <ci>RSK</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="SFK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="SFK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="SHP"/>
+    <math cmeta:id="SFK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>SFK</ci>
+        <ci>SHP</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="SHP">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="SHP" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="CD22"/>
+    <variable units="binary" public_interface="in" name="SFK"/>
+    <math cmeta:id="SHP_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>SHP</ci>
+        <apply>
+          <and/>
+          <ci>CD22</ci>
+          <apply>
+            <not/>
+            <ci>SFK</ci>
+          </apply>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="SLP76">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="SLP76" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="LAT"/>
+    <math cmeta:id="SLP76_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>SLP76</ci>
+        <ci>LAT</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="STAT1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="STAT1" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="SFK"/>
+    <variable units="binary" public_interface="in" name="JAK"/>
+    <math cmeta:id="STAT1_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>STAT1</ci>
+        <apply>
+          <or/>
+          <ci>SFK</ci>
+          <ci>JAK</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="STAT3">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="STAT3" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="SFK"/>
+    <variable units="binary" public_interface="in" name="JAK"/>
+    <math cmeta:id="STAT3_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>STAT3</ci>
+        <apply>
+          <or/>
+          <ci>SFK</ci>
+          <ci>JAK</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="STAT5">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="STAT5" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="SFK"/>
+    <variable units="binary" public_interface="in" name="JAK"/>
+    <math cmeta:id="STAT5_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>STAT5</ci>
+        <apply>
+          <or/>
+          <ci>SFK</ci>
+          <ci>JAK</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="SYK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="SYK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="BCR"/>
+    <variable units="binary" public_interface="in" name="SFK"/>
+    <math cmeta:id="SYK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>SYK</ci>
+        <apply>
+          <or/>
+          <ci>BCR</ci>
+          <ci>SFK</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="TCR">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[T-cell receptor]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="TCR" initial_value="0"/>
+  </component>
+  <component name="Zap70">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="Zap70" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="TCR"/>
+    <math cmeta:id="Zap70_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>Zap70</ci>
+        <ci>TCR</ci>
+      </apply>
+    </math>
+  </component>
+  <group>
+    <relationship_ref name="Media" relationship="containment"/>
+    <component_ref component="Media"/>
+  </group>
+  <group>
+    <relationship_ref name="Cytosol" relationship="containment"/>
+    <component_ref component="Cytosol">
+      <component_ref component="AKT"/>
+      <component_ref component="BLNK"/>
+      <component_ref component="BTK"/>
+      <component_ref component="GRB_SOS"/>
+      <component_ref component="IkB"/>
+      <component_ref component="IKK"/>
+      <component_ref component="JAK"/>
+      <component_ref component="LAT"/>
+      <component_ref component="MEK"/>
+      <component_ref component="MEKK"/>
+      <component_ref component="MKK"/>
+      <component_ref component="mTOR"/>
+      <component_ref component="PI3K"/>
+      <component_ref component="PKC"/>
+      <component_ref component="PLC"/>
+      <component_ref component="RAF"/>
+      <component_ref component="RAS"/>
+      <component_ref component="RSK"/>
+      <component_ref component="SFK"/>
+      <component_ref component="SHP"/>
+      <component_ref component="SLP76"/>
+      <component_ref component="SYK"/>
+      <component_ref component="Zap70"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Nucleus" relationship="containment"/>
+    <component_ref component="Nucleus">
+      <component_ref component="ERK"/>
+      <component_ref component="GeneExpression"/>
+      <component_ref component="NFkB"/>
+      <component_ref component="p38"/>
+      <component_ref component="S6"/>
+      <component_ref component="STAT1"/>
+      <component_ref component="STAT3"/>
+      <component_ref component="STAT5"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Media_Cytosol_Membrane" relationship="containment"/>
+    <component_ref component="Media_Cytosol_Membrane">
+      <component_ref component="BCR"/>
+      <component_ref component="CD22"/>
+      <component_ref component="TCR"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Cytosol_Nucleus_Membrane" relationship="containment"/>
+    <component_ref component="Cytosol_Nucleus_Membrane"/>
+  </group>
+  <connection>
+    <map_components component_1="PI3K" component_2="AKT"/>
+    <map_variables variable_1="PI3K" variable_2="PI3K"/>
+  </connection>
+  <connection>
+    <map_components component_1="SYK" component_2="BLNK"/>
+    <map_variables variable_1="SYK" variable_2="SYK"/>
+  </connection>
+  <connection>
+    <map_components component_1="SYK" component_2="BTK"/>
+    <map_variables variable_1="SYK" variable_2="SYK"/>
+  </connection>
+  <connection>
+    <map_components component_1="MEK" component_2="ERK"/>
+    <map_variables variable_1="MEK" variable_2="MEK"/>
+  </connection>
+  <connection>
+    <map_components component_1="STAT1" component_2="GeneExpression"/>
+    <map_variables variable_1="STAT1" variable_2="STAT1"/>
+  </connection>
+  <connection>
+    <map_components component_1="STAT3" component_2="GeneExpression"/>
+    <map_variables variable_1="STAT3" variable_2="STAT3"/>
+  </connection>
+  <connection>
+    <map_components component_1="STAT5" component_2="GeneExpression"/>
+    <map_variables variable_1="STAT5" variable_2="STAT5"/>
+  </connection>
+  <connection>
+    <map_components component_1="S6" component_2="GeneExpression"/>
+    <map_variables variable_1="S6" variable_2="S6"/>
+  </connection>
+  <connection>
+    <map_components component_1="ERK" component_2="GeneExpression"/>
+    <map_variables variable_1="ERK" variable_2="ERK"/>
+  </connection>
+  <connection>
+    <map_components component_1="p38" component_2="GeneExpression"/>
+    <map_variables variable_1="p38" variable_2="p38"/>
+  </connection>
+  <connection>
+    <map_components component_1="NFkB" component_2="GeneExpression"/>
+    <map_variables variable_1="NFkB" variable_2="NFkB"/>
+  </connection>
+  <connection>
+    <map_components component_1="BLNK" component_2="GRB_SOS"/>
+    <map_variables variable_1="BLNK" variable_2="BLNK"/>
+  </connection>
+  <connection>
+    <map_components component_1="PLC" component_2="GRB_SOS"/>
+    <map_variables variable_1="PLC" variable_2="PLC"/>
+  </connection>
+  <connection>
+    <map_components component_1="IKK" component_2="IkB"/>
+    <map_variables variable_1="IKK" variable_2="IKK"/>
+  </connection>
+  <connection>
+    <map_components component_1="PKC" component_2="IKK"/>
+    <map_variables variable_1="PKC" variable_2="PKC"/>
+  </connection>
+  <connection>
+    <map_components component_1="Zap70" component_2="LAT"/>
+    <map_variables variable_1="Zap70" variable_2="Zap70"/>
+  </connection>
+  <connection>
+    <map_components component_1="RAF" component_2="MEK"/>
+    <map_variables variable_1="RAF" variable_2="RAF"/>
+  </connection>
+  <connection>
+    <map_components component_1="PKC" component_2="MEKK"/>
+    <map_variables variable_1="PKC" variable_2="PKC"/>
+  </connection>
+  <connection>
+    <map_components component_1="MEKK" component_2="MKK"/>
+    <map_variables variable_1="MEKK" variable_2="MEKK"/>
+  </connection>
+  <connection>
+    <map_components component_1="AKT" component_2="mTOR"/>
+    <map_variables variable_1="AKT" variable_2="AKT"/>
+  </connection>
+  <connection>
+    <map_components component_1="IkB" component_2="NFkB"/>
+    <map_variables variable_1="IkB" variable_2="IkB"/>
+  </connection>
+  <connection>
+    <map_components component_1="MKK" component_2="p38"/>
+    <map_variables variable_1="MKK" variable_2="MKK"/>
+  </connection>
+  <connection>
+    <map_components component_1="BTK" component_2="PI3K"/>
+    <map_variables variable_1="BTK" variable_2="BTK"/>
+  </connection>
+  <connection>
+    <map_components component_1="PLC" component_2="PKC"/>
+    <map_variables variable_1="PLC" variable_2="PLC"/>
+  </connection>
+  <connection>
+    <map_components component_1="BTK" component_2="PLC"/>
+    <map_variables variable_1="BTK" variable_2="BTK"/>
+  </connection>
+  <connection>
+    <map_components component_1="PI3K" component_2="PLC"/>
+    <map_variables variable_1="PI3K" variable_2="PI3K"/>
+  </connection>
+  <connection>
+    <map_components component_1="BLNK" component_2="PLC"/>
+    <map_variables variable_1="BLNK" variable_2="BLNK"/>
+  </connection>
+  <connection>
+    <map_components component_1="LAT" component_2="PLC"/>
+    <map_variables variable_1="LAT" variable_2="LAT"/>
+  </connection>
+  <connection>
+    <map_components component_1="Zap70" component_2="PLC"/>
+    <map_variables variable_1="Zap70" variable_2="Zap70"/>
+  </connection>
+  <connection>
+    <map_components component_1="RAS" component_2="RAF"/>
+    <map_variables variable_1="RAS" variable_2="RAS"/>
+  </connection>
+  <connection>
+    <map_components component_1="GRB_SOS" component_2="RAS"/>
+    <map_variables variable_1="GRB_SOS" variable_2="GRB_SOS"/>
+  </connection>
+  <connection>
+    <map_components component_1="PKC" component_2="RAS"/>
+    <map_variables variable_1="PKC" variable_2="PKC"/>
+  </connection>
+  <connection>
+    <map_components component_1="ERK" component_2="RSK"/>
+    <map_variables variable_1="ERK" variable_2="ERK"/>
+  </connection>
+  <connection>
+    <map_components component_1="mTOR" component_2="S6"/>
+    <map_variables variable_1="mTOR" variable_2="mTOR"/>
+  </connection>
+  <connection>
+    <map_components component_1="RSK" component_2="S6"/>
+    <map_variables variable_1="RSK" variable_2="RSK"/>
+  </connection>
+  <connection>
+    <map_components component_1="SHP" component_2="SFK"/>
+    <map_variables variable_1="SHP" variable_2="SHP"/>
+  </connection>
+  <connection>
+    <map_components component_1="CD22" component_2="SHP"/>
+    <map_variables variable_1="CD22" variable_2="CD22"/>
+  </connection>
+  <connection>
+    <map_components component_1="SFK" component_2="SHP"/>
+    <map_variables variable_1="SFK" variable_2="SFK"/>
+  </connection>
+  <connection>
+    <map_components component_1="LAT" component_2="SLP76"/>
+    <map_variables variable_1="LAT" variable_2="LAT"/>
+  </connection>
+  <connection>
+    <map_components component_1="SFK" component_2="STAT1"/>
+    <map_variables variable_1="SFK" variable_2="SFK"/>
+  </connection>
+  <connection>
+    <map_components component_1="JAK" component_2="STAT1"/>
+    <map_variables variable_1="JAK" variable_2="JAK"/>
+  </connection>
+  <connection>
+    <map_components component_1="SFK" component_2="STAT3"/>
+    <map_variables variable_1="SFK" variable_2="SFK"/>
+  </connection>
+  <connection>
+    <map_components component_1="JAK" component_2="STAT3"/>
+    <map_variables variable_1="JAK" variable_2="JAK"/>
+  </connection>
+  <connection>
+    <map_components component_1="SFK" component_2="STAT5"/>
+    <map_variables variable_1="SFK" variable_2="SFK"/>
+  </connection>
+  <connection>
+    <map_components component_1="JAK" component_2="STAT5"/>
+    <map_variables variable_1="JAK" variable_2="JAK"/>
+  </connection>
+  <connection>
+    <map_components component_1="BCR" component_2="SYK"/>
+    <map_variables variable_1="BCR" variable_2="BCR"/>
+  </connection>
+  <connection>
+    <map_components component_1="SFK" component_2="SYK"/>
+    <map_variables variable_1="SFK" variable_2="SFK"/>
+  </connection>
+  <connection>
+    <map_components component_1="TCR" component_2="Zap70"/>
+    <map_variables variable_1="TCR" variable_2="TCR"/>
+  </connection>
+</model>

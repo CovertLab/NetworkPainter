@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.reactome.org/biopax#" xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://www.reactome.org/biopax">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl"/>
+  </owl:Ontology>
+  <rdf:Description>
+    <dc:Title><![CDATA[PBMC immune signaling]]></dc:Title>
+    <dc:Subject><![CDATA[This diagram depicts the human peripheral blood mononuclear cell (PBMC) immune signaling network. PBMCs are a critical component of the immune system, helping fight infection and adapt to intruders. The diagram is modified from Figure S6 of Bodenmiller et al., 2012.]]></dc:Subject>
+    <dc:Contributor><![CDATA[Jonathan Karr]]></dc:Contributor>
+    <dc:Creator><![CDATA[NetworkAnalyzer]]></dc:Creator>
+    <dc:Date><![CDATA[Tue Jan 29 2013 07:03:12 PM]]></dc:Date>
+  </rdf:Description>
+  <bp:CellularLocationVocabulary rdf:ID="Media"/>
+  <bp:CellularLocationVocabulary rdf:ID="Cytosol"/>
+  <bp:CellularLocationVocabulary rdf:ID="Nucleus"/>
+  <bp:CellularLocationVocabulary rdf:ID="Media_Cytosol_Membrane"/>
+  <bp:CellularLocationVocabulary rdf:ID="Cytosol_Nucleus_Membrane"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Gene_Expression"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Observed_Signaling_Node"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Receptor"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Stimulus"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Transcription_Factor"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Unobserved_Siganling_Node"/>
+  <bp:PhysicalEntity rdf:ID="AKT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AKT</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="BCR">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCR</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B-cell receptor</bp:comment>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="BLNK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLNK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="BTK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTK</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="CD22">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD22</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="ERK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ERK</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene expression</bp:name>
+    <bp:referenceEntity rdf:resource="#Gene_Expression"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="GRB_SOS">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRB/SOS</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I&amp;kappa;B</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="IKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="JAK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JAK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="LAT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAT</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="MEK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="MEKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEKK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="MKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MKK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="mTOR">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mTOR</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="NFkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NF&amp;kappa;B</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="p38">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p38</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="PI3K">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PI3K</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="PKC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKC</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="PLC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLC</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="RAF">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAF</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="RAS">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAS</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="RSK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="S6">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="SFK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="SHP">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHP</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="SLP76">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SLP76</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="STAT1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT1</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="STAT3">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT3</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="STAT5">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT5</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="SYK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SYK</bp:name>
+    <bp:referenceEntity rdf:resource="#Unobserved_Siganling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="TCR">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCR</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T-cell receptor</bp:comment>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Zap70">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zap70</bp:name>
+    <bp:referenceEntity rdf:resource="#Observed_Signaling_Node"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:Control rdf:ID="PI3K_AKT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PI3K -&gt; AKT</bp:name>
+    <bp:controller rdf:resource="#PI3K"/>
+    <bp:controlled rdf:resource="#AKT"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SYK_BLNK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SYK -&gt; BLNK</bp:name>
+    <bp:controller rdf:resource="#SYK"/>
+    <bp:controlled rdf:resource="#BLNK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SYK_BTK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SYK -&gt; BTK</bp:name>
+    <bp:controller rdf:resource="#SYK"/>
+    <bp:controlled rdf:resource="#BTK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="MEK_ERK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEK -&gt; ERK</bp:name>
+    <bp:controller rdf:resource="#MEK"/>
+    <bp:controlled rdf:resource="#ERK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="STAT1_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT1 -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#STAT1"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="STAT3_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT3 -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#STAT3"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="STAT5_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT5 -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#STAT5"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="S6_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6 -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#S6"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="ERK_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ERK -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#ERK"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="p38_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p38 -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#p38"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="NFkB_GeneExpression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NFkB -&gt; GeneExpression</bp:name>
+    <bp:controller rdf:resource="#NFkB"/>
+    <bp:controlled rdf:resource="#GeneExpression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="BLNK_GRB_SOS">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLNK -&gt; GRB_SOS</bp:name>
+    <bp:controller rdf:resource="#BLNK"/>
+    <bp:controlled rdf:resource="#GRB_SOS"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PLC_GRB_SOS">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLC -&gt; GRB_SOS</bp:name>
+    <bp:controller rdf:resource="#PLC"/>
+    <bp:controlled rdf:resource="#GRB_SOS"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="IKK_IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKK -&gt; IkB</bp:name>
+    <bp:controller rdf:resource="#IKK"/>
+    <bp:controlled rdf:resource="#IkB"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PKC_IKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKC -&gt; IKK</bp:name>
+    <bp:controller rdf:resource="#PKC"/>
+    <bp:controlled rdf:resource="#IKK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Zap70_LAT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zap70 -&gt; LAT</bp:name>
+    <bp:controller rdf:resource="#Zap70"/>
+    <bp:controlled rdf:resource="#LAT"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="RAF_MEK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAF -&gt; MEK</bp:name>
+    <bp:controller rdf:resource="#RAF"/>
+    <bp:controlled rdf:resource="#MEK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PKC_MEKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKC -&gt; MEKK</bp:name>
+    <bp:controller rdf:resource="#PKC"/>
+    <bp:controlled rdf:resource="#MEKK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="MEKK_MKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEKK -&gt; MKK</bp:name>
+    <bp:controller rdf:resource="#MEKK"/>
+    <bp:controlled rdf:resource="#MKK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="AKT_mTOR">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AKT -&gt; mTOR</bp:name>
+    <bp:controller rdf:resource="#AKT"/>
+    <bp:controlled rdf:resource="#mTOR"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="IkB_NFkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IkB -&gt; NFkB</bp:name>
+    <bp:controller rdf:resource="#IkB"/>
+    <bp:controlled rdf:resource="#NFkB"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="MKK_p38">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MKK -&gt; p38</bp:name>
+    <bp:controller rdf:resource="#MKK"/>
+    <bp:controlled rdf:resource="#p38"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="BTK_PI3K">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTK -&gt; PI3K</bp:name>
+    <bp:controller rdf:resource="#BTK"/>
+    <bp:controlled rdf:resource="#PI3K"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PLC_PKC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLC -&gt; PKC</bp:name>
+    <bp:controller rdf:resource="#PLC"/>
+    <bp:controlled rdf:resource="#PKC"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="BTK_PLC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BTK -&gt; PLC</bp:name>
+    <bp:controller rdf:resource="#BTK"/>
+    <bp:controlled rdf:resource="#PLC"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PI3K_PLC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PI3K -&gt; PLC</bp:name>
+    <bp:controller rdf:resource="#PI3K"/>
+    <bp:controlled rdf:resource="#PLC"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="BLNK_PLC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLNK -&gt; PLC</bp:name>
+    <bp:controller rdf:resource="#BLNK"/>
+    <bp:controlled rdf:resource="#PLC"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="LAT_PLC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAT -&gt; PLC</bp:name>
+    <bp:controller rdf:resource="#LAT"/>
+    <bp:controlled rdf:resource="#PLC"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Zap70_PLC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zap70 -&gt; PLC</bp:name>
+    <bp:controller rdf:resource="#Zap70"/>
+    <bp:controlled rdf:resource="#PLC"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="RAS_RAF">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAS -&gt; RAF</bp:name>
+    <bp:controller rdf:resource="#RAS"/>
+    <bp:controlled rdf:resource="#RAF"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="GRB_SOS_RAS">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRB_SOS -&gt; RAS</bp:name>
+    <bp:controller rdf:resource="#GRB_SOS"/>
+    <bp:controlled rdf:resource="#RAS"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PKC_RAS">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKC -&gt; RAS</bp:name>
+    <bp:controller rdf:resource="#PKC"/>
+    <bp:controlled rdf:resource="#RAS"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="ERK_RSK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ERK -&gt; RSK</bp:name>
+    <bp:controller rdf:resource="#ERK"/>
+    <bp:controlled rdf:resource="#RSK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="mTOR_S6">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mTOR -&gt; S6</bp:name>
+    <bp:controller rdf:resource="#mTOR"/>
+    <bp:controlled rdf:resource="#S6"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="RSK_S6">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSK -&gt; S6</bp:name>
+    <bp:controller rdf:resource="#RSK"/>
+    <bp:controlled rdf:resource="#S6"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SHP_SFK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHP -&gt; SFK</bp:name>
+    <bp:controller rdf:resource="#SHP"/>
+    <bp:controlled rdf:resource="#SFK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="CD22_SHP">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD22 -&gt; SHP</bp:name>
+    <bp:controller rdf:resource="#CD22"/>
+    <bp:controlled rdf:resource="#SHP"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SFK_SHP">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFK -| SHP</bp:name>
+    <bp:controller rdf:resource="#SFK"/>
+    <bp:controlled rdf:resource="#SHP"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="LAT_SLP76">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAT -&gt; SLP76</bp:name>
+    <bp:controller rdf:resource="#LAT"/>
+    <bp:controlled rdf:resource="#SLP76"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SFK_STAT1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFK -&gt; STAT1</bp:name>
+    <bp:controller rdf:resource="#SFK"/>
+    <bp:controlled rdf:resource="#STAT1"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="JAK_STAT1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JAK -&gt; STAT1</bp:name>
+    <bp:controller rdf:resource="#JAK"/>
+    <bp:controlled rdf:resource="#STAT1"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SFK_STAT3">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFK -&gt; STAT3</bp:name>
+    <bp:controller rdf:resource="#SFK"/>
+    <bp:controlled rdf:resource="#STAT3"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="JAK_STAT3">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JAK -&gt; STAT3</bp:name>
+    <bp:controller rdf:resource="#JAK"/>
+    <bp:controlled rdf:resource="#STAT3"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SFK_STAT5">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFK -&gt; STAT5</bp:name>
+    <bp:controller rdf:resource="#SFK"/>
+    <bp:controlled rdf:resource="#STAT5"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="JAK_STAT5">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JAK -&gt; STAT5</bp:name>
+    <bp:controller rdf:resource="#JAK"/>
+    <bp:controlled rdf:resource="#STAT5"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="BCR_SYK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCR -&gt; SYK</bp:name>
+    <bp:controller rdf:resource="#BCR"/>
+    <bp:controlled rdf:resource="#SYK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="SFK_SYK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFK -&gt; SYK</bp:name>
+    <bp:controller rdf:resource="#SFK"/>
+    <bp:controlled rdf:resource="#SYK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="TCR_Zap70">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCR -&gt; Zap70</bp:name>
+    <bp:controller rdf:resource="#TCR"/>
+    <bp:controlled rdf:resource="#Zap70"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+</rdf:RDF>

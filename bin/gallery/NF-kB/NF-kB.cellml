@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model cmeta:id="NF_kB" name="NF-kB" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:cmeta="http://www.cellml.org/metadata/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:RDF>
+    <rdf:Description rdf:about="#NF_kB">
+      <dc:Title><![CDATA[NF-kB]]></dc:Title>
+      <dc:Subject><![CDATA[NF-kB (nuclear factor kappa-light-chain-enhancer of activated B cells) is a protein complex that acts as a transcription factor. NF-kB is found in almost all animal cell types and is involved in cellular responses to stimuli such as stress, cytokines, free radicals, ultraviolet irradiation, oxidized LDL, and bacterial or viral antigens. NF-kB plays a key role in regulating the immune response to infection. Consistent with this role, incorrect regulation of NF-kB has been linked to cancer, inflammatory and autoimmune diseases, septic shock, viral infection, and improper immune development. NF-kB has also been implicated in processes of synaptic plasticity and memory.References:- TD Gilmore (2006). Introduction to NF-B: players, pathways, perspectives. Oncogene. 25 (51): 6680-4.- AR Brasier (2006). The NF-B regulatory network. Cardiovasc. Toxicol. 6 (2): 111-30.- ND Perkins (2007). Integrating cell-signalling pathways with NF-B and IKK function. Nat. Rev. Mol. Cell Biol. 8 (1): 49-62.]]></dc:Subject>
+      <dc:Contributor><![CDATA[Jonathan Karr]]></dc:Contributor>
+      <dc:Creator><![CDATA[NetworkAnalyzer]]></dc:Creator>
+      <dc:Date><![CDATA[Tue Mar 31 2009 07:29:42 PM]]></dc:Date>
+    </rdf:Description>
+  </rdf:RDF>
+  <units name="binary">
+    <unit multiplier="1" units="dimensionless"/>
+  </units>
+  <component name="Media"/>
+  <component name="Cytosol"/>
+  <component name="Nucleus"/>
+  <component name="Media_Cytosol_Membrane"/>
+  <component name="Cytosol_Nucleus_Membrane"/>
+  <component name="receptor1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="receptor1" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="signal1"/>
+    <math cmeta:id="receptor1_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>receptor1</ci>
+        <ci>signal1</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="receptor2">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="receptor2" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="signal2"/>
+    <math cmeta:id="receptor2_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>receptor2</ci>
+        <ci>signal2</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="signal1">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="signal1" initial_value="0"/>
+  </component>
+  <component name="signal2">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="signal2" initial_value="0"/>
+  </component>
+  <component name="IKK">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="IKK" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="receptor1"/>
+    <variable units="binary" public_interface="in" name="receptor2"/>
+    <math cmeta:id="IKK_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>IKK</ci>
+        <apply>
+          <or/>
+          <ci>receptor1</ci>
+          <ci>receptor2</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="nfkb_cytoplasm">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="nfkb_cytoplasm" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="ikba"/>
+    <math cmeta:id="nfkb_cytoplasm_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>nfkb_cytoplasm</ci>
+        <apply>
+          <not/>
+          <ci>ikba</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="ikba">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="ikba" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="IKK"/>
+    <math cmeta:id="ikba_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>ikba</ci>
+        <apply>
+          <not/>
+          <ci>IKK</ci>
+        </apply>
+      </apply>
+    </math>
+  </component>
+  <component name="nfkb_nucleus">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="nfkb_nucleus" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="nfkb_cytoplasm"/>
+    <math cmeta:id="nfkb_nucleus_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>nfkb_nucleus</ci>
+        <ci>nfkb_cytoplasm</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="mRNA_cytoplasm">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="mRNA_cytoplasm" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="mRNA_nucleus"/>
+    <math cmeta:id="mRNA_cytoplasm_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>mRNA_cytoplasm</ci>
+        <ci>mRNA_nucleus</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="protein">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="protein" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="mRNA_cytoplasm"/>
+    <math cmeta:id="protein_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>protein</ci>
+        <ci>mRNA_cytoplasm</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="mRNA_nucleus">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="mRNA_nucleus" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="gene_expression"/>
+    <math cmeta:id="mRNA_nucleus_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>mRNA_nucleus</ci>
+        <ci>gene_expression</ci>
+      </apply>
+    </math>
+  </component>
+  <component name="gene_expression">
+    <rdf:RDF>
+      <rdf:Description>
+        <dc:Subject><![CDATA[]]></dc:Subject>
+      </rdf:Description>
+    </rdf:RDF>
+    <variable units="binary" public_interface="out" name="gene_expression" initial_value="0"/>
+    <variable units="binary" public_interface="in" name="nfkb_nucleus"/>
+    <math cmeta:id="gene_expression_regulation" xmlns="http://www.w3.org/1998/Math/MathML">
+      <apply>
+        <eq/>
+        <ci>gene_expression</ci>
+        <ci>nfkb_nucleus</ci>
+      </apply>
+    </math>
+  </component>
+  <group>
+    <relationship_ref name="Media" relationship="containment"/>
+    <component_ref component="Media">
+      <component_ref component="signal1"/>
+      <component_ref component="signal2"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Cytosol" relationship="containment"/>
+    <component_ref component="Cytosol">
+      <component_ref component="IKK"/>
+      <component_ref component="nfkb_cytoplasm"/>
+      <component_ref component="ikba"/>
+      <component_ref component="mRNA_cytoplasm"/>
+      <component_ref component="protein"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Nucleus" relationship="containment"/>
+    <component_ref component="Nucleus">
+      <component_ref component="nfkb_nucleus"/>
+      <component_ref component="mRNA_nucleus"/>
+      <component_ref component="gene_expression"/>
+    </component_ref>
+  </group>
+  <group>
+    <relationship_ref name="Media_Cytosol_Membrane" relationship="containment"/>
+    <component_ref component="Media_Cytosol_Membrane">
+      <component_ref component="receptor1"/>
+      <component_ref component="receptor2"/>
+    </component_ref>
+  </group>
+  <connection>
+    <map_components component_1="signal1" component_2="receptor1"/>
+    <map_variables variable_1="signal1" variable_2="signal1"/>
+  </connection>
+  <connection>
+    <map_components component_1="signal2" component_2="receptor2"/>
+    <map_variables variable_1="signal2" variable_2="signal2"/>
+  </connection>
+  <connection>
+    <map_components component_1="receptor1" component_2="IKK"/>
+    <map_variables variable_1="receptor1" variable_2="receptor1"/>
+  </connection>
+  <connection>
+    <map_components component_1="receptor2" component_2="IKK"/>
+    <map_variables variable_1="receptor2" variable_2="receptor2"/>
+  </connection>
+  <connection>
+    <map_components component_1="ikba" component_2="nfkb_cytoplasm"/>
+    <map_variables variable_1="ikba" variable_2="ikba"/>
+  </connection>
+  <connection>
+    <map_components component_1="IKK" component_2="ikba"/>
+    <map_variables variable_1="IKK" variable_2="IKK"/>
+  </connection>
+  <connection>
+    <map_components component_1="nfkb_cytoplasm" component_2="nfkb_nucleus"/>
+    <map_variables variable_1="nfkb_cytoplasm" variable_2="nfkb_cytoplasm"/>
+  </connection>
+  <connection>
+    <map_components component_1="mRNA_nucleus" component_2="mRNA_cytoplasm"/>
+    <map_variables variable_1="mRNA_nucleus" variable_2="mRNA_nucleus"/>
+  </connection>
+  <connection>
+    <map_components component_1="mRNA_cytoplasm" component_2="protein"/>
+    <map_variables variable_1="mRNA_cytoplasm" variable_2="mRNA_cytoplasm"/>
+  </connection>
+  <connection>
+    <map_components component_1="gene_expression" component_2="mRNA_nucleus"/>
+    <map_variables variable_1="gene_expression" variable_2="gene_expression"/>
+  </connection>
+  <connection>
+    <map_components component_1="nfkb_nucleus" component_2="gene_expression"/>
+    <map_variables variable_1="nfkb_nucleus" variable_2="nfkb_nucleus"/>
+  </connection>
+</model>

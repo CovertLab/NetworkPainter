@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="52" height="60" viewBox="0 0 52 60">
+<defs>
+<radialGradient id='renderingstyle' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
+  <stop offset='5%' style='stop-color:white;stop-opacity:1' />
+  <stop offset='95%' style='stop-color:orange;stop-opacity:1' />
+</radialGradient>
+<linearGradient id='yreceptor_edge' x1='0%' x2='100%' y1='0%' y2='0%'>
+  <stop offset='25%' style='stop-color:black;stop-opacity:.3' />
+  <stop offset='95%' style='stop-color:black;stop-opacity:1' />
+</linearGradient>
+</defs>
+<ellipse style="fill:url(#renderingstyle);stroke:url(#yreceptor_edge);" cx="26" cy="30" rx="10" ry="10"/>
+<path style="fill:none;stroke:url(#yreceptor_edge);" d="
+M 26,20
+v -20
+M 26,40
+v 20
+M 35,25
+l 17,-10
+M 35,35
+l 17,10
+M 17,35
+l -17,10
+M 17,25
+l -17,-10
+"/>
+</svg>

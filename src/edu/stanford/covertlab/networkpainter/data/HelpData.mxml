@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!---
+Application help. Displayed in help window and on website.
+
+@see edu.stanford.covertlab.window.HelpWindow
+@see edu.stanford.covertlab.window.HelpSection
+
+@author Jonathan Karr, jkarr@stanford.edu
+@author Ed Chen, chened@stanford.edu
+@affiliation Covert Lab, Department of Bioengineering, Stanford University
+@lastupdated 3/23/2009		
+-->
+<covertlab:HelpSection xmlns:covertlab="edu.stanford.covertlab.window.*">
+	<covertlab:children>		
+		<covertlab:HelpSection label="Networks">
+            <covertlab:children>
+				<covertlab:HelpSection label="What is a network?">
+                    <covertlab:content><![CDATA[
+						<p>A network is a hypothesis about how the systems-level behavior of a cell or cellular system arises from the physiochemical 
+						interactions of DNA, RNA, proteins, metabolites, ions, and other chemical constituents. More specifically, a network is a set 
+						of chemical components (biomolecules), a description of how those biomolecules interact, or regulate each other (edges), and a list of 
+						compartments in which those biomolecules exist. In addition, a network includes a description of how each biomolecule, compartment, 
+						and membrane should be drawn.</p>
+						<p>Networks can be used to visualize and analyze experiments (see Experiment section), and can be 
+						exported to several formats.</p>
+					]]></covertlab:content>
+                </covertlab:HelpSection>
+				<covertlab:HelpSection label="Creating &amp; opening">
+					<covertlab:children>
+						<covertlab:HelpSection label="Creating a network">
+							<covertlab:content><![CDATA[
+							To create a network select <i>File&#8658; New</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Opening a network">
+							<covertlab:content><![CDATA[
+							<p>To open a network select <i>File&#8658; Open</i>, highlight the desired network, and click <i>Open</i>.</p>
+							<p><i>Note: If another user with write permissions is currently editing the network, you will not be able to save any changes
+							you make to the original network. In that case you will still be able to save changes to a new network.</i></p>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>				
+				<covertlab:HelpSection label="Biomolecules">
+					<covertlab:children>
+						<covertlab:HelpSection label="Introduction">
+							<covertlab:content><![CDATA[
+								<p>The application allows you to enumerate the proteins, genes, metabolites, and other chemicals in your hypothesis, specify their 
+								rendering styles, and annotate them with evidence. Biomolecules can be added in either the diagram of editor modes.
+								To add biomolecules in editor mode, fill out the biomolecule form and click <i>Add New</i>. Biomolecules can be added in diagram
+								mode by dragging the desired biomolecule style from the biomolecule toolbar.</p>
+								
+								<p>Each biomolecule must have a unique name that contains only letters, digits, and underscores. Additionally, names may only 
+								start with letters, and cannot be the reserved names "null" or "undefined". Biomolecule labels support an HTML-style 
+								syntax for Greek characters, subscripts, and superscripts, eg.
+								<table cellpadding="0" cellspacing="0" style="border-top:2px solid #000;border-bottom:2px solid #000;margin-bottom:20px;">
+								<tr><th style="width:200px;text-align:left;border-bottom:2px solid #000;">Markup</th><th style="width:50px;text-align:left;border-bottom:2px solid #000;">Rendering</th></tr>
+								<tr><td>NF-&amp;kappa;</td><td>NF-&#954;B.</td></tr>
+								<tr><td>H&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;</td><td>H<sub>2</sub>0<sub>2</sub></td></tr>
+								<tr><td>Ca&lt;sup&gt;2+&lt;/sup&gt;</td><td>Ca<sup>2+</sup>.</td></tr>
+								</table></p>								
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Editing biomolecules">
+							<covertlab:content><![CDATA[
+								<p>In editor mode, if the compartment of a biomolecule is modified, the biomolecule will be placed at the top left of the selected
+								compartment. In diagram mode each biomolecule's compartment is automatically updated when the biomolecule is dragged.</p>
+								
+								<p>In editor mode the name, label, rendering style, regulation, and comments of a biomolecule can be edited 
+								through the biomolecules form. A similar form can be accessed in diagram mode by double clicking on a biomolecule. See the next section
+								for more information about regulations.</p>								
+							]]></covertlab:content>
+						</covertlab:HelpSection>					
+						<covertlab:HelpSection label="Regulations">
+							<covertlab:content><![CDATA[
+								<p>The regulation field allows you to describe interactions among biomolecules. In particular, the field allows you to use Boolean algebra
+								to describe how a biomolecule is regulated by other biomolecules. Edges are automatically drawn to the biomolecule from any biomolecule referenced in its
+								regulation. Below are several examples of regulatory rules:
+								<table cellpadding="0" cellspacing="0" style="border-top:2px solid #000;border-bottom:2px solid #000;margin-bottom:20px;">
+								<tr><th style="width:250px;text-align:left;border-bottom:2px solid #000;padding-right:20px;">Target Relationship</th><th style="width:250px;text-align:left;border-bottom:2px solid #000;">Regulation Syntax</th></tr>
+								<tr><td>OR relationship between two biomolecules</td><td>molecule1 || molecule2</td></tr>
+								<tr><td>AND relationship between two biomolecules</td><td>molecule1 && molecule2</td></tr>
+								<tr><td>Negation of a biomolecule</td><td>!molecule1</td></tr>
+								<tr><td>Composition</td><td>molecule1 || !(molecule2 && molecule3)</td></tr>
+								</table>
+								</p>								
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+                </covertlab:HelpSection> 
+				<covertlab:HelpSection label="Biomolecule styles">
+					<covertlab:children>
+						<covertlab:HelpSection label="Introduction">
+							<covertlab:content><![CDATA[
+								<p>Biomolecule styles describe how a group of biomolecules should be rendered in diagram mode. Biomolecule styles include four attributes
+								<ul>
+								<li>Name</li>
+								<li>Shape</li>
+								<li>Fill color</li>
+								<li>Outline color</li>
+								</ul></p>
+								
+								<p><i>Note: Biomolecule style names must start with a letter and can only contain letters, numbers, and underscores. Additionally 
+								biomolecule style names cannot not be the reserved terms "null" or "undefined".</i></p>
+							]]></covertlab:content>
+                        </covertlab:HelpSection>
+						<covertlab:HelpSection label="Available shapes">
+                           <covertlab:content><![CDATA[
+								<table width="100%">								
+								<tr>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/7passreceptor.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/atpase.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/centrosome.png"/></td>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/dna.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/flagellum.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/golgi.png"/></td>									
+								</tr>
+								<tr>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">7-Pass Transmembrane Receptor</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">ATPase</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Centrosome</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">DNA</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Flagellum</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Golgi</td>
+								</tr>
+								<tr>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/ig.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/ionchannel.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/mitochondrion.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/pore.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/yreceptor.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/circle.png"/></td>
+								</tr>
+								<tr>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Ig Receptor</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Ion Channel</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Mitochondrion</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Pore</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Y-shaped receptor</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Circle</td>
+								</tr>
+								<tr>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/diamond.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/ellipse.png"/></td>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/hexagon.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/house.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/invhouse.png"/></td>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/invtrapezium.png"/></td>
+								</tr>								
+								<tr>									
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Diamond</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Ellipse</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Hexagon</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">House</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Inverted House</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Inverted Trapezium</td>
+								</tr>
+								<tr>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/invtriangle.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/octagon.png"/></td>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/parallelogram.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/pentagon.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/rectangle.png"/></td>
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/septagon.png"/></td>
+								</tr>
+								<tr>									
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Inverted Triangle</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Octagon</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Parallelogram</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Pentagon</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Rectangle</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:35px;">Septagon</td>
+								</tr>
+								<tr>																							
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/trapezium.png"/></td>									
+									<td style="vertical-align:middle;text-align:center;padding-right:20px;"><img src="../src/edu/stanford/covertlab/graphics/shape/png/triangle.png"/></td>
+								</tr>
+								<tr>									
+									<td style="text-align:center;padding-right:20px;padding-bottom:5px;">Trapezium</td>
+									<td style="text-align:center;padding-right:20px;padding-bottom:5px;">Triangle</td>
+								</tr>
+								</table>								
+							]]></covertlab:content>
+                        </covertlab:HelpSection>
+						<covertlab:HelpSection label="Adding new shape">
+							<covertlab:content><![CDATA[
+								Please <a href="about.php">send us an SVG file</a>  to suggest a new shape. The SVG graphic should use only two colors &#8212 a fill color to 
+								be applied to a radial gradient, and a stroke color to be applied to a linear gradient. See 
+								<a href='../src/edu/stanford/covertlab/graphics/shape/svg/dna.svg'>dna.svg</a> for an example.
+							]]></covertlab:content>
+                        </covertlab:HelpSection>
+                    </covertlab:children>
+                </covertlab:HelpSection>
+				<covertlab:HelpSection label="Compartments &amp; membranes">
+                    <covertlab:content><![CDATA[
+						<p>Compartments and membranes can be added, edited, and removed in both the editor and diagram modes using either the compartment form, the
+						new component toolbar, or double clicking on a compartment. Membranes are similar to compartments, and are automatically created between 
+						pairs of compartments. Membranes inherit their rendering attributes from the preceding compartment. Compartments have five attributes:
+						<ul>
+						<li>Name</li>
+						<li>Compartment color</li>
+						<li>Membrane color</li>
+						<li>Membrane phospholipid body color</li>
+						<li>Membrane phospholipid outline color</li>
+						</ul></p>
+						
+						<p>Biomolecule can be assigned to compartments either by dragging them in the diagram mode, or through the compartment combo box in editor mode.</p>
+						
+						<p><i>Note: Compartment names must start with a letter and can only contain letters, numbers, and underscores. Additionally compartment names cannot not
+						be the reserved terms "null" or "undefined".</i></p>
+					]]></covertlab:content>
+                </covertlab:HelpSection>				
+				<covertlab:HelpSection label="Diagram mode">
+					<covertlab:children>
+						<covertlab:HelpSection label="">
+							<covertlab:content><![CDATA[
+							The diagram mode displays an editable, graphical rendering of the current network. Diagram mode is the default editing mode.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Creating and editing biomolecules &amp; compartments">
+							<covertlab:content><![CDATA[
+							<p>To add a biomolecule to the network in diagram mode, drag and drop the desired style from the new biomolecule toolbar onto the diagram.
+							After dropping the icon onto the diagram, a popup window will prompt you for the name, label, regulation, and comments of the new biomolecule.</p>
+							
+							<p>In diagram mode, double clicking on a biomolecule opens a popup window which allows you to edit the
+							name, label, style, regulation, and comments of the biomolecule.</p>
+							]]></covertlab:content>
+						</covertlab:HelpSection>						
+						<covertlab:HelpSection label="Selecting and moving biomolecules">
+							<covertlab:content><![CDATA[
+							Biomolecules can be repositioned by dragging them across the diagram; the compartment of each biomolecule will be automatically
+							updated upon completion of dragging. To select, and then drag, cut, or copy multiple biomolecules hold either the <i>shift</i> 
+							or <i>control</i> keys while selecting biomolecules.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Cutting, copying, and pasting biomolecules">
+							<covertlab:content><![CDATA[
+							The currently selected biomolecules can be cut or copied from the diagram by selecting <i>Edit&#8658; Cut</i> or <i>Edit&#8658; Copy</i>. 
+							Similarly, to paste the last cut or copied biomolecules select <i>Edit&#8658; Paste</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>						
+						<covertlab:HelpSection label="Undo, redo">
+							<covertlab:content><![CDATA[
+							To undo or redo any action select <i>Edit&#8658; Undo</i> or <i>Edit&#8658; Redo</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Panning, zooming">
+							<covertlab:content><![CDATA[
+							The diagram can be panned either by dragging the diagram across the screen or by dragging the red rectangle in the overview window which indicates
+							the currently visible portion of the diagram. To zoom in or out on the diagram select <i>View&#8658; Zoom</i> from the main menu or use your 
+							mouse wheel.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Fullscreen view">
+							<covertlab:content><![CDATA[
+							To view the diagram in fullscreen mode select <i>View&#8658; Fullscreen</i> from the main menu. In fullscreen mode, by default only the diagram
+							is visible. Two toolbars are accessible in fullscreen mode by mousing over the top and bottom portions of the screen. Mousing over the top
+							portion of the screen will reveal a toolbar with controls for zooming. Mousing over the bottom portion of the screen reveals a toolbar with
+							play, pause, and stop controls. Editing is disabled in fullscreen mode.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Overview">
+							<covertlab:content><![CDATA[
+							The overview window displays a small preview of the entire diagram  and indicates the currently visible portion of the diagram. Dragging the 
+							red rectangle in the overview window will pan the diagram across the screen. To toggle the overview window select <i>View&#8658; Overview</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Finding biomolecules">
+							<covertlab:content><![CDATA[
+							To find a specific biomolecule by either name or label, open the find biomolecule popup window (<i>Edit&#8658; Find</i>), enter the 
+							name or label of the biomolecule you wish to find, and click <i>Find</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Editor mode">
+					<covertlab:children>
+						<covertlab:HelpSection label="">
+							<covertlab:content><![CDATA[
+								Editor mode displays a form-based way to edit a diagram. Editor mode also displays several additional advanced rendering and animation
+								options not available in diagram mode.
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Advanced options">
+							<covertlab:content><![CDATA[
+								The advanced options tabs provides you with additional control over the rendering of a network:
+								<table cellpadding="0" cellspacing="0" style="border-top:2px solid #000;border-bottom:2px solid #000;margin-bottom:20px;">
+								<tr><th style="width:250px;text-align:left;border-bottom:2px solid #000;">Option</th><th style="width:250px;text-align:left;border-bottom:2px solid #000;">Effect</th></tr>
+								<tr><td>Diagram width, height</td><td>Sets the size of the diagram</tr></td>
+								<tr><td>Show pores</td><td>Toggles the display of pores</tr></td>
+								<tr><td>Pore fill, stroke colors</td><td>Controls the fill and stroke colors of pores</tr></td>
+								<tr><td>Horizontal, vertical separation</td><td>tunes the horizontal and vertical spacing of biomolecules in auto layout algorithm</tr></td>
+								<tr><td>Frame rate, export frame rate</td><td>Controls the speed of the animation and exported animations</tr></td>
+								<tr><td>Loops</td><td>Controls the number of times the animation should loop before stopping</tr></td>
+								<tr><td>Show biomolecule selected handles</td><td>Toggles whether or not the select handles of biomolecule should appear in exported network images</tr></td>
+								<tr><td>Color biomolecules by value</td><td>Toggles whether or not biomolecule should be colored by their experimentally observed values in exported network images</tr></td>
+								</table>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Exporting &amp; importing">
+					<covertlab:children>
+						<covertlab:HelpSection label="Introduction">
+							<covertlab:content><![CDATA[
+							To export a network select <i>File&#8658; Export</i>, and choose the desired export format. Note: The only importable export format is the JSON.
+							Additionally, networks can be transloaded from KEGG. To import a network select <i>File&#8658; Import</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Export formats">
+							<covertlab:content><![CDATA[
+							<ul>
+							<li>Images
+								<ul>
+								<li>dot</li>
+								<li>gif</li>
+								<li>jpg</li>
+								<li>png</li>
+								<li>pdf</li>
+								<li>svg</li>
+								</ul></li>
+							<li>Animation
+								<ul>
+								<li>animated gif</li>
+								<li>multipage pdf</li>
+								<li>multipage svg</li>
+								<li>swf</li>
+								</ul></li>
+							<li>Simulation
+								<ul>
+								<li>Boolean Simulation (m)</li>
+								</ul></li>
+							<li>Exchange Formats
+								<ul>
+								<li>BioPax</li>
+								<li>CellML</li>
+								<li>SBML</li>
+								<li>JSON (can be imported)</li>
+								</ul></li>							
+							</ul>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Editing an exported SVG image">
+							<covertlab:content><![CDATA[
+								Exported SVG images can be edited by many programs including:
+								<ul>
+								<li><a href="http://www.inkscape.org">Inkscape</a> &#8212 Recommended. Free, native SVG editor</li>
+								<li><a href="http://www.kiyut.com/products/sketsa/">Sketsa</a> &#8212 Free, native SVG editor.</li>
+								<li><a href="http://glipssvgeditor.sourceforge.net/">GLIPS Graffiti</a>&#8212 Free, native SVG editor.</li>
+								<li><a href="http://www.adobe.com/products/illustrator/">Adobe Illustrator</a> &#8212 Commercial vector graphics program.</li>
+								</ul>
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="BioPax details &amp; use">
+							<covertlab:content><![CDATA[
+								BioPax Level 3, Version 0.92 is exported according to the following mapping:
+								<table cellpadding="0" cellspacing="0" style="border-top:2px solid #000;border-bottom:2px solid #000;margin-bottom:10px;">
+								<tr><th style="text-align:left;padding-right:20px;width:200px;border-bottom:2px solid #000;"><applicationName/> Type</th><th style="text-align:left;padding-right:20px;width:200px;border-bottom:2px solid #000;">BioPax Type</th></tr>
+								<tr><td>Meta Data</td><td>rdf</td></tr>
+								 <tr><td>Membranes/Compartments</td><td>cellular location vocabulary</td></tr>
+								 <tr><td>Biomolecule Style</td><td>entity reference group vocabulary</td></tr>
+								 <tr><td>Biomolecules</td><td>physical entity</td></tr>
+								 <tr><td>Regulation</td><td>control</td></tr>
+								</table>
+								
+								<p>Exported BioPax networks have been tested with, and can be edited with <a href="http://protege.stanford.edu/overview/">Prot&#233;g&#233;-OWL</a>, 
+								a free program for constructing and editing ontology-based biological models.</p>
+								
+								<p>For more information about the BioPax format see <a href="http://www.biopax.org/">www.biopax.org</a>.</p>
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="CellML details &amp; use">
+							<covertlab:content><![CDATA[
+								CellML version 1.1 is exported according to the following mapping:
+								<table cellpadding="0" cellspacing="0" style="border-top:2px solid #000;border-bottom:2px solid #000;margin-bottom:10px;">
+								<tr><th style="text-align:left;padding-right:20px;width:200px;border-bottom:2px solid #000;"><applicationName/> Type</th><th style="text-align:left;padding-right:20px;width:200px;border-bottom:2px solid #000;">CellML Type</th></tr>
+								<tr><td>Meta Data</td><td>rdf</td></tr>
+								 <tr><td>Membranes/Compartments</td><td>group</td></tr>
+								 <tr><td>Biomolecules</td><td>component</td></tr>
+								 <tr><td>Regulation</td><td>connection</td></tr>
+								</table>
+								
+								<p>Exported CellML models have been tested with, and can be edited with <a href="http://www.cellml.org/tools/index_html">Physiome CellML</a>.
+								Physiome CellML does not support Boolean models, and cannot be used to simulate exported networks.</p>
+								
+								<p>For more information about the CellML format see <a href="http://www.cellml.org/">www.cellml.org</a>.</p>
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="SBML details &amp; use">
+							<covertlab:content><![CDATA[
+								SBML Level 2 Version 4 is exported according to the following mapping:
+								<table cellpadding="0" cellspacing="0" style="border-top:2px solid #000;border-bottom:2px solid #000;margin-bottom:10px;">
+								<tr><th style="text-align:left;padding-right:20px;width:200px;border-bottom:2px solid #000;"><applicationName/> Type</th><th style="text-align:left;padding-right:20px;width:200px;border-bottom:2px solid #000;">SBML Type</th></tr>
+								<tr><td>Meta Data</td><td>notes</td></tr>
+								 <tr><td>Membranes/Compartments</td><td>sbml:compartment, sbml:compartmentType</td></tr>
+								 <tr><td>Biomolecule Style</td><td>sbml:speciesType, networkpainter:biomoleculeStyle</td></tr>
+								 <tr><td>Biomolecules</td><td>sbml:species</td></tr>
+								 <tr><td>Regulation</td><td>sbml:assignmentRule</td></tr>
+								</table>
+								
+								<p>We recommend using the <a href="http://sbml.org/Software/SBMLToolbox">MATLAB SBML ToolBox</a> to simulate exported SBML models. 
+								Exported SBML models have also been tested with, 
+								and can be edited with <a href="http://www.celldesigner.org/">CellDesigner</a>. However, CellDesigner does not support SBML 
+								Level 2 Version 4l; CellDesigner only supports up to Level 2 Version 1. Exported SBML models have been tested unsuccessfully with 
+								JSim, ProMoT, and VCell.</p>
+				
+								<p>For more information about the BioPax format see <a href="http://www.sbml.org/">www.sbml.org</a>.</p>
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Saving">
+					<covertlab:content><![CDATA[
+					<p>To save a network select <i>File&#8658; Save</i>, or <i>Save As</i>.</p>
+					
+					<p><i>Note: Write privileges (see <i>User Privileges & Publishing</i> section) are required to save a network.</i></p>
+					]]></covertlab:content>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Renaming &amp; deleting">
+					<covertlab:content><![CDATA[
+						<p>The Network Manager (<i>Network&#8658; Manage Networks</i>) can be used to edit the names and descriptions of networks as well as edit user
+						privileges over networks. The Network Manager can also be used to delete networks. See <i>User privileges & publishing</i> section for more
+						information about user privileges.</p>
+						
+						<p><i>Note: Write privileges are required edit a network's name or description; Owner privileges are recurred to edit user privileges or delete
+						a network.</i></p>
+					]]></covertlab:content>
+				</covertlab:HelpSection>								
+				<covertlab:HelpSection label="User privileges &amp; publishing">
+					<covertlab:children>
+						<covertlab:HelpSection label="What are user privileges?">
+							<covertlab:content><![CDATA[
+							User privileges are the way user access to networks is controlled to enable multiple users to view and edit networks.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="User privileges levels">
+							<covertlab:content><![CDATA[
+							Four privilege levels are defined:
+							<ul>
+							<li>Owner &#8212; Can edit and save changes to a network as well as manager user privileges over the network and delete the network.</li>
+							<li>Write &#8212; Can edit and save changes to a network.</li>
+							<li>Read &#8212; Can only read a network. Cannot save changes to a network.</li>
+							<li>None &#8212; Used to remove user privileges to a network.</li>
+							</ul>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Managing user privileges">
+							<covertlab:content><![CDATA[
+							<p>User privileges to a network can be edited using the Network Manager (<i>Network&#8658; Manage Networks</i>).</p>
+							
+							<p><i>Note: Owner privileges are required to edit user privileges over a network.</i></p>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Collaborative editing &amp; network locking">
+							<covertlab:content><![CDATA[
+							At any given time at most one user can edit and save changes to a network. 
+							All other users with privileges over the network will only be able to view the network.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="What is publishing">
+							<covertlab:content><![CDATA[
+							Publishing is a way to share a network with all registered users. All users have "read"-level privileges on published networks. 
+							Published networks are listed in the <a href="gallery.php">gallery</a>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Publishing and unpublishing networks">
+							<covertlab:content><![CDATA[
+							Networks can be published and unpublished through the Network Manager (<i>Network&#8658; Manage Networks</i>).
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>		
+			</covertlab:children>
+        </covertlab:HelpSection>
+		
+		
+		<covertlab:HelpSection label="Experiments">
+            <covertlab:children>
+				<covertlab:HelpSection label="What is an experiment?">
+					<covertlab:content><![CDATA[
+						<p>An experiment is a dataset of high-dimensional measurements of a biological system. One dimension of
+						the dataset must correspond to biomolecules. A second must correspond to time. The other dimensions may correspond to individuals,
+						cell types, or experimental conditions.</p>
+					]]></covertlab:content>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Loading an experiment">
+					<covertlab:children>
+						<covertlab:HelpSection label="Standalone version">
+							<covertlab:content><![CDATA[
+								<p>To load an experiment with the current network, first open the <i>Experiment Manager</i> 
+								(<i>Experiment&#8658; Manage Experiments</i>). Next, click <i>Add</i> to upload an experiment in JSON format. 
+								See <a href="../tutorials/DemoExperiment.json">DemoExperiment.json</a> as an example.</p>
+								
+								<p>Next select an experiment from the list on the 
+								left and associate biomolecules in the current network with experimental conditions and 
+								observed channels. Click <i>Update</i> to commit your changes. Finally, to visualize the experiment
+								with the current network select the experiment on click <i>Select</i>. A measurement will be opened according to 
+								the currently selected axes (see <i>Configuring Axes</i> section), and the network will be animated
+								with experimental data.</p>							
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Cytobank version">
+							<covertlab:content><![CDATA[
+								<p>To visualize a Cytobank experiment first login to Cytobank at <a href="http://www.cytobank.org">www.cytobank.org</a>.
+								Second, create a new illustration for the desired experiment. Third, click "View/draw network" under the <i>Signaling 
+								network diagram</i> tab of the <i>Advanced Views</i> section. Fourth, draw a network and associate biomolecules with
+								observed channels. Lastly, click the play button to visualize the experiment. This will animate the diagram according
+								to the currently selected axes (see <i>Configure axes</i> section).
+								
+								<p><i>Note: A Cytobank user account is required to visualize Cytobank experiments. To create a Cytobank 
+								user account see <i>Cytobank&#8658; Creating an Account</i></i>.</p>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Configuring axes">
+					<covertlab:children>
+						<covertlab:HelpSection label="Axes manager">
+							<covertlab:content><![CDATA[
+								The Axes Manager (<i>Experiment&#8658; Configure Axes</i>) should be
+								used to link experimentally observed dimensions (conditions, populations, time points, etc.)
+								to specific diagram dimensions (biomolecules, animation, comparison-x,y), as well as 
+								select the desired scaling and normalization for an experiment.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Dimensions">
+							<covertlab:content><![CDATA[
+								The following diagram dimensions are available:
+								<ul>
+								<li>Biomolecules &#8212; Linked to the channel dimension by default</li>
+								<li>Animation&#8212; Linked to the timepoint dimension by default</li>
+								<li>Comparison-X,Y &#8212; Displayed as small heatmaps below each linked biomolecule (see <i>Experiment&#8658; Heatmap</i> section)</li>
+								</ul>
+							]]></covertlab:content>
+						</covertlab:HelpSection>						
+						<covertlab:HelpSection label="Normalization control">
+							<covertlab:content><![CDATA[
+								The following controls are available for each of the four diagram axes:
+								<ul>
+								<li>First</li>
+								<li>Last</li>
+								<li>Minimum</li>
+								<li>Maximum</li>
+								<li>Mean</li>
+								<li>Median</li>
+								<li>None</li>
+								</ul>
+								
+								<p>Controls are applied to dimensions in the following order:
+								<ol>
+								<li>Comparison-Y</li>
+								<li>Comparison-X</li>
+								<li>Animation</li>
+								<li>Biomolecule</li>
+								</ol></p>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Normalization equation">
+							<covertlab:content><![CDATA[
+								The following normalizations are available:
+								<ul>
+								<li>Difference</li>
+								<li>Log 10 ratio</li>
+								<li>Raw</li>
+								</ul>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Dynamic range">
+							<covertlab:content><![CDATA[
+								If a dynamic range is specified, the data is truncated to the
+								that range. Otherwise the data is scaled to the maximum absolute value of 
+								the normalized values.
+								]]></covertlab:content>
+						</covertlab:HelpSection>	
+						<covertlab:HelpSection label="Clustering &amp; optimal leaf ordering">
+							<covertlab:content><![CDATA[
+								After scaling, normalization, and truncation to the dynamic range, each dimension (except time) 
+								is clustered, and the optimal leaf order is computed to minimize variation between successive
+								values of each dimension. Hierarchical agglomerative clustering is computed using Euclidean distance
+								and average linkage (Eisen <i>et al.</i>, 1998). Optimal leaf ordering is computed as described by
+								Bar-Joseph <i>et al.</i>, 2001.
+								 
+								<p>References:
+								<ol>
+								<li>Michael B. Eisen, Paul T. Spellman, Patrick O. Brown, and David Botstein (1998). 
+								    Cluster analysis and display of genome-wide expression patterns. Proc Nat Acad Sci USA. 
+								    95(25):14863-8.</li>
+								<li>Ziv Bar-Joseph, David Gifford, and Tommi Jaakola (2001). 
+								    Fast optimal leaf ordering for hierarchical clustering. 
+								    Bioinformatics. 17: S22-29.</li>
+								</ol></p>
+								]]></covertlab:content>
+						</covertlab:HelpSection>							
+						<covertlab:HelpSection label="Colormaps">
+							<covertlab:content><![CDATA[
+								<p>The colormap controls the color mapping between experimentally observed 
+								activities of network components and their rendered colors. The following 
+								colormaps are available:</p>
+								
+								<p><img src="../src/edu/stanford/covertlab/colormap/ColormapTest.png"/></p>
+								]]></covertlab:content>
+						</covertlab:HelpSection>						
+					</covertlab:children>
+				</covertlab:HelpSection>		
+				<covertlab:HelpSection label="Animation">
+					<covertlab:children>
+						<covertlab:HelpSection label="Starting, pausing, &amp; stopping">
+							<covertlab:content><![CDATA[
+								Animations can be played, paused, and stopped using the animation toolbar. The timeline in the animation toolbar 
+								can also be used to navigate to particular frames in the animation.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Frame rate &amp; looping">
+							<covertlab:content><![CDATA[
+								The frame rate and the repeat count can be controlled through the advanced options panel in the editor mode.
+							]]></covertlab:content>
+						</covertlab:HelpSection>						
+						<covertlab:HelpSection label="Exporting">
+							<covertlab:content><![CDATA[
+								To export an experiment select <i>File&#8658; Export&#8658; Animation</i>. The following export formats
+								are available:
+								<ul>
+								<li>animated gif</li>
+								<li>multipage pdf</li>
+								<li>multipage svg</li>
+								<li>swf</li>								
+								</ul>
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Embedding exporting animations in PowerPoint">
+							<covertlab:content><![CDATA[
+								For instructions on embedding Adobe Flash animations in PowerPoint
+								see <a href="http://www.ispringsolutions.com/articles/how-to-manually-insert-flash-into-powerpoint-2010.html">http://www.ispringsolutions.com/articles/how-to-manually-insert-flash-into-powerpoint-2010.html</a>.
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Converting exporting animations to movies">
+							<covertlab:content><![CDATA[
+								<p>Unfortunately there is easy way to convert Adobe Flash animations to 
+								video formats such as avi, mov, and mpeg. However, jpeg images can be
+								extracted from multipage pdf output and then converted to a video:
+								<ol>
+								<li>Extract jpeg images &#8212 <a href="http://www.adobe.com/products/acrobat/">Adobe Acrobat</a></li>
+								<li>Convert jpeg to video &#8212; <a href="http://www.gromada.com/">VideoMach</a> or <a href="http://sourceforge.net/projects/jpegtoavi/">JPEG to MJPEG-AVI Converter</a></li>
+								</ol>							
+								</p>
+								]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Advanced options">
+							<covertlab:content><![CDATA[
+								The advanced options panel in the editor mode provides additional 
+								control over the rendering of a network. See <i>Networks&#8658; Editor Mode&#8658; Advanced Options</i> for 
+								more information.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+                </covertlab:HelpSection>
+				<covertlab:HelpSection label="Comparison heatmaps">
+					<covertlab:content><![CDATA[
+						Comparison heatmaps are small heatmaps below each biomolecule which display addition experimental dimensions (e.g. dosage, individual, cell type).						
+						To enable comparison heatmaps click <i>Experiment&#8658; View comparison heatmaps</i>. Use the <i>Experiment&#8658; Configure axes</i> window to configure
+						the comparison heatmap x- and y-axes.
+					]]></covertlab:content>
+				</covertlab:HelpSection>	
+			</covertlab:children>
+		</covertlab:HelpSection>				
+		
+
+		<covertlab:HelpSection label="User account, privacy &amp; security">
+			<covertlab:children>
+				<covertlab:HelpSection label="Logging in &amp; creating a user account">
+					<covertlab:children>
+						<covertlab:HelpSection label="Standalone version">
+							<covertlab:content><![CDATA[
+								First, navigate to the <applicationName/> <a href="login.php">login page</a>. Please click <i>Register</i>, or your enter 
+								your email and password to login.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="Cytobank version">
+							<covertlab:content><![CDATA[
+							Navigate to <a href="http://www.cytobank.org">www.cytobank.org</a> to login to Cytobank.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Help, I forgot my password!">
+					<covertlab:content><![CDATA[
+					Please <a href="about.php">email us</a> to reset your password.
+					]]></covertlab:content>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Updating your personal information">
+					<covertlab:content><![CDATA[
+						To update your name, email address, organization, or password select <i>File&#8658; User Account</i>, 
+						edit the desired fields, and click <i>Save</i>.
+					]]></covertlab:content>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Privacy">
+					<covertlab:content><![CDATA[
+						We promise to never distribute your private information including your email address and password. 
+						Your name and principal investigator will be used to enable 
+						other users to share networks with you. This information is provided to users 
+						through the Network Manager.
+					]]></covertlab:content>
+				</covertlab:HelpSection>
+				<covertlab:HelpSection label="Security">
+					<covertlab:children>
+						<covertlab:HelpSection label="Automatic logoff">
+							<covertlab:content><![CDATA[
+							Users are automatically logged off after 60 minutes of inactivity. Until then,
+							other users will be blocked from editing the user's current network.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+						<covertlab:HelpSection label="User privileges">
+							<covertlab:content><![CDATA[
+							See <i>Networks&#8658; User Privileges</i>.
+							]]></covertlab:content>
+						</covertlab:HelpSection>
+					</covertlab:children>
+				</covertlab:HelpSection>
+			</covertlab:children>
+		</covertlab:HelpSection>		
+		
+		<covertlab:HelpSection label="Need more help?">
+		<covertlab:content><![CDATA[
+				<p>Please <a href="about.php">contact the development team</a> with any questions or comments.</p>
+			]]></covertlab:content>
+		</covertlab:HelpSection>
+	</covertlab:children>
+</covertlab:HelpSection>

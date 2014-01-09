@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.reactome.org/biopax#" xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://www.reactome.org/biopax">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl"/>
+  </owl:Ontology>
+  <rdf:Description>
+    <dc:Title><![CDATA[TCR Signaling]]></dc:Title>
+    <dc:Subject><![CDATA[The adaptive phase of the immune response begins with engagement on CD4+ helper T cells of the T cell antigen receptor (TCR) by its ligand, a small foreign peptide bound to a cell surface protein of the class II major histocompatibility complex (peptide-MHC) expressed on an antigen-presenting cell. This engagement initiates a series of biochemical events that can differentially signal the naive T cell to: 1) enter into a pathway leading to generation of effector T cells with the onset of rapid proliferation and production of effector cytokines; 2) enter into a state of antigenic non-responsiveness known as anergy; or 3) die by apoptosis. The type of response elicited depends on multiple factors including the affinity of the interaction, the duration of the interaction, and the presence or absence of various costimulatory signaling inputs such as those provided by the CD4 coreceptor and the CD28 costimulatory receptor.References- Yanping Huang and Ronald L. Wange (2004). T Cell Receptor Signaling: Beyond Complex Complexes. J. Biol. Chem. 279 (28): 28827-28830.]]></dc:Subject>
+    <dc:Contributor><![CDATA[Jonathan Karr]]></dc:Contributor>
+    <dc:Creator><![CDATA[NetworkAnalyzer]]></dc:Creator>
+    <dc:Date><![CDATA[Tue Mar 31 2009 09:45:37 PM]]></dc:Date>
+  </rdf:Description>
+  <bp:CellularLocationVocabulary rdf:ID="Media"/>
+  <bp:CellularLocationVocabulary rdf:ID="Cytosol"/>
+  <bp:CellularLocationVocabulary rdf:ID="Nucleus"/>
+  <bp:CellularLocationVocabulary rdf:ID="Media_Cytosol_Membrane"/>
+  <bp:CellularLocationVocabulary rdf:ID="Cytosol_Nucleus_Membrane"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Receptor"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Second_Messenger"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Stimulus"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Transcription_Factor"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Annotation"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Gene_Expression"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Membrane_Associated_Protein"/>
+  <bp:PhysicalEntity rdf:ID="Peptide_MHC">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peptide-MHC</bp:name>
+    <bp:referenceEntity rdf:resource="#Stimulus"/>
+    <bp:cellularLocation rdf:resource="#Media"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="CD40">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD40</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="TCR_CD3">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCR/CD3</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Lck">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lck</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="ZAP70">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZAP70</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Itk">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Itk</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Akt">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akt</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="NFAT_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NFAT</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="NFAT_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NFAT</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="c_Fos">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c-Fos</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="c_Jun">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c-Jun</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="p50_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p50</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="p65_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p65</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="p50_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p50</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="p65_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p65</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I&amp;kappa;B</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="IKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKK</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="RasGRP">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RasGRP</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Ras">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ras</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Raf_1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raf-1</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="MEK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEK</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="ERK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ERK</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="PKCt">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKC&amp;theta;</bp:name>
+    <bp:referenceEntity rdf:resource="#Membrane_Associated_Protein"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="COT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COT</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="NIK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIK</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="CAMKII">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAMKII</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="CARMA1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARMA1</bp:name>
+    <bp:referenceEntity rdf:resource="#Membrane_Associated_Protein"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Bcl10">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bcl10</bp:name>
+    <bp:referenceEntity rdf:resource="#Membrane_Associated_Protein"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="MALT1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MALT1</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="UBC13">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBC13</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="gene_expression_NFAT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Expression</bp:name>
+    <bp:referenceEntity rdf:resource="#Gene_Expression"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="gene_expression_ap1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Expression</bp:name>
+    <bp:referenceEntity rdf:resource="#Gene_Expression"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="gene_expression_nfkb">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Expression</bp:name>
+    <bp:referenceEntity rdf:resource="#Gene_Expression"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="IL_2">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL-2</bp:name>
+    <bp:referenceEntity rdf:resource="#Stimulus"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="PI3K">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PI3K</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Nck">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nck</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="Vav1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vav1</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="SLP76">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SLP76</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="PLCy1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLC&amp;gamma;1</bp:name>
+    <bp:referenceEntity rdf:resource="#Membrane_Associated_Protein"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="LAT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAT</bp:name>
+    <bp:referenceEntity rdf:resource="#Membrane_Associated_Protein"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="cytoskeleton_reorganization">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoskeleton Reorganization</bp:name>
+    <bp:referenceEntity rdf:resource="#Annotation"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:Control rdf:ID="Peptide_MHC_TCR_CD3">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peptide_MHC -&gt; TCR_CD3</bp:name>
+    <bp:controller rdf:resource="#Peptide_MHC"/>
+    <bp:controlled rdf:resource="#TCR_CD3"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="CD40_Lck">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD40 -&gt; Lck</bp:name>
+    <bp:controller rdf:resource="#CD40"/>
+    <bp:controlled rdf:resource="#Lck"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="TCR_CD3_ZAP70">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCR_CD3 -&gt; ZAP70</bp:name>
+    <bp:controller rdf:resource="#TCR_CD3"/>
+    <bp:controlled rdf:resource="#ZAP70"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Lck_Itk">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lck -&gt; Itk</bp:name>
+    <bp:controller rdf:resource="#Lck"/>
+    <bp:controlled rdf:resource="#Itk"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="ZAP70_Itk">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZAP70 -&gt; Itk</bp:name>
+    <bp:controller rdf:resource="#ZAP70"/>
+    <bp:controlled rdf:resource="#Itk"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Itk_Akt">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Itk -&gt; Akt</bp:name>
+    <bp:controller rdf:resource="#Itk"/>
+    <bp:controlled rdf:resource="#Akt"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="NFAT_cytoplasm_NFAT_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NFAT_cytoplasm -&gt; NFAT_nucleus</bp:name>
+    <bp:controller rdf:resource="#NFAT_cytoplasm"/>
+    <bp:controlled rdf:resource="#NFAT_nucleus"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="ERK_c_Fos">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ERK -&gt; c_Fos</bp:name>
+    <bp:controller rdf:resource="#ERK"/>
+    <bp:controlled rdf:resource="#c_Fos"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PKCt_c_Jun">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKCt -&gt; c_Jun</bp:name>
+    <bp:controller rdf:resource="#PKCt"/>
+    <bp:controlled rdf:resource="#c_Jun"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="p50_cytoplasm_p50_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p50_cytoplasm -&gt; p50_nucleus</bp:name>
+    <bp:controller rdf:resource="#p50_cytoplasm"/>
+    <bp:controlled rdf:resource="#p50_nucleus"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="p65_cytoplasm_p65_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p65_cytoplasm -&gt; p65_nucleus</bp:name>
+    <bp:controller rdf:resource="#p65_cytoplasm"/>
+    <bp:controlled rdf:resource="#p65_nucleus"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="IkB_p50_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IkB -| p50_cytoplasm</bp:name>
+    <bp:controller rdf:resource="#IkB"/>
+    <bp:controlled rdf:resource="#p50_cytoplasm"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="IkB_p65_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IkB -| p65_cytoplasm</bp:name>
+    <bp:controller rdf:resource="#IkB"/>
+    <bp:controlled rdf:resource="#p65_cytoplasm"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="IKK_IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKK -| IkB</bp:name>
+    <bp:controller rdf:resource="#IKK"/>
+    <bp:controlled rdf:resource="#IkB"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="NIK_IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIK -| IkB</bp:name>
+    <bp:controller rdf:resource="#NIK"/>
+    <bp:controlled rdf:resource="#IkB"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="CAMKII_IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAMKII -| IkB</bp:name>
+    <bp:controller rdf:resource="#CAMKII"/>
+    <bp:controlled rdf:resource="#IkB"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="UBC13_IkB">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UBC13 -| IkB</bp:name>
+    <bp:controller rdf:resource="#UBC13"/>
+    <bp:controlled rdf:resource="#IkB"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="RasGRP_Ras">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RasGRP -&gt; Ras</bp:name>
+    <bp:controller rdf:resource="#RasGRP"/>
+    <bp:controlled rdf:resource="#Ras"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Ras_Raf_1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ras -&gt; Raf_1</bp:name>
+    <bp:controller rdf:resource="#Ras"/>
+    <bp:controlled rdf:resource="#Raf_1"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Raf_1_MEK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raf_1 -&gt; MEK</bp:name>
+    <bp:controller rdf:resource="#Raf_1"/>
+    <bp:controlled rdf:resource="#MEK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="MEK_ERK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEK -&gt; ERK</bp:name>
+    <bp:controller rdf:resource="#MEK"/>
+    <bp:controlled rdf:resource="#ERK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="cytoskeleton_reorganization_PKCt">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytoskeleton_reorganization -&gt; PKCt</bp:name>
+    <bp:controller rdf:resource="#cytoskeleton_reorganization"/>
+    <bp:controlled rdf:resource="#PKCt"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Akt_COT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akt -&gt; COT</bp:name>
+    <bp:controller rdf:resource="#Akt"/>
+    <bp:controlled rdf:resource="#COT"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="COT_NIK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COT -&gt; NIK</bp:name>
+    <bp:controller rdf:resource="#COT"/>
+    <bp:controlled rdf:resource="#NIK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="PKCt_CAMKII">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKCt -&gt; CAMKII</bp:name>
+    <bp:controller rdf:resource="#PKCt"/>
+    <bp:controlled rdf:resource="#CAMKII"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="NFAT_nucleus_gene_expression_NFAT">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NFAT_nucleus -&gt; gene_expression_NFAT</bp:name>
+    <bp:controller rdf:resource="#NFAT_nucleus"/>
+    <bp:controlled rdf:resource="#gene_expression_NFAT"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="c_Fos_gene_expression_ap1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c_Fos -&gt; gene_expression_ap1</bp:name>
+    <bp:controller rdf:resource="#c_Fos"/>
+    <bp:controlled rdf:resource="#gene_expression_ap1"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="c_Jun_gene_expression_ap1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c_Jun -&gt; gene_expression_ap1</bp:name>
+    <bp:controller rdf:resource="#c_Jun"/>
+    <bp:controlled rdf:resource="#gene_expression_ap1"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="p50_nucleus_gene_expression_nfkb">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p50_nucleus -&gt; gene_expression_nfkb</bp:name>
+    <bp:controller rdf:resource="#p50_nucleus"/>
+    <bp:controlled rdf:resource="#gene_expression_nfkb"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="p65_nucleus_gene_expression_nfkb">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p65_nucleus -&gt; gene_expression_nfkb</bp:name>
+    <bp:controller rdf:resource="#p65_nucleus"/>
+    <bp:controlled rdf:resource="#gene_expression_nfkb"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="gene_expression_nfkb_IL_2">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene_expression_nfkb -&gt; IL_2</bp:name>
+    <bp:controller rdf:resource="#gene_expression_nfkb"/>
+    <bp:controlled rdf:resource="#IL_2"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Nck_cytoskeleton_reorganization">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nck -&gt; cytoskeleton_reorganization</bp:name>
+    <bp:controller rdf:resource="#Nck"/>
+    <bp:controlled rdf:resource="#cytoskeleton_reorganization"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="Vav1_cytoskeleton_reorganization">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vav1 -&gt; cytoskeleton_reorganization</bp:name>
+    <bp:controller rdf:resource="#Vav1"/>
+    <bp:controlled rdf:resource="#cytoskeleton_reorganization"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+</rdf:RDF>

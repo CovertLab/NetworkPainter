@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.reactome.org/biopax#" xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://www.reactome.org/biopax">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl"/>
+  </owl:Ontology>
+  <rdf:Description>
+    <dc:Title><![CDATA[NF-kB]]></dc:Title>
+    <dc:Subject><![CDATA[NF-kB (nuclear factor kappa-light-chain-enhancer of activated B cells) is a protein complex that acts as a transcription factor. NF-kB is found in almost all animal cell types and is involved in cellular responses to stimuli such as stress, cytokines, free radicals, ultraviolet irradiation, oxidized LDL, and bacterial or viral antigens. NF-kB plays a key role in regulating the immune response to infection. Consistent with this role, incorrect regulation of NF-kB has been linked to cancer, inflammatory and autoimmune diseases, septic shock, viral infection, and improper immune development. NF-kB has also been implicated in processes of synaptic plasticity and memory.References:- TD Gilmore (2006). Introduction to NF-B: players, pathways, perspectives. Oncogene. 25 (51): 6680-4.- AR Brasier (2006). The NF-B regulatory network. Cardiovasc. Toxicol. 6 (2): 111-30.- ND Perkins (2007). Integrating cell-signalling pathways with NF-B and IKK function. Nat. Rev. Mol. Cell Biol. 8 (1): 49-62.]]></dc:Subject>
+    <dc:Contributor><![CDATA[Jonathan Karr]]></dc:Contributor>
+    <dc:Creator><![CDATA[NetworkAnalyzer]]></dc:Creator>
+    <dc:Date><![CDATA[Tue Mar 31 2009 07:29:37 PM]]></dc:Date>
+  </rdf:Description>
+  <bp:CellularLocationVocabulary rdf:ID="Media"/>
+  <bp:CellularLocationVocabulary rdf:ID="Cytosol"/>
+  <bp:CellularLocationVocabulary rdf:ID="Nucleus"/>
+  <bp:CellularLocationVocabulary rdf:ID="Media_Cytosol_Membrane"/>
+  <bp:CellularLocationVocabulary rdf:ID="Cytosol_Nucleus_Membrane"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Receptor"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Second_Messenger"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Signal"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Transcription_Factor"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Annotation"/>
+  <bp:EntityReferenceGroupVocabulary rdf:ID="Gene_Expression"/>
+  <bp:PhysicalEntity rdf:ID="receptor1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Receptor</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="receptor2">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Receptor</bp:name>
+    <bp:referenceEntity rdf:resource="#Receptor"/>
+    <bp:cellularLocation rdf:resource="#Media_Cytosol_Membrane"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="signal1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Signal</bp:name>
+    <bp:referenceEntity rdf:resource="#Signal"/>
+    <bp:cellularLocation rdf:resource="#Media"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="signal2">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Signal</bp:name>
+    <bp:referenceEntity rdf:resource="#Signal"/>
+    <bp:cellularLocation rdf:resource="#Media"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="IKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKK</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="nfkb_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NF-&amp;kappa;B</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="ikba">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I&amp;kappa;B&amp;alpha;</bp:name>
+    <bp:referenceEntity rdf:resource="#Second_Messenger"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="nfkb_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NF-&amp;kappa;B</bp:name>
+    <bp:referenceEntity rdf:resource="#Transcription_Factor"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="mRNA_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mRNA</bp:name>
+    <bp:referenceEntity rdf:resource="#Annotation"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="protein">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protein</bp:name>
+    <bp:referenceEntity rdf:resource="#Annotation"/>
+    <bp:cellularLocation rdf:resource="#Cytosol"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="mRNA_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mRNA</bp:name>
+    <bp:referenceEntity rdf:resource="#Annotation"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:PhysicalEntity rdf:ID="gene_expression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Expression</bp:name>
+    <bp:referenceEntity rdf:resource="#Gene_Expression"/>
+    <bp:cellularLocation rdf:resource="#Nucleus"/>
+    <bp:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+  </bp:PhysicalEntity>
+  <bp:Control rdf:ID="signal1_receptor1">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal1 -&gt; receptor1</bp:name>
+    <bp:controller rdf:resource="#signal1"/>
+    <bp:controlled rdf:resource="#receptor1"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="signal2_receptor2">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signal2 -&gt; receptor2</bp:name>
+    <bp:controller rdf:resource="#signal2"/>
+    <bp:controlled rdf:resource="#receptor2"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="receptor1_IKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptor1 -&gt; IKK</bp:name>
+    <bp:controller rdf:resource="#receptor1"/>
+    <bp:controlled rdf:resource="#IKK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="receptor2_IKK">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptor2 -&gt; IKK</bp:name>
+    <bp:controller rdf:resource="#receptor2"/>
+    <bp:controlled rdf:resource="#IKK"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="ikba_nfkb_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ikba -| nfkb_cytoplasm</bp:name>
+    <bp:controller rdf:resource="#ikba"/>
+    <bp:controlled rdf:resource="#nfkb_cytoplasm"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="IKK_ikba">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKK -| ikba</bp:name>
+    <bp:controller rdf:resource="#IKK"/>
+    <bp:controlled rdf:resource="#ikba"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INHIBITION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="nfkb_cytoplasm_nfkb_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nfkb_cytoplasm -&gt; nfkb_nucleus</bp:name>
+    <bp:controller rdf:resource="#nfkb_cytoplasm"/>
+    <bp:controlled rdf:resource="#nfkb_nucleus"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="mRNA_nucleus_mRNA_cytoplasm">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mRNA_nucleus -&gt; mRNA_cytoplasm</bp:name>
+    <bp:controller rdf:resource="#mRNA_nucleus"/>
+    <bp:controlled rdf:resource="#mRNA_cytoplasm"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="mRNA_cytoplasm_protein">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mRNA_cytoplasm -&gt; protein</bp:name>
+    <bp:controller rdf:resource="#mRNA_cytoplasm"/>
+    <bp:controlled rdf:resource="#protein"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="gene_expression_mRNA_nucleus">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene_expression -&gt; mRNA_nucleus</bp:name>
+    <bp:controller rdf:resource="#gene_expression"/>
+    <bp:controlled rdf:resource="#mRNA_nucleus"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+  <bp:Control rdf:ID="nfkb_nucleus_gene_expression">
+    <bp:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nfkb_nucleus -&gt; gene_expression</bp:name>
+    <bp:controller rdf:resource="#nfkb_nucleus"/>
+    <bp:controlled rdf:resource="#gene_expression"/>
+    <bp:controlType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACTIVATION</bp:controlType>
+  </bp:Control>
+</rdf:RDF>

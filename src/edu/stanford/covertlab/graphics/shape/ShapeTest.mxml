@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!---
+Tester for shapes.
+
+@author Jonathan Karr, jkarr@stanford.edu
+@affiliation Covert Lab, Department of Bioengineering, Stanford University
+@lastupdated 4/3/2009
+-->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="drawShape();">
+	<mx:Script><![CDATA[
+		
+	import com.degrafa.GeometryGroup;
+	import com.degrafa.Surface;
+		
+	private function drawShape():void {
+		setStyle('verticalAlign', 'middle');
+		setStyle('horizontalAlign', 'center');
+		setStyle('backgroundColor', 0xFFFFFF);
+		
+		var surface:Surface = new Surface();
+		addChild(surface);
+
+		var geometryGroup:GeometryGroup = new GeometryGroup();
+		surface.addChild(geometryGroup);
+		
+		var shape:ShapeBase = new DNAShape(40, 0x000000, 0xCDAD00);
+		shape.target = geometryGroup;
+		geometryGroup.geometryCollection.addItem(shape);
+	}
+	]]></mx:Script>
+</mx:Application>
