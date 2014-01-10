@@ -3,6 +3,12 @@ bin/NetworkPainter.swf
 bin/pub/
 obj/
 docs/
+tutorials/*.aux
+tutorials/*.log
+tutorials/*.out
+tutorials/*.nav
+tutorials/*.snm
+tutorials/*.toc
 
 #data files
 amfphp/services/KEGG/KGML/*.xml
