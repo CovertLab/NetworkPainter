@@ -18,6 +18,7 @@ $html = formatHelpData($helpData,array('<contact/>','<applicationName/>'),array(
 
 echo <<< HTML
   <style>
+      p {text-align:justify;}
 	  page p,page ul {
 		line-height: 1.3em;
 	  }

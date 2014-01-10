@@ -494,9 +494,8 @@ Application help. Displayed in help window and on website.
 								<p>Next select an experiment from the list on the 
 								left and associate biomolecules in the current network with experimental conditions and 
 								observed channels. Click <i>Update</i> to commit your changes. Finally, to visualize the experiment
-								with the current network select the experiment on click <i>Select</i>. A measurement will be opened according to 
-								the currently selected axes (see <i>Configuring Axes</i> section), and the network will be animated
-								with experimental data.</p>							
+								with the current network select the experiment and click <i>Select</i>. The network will be animated
+								with experimental data as determined by the currently selected axes (see <i>Configuring Axes</i> section).</p>
 							]]></covertlab:content>
 						</covertlab:HelpSection>
 						<covertlab:HelpSection label="Cytobank version">
@@ -504,7 +503,7 @@ Application help. Displayed in help window and on website.
 								<p>To visualize a Cytobank experiment first login to Cytobank at <a href="http://www.cytobank.org">www.cytobank.org</a>.
 								Second, create a new illustration for the desired experiment. Third, click "View/draw network" under the <i>Signaling 
 								network diagram</i> tab of the <i>Advanced Views</i> section. Fourth, draw a network and associate biomolecules with
-								observed channels. Lastly, click the play button to visualize the experiment. This will animate the diagram according
+								observed channels. Lastly, click the <i>play</i> button to visualize the experiment. This will animate the diagram according
 								to the currently selected axes (see <i>Configure axes</i> section).
 								
 								<p><i>Note: A Cytobank user account is required to visualize Cytobank experiments. To create a Cytobank 
@@ -593,7 +592,7 @@ Application help. Displayed in help window and on website.
 						</covertlab:HelpSection>							
 						<covertlab:HelpSection label="Colormaps">
 							<covertlab:content><![CDATA[
-								<p>The colormap controls the color mapping between experimentally observed 
+								<p>The colormap controls the color mapping between the experimentally observed 
 								activities of network components and their rendered colors. The following 
 								colormaps are available:</p>
 								
@@ -689,7 +688,7 @@ Application help. Displayed in help window and on website.
 				</covertlab:HelpSection>
 				<covertlab:HelpSection label="Updating your personal information">
 					<covertlab:content><![CDATA[
-						To update your name, email address, organization, or password select <i>File&#8658; User Account</i>, 
+						To update your name, principal investigator, or organization select <i>File&#8658; User Account</i>, 
 						edit the desired fields, and click <i>Save</i>.
 					]]></covertlab:content>
 				</covertlab:HelpSection>
