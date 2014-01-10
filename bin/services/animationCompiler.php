@@ -16,6 +16,12 @@
  * @affiliation Covert Lab, Department of Bioengineering, Stanford University
  * @lastupdated 2/23/2009
  */
+ 
+//cleanup
+unlink('tmp/tmp.ColorScale.png');
+unlink('tmp/tmp.ColorScale.svg');
+unlink('tmp/tmpViewer.swf');
+unlink('tmp/tmp.zip');
 
 //options
 extract(array_map('urldecode', $_POST));
@@ -107,6 +113,6 @@ $zip->addFile('../expressInstall.swf', "expressInstall.swf");
 $zip->close();
 
 //return zip archive
-header("location: tmp/tmp.zip");
+header("location: tmp/tmp.zip?".rand());
 
 ?>
