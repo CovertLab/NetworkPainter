@@ -11,15 +11,15 @@ Application tutorial data. Displayed in tutorial window.
 <mx:Object xmlns:mx="http://www.adobe.com/2006/mxml">
 	<mx:ArrayCollection id="tutorials">
 		<mx:Object url="../tutorials/tutorial_01.swf" title="Creating pathway diagrams"		
-			description="In this tutorial we explain how to creates a new &lt;applicationName/&gt; user account,
-			login, and create, save, and export a network models of NF-&#954;B activation and transcriptional
+			description="In this tutorial we explain how to create a new &lt;applicationName/&gt; user account,
+			login, and create, save, and export a network model of NF-&#954;B activation and transcriptional
 			regulation." />
 		<mx:Object url="../tutorials/tutorial_02.swf" title="Visualizing experimental data"	
-			description="In this tutorial we revisit the network created in tutorial #1 and use it to visualize
+			description="In this tutorial we revisit the network we created in tutorial #1, and use it to visualize
 			experimental flow cytometry data." />		
 		<mx:Object url="../tutorials/tutorial_03.swf" title="Advanced topics"
-			description="In this tutorial we learn how to share networks and collaborate with colleagues,
-			publish networks to make them publicly available to the scientific community, and explore advanced 
+			description="In this tutorial we learn how to share networks to collaborate with colleagues and
+			publish networks to make them publicly available to the scientific community. We also explore advanced 
 			rendering features including automatic diagram layout." />
 	</mx:ArrayCollection>
 </mx:Object>
