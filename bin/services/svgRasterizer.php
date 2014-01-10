@@ -9,7 +9,11 @@
  * @affiliation Covert Lab, Department of Bioengineering, Stanford University
  * @lastupdated 2/16/2009
  */
-
+ 
+//cleanup
+unlink("tmp/tmp.svg");
+unlink("tmp/tmp.$format");
+ 
 //options
 $svg = urldecode($_POST['svg']);
 $format = urldecode($_POST['format']);
@@ -21,6 +25,6 @@ file_put_contents('tmp/tmp.svg', str_replace('\"', '"',$svg));
 shell_exec("inkscape tmp/tmp.svg --export-$format=tmp/tmp.$format");
 
 //return rendered file
-readfile("tmp/tmp.$format");
+header("location: tmp/tmp.$format?".rand());
 
 ?>
