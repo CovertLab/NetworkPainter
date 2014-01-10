@@ -21,6 +21,11 @@ $file = array_shift(explode(".", array_pop(explode("/", $_SERVER["SCRIPT_NAME"])
 $menu = "<div id=\"menu\">";
 $menu .= "
       <ul>
+        <li class=\"top".($file=="login" ? " active":"")."\"><a href=\"login.php\">login</a></li>
+      </ul>
+";
+$menu .= "
+      <ul>
         <li class=\"top".($file=="index" ? " active":"")."\"><a href=\"features.php\">features</a></li>
       </ul>
 ";
@@ -47,11 +52,6 @@ $menu.="
 $menu.="
       <ul>
         <li class=\"top".($file=="about" ? " active":"")."\"><a href=\"about.php\">about</a></li>
-      </ul>
-";
-$menu .= "
-      <ul>
-        <li class=\"top".($file=="login" ? " active":"")."\"><a href=\"login.php\">login</a></li>
       </ul>
 ";
 $menu.="    </div>";

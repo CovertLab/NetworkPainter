@@ -50,7 +50,7 @@ echo <<<HTML
 
       <a name="credits"/>
       <h3>Credits <span class="red">& Contact Info</span></h3>
-      <p>$applicationName was developed by the <a href="http://covertlab.stanford.edu">Covert Lab</a> at <a href="http://www.stanford.edu">Stanford University</a>. Please contact us with any questions or comments.</p>
+      <p>$applicationName was developed by the <a href="http://covertlab.stanford.edu">Covert Lab</a> at <a href="http://www.stanford.edu">Stanford University</a> in collaboration with <a href="http://www.cytobank.org">Cytobank Inc.</a>. Please contact us with any questions or comments.</p>
 	  <p style="padding-top:5px;">$credits</p>
       <p/>
 

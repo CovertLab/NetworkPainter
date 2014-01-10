@@ -84,8 +84,6 @@ Displayed in about window and on website.
 		<mx:Object software="Bezier" version="r136" url="http://code.google.com/p/bezier/wiki/Main"/>
 		<mx:Object software="Degrafa" version="Beta 3.1" url="http://degrafa.org/"/>
 		<mx:Object software="FAMFAMFAM Silk Icons" version="1.3" url="http://www.famfamfam.com/lab/icons/silk/"/>
-		<mx:Object software="FFmpeg" version="R 16537" url="http://www.ffmpeg.org/"/>
-		<mx:Object software="FlashDevelop" version="3.0.0" url="http://www.flashdevelop.org/community/"/>
 		<mx:Object software="Flash External Interface Proxy" version="1.0" url="http://livedocs.adobe.com/flex/3/html/help.html?content=19_External_Interface_10.html"/> 
 		<mx:Object software="Flex" version="3.2" url="http://opensource.adobe.com/wiki/display/flexsdk/Download+Flex+3"/>
 		<mx:Object software="FlexLib" version="2.4" url="http://code.google.com/p/flexlib/"/>
@@ -94,8 +92,6 @@ Displayed in about window and on website.
 		<mx:Object software="InkScape" version="0.46" url="http://www.inkscape.org/"/>
 		<mx:Object software="JavaScript ToolTips" version="5.1" url="http://www.walterzorn.com/tooltip/tooltip_e.htm"/>		
 		<mx:Object software="KEGG PATHWAY" version="KGML 0.6" url="http://www.genome.jp/kegg/"/>				
-		<mx:Object software="MATLAB" version="2008a" url="http://www.mathworks.com/products/matlab/"/>	
-		<mx:Object software="Microsoft Visual C#" version="2008" url="http://msdn.microsoft.com/en-us/vcsharp/default.aspx"/>
 		<mx:Object software="Monkey Patches" version="" url="http://blog.flexmonkeypatches.com/2008/09/10/flex-custom-tooltip-speech-bubble/"/>	
 		<mx:Object software="MySQL" version="5.0.41" url="http://dev.mysql.com/downloads/"/>		
 		<mx:Object software="PHP" version="5.2.2" url="http://www.php.net/downloads.php"/>
@@ -103,11 +99,8 @@ Displayed in about window and on website.
 		<mx:Object software="printf" version="rev 6" url="http://code.google.com/p/printf-as3/"/>		
 		<mx:Object software="Screen2Video" version="5.1" url="http://www.viscomsoft.com/products/screen2video/"/>		
 		<mx:Object software="Solucija" version="" url="http://www.solucija.com/free-templates"/>
-		<mx:Object software="Subversion" version="1.6.1" url="http://subversion.tigris.org/"/>
 		<mx:Object software="TextFieldUtil" version="" url="http://jasonbejot.com/superscript-and-subscript-in-actionscript"/>
-		<mx:Object software="TortoiseSVN" version="1.6.1" url="http://tortoisesvn.tigris.org/"/>
 		<mx:Object software="Tweener" version="1.31.74" url="http://code.google.com/p/tweener/"/>
-		<mx:Object software="Wink" version="2.0 build 1060" url="http://www.debugmode.com/wink/"/>
 		<mx:Object software="XML_MXML" version="0.3.0" url="http://pear.php.net/package/XML_MXML/download"/>
     </mx:ArrayCollection>
 	<mx:ArrayCollection id="requirements">

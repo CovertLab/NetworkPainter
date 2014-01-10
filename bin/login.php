@@ -37,8 +37,6 @@ case 'register_save':
 ///////////////////////////////////
 
 function start($email = '', $error = '') {
-    $error = 'NetworkPainter is temporarily unavailable while we are improving the software. Please check back soon. '. $error;
-    
 	if ($error != '') $error = "<p class=\"error\">$error</p>";
 	require('head.php');
 	echo "<div class=\"wrap page\">"; 
@@ -83,7 +81,7 @@ function start($email = '', $error = '') {
 	
 	echo "<div style=\"width:235px; float:left;\">\n";
 	echo "    <h3 style=\"margin-bottom:12px;\">Cytobank <span class=\"red\">Version</span></h3>"; 	
-	echo "    <p>Login at <a href=\"http://www.cytobank.org\">Cytobank</a>.</p>";
+	echo "    <p>Login at <a href=\"http://www.cytobank.org\">Cytobank</a> (coming soon).</p>";
 	echo "</div>\n";
 	
 	echo "<div style=\"clear:both; padding-bottom:20px;\">\n";

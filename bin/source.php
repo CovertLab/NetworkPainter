@@ -13,9 +13,6 @@
 
 require('head.php');
 
-preg_match('/<body>(.*?)<\/body>/is', file_get_contents('../installation.html'), $matches);
-$installation = preg_replace('/href="\//i','href="/svn/'.$aboutData['applicationName'].'/',$matches[1]);
-
 $license = '<p>'.str_replace("\r\n\r\n","</p>\n<p>",file_get_contents('../license.txt'))."</p>\n";
 
 echo <<<HTML
@@ -25,11 +22,11 @@ echo <<<HTML
 	  
 	  <a name="download"/>
       <h3>Download</h3>
-	  $applicationName is distributed under the <a href="#license">MIT license</a>. The source code is freely available at <a href="http://simtk.org/home/networkpainter">SimTK</a>.
+	  $applicationName is distributed under the <a href="#license">MIT license</a>. The source code is freely available at <a href="http://github.com/CovertLab/NetworkPainter">Github</a>.
 	  
 	  <a name="installation"/>
       <h3>Installation</h3>
-	  $installation	
+	  Installation instructions are available <a href="https://github.com/CovertLab/NetworkPainter/blob/master/installation.md">here</a>.
 	  
 	  <a name="documentation"/>
 	  <h3>Documentation</h3>
