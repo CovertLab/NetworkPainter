@@ -97,7 +97,6 @@ Displayed in about window and on website.
 		<mx:Object software="PHP" version="5.2.2" url="http://www.php.net/downloads.php"/>
 		<mx:Object software="PHP Thumb" version="1.7.9" url="http://phpthumb.sourceforge.net/"/>
 		<mx:Object software="printf" version="rev 6" url="http://code.google.com/p/printf-as3/"/>		
-		<mx:Object software="Screen2Video" version="5.1" url="http://www.viscomsoft.com/products/screen2video/"/>		
 		<mx:Object software="Solucija" version="" url="http://www.solucija.com/free-templates"/>
 		<mx:Object software="TextFieldUtil" version="" url="http://jasonbejot.com/superscript-and-subscript-in-actionscript"/>
 		<mx:Object software="Tweener" version="1.31.74" url="http://code.google.com/p/tweener/"/>
