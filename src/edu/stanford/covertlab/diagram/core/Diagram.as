@@ -2055,14 +2055,17 @@
 		
 		public function render(format:String, metaData:Object = null, 
 		overrideShowBiomoleculeSelectedHandles:Boolean = false,
-		overrideColorBiomoleculesByValue:Boolean = false):* {			
+		overrideColorBiomoleculesByValue:Boolean = false,
+		overrideComparisonHeatmapsVisible:Boolean = true):* {
 			var data:*;
 			var i:uint;
 			var biomoleculeValues:Array = [];			
 			var comparisonHeatmapsVisible:Boolean = this.comparisonHeatmapsVisible;
 			
 			//toggle off comparison heatmaps
-			this.comparisonHeatmapsVisible = false;
+			if (overrideComparisonHeatmapsVisible) {
+				this.comparisonHeatmapsVisible = false;
+			}
 			
 			//turn off biomolecule selected handles
 			if (!exportShowBiomoleculeSelectedHandles || overrideShowBiomoleculeSelectedHandles) {
@@ -2183,7 +2186,7 @@
 					var zo:ZipOutput = new ZipOutput();
 					
 					var byteArray:ByteArray = new ByteArray();
-					byteArray.writeUTFBytes(this.render('svg', metaData));
+					byteArray.writeUTFBytes(this.render('svg', metaData, false, false, false));
 					var ze:ZipEntry = new ZipEntry(printf('%s/%s.svg', metaData.title, 'reference'));
 					zo.putNextEntry(ze);
 					zo.write(byteArray);
