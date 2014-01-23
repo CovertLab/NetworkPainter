@@ -28,17 +28,17 @@
 		private var _colors:Array;
 		private var _bounds:Rectangle;
 		
-		public function ColorBar(x:Number=0,y:Number=0,width:Number=0,
-			height:Number=0,count:Number=0,colors:Array=null){
+		public function ColorBar(x:Number=0, y:Number=0, width:Number=0,
+			height:Number=0, count:Number=0, colors:Array=null){
 			
 			super();
 			
-			this.x=x;
-			this.y=y;
-			this.width=width;
-			this.height=height;
+			this.x = x;
+			this.y = y;
+			this.width = width;
+			this.height = height;
 			
-			super.count =count;
+			super.count = count;
 			
 			this.colors = colors;
 		}
@@ -116,17 +116,17 @@
 		* @inheritDoc 
 		**/
 		override public function preDraw():void{
-			if(invalidated){
+			if(invalidated) {
 				
-				objectStack=[];
+				objectStack = [];
 				_bounds = null;
 				
 				var newRegularRectangle:RegularRectangle;
 				
 	    	    //loop calc and add the circle for each count    	
-	        	for (var i:int = 0;i< count;i++){	
+	        	for (var i:int = 0; i< count; i++) {	
 	        		
-	    			newRegularRectangle = new RegularRectangle(x, y + i * height / count, width, height / count);
+	    			newRegularRectangle = new RegularRectangle(x, y + height * (1 - (i + 1) / count), width, height / count);
 					//BUG: in Solid Fill for colors near 0x000500
 					if (colors != null && colors.length > i) {
 						newRegularRectangle.fill = new SolidFill(colors[i]);
@@ -137,8 +137,7 @@
 					newRegularRectangle.preDraw();
         			calcBounds(newRegularRectangle.bounds);
         		
-        			objectStack.push(newRegularRectangle);
-        		
+        			objectStack.push(newRegularRectangle);        		
 				}
 				
 				//border
@@ -146,7 +145,7 @@
 				newRegularRectangle.stroke = stroke;
 				objectStack.push(newRegularRectangle);
 			
-				invalidated=false;	
+				invalidated = false;	
 			}
 		}
 		
