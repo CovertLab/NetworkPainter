@@ -1,8 +1,8 @@
  Options +FollowSymLinks
  RewriteEngine On
- RewriteRule ^KarrEtAl2014$  http://%{SERVER_NAME}/projects/NetworkPainter/$
+ RewriteRule ^KarrEtAl2014$      http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
  RewriteRule ^KarrEtAl2014Fig1$  http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
- RewriteRule ^KarrEtAl2014Fig2$  http://%{SERVER_NAME}/projects/NetworkPainter/$
+ RewriteRule ^KarrEtAl2014Fig2$  http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
 
 
  
