@@ -17,6 +17,7 @@ require('configuration.php');
 
 //parameters
 $networkID = $_GET['networkID'];
+$experimentID = null;
 
 //database connection
 $db_connection = databaseConnect($config['mysql']);
@@ -40,6 +41,7 @@ if (is_numeric($networkID)) {
 		$lastsave = date('F j, Y', strtotime($lastsave));		
 		
 		if (file_exists("pub/$networkID.swf") && file_exists("pub/$networkID.ColorScale.png")){
+            $experimentID = 0;
 			list($colorScaleWidth, $junk) = getimagesize("pub/$networkID.ColorScale.png");
 			$animationWidth = 750 - 10 - $colorScaleWidth;
 			$animationHeight = $height / $width * $animationWidth;
@@ -80,7 +82,7 @@ HTML;
 				</p>
 			</div>
 			<div class="col last" style="text-align:right;">
-				<a href="login.php?networkID=$networkID">View in $applicationName</a>
+				<a href="login.php?networkID=$networkID&experimentID=$experimentID">View in $applicationName</a>
 			</div>
 		</div>
 HTML;
