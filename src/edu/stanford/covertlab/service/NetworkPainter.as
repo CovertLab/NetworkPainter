@@ -1,11 +1,12 @@
 ﻿package edu.stanford.covertlab.service 
 {
+	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.utils.ByteArray;
 	import mx.collections.ArrayCollection;
 	import mx.controls.Alert;
-	import mx.managers.CursorManager;
+	import mx.core.Application;
 	import mx.rpc.events.FaultEvent;
 	import mx.rpc.events.ResultEvent;
 	import mx.rpc.remoting.RemoteObject;
@@ -73,6 +74,9 @@
 		private var biomolecules:ArrayCollection;
 		private var edges:ArrayCollection;
 		
+		//status var
+		private var statusBar:StatusBar;
+		
 		public function NetworkPainter() 
 		{
 			remoteObj = new RemoteObject(DESTINATION);
@@ -119,56 +123,58 @@
 			
 			remoteObj.getOperation("deleteNetwork").addEventListener(ResultEvent.RESULT, deleteNetworkEnd);
 			remoteObj.getOperation("deleteNetwork").addEventListener(FaultEvent.FAULT, deleteNetworkFault);
+			
+			statusBar = Application.application.statusBar;
 		}
 		
 		//get allowed networks
 		public function listNetworks(userid:uint):void {
 			remoteObj.getOperation("listNetworks").send(userid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('listNetworks', 'Listing networks ...');
 		}
 		
 		private function listNetworksEnd(event:ResultEvent):void {
 			networks = event.result as ArrayCollection;
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('listNetworks');
 			dispatchEvent(new Event(LIST_NETWORKS));
 		}
 		
 		private function listNetworksFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('listNetworks');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//get network details
 		public function getNetworkDetails(userid:uint, networkid:uint):void {
 			remoteObj.getOperation("getNetworkDetails").send(userid, networkid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('getNetworkDetails', 'Retrieving network ...');
 		}
 		
 		private function getNetworkDetailsEnd(event:ResultEvent):void {
 			networkDetails = event.result;
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('getNetworkDetails');
 			dispatchEvent(new Event(GET_NETWORK_DETAILS));
 		}
 		
 		private function getNetworkDetailsFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('getNetworkDetails');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//get network permissions
 		public function getNetworkPermissions(networkid:uint):void {
 			remoteObj.getOperation("getNetworkPermissions").send(networkid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('getNetworkPermissions', 'Retrieving network ...');
 		}
 		
 		private function getNetworkPermissionsEnd(event:ResultEvent):void {
 			networkPermissions = event.result as ArrayCollection;
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('getNetworkPermissions');
 			dispatchEvent(new Event(GET_NETWORK_PERMISSIONS));
 		}
 		
 		private function getNetworkPermissionsFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('getNetworkPermissions');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
@@ -182,49 +188,49 @@
 				poreFillColor, poreStrokeColor, membraneHeight, membraneCurvature, minCompartmentHeight, ranksep, nodesep, 
 				animationFrameRate, loopAnimation, exportShowBiomoleculeSelectedHandles, exportColorBiomoleculesByValue, 
 				exportAnimationFrameRate, exportLoopAnimation);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('saveAsNetwork', 'Saving network ...');
 		}
 		
 		private function saveAsNetworkEnd(event:ResultEvent):void {
 			newNetworkId = event.result as uint;
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('saveAsNetwork');
 			dispatchEvent(new Event(SAVE_AS_NETWORK));
 		}
 		
 		private function saveAsNetworkFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('saveAsNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//update network
 		public function updateNetwork(networkid:uint, userid:uint, network:Object, preview:ByteArray):void {
 			remoteObj.getOperation("updateNetwork").send(networkid, userid, network, preview);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('updateNetwork', 'Saving network ...');
 		}
 		
 		private function updateNetworkEnd(event:ResultEvent):void {
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('updateNetwork');
 			dispatchEvent(new Event(UPDATE_NETWORK));
 		}
 		
 		private function updateNetworkFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('updateNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//save network properties
 		public function saveNetworkProperties(networkid:uint, name:String, description:String, publicStatus:String, networkPermissions:String, permissions:ArrayCollection):void {
 			remoteObj.getOperation("saveNetworkProperties").send(networkid, name, description, publicStatus, networkPermissions, permissions);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('updateNetwork', 'Saving network ...');
 		}
 		
 		private function saveNetworkPropertiesEnd(event:ResultEvent):void {
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('updateNetwork');
 			dispatchEvent(new Event(SAVE_NETWORK_PROPERTIES));
 		}
 		
 		private function saveNetworkPropertiesFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('updateNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
@@ -236,7 +242,7 @@
 			remoteObj.getOperation("loadNetworkCompartments").send(userid, networkid);
 			remoteObj.getOperation("loadNetworkBiomolecules").send(userid, networkid);
 			remoteObj.getOperation("loadNetworkEdges").send(userid, networkid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('loadNetwork', 'Retrieving network ...');
 		}
 		
 		private function loadNetworkEnd(event:ResultEvent):void {
@@ -271,61 +277,61 @@
 				network.compartments = compartments;
 				network.biomolecules = biomolecules;
 				network.edges = edges;
-				CursorManager.removeBusyCursor();
+				statusBar.removeMessage('loadNetwork');
 				dispatchEvent(new Event(LOAD_NETWORK));
 			}
 		}
 		
 		private function loadNetworkFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('loadNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//renew network lock
 		public function renewNetworkLock(userid:uint,networkid:uint):void {
 			remoteObj.getOperation("renewNetworkLock").send(userid, networkid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('renewNetworkLock', 'Checking out network ...');
 		}
 		
 		private function renewNetworkLockEnd(event:ResultEvent):void {
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('renewNetworkLock');
 			dispatchEvent(new Event(RENEW_NETWORK_LOCK));
 		}
 		
 		private function renewNetworkLockFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('renewNetworkLock');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//clear network lock
 		public function clearNetworkLock(networkid:uint):void {
 			remoteObj.getOperation("clearNetworkLock").send(networkid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('clearNetworkLock', 'Releasing network ...');
 		}
 		
 		private function clearNetworkLockEnd(event:ResultEvent):void {
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('clearNetworkLock');
 			dispatchEvent(new Event(CLEAR_NETWORK_LOCK));
 		}
 		
 		private function clearNetworkLockFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('clearNetworkLock');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
 		//delete network
 		public function deleteNetwork(networkid:uint):void {
 			remoteObj.getOperation("deleteNetwork").send(networkid);
-			CursorManager.setBusyCursor();
+			statusBar.addMessage('deleteNetwork', 'Deleting network ...');
 		}
 		
 		private function deleteNetworkEnd(event:ResultEvent):void {
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('deleteNetwork');
 			dispatchEvent(new Event(DELETE_NETWORK));
 		}
 		
 		private function deleteNetworkFault(event:FaultEvent):void {			
-			CursorManager.removeBusyCursor();
+			statusBar.removeMessage('deleteNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}		
 	}

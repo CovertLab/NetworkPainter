@@ -24,6 +24,7 @@ embedding into websites, powerpoint, etc.
 @lastupdated 3/23/2009
 -->
 <mx:Application 
+	xmlns:controls="edu.stanford.covertlab.controls.*"
 	xmlns:diagram_core="edu.stanford.covertlab.diagram.core.*"
 	xmlns:mx="http://www.adobe.com/2006/mxml" 
     width="100%" height="100%" 
@@ -170,5 +171,8 @@ embedding into websites, powerpoint, etc.
 	]]>
 	</mx:Script>
 
-	<diagram_core:Diagram id="diagram" />
+	<mx:Canvas width="100%" height="100%" paddingTop="0" paddingBottom="0" paddingLeft="0" paddingRight="0">
+		<diagram_core:Diagram id="diagram" />
+		<controls:StatusBar id="statusBar" />
+	</mx:Canvas>
 </mx:Application>

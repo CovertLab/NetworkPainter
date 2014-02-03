@@ -448,6 +448,13 @@ TitleWindow{
 .TitleWindowListItemRenderer{
 }
 
+/* Status bar */
+StatusBar {
+	backgroundColor: #cccccc;
+	bottom:0;
+	right:0;
+}
+
 /**
  * Embedded Fonts
  *

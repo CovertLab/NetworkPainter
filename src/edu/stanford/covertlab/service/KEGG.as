@@ -1,10 +1,11 @@
 ﻿package edu.stanford.covertlab.service 
 {
+	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import mx.collections.ArrayCollection;
 	import mx.controls.Alert;
-	import mx.managers.CursorManager;
+	import mx.core.Application;
 	import mx.rpc.events.FaultEvent;
 	import mx.rpc.events.ResultEvent;
 	import mx.rpc.remoting.RemoteObject;
@@ -37,15 +38,14 @@
 		public static const KEGG_FAULT:String = 'keggFault';
 		public static const DESTINATION:String = "amfphp";
 		public static const SOURCE:String = "KEGG.KEGG";		
-		
-		//flags
-		private var listingPathways:Boolean = false;
-		private var gettingPathway:Boolean = false;
-	
+			
 		//data
 		public var pathways:ArrayCollection;
 		public var pathway:Object;
 		public var error:String;
+		
+		//status bar
+		private var statusBar:StatusBar;
 		
 		public function KEGG() 
 		{
@@ -57,45 +57,41 @@
 			
 			remoteObj.getOperation("getPathway").addEventListener(ResultEvent.RESULT, getPathwayEnd);
 			remoteObj.getOperation("getPathway").addEventListener(FaultEvent.FAULT, getPathwayFault);
+			
+			statusBar = Application.application.statusBar;
 		}
 		
 		//list pathways
 		public function listPathways():void {
-			remoteObj.getOperation("listPathways").send();
-			listingPathways = true;
-			refreshBusyCursor();
+			remoteObj.getOperation("listPathways").send();		
+			statusBar.addMessage('listKegg', 'Retrieving list of KEGG pathways ...');			
 		}
 		
 		private function listPathwaysEnd(event:ResultEvent):void {
-			pathways = new ArrayCollection(event.result as Array);
-			listingPathways = false;			
-			refreshBusyCursor();
+			pathways = new ArrayCollection(event.result as Array);			
+			statusBar.removeMessage('listKegg');			
 			dispatchEvent(new Event(KEGG_LISTPATHWAYS));
 		}
 		
 		private function listPathwaysFault(event:FaultEvent):void {			
-			listingPathways = false;
-			refreshBusyCursor();
+			statusBar.removeMessage('listKegg');
 			dispatchEvent(new Event(KEGG_FAULT));
 		}
 		
 		//get pathway
 		public function getPathway(pathway:Object):void {
 			remoteObj.getOperation("getPathway").send(pathway.id);
-			gettingPathway = true;
-			refreshBusyCursor();
+			statusBar.addMessage('getKegg', 'Retrieving KEGG pathway ...');
 		}
 		
 		private function getPathwayEnd(event:ResultEvent):void {
 			pathway = event.result;
-			gettingPathway = false;			
-			refreshBusyCursor();
+			statusBar.removeMessage('getKegg');
 			dispatchEvent(new Event(KEGG_GETPATHWAY));
 		}
 		
 		private function getPathwayFault(event:FaultEvent):void {
-			gettingPathway = false;
-			refreshBusyCursor();
+			statusBar.removeMessage('getKegg');
 			dispatchEvent(new Event(KEGG_FAULT));
 		}
 		
@@ -103,16 +99,7 @@
 		public function previewSource(pathway:Object):String {
 			var org:String = pathway.id.match(/^[a-z]+/i)[0];
 			return 'http://www.genome.jp/kegg/pathway/' + org + '/' + pathway.id + '.png';
-		}
-		
-		/****************************************************
-		 * busy cursor
-		 * **************************************************/		
-		private function refreshBusyCursor():void {
-			if (listingPathways || gettingPathway) CursorManager.setBusyCursor();
-			else CursorManager.removeBusyCursor();
-		}
-		
+		}		
 	}
 	
 }

@@ -74,9 +74,10 @@
   @lastupdated: 3/23/2009
 -->
 <mx:Application 
+	xmlns:controls="edu.stanford.covertlab.controls.*"
 	xmlns:diagram_panel="edu.stanford.covertlab.diagram.panel.*"
 	xmlns:diagram_core="edu.stanford.covertlab.diagram.core.*"
-    xmlns:diagram_toolbar="edu.stanford.covertlab.diagram.toolbar.*"
+    xmlns:diagram_toolbar="edu.stanford.covertlab.diagram.toolbar.*"	
 	xmlns:mx="http://www.adobe.com/2006/mxml" 
 	xmlns:rphelan="com.rphelan.controls.*"
     width="100%" height="100%" 
@@ -475,7 +476,7 @@
 	</rphelan:AcceleratorMenuBar>
 
 	<!-- tabs -->
-	<mx:Box id="box" height="100%" width="100%" paddingTop="10" paddingBottom="1" paddingRight="1" paddingLeft="1">
+	<mx:Canvas id="box" height="100%" width="100%" paddingTop="10" paddingBottom="1" paddingRight="1" paddingLeft="1">
 		<mx:TabNavigator id="tabWindow" width="100%" height="100%" paddingTop="10" styleName="MainTabNavigator" change="mainTabNavigatorChange(event);">
 			<diagram_core:Diagram id="diagram" label="Layout" styleName="MainTab"/>
 			<mx:HBox id="editor" label="Editor" paddingLeft="10" paddingTop="0" paddingRight="10" paddingBottom="10" horizontalGap="20">
@@ -487,5 +488,6 @@
 				</mx:VBox>
 			</mx:HBox>
 		</mx:TabNavigator>
-	</mx:Box>
+		<controls:StatusBar id="statusBar" />
+	</mx:Canvas>
 </mx:Application>

@@ -1,9 +1,10 @@
 ﻿package edu.stanford.covertlab.service 
 {
+	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import mx.collections.ArrayCollection;
-	import mx.managers.CursorManager;
+	import mx.core.Application;
 	import mx.rpc.events.FaultEvent;
 	import mx.rpc.events.ResultEvent;
 	import mx.rpc.remoting.RemoteObject;
@@ -38,14 +39,13 @@
 		public static const DESTINATION:String = "amfphp";
 		public static const SOURCE:String = "Reactome.Reactome";		
 		
-		//flags
-		private var listingPathways:Boolean = false;
-		private var gettingPathway:Boolean = false;
-	
 		//data
 		public var pathways:ArrayCollection;
 		public var pathway:Object;
 		public var error:String;
+		
+		//status bar
+		private var statusBar:StatusBar;
 		
 		public function Reactome() 
 		{
@@ -57,45 +57,41 @@
 			
 			remoteObj.getOperation("getPathway").addEventListener(ResultEvent.RESULT, getPathwayEnd);
 			remoteObj.getOperation("getPathway").addEventListener(FaultEvent.FAULT, getPathwayFault);
+			
+			statusBar = Application.application.statusBar;
 		}
 		
 		//list pathways
 		public function listPathways():void {
 			remoteObj.getOperation("listPathways").send();
-			listingPathways = true;
-			refreshBusyCursor();
+			statusBar.addMessage('listReactome', 'Listing Reactome pathways ...');
 		}
 		
 		private function listPathwaysEnd(event:ResultEvent):void {
 			pathways = new ArrayCollection(event.result as Array);
-			listingPathways = false;			
-			refreshBusyCursor();
+			statusBar.removeMessage('listReactome');
 			dispatchEvent(new Event(REACTOME_LISTPATHWAYS));
 		}
 		
 		private function listPathwaysFault(event:FaultEvent):void {			
-			listingPathways = false;
-			refreshBusyCursor();
+			statusBar.removeMessage('listReactome');
 			dispatchEvent(new Event(REACTOME_FAULT));
 		}
 		
 		//get pathway
 		public function getPathway(pathway:Object):void {
 			remoteObj.getOperation("getPathway").send(pathway.id);
-			gettingPathway = true;
-			refreshBusyCursor();
+			statusBar.addMessage('getReactome', 'Getting Reactome pathway ...');
 		}
 		
 		private function getPathwayEnd(event:ResultEvent):void {
 			pathway = event.result;
-			gettingPathway = false;			
-			refreshBusyCursor();
+			statusBar.removeMessage('getReactome');
 			dispatchEvent(new Event(REACTOME_GETPATHWAY));
 		}
 		
 		private function getPathwayFault(event:FaultEvent):void {			
-			gettingPathway = false;
-			refreshBusyCursor();
+			statusBar.removeMessage('getReactome');
 			dispatchEvent(new Event(REACTOME_FAULT));
 		}
 		
@@ -103,15 +99,6 @@
 		public function previewSource(pathway:Object):String {
 			return null;
 		}
-		
-		/****************************************************
-		 * busy cursor
-		 * **************************************************/		
-		private function refreshBusyCursor():void {
-			if (listingPathways || gettingPathway) CursorManager.setBusyCursor();
-			else CursorManager.removeBusyCursor();
-		}
-		
 	}
 	
 }

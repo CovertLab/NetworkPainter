@@ -1,10 +1,11 @@
 ﻿package edu.stanford.covertlab.service
 {
+	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import mx.collections.ArrayCollection;
 	import mx.controls.Alert;
-	import mx.managers.CursorManager;
+	import mx.core.Application;
 	import mx.rpc.events.FaultEvent;
 	import mx.rpc.events.ResultEvent;
 	import mx.rpc.remoting.RemoteObject;	
@@ -40,13 +41,12 @@
 		//remote object
 		private var remoteObj:RemoteObject;
 		
-		//flags
-		private var queryingGetExperiments:Boolean = false;
-		private var queryingSetExperiments:Boolean = false;
-		
 		//data
 		public var result:Object;
 		public var error:String;
+		
+		//status bar
+		private var statusBar:StatusBar;
 		
 		public function NetworkPainterExperiments() 
 		{
@@ -58,6 +58,8 @@
 			
 			remoteObj.getOperation("setExperiments").addEventListener(ResultEvent.RESULT, setExperimentsEnd);
 			remoteObj.getOperation("setExperiments").addEventListener(FaultEvent.FAULT, setExperimentsFault);
+			
+			statusBar = Application.application.statusBar;
 		}
 		
 		/****************************************************
@@ -66,20 +68,17 @@
 		//experiments
 		public function getExperiments(networkID:uint):void {
 			remoteObj.getOperation("getExperiments").send(networkID);
-			queryingGetExperiments = true;
-			refreshBusyCursor();
+			statusBar.addMessage('getExperiments', 'Listing experiments ...');
 		}
 		
 		private function getExperimentsEnd(event:ResultEvent):void {
 			result = event.result;
-			queryingGetExperiments = false;			
-			refreshBusyCursor();
+			statusBar.removeMessage('getExperiments');
 			dispatchEvent(new Event(GET_EXPERIMENTS));
 		}
 		
 		private function getExperimentsFault(event:FaultEvent):void {			
-			queryingGetExperiments = false;
-			refreshBusyCursor();
+			statusBar.removeMessage('getExperiments');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
 		
@@ -87,29 +86,17 @@
 		//averages
 		public function setExperiments(networkID:uint, data:Object):void {				
 			remoteObj.getOperation("setExperiments").send(networkID, data);
-			queryingSetExperiments = true;
-			refreshBusyCursor();
+			statusBar.addMessage('setExperiments', 'Saving experiment ...');
 		}
 		
 		private function setExperimentsEnd(event:ResultEvent):void {
-			queryingSetExperiments = false;
-			refreshBusyCursor();
+			statusBar.removeMessage('setExperiments');
 			dispatchEvent(new Event(SET_EXPERIMENTS));
 		}
 		
 		private function setExperimentsFault(event:FaultEvent):void {			
-			queryingSetExperiments = false;			
-			refreshBusyCursor();
+			statusBar.removeMessage('setExperiments');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
-
-		
-		/****************************************************
-		 * busy cursor
-		 * **************************************************/		
-		private function refreshBusyCursor():void {
-			if (queryingGetExperiments || queryingSetExperiments) CursorManager.setBusyCursor();
-			else CursorManager.removeBusyCursor();
-		}		
 	}	
 }

@@ -1,8 +1,9 @@
 package phi.db
 {
+	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
-	import mx.managers.CursorManager;
+	import mx.core.Application;
 	
 	import mx.collections.ArrayCollection;
 	import mx.rpc.events.FaultEvent;
@@ -512,7 +513,7 @@ package phi.db
 			conn.remoteObj.getOperation("query").addEventListener(ResultEvent.RESULT, onQueryEnd);
 			
 			dispatchEvent(new Event(Query.QUERY_START));
-			CursorManager.setBusyCursor();
+			(Application.application.statusBar as StatusBar).addMessage('queryDb', 'Querying database ...');
 			//phiBusy.showBusy();
 		 }
 		 
@@ -521,7 +522,7 @@ package phi.db
 		 	conn.remoteObj.removeEventListener(FaultEvent.FAULT, onQueryFault);
 		 	conn.remoteObj.removeEventListener(ResultEvent.RESULT, onQueryEnd);
 		 	
-		 	CursorManager.removeBusyCursor();
+		 	(Application.application.statusBar as StatusBar).removeMessage('queryDb');
 		 	//phiBusy.removeBusy();
 		 }
 	}
