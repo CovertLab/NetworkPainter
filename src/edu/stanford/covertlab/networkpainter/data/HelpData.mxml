@@ -489,7 +489,74 @@ Application help. Displayed in help window and on website.
 							<covertlab:content><![CDATA[
 								<p>To load an experiment with the current network, first open the <i>Experiment Manager</i> 
 								(<i>Experiment&#8658; Manage Experiments</i>). Next, click <i>Add</i> to upload an experiment in JSON format. 
-								See <a href="../tutorials/DemoExperiment.json">DemoExperiment.json</a> as an example.</p>
+								</p>
+								
+								<p>The JSON object must contain the following eight fields:
+								<ul>
+								<li>name <String>: Textual description of the experimental data set.</li>
+								<li>channels <Array>: Array of objects, each representing an observed experimental channel (e.g. p-Syk-Ax647). Each object must have a single String field 'name' which describes the channel.</li>
+								<li>conditions <Array>: Array of objects, each representing an experimental condition (e.g. LPS). Each object must have a single String field 'name' which describes the condition.</li>								
+								<li>dosages <Array>: Array of objects, each representing an experimental doseage (e.g. 2 mg/g). Each object must have a single String field 'name' which describes the doseage.</li>
+								<li>individual <Array>: Array of objects, each representing an observed experimental subject (e.g. patient 0). Each object must have a single String field 'name' which describes the subject.</li>
+								<li>populations <Array>: Array of objects, each representing an observed cellular population (e.g. B-cells). Each object must have a single String field 'name' which describes the cell type(s).</li>
+								<li>timepoints <Array>: Array of objects, each representing an observed timepoint. Each object must have a single String field 'name' which describes the time of the timepoint.</li>
+								<li>statistics <Array>: Array of objects, each representing an experimental observation of a particular channel in a particular cellular population for a particular individual under a particular condition and doseage at a particular timepoint. Each object must have seven fields:
+									<ul>
+									<li>channel <String>: Name of the observed channel.</li>
+									<li>condition <String>: Name of the observed condition.</li>
+									<li>doseage <String>: Name of the observed doseage.</li>
+									<li>individual <String>: Name of the observed individual.</li>
+									<li>population <String>: Name of the observed cellular population.</li>
+									<li>timepoint <String>: Name of the observed timepoint.</li>
+									<li>value <Number>: Numerical value of the observed data point.</li>
+									</ul>
+								</li>
+								</ul>
+								</p>
+								
+								<p>Below is a template of the JSON experimental data format. <a href="../tutorials/DemoExperiment.json">DemoExperiment.json</a> provides a complete example.
+								<pre>{<br />
+&nbsp;&nbsp;"name": "Follicular Lymphoma Demo Data",<br />
+&nbsp;&nbsp;"channels": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "Bcl2-PE"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "p-Erk12-Ax647"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "p-Syk-Ax647"}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;],<br />
+&nbsp;&nbsp;"conditions": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "aBCR"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "aBCR H2O2"}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;],<br />
+&nbsp;&nbsp;"dosages": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "1 unit"}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;],<br />
+&nbsp;&nbsp;"individuals": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "Patient-1"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "Patient-2"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;],<br />
+&nbsp;&nbsp;"populations": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "Ungated"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "B cells"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "T cells"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;],<br />
+&nbsp;&nbsp;"timepoints": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "0m"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "4m"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"name": "16m"},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;],<br />
+&nbsp;&nbsp;"statistics": [<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"population": "Ungated", "condition": "aBCR", "dosage": "1 unit", "individual": "Patient-1", "timepoint": "0m", "channel": "p-Syk-Ax647", "value": 15.54},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"population": "Ungated", "condition": "aBCR", "dosage": "1 unit", "individual": "Patient-1", "timepoint": "4m", "channel": "p-Syk-Ax647", "value": 22.88},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{"population": "Ungated", "condition": "aBCR", "dosage": "1 unit", "individual": "Patient-1", "timepoint": "16m", "channel": "p-Syk-Ax647", "value": 20.72},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+&nbsp;&nbsp;]<br />
+}
+</pre></p>								
 								
 								<p>Next select an experiment from the list on the 
 								left and associate biomolecules in the current network with experimental conditions and 
