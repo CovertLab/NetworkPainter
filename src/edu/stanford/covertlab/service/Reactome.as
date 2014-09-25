@@ -37,7 +37,7 @@
 		public static const REACTOME_GETPATHWAY:String = 'reactomeGetPathway';
 		public static const REACTOME_FAULT:String = 'reactomeFault';
 		public static const DESTINATION:String = "amfphp";
-		public static const SOURCE:String = "Reactome.Reactome";		
+		public static const SOURCE:String = "Reactome";		
 		
 		//data
 		public var pathways:ArrayCollection;

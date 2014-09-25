@@ -32,7 +32,7 @@
 			if (importNetworkWindow != value) {
 				if (data && !importNetworkWindow) {
 					var source:String = value.previewSource(data);
-					if (source) image.source = '/services/phpThumb/phpThumb.php?src=' + source + '&w=' + image.width + '&h=' + image.height;
+					if (source) image.source = 'services/phpThumb/phpThumb.php?src=' + source + '&w=' + image.width + '&h=' + image.height;
 					else image.source = null;
 				}
 				_importNetworkWindow = value;
@@ -47,7 +47,7 @@
 				
 				if (importNetworkWindow) {
 					var source:String = importNetworkWindow.previewSource(data);
-					if (source) image.source = '/services/phpThumb/phpThumb.php?src=' + source + '&w=' + image.width + '&h=' + image.height;
+					if (source) image.source = 'services/phpThumb/phpThumb.php?src=' + source + '&w=' + image.width + '&h=' + image.height;
 					else image.source = null;
 				}
 			}

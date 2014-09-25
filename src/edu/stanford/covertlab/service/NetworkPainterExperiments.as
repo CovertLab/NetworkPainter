@@ -3,6 +3,7 @@
 	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
+	import flash.external.ExternalInterface;
 	import mx.collections.ArrayCollection;
 	import mx.controls.Alert;
 	import mx.core.Application;
@@ -36,7 +37,7 @@
 		public static const FAULT:String = 'fault';
 		
 		public static const DESTINATION:String = "amfphp";
-		public static const SOURCE:String = "NetworkPainter.NetworkPainter";
+		public static const SOURCE:String = "NetworkPainter";
 		
 		//remote object
 		private var remoteObj:RemoteObject;
@@ -94,7 +95,8 @@
 			dispatchEvent(new Event(SET_EXPERIMENTS));
 		}
 		
-		private function setExperimentsFault(event:FaultEvent):void {			
+		private function setExperimentsFault(event:FaultEvent):void {
+			ExternalInterface.call('console.log', 'setExperimentsFault');
 			statusBar.removeMessage('setExperiments');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}

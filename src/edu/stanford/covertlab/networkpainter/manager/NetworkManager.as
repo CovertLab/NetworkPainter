@@ -306,6 +306,8 @@
 		private function loadNetwork(properties:Object):void{
 			id = properties.id;
 			
+			//ExternalInterface.call('console.log', properties);
+			
 			if (properties.locked) {
 				Alert.show('Opening read only copy.', 'Warning: Network Locked', Alert.OK|Alert.CANCEL, null,
 					function(event:CloseEvent):void {

@@ -13,13 +13,13 @@
  */
 
 //application configuration
-$config['url']='http://covertlab.stanford.edu/projects/NetworkPainter/bin';
+$config['url']='http://covert.stanford.edu/networkpainter';
 $config['name']='NetworkPainter';
 
 //mysql configuration
-$config['mysql']['server']='localhost';
-$config['mysql']['database']='networkpainter';
-$config['mysql']['user']='networkpainter';
-$config['mysql']['password']='networkpainter';
+$config['mysql']['server']='mysql-user-master.stanford.edu';
+$config['mysql']['database']='g_covert_networkpainter';
+$config['mysql']['user']='gcovertnetwork';
+$config['mysql']['password']='gohyodee';
 
 ?>

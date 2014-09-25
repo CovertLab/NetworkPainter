@@ -23,7 +23,7 @@ foreach($aboutData['features'] as $feature){
 $features .= "</ul>\n";
 	
 $requirements="<ul><li>".join("</li><li>",array_map(create_function('$x','return $x["requirement"].(array_key_exists("comment",$x) && $x["comment"]!="" ? " -- ".$x["comment"] : "");'),$aboutData['requirements']))."</li></ul>";
-$contact_darkgray="<img src=\"/scripts/generateTextImage.php?text=".$aboutData['email']."&size=9&font=arial&color=76,86,94&bgcolor=200,200,200\" style=\"position:relative;top:2px\"/>";
+$contact_darkgray='<a href="mailto:"'.$aboutData['email'].'">'.$aboutData['email'].'</a>';
 $newStuff=str_replace(array('<contact/>','<applicationName/>'),array($contact,$aboutData['applicationName']),$aboutData['newStuff']);
 $infoMsg=str_replace(array('<contact/>','<applicationName/>'),array($contact_darkgray,$aboutData['applicationName']),$aboutData['infoMsg']);
  

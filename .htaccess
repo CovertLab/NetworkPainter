@@ -1,8 +1,15 @@
- Options +FollowSymLinks
- RewriteEngine On
- RewriteRule ^KarrEtAl2014$      http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
- RewriteRule ^KarrEtAl2014Fig1$  http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
- RewriteRule ^KarrEtAl2014Fig2$  http://%{SERVER_NAME}/projects/NetworkPainter/bin/view.php?networkID=132
+<filesMatch ".(swf)$">
+	FileETag None
+	<ifModule mod_headers.c>
+		Header unset ETag
+		Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+		Header set Pragma "no-cache"
+		Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+	</ifModule>
+</filesMatch>
 
-
- 
+RedirectMatch ^/group/covert/cgi-bin/projects/networkpainter/*$ http://web.stanford.edu/group/covert/cgi-bin/projects/networkpainter/bin/
+RedirectMatch ^/group/covert/cgi-bin/projects/networkpainter/bin/*$ http://web.stanford.edu/group/covert/cgi-bin/projects/networkpainter/bin/login.php
+RedirectMatch ^/group/covert/cgi-bin/projects/networkpainter/bin/KarrEtAl2014/*$ http://web.stanford.edu/group/covert/cgi-bin/projects/networkpainter/bin/view.php?networkID=132
+RedirectMatch ^/group/covert/cgi-bin/projects/networkpainter/bin/KarrEtAl2014Fig1/*$ http://web.stanford.edu/group/covert/cgi-bin/projects/networkpainter/bin/view.php?networkID=132
+RedirectMatch ^/group/covert/cgi-bin/projects/networkpainter/bin/KarrEtAl2014Fig2/*$ http://web.stanford.edu/group/covert/cgi-bin/projects/networkpainter/bin/view.php?networkID=132

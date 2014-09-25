@@ -42,6 +42,7 @@
 	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;	
+	import flash.external.ExternalInterface;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.ui.Keyboard;
@@ -1473,18 +1474,18 @@
 			edgesGeometryGroup.alpha = 0;
 			
 			// get scale
-			pattern = /graph (\d+\.\d+) (\d+\.\d+) (\d+\.\d+)/;
+			pattern = /^graph (\d+\.*\d*) (\d+\.*\d*) (\d+\.*\d*)$/m;
 			matches = pattern.exec(event.result.toString());
 			if (matches != null) scale = parseFloat(matches[1]);
 			
 			//parse nodes
-			pattern = /node (\w+)  (\d+\.\d+) (\d+\.\d+) (\d+\.\d+) (\d+\.\d+) "?.*"? solid \w+ #\w+ #\w+/g;
+			pattern = /^node (\w+) (\d+\.*\d*) (\d+\.*\d*) (\d+\.*\d*) (\d+\.*\d*) "?.*"? solid \w+ #\w+ #\w+$/gm;
 			matches = pattern.exec(event.result.toString());
 			while (matches != null) {
 				biomolecule = getBiomoleculeByName(matches[1], true);
 								
 				//update biomolecule position
-				biomolecule.translateTo(parseFloat(matches[2])*scale,parseFloat(matches[3])*scale,0,false,false);
+				biomolecule.translateTo(parseFloat(matches[2]) * scale, parseFloat(matches[3]) * scale, 0, false, false);
 				
 				//get next biomolecule
 				matches = pattern.exec(event.result.toString());

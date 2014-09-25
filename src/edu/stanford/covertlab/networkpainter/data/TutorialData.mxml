@@ -21,5 +21,7 @@ Application tutorial data. Displayed in tutorial window.
 			description="In this tutorial we learn how to share networks to collaborate with colleagues and
 			publish networks to make them publicly available to the scientific community. We also explore advanced 
 			rendering features including automatic diagram layout." />
+		<mx:Object url="../tutorials/tutorial_04.swf" title="Cytobank-integrated version"
+			description="In this tutorial we learn how to use NetworkPainter in the context of <a href='http://www.cytobank.org/networkpainter.html'>Cytobank</a>." />
 	</mx:ArrayCollection>
 </mx:Object>

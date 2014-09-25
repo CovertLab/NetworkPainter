@@ -17,6 +17,8 @@
  * @lastupdated 3/27/2009
  */
 
+set_include_path(get_include_path() . PATH_SEPARATOR . '../lib/');
+ 
 require_once('DB.php');
 require_once('XML/MXML/Parser.php');
 

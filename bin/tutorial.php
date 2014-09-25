@@ -33,7 +33,12 @@ if ($_GET['tutorial']) {
 	$html .= "    <embed src=\"../tutorials/$url\" width=\"$width\" height=\"$height\" type=\"application/x-shockwave-flash\" play=\"true\" loop=\"false\"></embed>\n"; 
 	$html .= "  </object>\n";
 	$html .= "</div>\n";
-	$html .= "<div style=\"float:left; width:375px;\">Download: <a href=\"../tutorials/tutorial_0$idx.pdf\">slides</a> | <a href=\"../tutorials/tutorial_0$idx.swf\">video</a></div>\n";
+	$html .= "<div style=\"float:left; width:375px;\">Download: ";
+	if (file_exists("../tutorials/tutorial_0$idx.pdf")) {
+		$html .= "  <a href=\"../tutorials/tutorial_0$idx.pdf\">slides</a> | ";
+	}
+	$html .= "  <a href=\"../tutorials/tutorial_0$idx.swf\">video</a>";
+	$html .= "</div>\n";
 	$html .= "<div style=\"float:left; width:375px; text-align:right\">Last updated: ".date('M j, Y', filemtime("../tutorials/tutorial_0$idx.swf"))."</div>\n";
 	$html .= "<div style=\"clear:both;\"></div>\n";
 }else{

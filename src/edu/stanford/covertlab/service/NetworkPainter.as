@@ -3,7 +3,9 @@
 	import edu.stanford.covertlab.controls.StatusBar;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
+	import flash.external.ExternalInterface;
 	import flash.utils.ByteArray;
+	import flash.utils.getQualifiedClassName;
 	import mx.collections.ArrayCollection;
 	import mx.controls.Alert;
 	import mx.core.Application;
@@ -60,7 +62,7 @@
 		public static const DELETE_NETWORK:String = 'networkPainterDeleteNetwork';
 		public static const FAULT:String = 'networkPainterFault';
 		public static const DESTINATION:String = "amfphp";
-		public static const SOURCE:String = "NetworkPainter.NetworkPainter";		
+		public static const SOURCE:String = "NetworkPainter";		
 		
 		//data
 		public var networks:ArrayCollection;
@@ -134,6 +136,7 @@
 		}
 		
 		private function listNetworksEnd(event:ResultEvent):void {
+			//ExternalInterface.call("console.log", getQualifiedClassName(event.result), event.result);
 			networks = event.result as ArrayCollection;
 			statusBar.removeMessage('listNetworks');
 			dispatchEvent(new Event(LIST_NETWORKS));
@@ -151,6 +154,7 @@
 		}
 		
 		private function getNetworkDetailsEnd(event:ResultEvent):void {
+			//ExternalInterface.call("console.log", getQualifiedClassName(event.result), event.result);
 			networkDetails = event.result;
 			statusBar.removeMessage('getNetworkDetails');
 			dispatchEvent(new Event(GET_NETWORK_DETAILS));
@@ -204,7 +208,7 @@
 		
 		//update network
 		public function updateNetwork(networkid:uint, userid:uint, network:Object, preview:ByteArray):void {
-			remoteObj.getOperation("updateNetwork").send(networkid, userid, network, preview);
+			remoteObj.getOperation("updateNetwork").send(networkid, userid, network, preview);			
 			statusBar.addMessage('updateNetwork', 'Saving network ...');
 		}
 		
@@ -213,7 +217,8 @@
 			dispatchEvent(new Event(UPDATE_NETWORK));
 		}
 		
-		private function updateNetworkFault(event:FaultEvent):void {			
+		private function updateNetworkFault(event:FaultEvent):void {
+			//ExternalInterface.call('console.log', 'updateNetworkFault');
 			statusBar.removeMessage('updateNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
@@ -230,6 +235,7 @@
 		}
 		
 		private function saveNetworkPropertiesFault(event:FaultEvent):void {			
+			//ExternalInterface.call('console.log', 'saveNetworkPropertiesFault');
 			statusBar.removeMessage('updateNetwork');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
@@ -298,7 +304,7 @@
 			dispatchEvent(new Event(RENEW_NETWORK_LOCK));
 		}
 		
-		private function renewNetworkLockFault(event:FaultEvent):void {			
+		private function renewNetworkLockFault(event:FaultEvent):void {
 			statusBar.removeMessage('renewNetworkLock');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}
@@ -314,7 +320,7 @@
 			dispatchEvent(new Event(CLEAR_NETWORK_LOCK));
 		}
 		
-		private function clearNetworkLockFault(event:FaultEvent):void {			
+		private function clearNetworkLockFault(event:FaultEvent):void {
 			statusBar.removeMessage('clearNetworkLock');
 			dispatchEvent(new FaultEvent(FAULT, false, true, null, null, event.message));
 		}

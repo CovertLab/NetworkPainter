@@ -22,7 +22,7 @@ Displayed in about window and on website.
 	<mx:String id="applicationName">NetworkPainter</mx:String>
 	<mx:String id="version">0.4</mx:String>
 	<mx:String id="releaseDate">Jan. 30, 2013</mx:String>
-	<mx:String id="url">http://covertlab.stanford.edu/projects/NetworkPainter</mx:String>
+	<mx:String id="url">http://covert.stanford.edu/networkpainter</mx:String>
 	<mx:String id="email">covertlab-server@stanford.edu</mx:String>	
 	<mx:String id="description"><![CDATA[<applicationName/> is a web-based software program for collaboratively drawing and painting pathway diagrams with high-dimensional data including flow and mass cytometry.]]></mx:String>
 	<mx:String id="newStuff"><![CDATA[<applicationName/> is under active development. Check back as new features are added.]]></mx:String>
@@ -63,13 +63,14 @@ Displayed in about window and on website.
 		<mx:Object feature="Export to common exchange formats" 
 			comment="BioPax, CellML, and SBML."/>
 	</mx:ArrayCollection>
+		<mx:Object foreName="Jonathan" lastName="Karr" position="Fellow, Genomics &amp; Multiscale Biology, Mount Sinai School of Medicine" email="jkarr@stanford.edu"/>
 	<mx:ArrayCollection id="developers">
-		<mx:Object foreName="Jonathan" lastName="Karr" position="Graduate Student, Biophysics &amp; Medicine, Stanford University" email="jkarr@stanford.edu"/>
 		<mx:Object foreName="Harendra" lastName="Guturu" position="Graduate Student, Electrical Engineering, Stanford University" email="hguturu@stanford.edu"/>
-		<mx:Object foreName="Ed" lastName="Chen" position="Graduate Student, Bioengineering, Stanford University" email="chened@stanford.edu"/>		
+		<mx:Object foreName="Ed" lastName="Chen" position="Graduate Student, Bioengineering, Stanford University" email="chened@stanford.edu"/>
+        <mx:Object foreName="Stu" lastName="Blair" position="Web Application and Bioinformatics Developer, Cytobank Inc." email="stu@cytobank.org"/>
 		<mx:Object foreName="Jonathan" lastName="Irish" position="Assistant Professor, Cancer Biology, Vanderbilt University" email="jonathan.irish@vanderbilt.edu"/>
 		<mx:Object foreName="Nikesh" lastName="Kotecha" position="CEO, Cytobank Inc." email="nikesh@cytobank.org"/>		
-		<mx:Object foreName="Markus" lastName="Covert" position="Assistant Professor, Bioengineering, Stanford University" email="mcovert@stanford.edu"/>
+		<mx:Object foreName="Markus" lastName="Covert" position="Associate Professor, Bioengineering, Stanford University" email="mcovert@stanford.edu"/>
 	</mx:ArrayCollection>
 	<mx:ArrayCollection id="thirdPartySoftware">
 		<mx:Object software="Accelerator Menu Bar" version="" url="http://www.rphelan.com/2008/03/17/flex-menu-accelerators/"/>
@@ -106,7 +107,7 @@ Displayed in about window and on website.
 		<mx:Object requirement="Web-browser"/>
 		<mx:Object requirement="Adobe Flash version 10.0 or higher"/>
 	</mx:ArrayCollection>
-	<mx:String id="acknowledgements"><![CDATA[<applicationName/> was supported by an NIH Director's Pioneer Award (5DP1LM01150-05), a NIH K99/R00 grant (CA125994-01A1), and a Hellman Faculty Scholarship to M.W.C; NDSEG, NSF, and Stanford Graduate Fellowships to J.R.K.; and NSF and Stanford Graduate Fellowships to H.G.]]></mx:String>
+	<mx:String id="acknowledgements"><![CDATA[<applicationName/> was supported by an NIH Director's Pioneer Award (5DP1LM01150-05), an NIH grant (1P50GM107615), a NIH K99/R00 grant (CA125994-01A1), a Paul Allen Family Foundation Allen Distinguished Investigator Award, and a Hellman Faculty Scholarship to M.W.C; NDSEG, NSF, and Stanford Graduate Fellowships and a JSMF Postdoctoral Award to J.R.K.; and NSF and Stanford Graduate Fellowships to H.G.]]></mx:String>
 	<mx:String id="disclaimer"><![CDATA[The <applicationName/> team or Stanford does not warrant or assume any legal liability or 
 	responsibility for the accuracy, completeness, or usefulness of any information displayed on this website.]]></mx:String>
 </mx:Object>

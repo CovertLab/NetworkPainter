@@ -13,7 +13,7 @@ require_once('engines/MiscFunctions.php');
 
 $aboutData = parseAboutData();
 $applicationName = $aboutData['applicationName'];
-$contact = "<a href=\"".$aboutData['email']."\">".$aboutData['email']."</a>";
+$contact = "<a href=\"mailto:".$aboutData['email']."\">".$aboutData['email']."</a>";
 $description = str_replace(array('<contact/>', '<applicationName/>'), array($contact, $applicationName), $aboutData['description']);
 $keywords = join(", ", $aboutData['keywords']);
 

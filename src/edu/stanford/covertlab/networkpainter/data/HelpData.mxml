@@ -567,7 +567,7 @@ Application help. Displayed in help window and on website.
 						</covertlab:HelpSection>
 						<covertlab:HelpSection label="Cytobank version">
 							<covertlab:content><![CDATA[
-								<p>To visualize a Cytobank experiment first login to Cytobank at <a href="http://www.cytobank.org">www.cytobank.org</a>.
+								<p>To visualize a Cytobank experiment first login to Cytobank at <a href="http://www.cytobank.org/networkpainter.html">www.cytobank.org/networkpainter.html</a>.
 								Second, create a new illustration for the desired experiment. Third, click "View/draw network" under the <i>Signaling 
 								network diagram</i> tab of the <i>Advanced Views</i> section. Fourth, draw a network and associate biomolecules with
 								observed channels. Lastly, click the <i>play</i> button to visualize the experiment. This will animate the diagram according
@@ -743,7 +743,7 @@ Application help. Displayed in help window and on website.
 						</covertlab:HelpSection>
 						<covertlab:HelpSection label="Cytobank version">
 							<covertlab:content><![CDATA[
-							Navigate to <a href="http://www.cytobank.org">www.cytobank.org</a> to login to Cytobank.
+							Navigate to <a href="http://www.cytobank.org/networkpainter.html">www.cytobank.org/networkpainter.html</a> to login to Cytobank.
 							]]></covertlab:content>
 						</covertlab:HelpSection>
 					</covertlab:children>

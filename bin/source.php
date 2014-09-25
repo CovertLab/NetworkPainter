@@ -22,7 +22,7 @@ echo <<<HTML
 	  
 	  <a name="download"/>
       <h3>Download</h3>
-	  $applicationName is distributed under the <a href="#license">MIT license</a>. The source code is freely available at <a href="http://github.com/CovertLab/NetworkPainter">Github</a>.
+	  $applicationName is distributed under the <a href="#license">Attribution Assurance License</a>. The source code is freely available at <a href="http://github.com/CovertLab/NetworkPainter">Github</a>.
 	  
 	  <a name="installation"/>
       <h3>Installation</h3>

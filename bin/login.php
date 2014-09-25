@@ -81,7 +81,7 @@ function start($email = '', $error = '') {
 	
 	echo "<div style=\"width:235px; float:left;\">\n";
 	echo "    <h3 style=\"margin-bottom:12px;\">Cytobank <span class=\"red\">Version</span></h3>"; 	
-	echo "    <p>Login at <a href=\"http://www.cytobank.org\">Cytobank</a> (coming soon).</p>";
+	echo "    <p>Login at <a href=\"http://www.cytobank.org/networkpainter.html\">Cytobank</a>.</p>";
 	echo "</div>\n";
 	
 	echo "<div style=\"clear:both; padding-bottom:20px;\">\n";

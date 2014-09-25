@@ -6,6 +6,7 @@
 	import edu.stanford.covertlab.networkpainter.manager.NetworkManager;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.external.ExternalInterface;
 	import flash.filters.ColorMatrixFilter;
 	import mx.binding.utils.BindingUtils;
 	import mx.containers.ControlBar;
@@ -251,8 +252,8 @@
 			PopUpManager.centerPopUp(this);
 		}
 		
-		private function openNetwork(event:Event):void {
-			var network:Object = (viewStack.selectedIndex == 0 ? tileList.selectedItem : dataGrid.selectedItem);
+		private function openNetwork(event:Event):void {			
+			var network:Object = (viewStack.selectedIndex == 0 ? tileList.selectedItem : dataGrid.selectedItem);			
 			networkManager.openNetwork(network);
 		}
 	 

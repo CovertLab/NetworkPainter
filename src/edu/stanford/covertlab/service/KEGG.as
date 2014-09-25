@@ -37,7 +37,7 @@
 		public static const KEGG_GETPATHWAY:String = 'keggGetPathway';
 		public static const KEGG_FAULT:String = 'keggFault';
 		public static const DESTINATION:String = "amfphp";
-		public static const SOURCE:String = "KEGG.KEGG";		
+		public static const SOURCE:String = "KEGG";		
 			
 		//data
 		public var pathways:ArrayCollection;

@@ -150,7 +150,7 @@
 						
 			//connect to database
 			db = Database.getInstance();
-			db.connect("conn", "networkpainter", "networkpainter", "localhost", "networkpainter", true);
+			db.connect("conn", "gcovertnetwork", "gohyodee", "mysql-user-master.stanford.edu", "g_covert_networkpainter", true);
 			
 			//initialize security
 			userManager = new UserManager(this, db);

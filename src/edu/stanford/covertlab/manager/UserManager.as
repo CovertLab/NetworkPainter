@@ -162,6 +162,7 @@
 			
 			id = parseInt(httpService.lastResult.response.userid);
 			if (!isNaN(id)) {
+				//ExternalInterface.call('console.log', 'userid', id);
 				loginUserQuery.execute('CALL loginuser(' + id + ');');
 			} else {
 				Alert.show("Invalid Session: Please relogin.", "Redirect Alert", Alert.OK, null, logoffUser);
@@ -169,6 +170,7 @@
 		}
 
 		private function loginUserQueryHandler(event:Event):void {
+			//ExternalInterface.call('console.log', loginUserQuery, loginUserQuery.getRecords());
 			var userData:Object = loginUserQuery.getRecords().getItemAt(0);
 			var oldUserData:Object = { 
 				isGuest:isGuest, 
@@ -290,6 +292,7 @@
 		 * query error handler
 		 * *****************************************************************/
 		private function queryErrorHandler(event:Event):void {
+			//ExternalInterface.call('console.log', 'error');
 			Alert.show('Please retry last action. '+event.target.getError(), 'Database Connection Error.');
 		}	
 	}	

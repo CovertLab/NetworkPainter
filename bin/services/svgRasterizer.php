@@ -10,21 +10,27 @@
  * @lastupdated 2/16/2009
  */
  
-//cleanup
-unlink("tmp/tmp.svg");
-unlink("tmp/tmp.$format");
- 
 //options
 $svg = urldecode($_POST['svg']);
 $format = urldecode($_POST['format']);
 
+//temporary files
+$tmpFile = tempnam('tmp', 'tmp');
+
 //save svg as temporary file
-file_put_contents('tmp/tmp.svg', str_replace('\"', '"',$svg));
+file_put_contents("$tmpFile.svg", str_replace('\"', '"', $svg));
 
 //rasterize svg (png, ps, eps, pdf)
-shell_exec("inkscape tmp/tmp.svg --export-$format=tmp/tmp.$format");
+shell_exec("./svgconvert $tmpFile.svg $tmpFile.$format");
 
 //return rendered file
-header("location: tmp/tmp.$format?".rand());
+$fp = fopen("$tmpFile.$format", 'r');
+fpassthru($fp);
+fclose($fp);
+
+//cleanup
+unlink("$tmpFile");
+unlink("$tmpFile.svg");
+unlink("$tmpFile.$format");
 
 ?>

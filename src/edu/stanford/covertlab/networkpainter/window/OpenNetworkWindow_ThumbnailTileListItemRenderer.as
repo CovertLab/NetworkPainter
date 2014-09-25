@@ -49,7 +49,8 @@
 				owner:networkManager.networkDetails.owner,
 				creation:networkManager.networkDetails.creation,
 				lastsave:networkManager.networkDetails.lastsave,				
-				lockuser:networkManager.networkDetails.lockuser };
+				lockuser:networkManager.networkDetails.lockuser 
+				};
 			image.source = networkManager.networkDetails.preview;
 		}
 		

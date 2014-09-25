@@ -13,7 +13,7 @@ Instructions to install NetworkPainter on your own server are available [here](i
 Documentation for the NetworkPainter source code is available [here](http://covertlab.stanford.edu/projects/NetworkPainter/docs). User help instructions and tutorials are available [here](http://covertlab.stanford.edu/projects/NetworkPainter/bin/help.php). 
 
 ### License ###
-NetworkPainter is distributed under the [MIT license](license.txt).
+NetworkPainter is distributed under the [Attribution Assurance License](license.txt).
 
 ### Citing NetworkPainter ###
 Please use the following reference to cite NetworkPainter: Karr JR, Guturu H, Chen EY, Blair SL, Irish JM, Kotecha N, Covert MW. NetworkPainter: Intracellular pathway animation in Cytobank. (In preparation).

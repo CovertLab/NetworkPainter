@@ -152,7 +152,7 @@
 			var xml:XML = new XML(printf(
 				'<sbml level="2" version="%d" xmlns="http://www.sbml.org/sbml/level2" ' +
 					'xmlns:dc="http://purl.org/dc/elements/1.1/" ' +
-					'xmlns:networkpainter="http://covertlab.stanford.edu/projects/networkpainter/" '+
+					'xmlns:networkpainter="http://covert.stanford.edu/networkpainter" '+
 					'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">' +			
 					'<model id="%s">' +
 						'<notes>' +
