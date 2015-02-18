@@ -38,13 +38,16 @@
 	import flash.display.DisplayObject;
 	import flash.display.Shape;
 	import flash.display.StageDisplayState;
+	import flash.events.ContextMenuEvent;
 	import flash.events.Event;	
-	import flash.events.KeyboardEvent;
+	import flash.events.KeyboardEvent;	
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;	
 	import flash.external.ExternalInterface;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import flash.ui.ContextMenu;
+	import flash.ui.ContextMenuItem;
 	import flash.ui.Keyboard;
 	import flash.utils.ByteArray;
 	import flash.utils.getTimer;
@@ -1178,6 +1181,26 @@
 			//update cut, copy buttons
 			cutEnabled = (selectedBiomolecules.length > 0);
 			copyEnabled = (selectedBiomolecules.length > 0);
+			
+			if (selectedBiomolecules.length == 2) { 
+				for (var i:uint = 0; i < 2; i++) {
+					var cm:ContextMenu = new ContextMenu();
+					
+					var cmiFrom:ContextMenuItem = new ContextMenuItem('Draw arrow: ' + selectedBiomolecules[i].myName + ' --> ' + selectedBiomolecules[1-i].myName);
+					cmiFrom.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, addArrowFromSelectedBimolecules);
+					cm.customItems.push(cmiFrom);
+
+					var cmiTo:ContextMenuItem = new ContextMenuItem('Draw arrow: ' + selectedBiomolecules[i].myName + ' <-- ' + selectedBiomolecules[1-i].myName);
+					cmiTo.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, addArrowToSelectedBimolecules);
+					cm.customItems.push(cmiTo);
+
+					(selectedBiomolecules[i] as Biomolecule).contextMenu = cm;
+				}
+			} else {
+				for (i = 0; i < selectedBiomolecules.length; i++) {
+					(selectedBiomolecules[i] as Biomolecule).contextMenu = null;
+				}
+			}
 		}
 		
 		public function selectAllBiomolecules():void {
@@ -1208,7 +1231,8 @@
 				updateCompartmentsOfSelectedBiomoleculesTimer.dispatchEvent(new TimerEvent(TimerEvent.TIMER_COMPLETE));
 			}
 			
-			while(selectedBiomolecules.length>0) {
+			while (selectedBiomolecules.length > 0) {
+				(selectedBiomolecules[0] as Biomolecule).contextMenu = null;
 				selectedBiomolecules[0].selected = false;
 				selectedBiomolecules.removeItemAt(0);
 			}
@@ -1354,6 +1378,34 @@
 			var sort:Sort = new Sort();
 			sort.fields = [new SortField('myName', true)];
 			sort.sort(biomolecules.source);
+		}
+		
+		private function addArrowFromSelectedBimolecules(evt:ContextMenuEvent):void {
+			if (selectedBiomolecules.length != 2){
+				return;
+			}
+
+			var from:Biomolecule = evt.contextMenuOwner as Biomolecule;
+			var to:Biomolecule = (selectedBiomolecules[0] == from ? selectedBiomolecules[1] : selectedBiomolecules[0]);
+
+			if (to.myRegulation)
+				to.myRegulation = to.myRegulation + ' || ' + from.myName;
+			else
+				to.myRegulation = from.myName;
+		}
+
+		private function addArrowToSelectedBimolecules(evt:ContextMenuEvent):void {
+			if (selectedBiomolecules.length != 2){
+				return;
+			}
+
+			var to:Biomolecule = evt.contextMenuOwner as Biomolecule;
+			var from:Biomolecule = (selectedBiomolecules[0] == to ? selectedBiomolecules[1] : selectedBiomolecules[0]);
+
+			if (to.myRegulation)
+				to.myRegulation = to.myRegulation + ' || ' + from.myName;
+			else
+				to.myRegulation = from.myName;
 		}
 		
 		/************************************************
