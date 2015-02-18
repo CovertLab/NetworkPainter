@@ -1594,7 +1594,7 @@
 		}
 		
 		private function autoLayoutDiagramServiceFaultHandler(event:FaultEvent):void {
-			Alert.show('Auto layout diagram failed.','Auto Layout Error');
+			Alert.show('Auto layout diagram failed.', 'Auto Layout Error');
 		}		
 		
 		public function dotCode(scale:uint=1,metaData:Object=null):String {

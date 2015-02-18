@@ -27,6 +27,7 @@
 	import mx.events.CloseEvent;
 	import mx.events.ListEvent;
 	import mx.managers.PopUpManager;
+	import org.adm.runtime.ModeCheck;
 	
 	/**
 	 * PopUp window which allows the user to specify experimentally observed channels
@@ -310,8 +311,11 @@
 			try {
 				var experiment:Object = JSON.decode(importFileReference.data.readUTFBytes(importFileReference.data.length));
 				manager.importExperiment(experiment);				
-			} catch (err:Error){
-				Alert.show('Unable to parse experiment: ' + err.message, 'Invalid experiment');
+			} catch (err:Error) {
+				if (ModeCheck.isDebugBuild()) {
+					trace(err.message);
+				}
+				Alert.show('Unable to parse experiment.', 'Invalid experiment');
 			}
 		}
 		

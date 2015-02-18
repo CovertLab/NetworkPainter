@@ -160,7 +160,7 @@
 			networkManager = new NetworkManager(this, userManager, diagram, db);
 			
 			//experiment database interaction
-			experimentManager = new ExperimentManager(this, userManager, networkManager, diagram, db);
+			experimentManager = new ExperimentManager(this, userManager, networkManager, diagram);
 			networkManager.experimentManager = experimentManager;
 			
 			//data

@@ -36,9 +36,7 @@
 	import mx.controls.menuClasses.MenuBarItem;
 	import mx.core.Application;
 	import mx.rpc.events.FaultEvent;
-	import phi.db.Query;
-	import phi.interfaces.IDatabase;
-	import phi.interfaces.IQuery;
+	import org.adm.runtime.ModeCheck;
 	
 	/**
 	 * Handles several experiment-related operations.
@@ -158,7 +156,7 @@
 			{name:'Median' }
 			]);
 		
-		public function ExperimentManager(application:Application, userManager:UserManager, networkManager:NetworkManager, diagram:Diagram, db:IDatabase) 
+		public function ExperimentManager(application:Application, userManager:UserManager, networkManager:NetworkManager, diagram:Diagram)
 		{
 			this.application = application;
 			this.userManager = userManager;
@@ -1465,7 +1463,10 @@
 		 * error handlers
 		 * *****************************************************************/
 		private function networkPainterErrorHandler(event:FaultEvent):void {
-			Alert.show('Please retry last action. ' + event.message.toString(), 'Database Error.');
+			if (ModeCheck.isDebugBuild()) {
+				trace(event.message.toString());
+			}
+			Alert.show('Please retry last action.', 'Database Error.');
 		}
 	}	
 }

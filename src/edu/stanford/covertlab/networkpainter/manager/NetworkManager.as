@@ -34,6 +34,7 @@
 	import mx.core.Application;
 	import mx.events.CloseEvent;
 	import mx.rpc.events.FaultEvent;
+	import org.adm.runtime.ModeCheck;
 	import phi.db.Query;
 	import phi.interfaces.IDatabase;
 	import phi.interfaces.IQuery;
@@ -533,7 +534,10 @@
 		 * network analyzer data error handler
 		 * *****************************************************************/	
 		private function networkPainterErrorHandler(event:FaultEvent):void {
-			Alert.show('Please retry last action. ' + event.message.toString(), 'Database Error.');
+			if (ModeCheck.isDebugBuild()) {
+				trace(event.message.toString());
+			}
+			Alert.show('Please retry last action.', 'Database Error.');
 		}
 		
 		/********************************************************************

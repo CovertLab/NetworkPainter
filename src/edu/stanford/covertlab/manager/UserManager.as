@@ -17,6 +17,7 @@
 	import mx.events.CloseEvent;
 	import mx.rpc.events.ResultEvent;
 	import mx.rpc.http.HTTPService;
+	import org.adm.runtime.ModeCheck;
 	import phi.db.Query;
 	import phi.interfaces.IDatabase;
 	import phi.interfaces.IQuery;
@@ -292,8 +293,10 @@
 		 * query error handler
 		 * *****************************************************************/
 		private function queryErrorHandler(event:Event):void {
-			//ExternalInterface.call('console.log', 'error');
-			Alert.show('Please retry last action. '+event.target.getError(), 'Database Connection Error.');
+			if (ModeCheck.isDebugBuild()) {
+				trace(event.target.getError());
+			}
+			Alert.show('Please retry last action.', 'Database Connection Error.');
 		}	
 	}	
 }

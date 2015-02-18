@@ -19,6 +19,7 @@
 	import mx.controls.Alert;
 	import mx.controls.VSlider;
 	import mx.events.SliderEvent;
+	import org.adm.runtime.ModeCheck;
 	
 	/**
 	 * Displays a small window which shows the entirety of the current biological network.
@@ -147,7 +148,9 @@
 				bitmapData.draw(diagram.backgroundCanvas, null, null, null, null, true);
 				bitmapFill.source = bitmapData;
 			}catch (error:ArgumentError) {
-				Alert.show('Bitmap data invalid.','Overview Error');
+				if (ModeCheck.isDebugBuild()) {
+					Alert.show('Bitmap data invalid.', 'Overview Error');
+				}
 			}
 			super.updateDisplayList(unscaledWidth, unscaledHeight);
 		}
