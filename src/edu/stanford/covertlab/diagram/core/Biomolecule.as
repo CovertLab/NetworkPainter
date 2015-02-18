@@ -58,7 +58,7 @@
 	public class Biomolecule extends Surface implements IHistory
 	{	
 		
-		public static const SIZE:Number = 20;
+		public static const SIZE:Number = 30;
 		
 		private var _diagram:Diagram;
 		private var _myName:String;
