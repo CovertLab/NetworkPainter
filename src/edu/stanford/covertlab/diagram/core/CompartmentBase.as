@@ -126,8 +126,8 @@
 			if (value != _dim) {
 				_dim = value;
 				if (dim) {
-					fillStop_color.color = fillStop_white.color = Diagram.dimGrey[0];
-					strokeStop_color.color = strokeStop_white.color = Diagram.dimGrey[1];
+					fillStop_color.color = fillStop_white.color = Diagram.dimGrey.compartmentFill;
+					strokeStop_color.color = strokeStop_white.color = Diagram.dimGrey.compartmentStroke;
 				}else {
 					fillStop_color.color = strokeStop_color.color = myColor;
 					fillStop_white.color = strokeStop_white.color = 0xFFFFFF;

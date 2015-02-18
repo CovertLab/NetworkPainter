@@ -248,8 +248,9 @@
 				biomolecule.update(nameInput.text, labelInput.text, regulationInput.text, biomolecule.myCompartment, 
 					styleInput.selectedItem as BiomoleculeStyle, commentsInput.text);
 			}else {
-				new Biomolecule(diagram, compartment, biomoleculeStyle,	biomoleculeX, biomoleculeY, nameInput.text, 
+				biomolecule = new Biomolecule(diagram, compartment, biomoleculeStyle,	biomoleculeX, biomoleculeY, nameInput.text, 
 					labelInput.text, regulationInput.text, commentsInput.text);
+				biomolecule.dim = diagram.dimAnimation && diagram.animationNotStopped;
 			}
 
 			dispatchEvent(new CloseEvent(CloseEvent.CLOSE));

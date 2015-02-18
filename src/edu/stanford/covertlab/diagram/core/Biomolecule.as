@@ -266,8 +266,8 @@
 			if (value != dim) {
 				_dim = value;
 				if (dim) {
-					shapeGeometryGroup.strokeColor = Diagram.dimGrey[2];
-					shapeGeometryGroup.fillColor = Diagram.dimGrey[1];
+					shapeGeometryGroup.strokeColor = Diagram.dimGrey.biomoleculeStroke;
+					shapeGeometryGroup.fillColor = Diagram.dimGrey.biomoleculeFill;
 					shapeGeometryGroup.solidColor = true;
 				}else if(!myValue || myValue.length == 0){
 					shapeGeometryGroup.strokeColor = myStyle.myOutline;
@@ -438,7 +438,7 @@
 		
 		private function setLabelColor():void {
 			if (dim) {
-				(labelGeometryGroup.fill as SolidFill).color = Diagram.dimGrey[3];
+				(labelGeometryGroup.fill as SolidFill).color = Diagram.dimGrey.biomoleculeLabel;
 				return;
 			}
 			

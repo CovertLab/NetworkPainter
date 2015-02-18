@@ -103,6 +103,7 @@ embedding into websites, powerpoint, etc.
 			network.edges = new ArrayCollection(network.edges);
 			network.animationFrameRate = network.exportAnimationFrameRate;
 			network.loopAnimation = network.exportLoopAnimation;
+			network.dimAnimation = network.exportDimAnimation;
 			diagram.loadNetwork(network);			
 			
 			tmp = new Experiment();

@@ -259,8 +259,9 @@
 					}
 				}
 				
-				new Biomolecule(diagram, compartmentInput.selectedItem as CompartmentBase, styleInput.selectedItem as BiomoleculeStyle, 
+				var biomolecule:Biomolecule = new Biomolecule(diagram, compartmentInput.selectedItem as CompartmentBase, styleInput.selectedItem as BiomoleculeStyle, 
 					0, 0, nameInput.text, labelInput.text, regulationInput.text, commentsInput.text);
+				biomolecule.dim = diagram.dimAnimation && diagram.animationNotStopped;
 						
 				clearInputs();
 				biolist.selectedIndex = -1;

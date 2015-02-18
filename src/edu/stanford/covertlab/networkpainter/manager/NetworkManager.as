@@ -118,10 +118,12 @@
 		public var nodesep:Number;
 		public var animationFrameRate:Number;
 		public var loopAnimation:Boolean;
+		public var dimAnimation:Boolean;
 		public var exportShowBiomoleculeSelectedHandles:Boolean;
 		public var exportColorBiomoleculesByValue:Boolean;
 		public var exportAnimationFrameRate:Number;
 		public var exportLoopAnimation:Boolean;
+		public var exportDimAnimation:Boolean;
 		
 		public var biomoleculestyles:ArrayCollection;
 		public var compartments:ArrayCollection;
@@ -268,6 +270,7 @@
 			nodesep = 54;
 			animationFrameRate = exportAnimationFrameRate = 20;
 			loopAnimation = exportLoopAnimation = true;
+			dimAnimation = exportDimAnimation = true;
 			exportShowBiomoleculeSelectedHandles = false;
 			exportColorBiomoleculesByValue = false;
 			
@@ -372,9 +375,9 @@
 				network.width, network.height, network.showPores, network.poreFillColor, network.poreStrokeColor,
 				network.membraneHeight, network.membraneCurvature, network.minCompartmentHeight, 
 				network.ranksep, network.nodesep, 
-				network.animationFrameRate, network.loopAnimation, 
+				network.animationFrameRate, network.loopAnimation, network.dimAnimation,
 				network.exportShowBiomoleculeSelectedHandles, network.exportColorBiomoleculesByValue, 
-				network.exportAnimationFrameRate, network.exportLoopAnimation);
+				network.exportAnimationFrameRate, network.exportLoopAnimation, network.exportDimAnimation);
 		}
 
 
@@ -673,11 +676,13 @@
 				
 				animationFrameRate = o.animationFrameRate;
 				loopAnimation = o.loopAnimation;
+				dimAnimation = o.dimAnimation;
 				
 				exportShowBiomoleculeSelectedHandles = o.exportShowBiomoleculeSelectedHandles;
 				exportColorBiomoleculesByValue = o.exportColorBiomoleculesByValue;
 				exportAnimationFrameRate = o.exportAnimationFrameRate;
 				exportLoopAnimation = o.exportLoopAnimation;
+				exportDimAnimation = o.exportDimAnimation;
 			}
 			
 			biomoleculestyles = (o.biomoleculestyles is ArrayCollection ? o.biomoleculestyles : new ArrayCollection(o.biomoleculestyles));

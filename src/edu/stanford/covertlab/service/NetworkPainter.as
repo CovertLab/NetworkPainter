@@ -185,13 +185,13 @@
 		//save network as
 		public function saveAsNetwork(userid:uint, name:String, description:String, publicstatus:String, width:uint, height:uint, showPores:Boolean, 
 		poreFillColor:uint, poreStrokeColor:uint, membraneHeight:Number, membraneCurvature:Number, minCompartmentHeight:Number, ranksep:uint, nodesep:uint, 
-		animationFrameRate:Number, loopAnimation:uint, exportShowBiomoleculeSelectedHandles:Boolean, exportColorBiomoleculesByValue:Boolean, 
-		exportAnimationFrameRate:Number, exportLoopAnimation:uint):void 
+		animationFrameRate:Number, loopAnimation:uint, dimAnimation:uint, exportShowBiomoleculeSelectedHandles:Boolean, exportColorBiomoleculesByValue:Boolean, 
+		exportAnimationFrameRate:Number, exportLoopAnimation:uint, exportDimAnimation:uint):void 
 		{
 			remoteObj.getOperation("saveAsNetwork").send(userid, name, description, publicstatus, width, height, showPores, 
 				poreFillColor, poreStrokeColor, membraneHeight, membraneCurvature, minCompartmentHeight, ranksep, nodesep, 
-				animationFrameRate, loopAnimation, exportShowBiomoleculeSelectedHandles, exportColorBiomoleculesByValue, 
-				exportAnimationFrameRate, exportLoopAnimation);
+				animationFrameRate, loopAnimation, dimAnimation, exportShowBiomoleculeSelectedHandles, exportColorBiomoleculesByValue, 
+				exportAnimationFrameRate, exportLoopAnimation, exportDimAnimation);
 			statusBar.addMessage('saveAsNetwork', 'Saving network ...');
 		}
 		

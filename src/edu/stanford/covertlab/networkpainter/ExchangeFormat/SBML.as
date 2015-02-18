@@ -177,10 +177,12 @@
 							'<networkpainter:nodesep>%d</networkpainter:nodesep>' +
 							'<networkpainter:animationFrameRate>%f</networkpainter:animationFrameRate>' +
 							'<networkpainter:loopAnimation>%d</networkpainter:loopAnimation>' +
+							'<networkpainter:dimAnimation>%d</networkpainter:dimAnimation>' +
 							'<networkpainter:exportShowBiomoleculeSelectedHandles>%s</networkpainter:exportShowBiomoleculeSelectedHandles>' +
 							'<networkpainter:exportColorBiomoleculesByValue>%s</networkpainter:exportColorBiomoleculesByValue>' +
 							'<networkpainter:exportAnimationFrameRate>%f</networkpainter:exportAnimationFrameRate>' +
 							'<networkpainter:exportLoopAnimation>%d</networkpainter:exportLoopAnimation>' +
+							'<networkpainter:exportDimAnimation>%d</networkpainter:exportDimAnimation>' +
 							'<networkpainter:listOfBiomoleculeStyles>%s</networkpainter:listOfBiomoleculeStyles>' +
 							'<networkpainter:listOfEdges>%s</networkpainter:listOfEdges>' +
 						'</annotation>' +
@@ -201,8 +203,8 @@
 				version,
 				HTML.escapeXML(metaData.title), metaData.title, metaData.subject, metaData.author, metaData.creator, metaData.timestamp,
 				network.width, network.height, network.showPores, network.poreFillColor, network.poreStrokeColor, network.membraneHeight, network.membraneCurvature, network.minCompartmentHeight, 
-				network.ranksep, network.nodesep, network.animationFrameRate, network.loopAnimation, 
-				network.exportShowBiomoleculeSelectedHandles, network.exportColorBiomoleculesByValue, network.exportAnimationFrameRate, network.exportLoopAnimation,
+				network.ranksep, network.nodesep, network.animationFrameRate, network.loopAnimation, network.dimAnimation,
+				network.exportShowBiomoleculeSelectedHandles, network.exportColorBiomoleculesByValue, network.exportAnimationFrameRate, network.exportLoopAnimation, network.exportDimAnimation,
 				listOfBiomoleculeStyles, listOfEdges,
 				listOfCompartmentTypes, listOfSpeciesTypes, listOfCompartments, listOfSpecies, listOfRules));
 			return '<?xml version="1.0" encoding="UTF-8"?>\n' + xml.toXMLString();

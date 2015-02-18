@@ -94,6 +94,7 @@ embedding into websites, powerpoint, etc.
 			network.edges = new ArrayCollection(network.edges);
 			network.animationFrameRate = network.exportAnimationFrameRate;
 			network.loopAnimation = true;
+			network.dimAnimation = true;
 			diagram.loadNetwork(network);			
 			
 			tmp = new Experiment();

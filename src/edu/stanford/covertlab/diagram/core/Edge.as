@@ -174,12 +174,10 @@
 			if (dim != value) {
 				_dim = value;
 				for (var i:uint = 0; i < poreGeometryGroup.numChildren; i++) {
-					(poreGeometryGroup.getChildAt(i) as PoreShape).fillColor = (dim ? Diagram.dimGrey[1] : diagram.poreFillColor);
-					(poreGeometryGroup.getChildAt(i) as PoreShape).strokeColor = (dim ? Diagram.dimGrey[2] : diagram.poreStrokeColor);
+					(poreGeometryGroup.getChildAt(i) as PoreShape).fillColor = (dim ? Diagram.dimGrey.poreFill : diagram.poreFillColor);
+					(poreGeometryGroup.getChildAt(i) as PoreShape).strokeColor = (dim ? Diagram.dimGrey.poreStroke : diagram.poreStrokeColor);
 					(poreGeometryGroup.getChildAt(i) as PoreShape).solidColor = dim;
 				}
-				(path.stroke as SolidStroke).color = (dim ? Diagram.dimGrey[2] : 0x000000);
-				(arrow.fill as SolidFill).color = (dim ? Diagram.dimGrey[2] : 0x000000);
 			}
 		}
 		
@@ -203,6 +201,9 @@
 			var upperCompartment:CompartmentBase;
 			var lowerCompartment:CompartmentBase;
 			var pore:PoreShape;
+			var poreFillColor:uint = (dim ? Diagram.dimGrey.poreFill : diagram.poreFillColor);
+			var poreStrokeColor:uint = (dim ? Diagram.dimGrey.poreStroke : diagram.poreStrokeColor);
+			var poreSolidColor:Boolean = dim;
 			var pt:Object;
 			var i:uint;
 			var segmentIndex:uint = 1;
@@ -235,16 +236,20 @@
 
 						//draw pore in upperCompartment.myMembrane
 						if (intersection !== false) {
-							pore = new PoreShape(
-								Biomolecule.SIZE, 
-								(dim ? Diagram.dimGrey[2] : diagram.poreStrokeColor),
-								(dim ? Diagram.dimGrey[1] : diagram.poreFillColor));
-							pore.solidColor = dim;
+							pore = new PoreShape(Biomolecule.SIZE, poreStrokeColor, poreFillColor);
+							pore.solidColor = poreSolidColor;
 							pore.x = intersection.x;
 							pore.y = intersection.y;
 							pore.rotation = intersection.rotation;
 							pore.target = poreGeometryGroup;
 							poreGeometryGroup.addChild(pore);
+							
+							BindingUtils.bindSetter(function(value:uint):void { 
+									if (!dim) pore.fillColor = value; 
+								}, diagram, 'poreFillColor');
+							BindingUtils.bindSetter(function(value:uint):void { 
+									if (!dim) pore.strokeColor = value; 
+								}, diagram, 'poreStrokeColor');
 						}
 						
 						//move down compartment
@@ -274,16 +279,20 @@
 
 						//draw pore in upperCompartment.myMembrane
 						if (intersection!==false) {
-							pore = new PoreShape(
-								Biomolecule.SIZE, 
-								(dim ? Diagram.dimGrey[2] : diagram.poreStrokeColor),
-								(dim ? Diagram.dimGrey[1] : diagram.poreFillColor));
-							pore.solidColor = dim;
+							pore = new PoreShape(Biomolecule.SIZE, poreStrokeColor, poreFillColor);							
+							pore.solidColor = poreSolidColor;
 							pore.x = intersection.x;
 							pore.y = intersection.y;
 							pore.rotation = intersection.rotation;
 							pore.target = poreGeometryGroup;
 							poreGeometryGroup.addChild(pore);
+							
+							BindingUtils.bindSetter(function(value:uint):void { 
+									if (!dim) pore.fillColor = value; 
+								}, diagram, 'poreFillColor');
+							BindingUtils.bindSetter(function(value:uint):void { 
+									if (!dim) pore.strokeColor = value; 
+								}, diagram, 'poreStrokeColor');
 						}
 							
 						//move up compartment
@@ -296,14 +305,14 @@
 		private function poreFillColorSetter(poreFillColor:uint):void 
 		{
 			for (var i:uint = 0; i < poreGeometryGroup.numChildren; i++) {
-				(poreGeometryGroup.getChildAt(i) as PoreShape).fillColor = (dim ? Diagram.dimGrey[1] : poreFillColor);
+				(poreGeometryGroup.getChildAt(i) as PoreShape).fillColor = (dim ? Diagram.dimGrey.poreFill : poreFillColor);
 			}
 		}
 		
 		private function poreStrokeColorSetter(poreStrokeColor:uint):void 
 		{
 			for (var i:uint = 0; i < poreGeometryGroup.numChildren; i++) {
-				(poreGeometryGroup.getChildAt(i) as PoreShape).strokeColor = (dim ? Diagram.dimGrey[2] : poreStrokeColor);
+				(poreGeometryGroup.getChildAt(i) as PoreShape).strokeColor = (dim ? Diagram.dimGrey.poreStroke : poreStrokeColor);
 			}
 		}
 		

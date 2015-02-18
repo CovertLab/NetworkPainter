@@ -218,14 +218,14 @@
 			
 			//setup animation timer
 			loopAnimation = true;
+			dimAnimation = true;
 			exportLoopAnimation = true;
+			exportDimAnimation = true;
 			fullScreenAnimationToolBar.repeatButton.selected = loopAnimation;
 			toolBarDocker.animationbar.animationBar.repeatButton.selected = loopAnimation;
 			
 			animationFrameRate = 20;
 			exportAnimationFrameRate = 20;
-			
-			animationAlpha = 0.2;
 		}
 		
 		/************************************************
@@ -409,6 +409,7 @@
 			
 			animationFrameRate = network.animationFrameRate;
 			loopAnimation = network.loopAnimation;
+			dimAnimation = network.dimAnimation;
 			fullScreenAnimationToolBar.repeatButton.selected = loopAnimation;
 			toolBarDocker.animationbar.animationBar.repeatButton.selected = loopAnimation;
 						
@@ -416,6 +417,7 @@
 			exportColorBiomoleculesByValue = network.exportColorBiomoleculesByValue;
 			exportLoopAnimation = network.exportLoopAnimation;
 			exportAnimationFrameRate = network.exportAnimationFrameRate;			
+			exportDimAnimation = network.exportDimAnimation;
 			
 			//create compartments
 			var upperCompartment:Compartment;
@@ -552,10 +554,12 @@
 				ranksep:ranksep,
 				animationFrameRate:animationFrameRate,
 				loopAnimation:loopAnimation,
+				dimAnimation:dimAnimation,
 				exportShowBiomoleculeSelectedHandles:exportShowBiomoleculeSelectedHandles,
 				exportColorBiomoleculesByValue:exportColorBiomoleculesByValue,
 				exportAnimationFrameRate:exportAnimationFrameRate,
 				exportLoopAnimation:exportLoopAnimation,
+				exportDimAnimation:exportDimAnimation,
 				biomoleculestyles:biomoleculestyles, 
 				compartments:compartments, 
 				biomolecules:biomolecules, 
@@ -1367,7 +1371,8 @@
 			
 			if (from == null || to == null) return null;
 			
-			var edge:Edge = new Edge(this, from, to, sense);		
+			var edge:Edge = new Edge(this, from, to, sense);
+			edge.dim = dimAnimation && animationNotStopped;
 			edge.target = edgesGeometryGroup;		
 			edgesGeometryGroup.addChild(edge);			
 			edges.addItem(edge);
@@ -1397,8 +1402,8 @@
 		* advanced options
 		* **********************************************/		
 		public function updateAdvancedOptions(diagramWidth:uint, diagramHeight:uint, showPores:Boolean, poreFillColor:uint, poreStrokeColor:uint,
-		ranksep:uint, nodesep:uint, loopAnimation:Boolean, animationFrameRate:Number,
-		exportShowBiomoleculeSelectedHandles:Boolean, exportColorBiomoleculesByValue:Boolean, exportAnimationFrameRate:Number, exportLoopAnimation:Boolean, 
+		ranksep:uint, nodesep:uint, loopAnimation:Boolean, animationFrameRate:Number, dimAnimation:Boolean,
+		exportShowBiomoleculeSelectedHandles:Boolean, exportColorBiomoleculesByValue:Boolean, exportAnimationFrameRate:Number, exportLoopAnimation:Boolean, exportDimAnimation:Boolean,
 		addHistoryAction:Boolean = true):Object {
 			var undoData:Object = {
 				diagramWidth:this.diagramWidth,
@@ -1410,10 +1415,12 @@
 				nodesep:this.nodesep,
 				//loopAnimation:this.loopAnimation,
 				//animationFrameRate:this.animationFrameRate,
+				//dimAnimation:this.dimAnimation,
 				exportShowBiomoleculeSelectedHandles:this.exportShowBiomoleculeSelectedHandles,
 				exportColorBiomoleculesByValue:this.exportColorBiomoleculesByValue
 				//exportAnimationFrameRate:this.exportAnimationFrameRate,
-				//exportLoopAnimation:this.exportLoopAnimation 
+				//exportLoopAnimation:this.exportLoopAnimation,
+				//exportDimAnimation:this.exportDimAnimation
 				};
 				
 			if (addHistoryAction) historyManager.addHistoryAction(new HistoryAction(this, 'updateAdvancedOptions', undoData));
@@ -1432,6 +1439,7 @@
 			//animation
 			this.loopAnimation = loopAnimation;			
 			this.animationFrameRate = animationFrameRate;
+			this.dimAnimation = dimAnimation;
 			this.fullScreenAnimationToolBar.repeatButton.selected = loopAnimation;
 			toolBarDocker.animationbar.animationBar.repeatButton.selected = loopAnimation;
 			
@@ -1440,6 +1448,7 @@
 			this.exportColorBiomoleculesByValue = exportColorBiomoleculesByValue;
 			this.exportAnimationFrameRate = exportAnimationFrameRate;
 			this.exportLoopAnimation = exportLoopAnimation;
+			this.exportDimAnimation = exportDimAnimation;
 			
 			return undoData;
 		}
@@ -1746,10 +1755,30 @@
 		[Bindable] public var animationPosMax:Number;
 		[Bindable] public var animationTimeMax:String;		
 		[Bindable] public var loopAnimation:Boolean = true;
-		[Bindable] public var animationAlpha:Number = 0.2;
+
+		private var _dimAnimation:Boolean;
+		[Bindable] 
+		public function get dimAnimation():Boolean {
+			return _dimAnimation;
+		}
+		public function set dimAnimation(value:Boolean): void {
+			if (_dimAnimation != value) {
+				_dimAnimation = value;
+				dimComponents(animationNotStopped);
+			}
+		}
+		
 		private var _animationFrameRate:Number = 20;
 		private var animationTween:Tween;
-		public static const dimGrey:Array = [0xF0F0F0 , 0xE8E8E8, 0xE0E0E0, 0xA0A0A0];
+		public static const dimGrey:Object = {
+			compartmentFill: 0xF0F0F0 , 
+			compartmentStroke: 0xE8E8E8, 
+			poreFill: 0xE8E8E8,
+			poreStroke: 0xE0E0E0,
+			biomoleculeFill: 0xA0A0A0,
+			biomoleculeStroke: 0x000000,
+			biomoleculeLabel: 0x000000
+			};
 		
 		[Bindable]
 		public function get animationFrameRate():Number {
@@ -1773,7 +1802,7 @@
 		}
 		
 		public function playAnimation():void {		
-			dimComponents(true);
+			dimComponents(true, false);
 			animationPlaying = true;
 			animationNotStopped = true;
 			animationIdx = animationPos = 0;
@@ -1791,7 +1820,7 @@
 		}
 		
 		public function stopAnimation():void {
-			dimComponents();		
+			dimComponents(false, false);		
 			animationPlaying = false;
 			animationNotStopped = false;
 			animationIdx = animationPos = 0;
@@ -1851,9 +1880,10 @@
 		}
 		
 		//alpha		
-		public function dimComponents(dim:Boolean = false):void {
-			var alpha:Number = (dim ? animationAlpha : 1);
+		public function dimComponents(dim:Boolean = false, exporting:Boolean = false):void {
 			var i:uint;
+			
+			dim = dim && ((!exporting && dimAnimation) || (exporting && exportDimAnimation));
 			
 			if (compartments)
 				for (i = 0; i < compartments.length; i++) compartments[i].dim = dim;
@@ -1981,6 +2011,7 @@
 			for (var i:uint = 0; i < pasteArray.length; i++) {
 				biomolecule = new Biomolecule(this, pasteArray[i].myCompartment, pasteArray[i].myStyle, pasteArray[i].x, pasteArray[i].y,
 					pasteArray[i].myName, pasteArray[i].myLabel, pasteArray[i].myRegulation, pasteArray[i].myComments, false);
+				biomolecule.dim = dimAnimation && animationNotStopped;
 				selectBiomolecule(biomolecule, true);
 
 				var bounds:Rectangle = biomolecule.getShapeBounds();
@@ -2067,9 +2098,9 @@
 					inverseAction = 'updateAdvancedOptions';
 					inverseData = updateAdvancedOptions(data.diagramWidth, data.diagramHeight, 
 						data.showPores, data.poreFillColor, data.poreStrokeColor, data.ranksep, data.nodesep, 
-						data.loopAnimation, data.animationFrameRate, 
+						data.loopAnimation, data.animationFrameRate, data.dimAnimation,
 						data.exportShowBiomoleculeSelectedHandles, data.exportColorBiomoleculesByValue, 
-						data.exportAnimationFrameRate, data.exportLoopAnimation, false);
+						data.exportAnimationFrameRate, data.exportLoopAnimation, data.exportDimAnimation, false);
 					break;
 			}
 			
@@ -2105,6 +2136,7 @@
 		[Bindable] public var exportColorBiomoleculesByValue:Boolean = false;
 		[Bindable] public var exportAnimationFrameRate:Number = 20;
 		[Bindable] public var exportLoopAnimation:Boolean = true;
+		[Bindable] public var exportDimAnimation:Boolean = true;
 		
 		public function render(format:String, metaData:Object = null, 
 		overrideShowBiomoleculeSelectedHandles:Boolean = false,
@@ -2134,8 +2166,8 @@
 				}
 			}
 					
-			//undim components			
-			if (animationNotStopped) dimComponents();
+			//undim components
+			if (animationNotStopped) dimComponents(false, true);
 			
 			//render
 			switch(format) {
@@ -2173,7 +2205,7 @@
 			}
 			
 			//dim components
-			if (animationNotStopped) dimComponents(true);
+			if (animationNotStopped) dimComponents(true, false);
 			
 			return data;
 		}
@@ -2195,7 +2227,7 @@
 			}
 			
 			//dim components
-			if (!animationNotStopped) dimComponents(true);
+			if (!animationNotStopped) dimComponents(true, true);
 						
 			//create frames
 			var bounds:Rectangle = new Rectangle(0, 0, diagramWidth, diagramHeight);
@@ -2223,7 +2255,7 @@
 			}
 			
 			//dim components
-			if (!animationNotStopped) dimComponents();
+			if (!animationNotStopped) dimComponents(true, false);
 			
 			//encode
 			switch(format) {

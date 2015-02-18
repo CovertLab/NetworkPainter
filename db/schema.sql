@@ -31,10 +31,12 @@ CREATE TABLE `networks` (
   `nodesep` float NOT NULL,
   `animationFrameRate` float NOT NULL,
   `loopAnimation` tinyint(1) NOT NULL,
+  `dimAnimation` tinyint(1) NOT NULL,
   `exportShowBiomoleculeSelectedHandles` tinyint(1) NOT NULL,
   `exportColorBiomoleculesByValue` tinyint(1) NOT NULL,
   `exportAnimationFrameRate` float NOT NULL,
   `exportLoopAnimation` tinyint(1) NOT NULL,
+  `exportDimAnimation` tinyint(1) NOT NULL,
   
   `creation` datetime NOT NULL,
   `lastsave` datetime NOT NULL,

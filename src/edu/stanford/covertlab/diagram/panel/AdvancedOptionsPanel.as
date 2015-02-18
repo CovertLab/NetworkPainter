@@ -56,12 +56,14 @@
 		//animation
 		private var animationLoopInput:CheckBox;
 		private var frameRateInput:HSlider;
+		private var animationDimInput:CheckBox;
 		
 		//export
 		private var showSelectHandlesInput:CheckBox;
 		private var colorBiomoleculesByValue:CheckBox;
 		private var exportFrameRateInput:HSlider;
 		private var exportAnimationLoopInput:CheckBox;
+		private var exportAnimationDimInput:CheckBox;
 		
 		//errors
 		private var errorMsg:Text;
@@ -186,6 +188,13 @@
 			formItem.addChild(animationLoopInput);
 			form.addChild(formItem);
 			
+			formItem = new FormItem();
+			formItem.label = 'Dim';
+			animationDimInput = new CheckBox();
+			BindingUtils.bindProperty(animationDimInput, 'selected', this, ['diagram', 'dimAnimation']);			
+			formItem.addChild(animationDimInput);
+			form.addChild(formItem);
+			
 			//export options
 			form = new Form();
 			form.percentWidth = 100;
@@ -225,6 +234,12 @@
 			formItem.addChild(exportAnimationLoopInput);
 			form.addChild(formItem);
 			
+			formItem = new FormItem();
+			formItem.label = 'Dim';
+			exportAnimationDimInput = new CheckBox();
+			BindingUtils.bindProperty(exportAnimationDimInput, 'selected', this, ['diagram', 'exportDimAnimation']);			
+			formItem.addChild(exportAnimationDimInput);
+			form.addChild(formItem);			
 			
 			//control bar
 			controlBar = new ControlBar();
@@ -257,8 +272,9 @@
 			diagram.updateAdvancedOptions(parseInt(diagramWidthInput.text), parseInt(diagramHeightInput.text),			
 				showPoresInput.selected, poreFillColor.selectedColor, poreStrokeColor.selectedColor,			
 				parseInt(ranksepInput.text), parseInt(nodesepInput.text), 						
-				animationLoopInput.selected, frameRateInput.value,			
-				showSelectHandlesInput.selected, colorBiomoleculesByValue.selected, exportFrameRateInput.value, exportAnimationLoopInput.selected);
+				animationLoopInput.selected, frameRateInput.value, animationDimInput.selected,
+				showSelectHandlesInput.selected, colorBiomoleculesByValue.selected, exportFrameRateInput.value, 
+				exportAnimationLoopInput.selected, exportAnimationDimInput.selected);
 		}
 		
 		/*********************************************************

@@ -316,10 +316,12 @@ SELECT
   networks.nodesep,
   networks.animationFrameRate,
   networks.loopAnimation,
+  networks.dimAnimation,
   networks.exportShowBiomoleculeSelectedHandles,
   networks.exportColorBiomoleculesByValue,
   networks.exportAnimationFrameRate,
-  networks.exportLoopAnimation
+  networks.exportLoopAnimation,
+  networks.exportDimAnimation
   
 FROM networks
 LEFT JOIN (SELECT * FROM permissions WHERE userid = _userid) AS permissions ON permissions.networkid = networks.id
@@ -389,9 +391,9 @@ CREATE PROCEDURE `savenewnetwork`(_ownerid BIGINT,
   _poreFillColor INT, _poreStrokeColor INT,
   _membraneHeight FLOAT, _membraneCurvature FLOAT, _minCompartmentHeight FLOAT,
   _ranksep FLOAT, _nodesep FLOAT,
-  _animationFrameRate FLOAT, _loopAnimation TINYINT,
+  _animationFrameRate FLOAT, _loopAnimation TINYINT, _dimAnimation TINYINT,
   _exportShowBiomoleculeSelectedHandles BOOL, _exportColorBiomoleculesByValue BOOL,
-  _exportAnimationFrameRate FLOAT, _exportLoopAnimation TINYINT,
+  _exportAnimationFrameRate FLOAT, _exportLoopAnimation TINYINT, _exportDimAnimation TINYINT,
   _autosave BOOL)
 BEGIN
 
@@ -402,9 +404,9 @@ INSERT INTO `networks` (
   poreFillColor,poreStrokeColor,
   membraneHeight,membraneCurvature,minCompartmentHeight,
   ranksep,nodesep,
-  animationFrameRate, loopAnimation,
+  animationFrameRate, loopAnimation, dimAnimation,
   exportShowBiomoleculeSelectedHandles, exportColorBiomoleculesByValue,
-  exportAnimationFrameRate, exportLoopAnimation,
+  exportAnimationFrameRate, exportLoopAnimation, exportDimAnimation,
   creation,lastsave,publicstatus,lockuserid,locktime)
 VALUES (
   _name, _description,
@@ -412,9 +414,9 @@ VALUES (
   _poreFillColor, _poreStrokeColor,
   _membraneHeight, _membraneCurvature, _minCompartmentHeight,
   _ranksep, _nodesep,
-  _animationFrameRate, _loopAnimation,
+  _animationFrameRate, _loopAnimation, _dimAnimation,
   _exportShowBiomoleculeSelectedHandles, _exportColorBiomoleculesByValue,
-  _exportAnimationFrameRate, _exportLoopAnimation,
+  _exportAnimationFrameRate, _exportLoopAnimation, _exportDimAnimation,
   NOW(),NOW(), _publicstatus, _ownerid, NOW());
 SET @networkid = last_insert_id();
 
@@ -443,9 +445,9 @@ CREATE PROCEDURE `updatenetwork`(id BIGINT,
   poreFillColor INT, poreStrokeColor INT,
   membraneHeight FLOAT, membraneCurvature FLOAT, minCompartmentHeight FLOAT,
   ranksep FLOAT, nodesep FLOAT,
-  animationFrameRate FLOAT, loopAnimation TINYINT,
+  animationFrameRate FLOAT, loopAnimation TINYINT, dimAnimation TINYINT,
   exportShowBiomoleculeSelectedHandles BOOL, exportColorBiomoleculesByValue BOOL,
-  exportAnimationFrameRate FLOAT, exportLoopAnimation TINYINT)
+  exportAnimationFrameRate FLOAT, exportLoopAnimation TINYINT, exportDimAnimation TINYINT)
 BEGIN
 
 #network
@@ -465,10 +467,12 @@ SET
   networks.nodesep = nodesep,
   networks.animationFrameRate = animationFrameRate,
   networks.loopAnimation = loopAnimation,
+  networks.dimAnimation = dimAnimation,
   networks.exportShowBiomoleculeSelectedHandles = exportShowBiomoleculeSelectedHandles,
   networks.exportColorBiomoleculesByValue = exportColorBiomoleculesByValue,
   networks.exportAnimationFrameRate = exportAnimationFrameRate,
   networks.exportLoopAnimation = exportLoopAnimation,
+  networks.exportDimAnimation = exportDimAnimation,
   networks.publicstatus = publicstatus
 WHERE
   networks.id = id;
