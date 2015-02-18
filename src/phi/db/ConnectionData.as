@@ -12,7 +12,7 @@ package phi.db
 	{
 		// Connection Constans
 		public static const DESTINATION		:String = "amfphp";
-		public static const SOURCE			:String = "MySQL.database"
+		public static const SOURCE			:String = "MySQL";
 		
 		// Connection Data
 		public var remoteObj	:RemoteObject;
@@ -41,7 +41,7 @@ package phi.db
 			this.username 	= user;
 			this.password 	= pass;
 			this.host 		= host;
-			this.db 		= db;			
+			this.db 		= db;
 		}
 		
 		public function clone():ConnectionData
