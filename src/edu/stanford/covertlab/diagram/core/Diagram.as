@@ -61,6 +61,7 @@
 	import mx.effects.Tween;
 	import mx.events.CloseEvent;
 	import mx.events.DragEvent;
+	import mx.events.FlexEvent;
 	import mx.managers.DragManager;
 	import mx.rpc.events.FaultEvent;
 	import mx.rpc.events.ResultEvent;
@@ -168,10 +169,13 @@
 			
 			//overview
 			overview = new Overview(this);
-			overview.x = 30;
+			overview.x = 5;
 			overview.y = 30;
 			overview.visible = overviewVisible = true;
 			addChild(overview);
+			
+			//heatmaps legend
+			setupHeatmapLegend();
 			
 			//translate biomolecules
 			updateCompartmentsOfSelectedBiomoleculesTimer = new Timer(500, 1);
@@ -1704,6 +1708,9 @@
 			animationTimeMax = animationAxis[animationAxis.length - 1].name;
 			animationTime = animationAxis[0].name;
 			
+			//update heatmap legend
+			updateHeatmapLegend();			
+			
 			//move observed biomolecules to top
 			for (var i:uint = 0; i < biomoleculeAssociations.length; i++ ) {
 				biomoleculesSurface.removeChild(biomoleculeAssociations[i].biomolecule);
@@ -1858,8 +1865,48 @@
 				for (i = 0; i < biomoleculeAssociations.length; i++) biomoleculeAssociations[i].biomolecule.dim = false;
 		}
 		
-		//comparison
+		//comparison heatmaps
+		import edu.stanford.covertlab.chart.LabeledColorGrid;
+		
 		[Bindable] public var comparisonHeatmapsVisible:Boolean = true;
+		private var heatmapLegend:LabeledColorGrid;
+		
+		private function setupHeatmapLegend():void {
+			heatmapLegend = new LabeledColorGrid();
+			addChild(heatmapLegend);
+					
+			BindingUtils.bindProperty(heatmapLegend, 'visible', this, 'comparisonHeatmapsVisible')
+			addEventListener(FlexEvent.CREATION_COMPLETE, positionHeatmapLegend);
+		}
+
+		private function positionHeatmapLegend(event:FlexEvent):void
+		{
+			heatmapLegend.x = 5;
+			heatmapLegend.y = height - 35;			
+		}
+
+		private function updateHeatmapLegend():void {		
+			var nCol:uint = comparisonXAxis.length;
+			var nRow:uint = comparisonYAxis.length;
+
+			var colLabels:Array = [];
+			var rowLabels:Array = [];
+			for (i = 0; i < nCol; i++) {
+				colLabels.push(comparisonXAxis[i]['name']);
+			}
+			for (j = 0; j < nRow; j++) {
+				rowLabels.push(comparisonYAxis[j]['name']);
+			}
+
+			var colors:Array = [];
+			for (var i:uint = 0; i < nCol; i++) {
+				for (var j:uint = 0; j < nRow; j++) {
+					colors.push(0xFFFFFF);
+				}
+			}
+
+			heatmapLegend.update(nCol, nRow, 12, 12, colLabels, rowLabels, colors);
+		}
 		
 		public function toggleComparisonHeatmaps():void {
 			comparisonHeatmapsVisible = !comparisonHeatmapsVisible;

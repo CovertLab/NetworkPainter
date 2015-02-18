@@ -190,7 +190,7 @@
 			
 			//color scale
 			colorScale = new ColorScale(colormap, [ -1, 0, 1], 20, 200);
-			colorScale.x = diagram.width - colorScale.width - 30;
+			colorScale.x = diagram.width - colorScale.width - 10;
 			colorScale.y = 25;
 			diagram.addChild(colorScale);
 			BindingUtils.bindProperty(colorScale, 'colormap', this, 'colormap');
