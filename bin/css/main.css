@@ -31,7 +31,7 @@ body { margin: 50px 0 0; background: #e5e5e5 url(../images/bg.gif) repeat-x; fon
         input{background:rgb(200,200,200);border:1px solid #4C565E;width:200px;}
         input:focus{outline:2px solid #9cf;background-color:#fff;}      
         button{position:relative;left:.4em;border:none;cursor:pointer;font-weight:bold;background:none;color:fff;}
-        button div{padding:0 1em 0 0;margin:-.5em -.3em -.5em -.4em;height:44px;background: url(../images/button-l.gif) no-repeat right;}
+        button div{padding:0 1em 0 0;margin:0px;position:relative; left:0.2em; top:-0.3em; height:44px;background: url(../images/button-l.gif) no-repeat right;}
         button:focus div{background: url(../images/button-l-focus.gif) no-repeat right;}
         button span{display:block;white-space:nowrap;padding:0 0 0 .7em;height:44px;color:#fff;line-height:40px;
 			background:url(../images/button-r.gif) no-repeat left;}
