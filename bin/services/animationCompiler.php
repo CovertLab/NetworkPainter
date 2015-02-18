@@ -98,10 +98,10 @@ flex_sdk_3.6a/bin/mxmlc
 	../../src/edu/stanford/covertlab/networkpainter/Viewer.mxml
 CMD;
 $cmd = str_replace("\r\n\t", " ", $cmd);
-$log = shell_exec("$cmd 2>&1");
+#file_put_contents("$tmpFile.sh", $cmd);
 
-//file_put_contents("$tmpFile.sh", $cmd);
-//file_put_contents("$tmpFile.log", $log."\n".getenv('PATH'));
+$log = shell_exec("$cmd 2>&1");
+#file_put_contents("$tmpFile.log", $log."\n".getenv('PATH'));
 
 //combine in zip archive
 $zip = new ZipArchive;
@@ -122,8 +122,10 @@ fclose($fp);
 
 //cleanup
 unlink("$tmpFile");
-unlink("$tmpFile.swf");
 unlink("$tmpFile.ColorScale.svg");
 unlink("$tmpFile.ColorScale.png");
+unlink("$tmpFile.swf");
+#unlink("$tmpFile.sh");
+#unlink("$tmpFile.log");
 unlink("$tmpFile.zip");
 ?>

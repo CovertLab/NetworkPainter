@@ -2279,7 +2279,7 @@
 			}
 			
 			//dim components
-			if (!animationNotStopped) dimComponents(true, true);
+			dimComponents(true, true);
 						
 			//create frames
 			var bounds:Rectangle = new Rectangle(0, 0, diagramWidth, diagramHeight);
@@ -2299,15 +2299,6 @@
 						frames.push(svgRenderer.render(backgroundCanvas, new Rectangle(0, 0, diagramWidth, diagramHeight), metaData));
 				}						
 			}
-			
-			//restore state
-			if (animationPlaying) {
-				playPauseAnimation();
-				for (i = 0; i < biomolecules.length; i++) biomolecules[i].myValue=state[i];
-			}
-			
-			//dim components
-			if (!animationNotStopped) dimComponents(true, false);
 			
 			//encode
 			switch(format) {
@@ -2343,6 +2334,15 @@
 					data = zo.byteArray;
 					break;
 			}
+			
+			//restore state
+			if (animationPlaying) {
+				playPauseAnimation();
+				for (i = 0; i < biomolecules.length; i++) biomolecules[i].myValue=state[i];
+			}
+			
+			//undim components
+			dimComponents(animationNotStopped, false);
 			
 			return data;
 		}
