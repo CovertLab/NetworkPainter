@@ -24,9 +24,11 @@
 	import edu.stanford.covertlab.util.ColorUtils;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.external.ExternalInterface;
 	import flash.geom.Rectangle;
 	import mx.binding.utils.BindingUtils;
 	import mx.collections.ArrayCollection;
+	import mx.events.ToolTipEvent;	
 	
 	/**
 	 * Biomolecule class. Displays a pictorial representation (according to its biomolecule style) of a biomolecule that can edited, 
@@ -93,8 +95,12 @@
 			
 			//heatmap
 			heatmapGeometryGroup = new GeometryGroup();
-			BindingUtils.bindSetter(function(value:Boolean):void { heatmapGeometryGroup.visible = (diagram.animationNotStopped && diagram.comparisonHeatmapsVisible && myValue!=null); }, diagram, 'comparisonHeatmapsVisible');
-			BindingUtils.bindSetter(function(value:Boolean):void { heatmapGeometryGroup.visible = (diagram.animationNotStopped && diagram.comparisonHeatmapsVisible && myValue!=null); }, diagram, 'animationNotStopped');
+			BindingUtils.bindSetter(function(value:Boolean):void { 
+				heatmapGeometryGroup.visible = (diagram.animationNotStopped && diagram.comparisonHeatmapsVisible && myValue != null); 
+				}, diagram, 'comparisonHeatmapsVisible');
+			BindingUtils.bindSetter(function(value:Boolean):void { 
+				heatmapGeometryGroup.visible = (diagram.animationNotStopped && diagram.comparisonHeatmapsVisible && myValue != null); 
+				}, diagram, 'animationNotStopped');
 			addChild(heatmapGeometryGroup);
 			
 			heatmap = new ColorGrid();
@@ -120,6 +126,10 @@
 			
 			//undo
 			if (addHistoryAction) diagram.historyManager.addHistoryAction(new HistoryAction(this, 'remove'));
+						
+			//tooltip
+			addEventListener(ToolTipEvent.TOOL_TIP_CREATE, onToolTipCreate);
+			addEventListener(ToolTipEvent.TOOL_TIP_END, onToolTipEnd);
 		}
 		
 		//copies label, regulation
@@ -331,14 +341,14 @@
 				}
 				
 				var nRow:Number = value[0].length;
-				var nCol:Number = value.length;
-				if (nRow == 1 || nCol == 1) {
-					var tmp:Number = Math.ceil(Math.sqrt(nRow * nCol - 1));
-					nRow = Math.ceil((nRow * nCol - 1) / tmp);
-					nCol = tmp;
-				}
-				var w:Number = 3/4 * SIZE * nCol;
-				var h:Number = 3/4 * SIZE * nRow;
+				var nCol:Number = value.length;				
+				var cellSize:uint = Math.min(
+					(3 / 4 * SIZE * Math.min(6, nCol)) / nCol,
+					(3 / 4 * SIZE * Math.min(6, nRow)) / nRow 
+					);
+				
+				var w:Number = 3/4 * cellSize * nCol;
+				var h:Number = 3/4 * cellSize * nRow;
 				heatmap.updateProperties(-w / 2, 0, w, h, nRow, nCol, colors);
 				
 				heatmap.y = getShapeBounds().bottom + heatmapOffsetY;
@@ -744,6 +754,41 @@
 			return new HistoryAction(this, inverseAction, inverseData);
 		}
 		
+		/************************************************
+		 * tooltip
+		 * **********************************************/
+		 import mx.managers.ToolTipManager
+
+		 private function onToolTipCreate(evt:ToolTipEvent):void {
+		 	addEventListener(MouseEvent.MOUSE_MOVE, updateToolTip);
+		 	
+		 }
+		 private function onToolTipEnd(evt:ToolTipEvent):void {
+		 	removeEventListener(MouseEvent.MOUSE_MOVE, updateToolTip);
+		 }
+
+		 private function updateToolTip(evt:MouseEvent):void {
+			if (!ToolTipManager.currentToolTip) {
+		 		return;
+	 		}
+			 
+		 	if (evt.localY < heatmap.y) {
+		 		ToolTipManager.currentToolTip.text = myName;
+		 	} else {
+		 		var iCol:uint = Math.floor((evt.localX - -heatmap.width /2) / heatmap.width  * heatmap.cols);
+		 		var iRow:uint = Math.floor((evt.localY - heatmap.y) / heatmap.height * heatmap.rows);
+		 						
+		 		if (iCol >= 0 && iCol < heatmap.cols &&
+		 			iRow >= 0 && iRow < heatmap.rows) {
+		 						
+					var toolTipText:String = diagram.comparisonXAxis[iCol]['name'] + ', ' + diagram.comparisonYAxis[iRow]['name'];
+		 			ToolTipManager.currentToolTip.text = toolTipText;
+	 			} else {
+	 				ToolTipManager.currentToolTip.text = ''
+	 			}
+		 	}
+		 }	
+		 
 	}
 	
 }

@@ -105,6 +105,8 @@ embedding into websites, powerpoint, etc.
 			diagram.loadMeasurement(
 				experiment.biomoleculeAssociations, 
 				experiment.animationAxis, 
+				experiment.comparisonXAxis,
+				experiment.comparisonYAxis,
 				experiment.measurement, 
 				true);
 				

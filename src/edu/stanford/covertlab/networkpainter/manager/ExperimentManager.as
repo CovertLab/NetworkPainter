@@ -356,7 +356,9 @@
 		
 		public function animateExperiment(experiment:Object, play:Boolean = true):void {
 			var tmp:Array = reshapeScaleClusterStatistics(experiment);
-			diagram.loadMeasurement(tmp[1], experiment[animationAxis.toLowerCase()], tmp[0]);
+			diagram.loadMeasurement(tmp[1], 
+				experiment[animationAxis.toLowerCase()], experiment[comparisonXAxis.toLowerCase()], experiment[comparisonYAxis.toLowerCase()], 
+				tmp[0]);
 			
 			if (play && !diagram.animationPlaying) {
 				diagram.playPauseAnimation();
@@ -1323,6 +1325,8 @@
 			urlVariables.experiment = JSON.encode({
 				biomoleculeAssociations: biomoleculeAssociations, 
 				animationAxis: experiment[animationAxis.toLowerCase()], 
+				comparisonXAxis: experiment[comparisonXAxis.toLowerCase()], 
+				comparisonYAxis: experiment[comparisonYAxis.toLowerCase()], 
 				measurement: tmp[0] 
 				});
 			

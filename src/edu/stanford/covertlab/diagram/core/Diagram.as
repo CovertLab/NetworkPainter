@@ -1671,6 +1671,8 @@
 		private var biomoleculeAssociations:Array;
 		private var measurement:Array;
 		private var animationAxis:Array;
+		public var comparisonXAxis:Array;
+		public var comparisonYAxis:Array;
 		
 		public function clearMeasurement():void {			
 			//reset measurement
@@ -1687,11 +1689,14 @@
 		}
 		
 		public function loadMeasurement(biomoleculeAssociations:Array, 
-		animationAxis:Array, measurement:Array, startAnimation:Boolean = true):void {			
+		animationAxis:Array, comparisonXAxis:Array, comparisonYAxis:Array, 
+		measurement:Array, startAnimation:Boolean = true):void {			
 			clearMeasurement();
 			measurementLoaded = true;
 			
 			this.animationAxis = animationAxis;
+			this.comparisonXAxis = comparisonXAxis;
+			this.comparisonYAxis = comparisonYAxis;
 			this.biomoleculeAssociations = biomoleculeAssociations;
 			this.measurement = measurement;			
 			
