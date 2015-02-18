@@ -63,8 +63,6 @@
 		private var dynamicRange:TextInput;
 		private var colormap:ComboBox;
 
-		private var clusterBiomoleculeAxis:CheckBox;
-		private var clusterAnimationAxis:CheckBox;
 		private var clusterComparisonXAxis:CheckBox;
 		private var clusterComparisonYAxis:CheckBox;
 		private var optimalLeafOrder:CheckBox;
@@ -337,26 +335,6 @@
 			accordion.addChild(form);
 			
 			formItem = new FormItem();			
-			formItem.label = 'Biomolecule Axis';
-			formItem.percentWidth = 100;
-			formItem.styleName = 'TitleWindowFormItem';
-			clusterBiomoleculeAxis = new CheckBox();
-			clusterBiomoleculeAxis.addEventListener(Event.CHANGE, save);
-			BindingUtils.bindProperty(clusterBiomoleculeAxis, 'selected', experimentManager, 'clusterBiomoleculeAxis');
-			formItem.addChild(clusterBiomoleculeAxis);
-			form.addChild(formItem);
-			
-			formItem = new FormItem();			
-			formItem.label = 'Animation Axis';
-			formItem.percentWidth = 100;
-			formItem.styleName = 'TitleWindowFormItem';
-			clusterAnimationAxis = new CheckBox();
-			clusterAnimationAxis.addEventListener(Event.CHANGE, save);
-			BindingUtils.bindProperty(clusterAnimationAxis, 'selected', experimentManager, 'clusterAnimationAxis');
-			formItem.addChild(clusterAnimationAxis);
-			form.addChild(formItem);
-			
-			formItem = new FormItem();			
 			formItem.label = 'Comparison-X Axis';
 			formItem.percentWidth = 100;
 			formItem.styleName = 'TitleWindowFormItem';
@@ -614,7 +592,7 @@
 				individualAxis.selectedItem.name, populationAxis.selectedItem.name, timepointAxis.selectedItem.name, 
 				biomoleculeAxisControl.selectedItem.name, animationAxisControl.selectedItem.name, comparisonXAxisControl.selectedItem.name, comparisonYAxisControl.selectedItem.name, 
 				equation.selectedItem.name, (dynamicRange.text == '' ? NaN : parseFloat(dynamicRange.text)), colormap.selectedItem.name, 
-				clusterBiomoleculeAxis.selected, clusterAnimationAxis.selected, clusterComparisonXAxis.selected, clusterComparisonYAxis.selected, 
+				clusterComparisonXAxis.selected, clusterComparisonYAxis.selected, 
 				optimalLeafOrder.selected, distanceMetric.selectedItem.name, linkage.selectedItem.name);
 		}
 		

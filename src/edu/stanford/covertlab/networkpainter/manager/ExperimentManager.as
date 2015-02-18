@@ -131,8 +131,6 @@
 		[Bindable] public var colormap:String;
 		
 		//clustering
-		[Bindable] public var clusterBiomoleculeAxis:Boolean;
-		[Bindable] public var clusterAnimationAxis:Boolean;
 		[Bindable] public var clusterComparisonXAxis:Boolean;
 		[Bindable] public var clusterComparisonYAxis:Boolean;		
 		[Bindable] public var optimalLeafOrder:Boolean;
@@ -220,7 +218,7 @@
 				'Difference', NaN, Colormap.CYTOBANK_BLUE_YELLOW, 
 				
 				//clustering
-				false, false, false, false, 
+				false, false, 
 				true, HierarchicalClustering.DISTANCE_METRIC_EUCLIDEAN, HierarchicalClustering.LINKAGE_AVERAGE);
 				
 			if (diagram.animationPlaying)
@@ -276,7 +274,7 @@
 			channelAxis:String, conditionAxis:String, dosageAxis:String, individualAxis:String, populationAxis:String, timepointAxis:String,
 			biomoleculeAxisControl:String, animationAxisControl:String, comparisonXAxisControl:String, comparisonYAxisControl:String,
 			equation:String, dynamicRange:Number, colormap:String, 
-			clusterBiomoleculeAxis:Boolean, clusterAnimationAxis:Boolean, clusterComparisonXAxis:Boolean, clusterComparisonYAxis:Boolean, 
+			clusterComparisonXAxis:Boolean, clusterComparisonYAxis:Boolean, 
 			optimalLeafOrder:Boolean, distanceMetric:String, linkage:String):void {
 				
 			this.channelAxis = channelAxis;
@@ -295,8 +293,6 @@
 			this.dynamicRange = dynamicRange;
 			this.colormap = colormap;
 		
-			this.clusterBiomoleculeAxis = clusterBiomoleculeAxis;
-			this.clusterAnimationAxis = clusterAnimationAxis;
 			this.clusterComparisonXAxis = clusterComparisonXAxis;
 			this.clusterComparisonYAxis = clusterComparisonYAxis;
 			this.optimalLeafOrder = optimalLeafOrder;
@@ -592,22 +588,7 @@
 				}
 			}
 								
-			//cluster/optimal leaf order
-			if (clusterBiomoleculeAxis && (biomoleculeAxis == 'Channels' || biomoleculeAxis == 'Conditions' ||  biomoleculeAxis == 'Dosages' || 
-			biomoleculeAxis == 'Individuals' || biomoleculeAxis == 'Populations' || biomoleculeAxis == 'Timepoints'))
-			{
-				tmp = cluster_BiomoleculeAxis(reshapedStatistics, experiment, biomoleculeAssociations);
-				reshapedStatistics = tmp[0];
-				biomoleculeAssociations = tmp[2];
-			}
-
-			if (clusterAnimationAxis && (animationAxis == 'Channels' || animationAxis == 'Conditions' ||  animationAxis == 'Dosages' || 
-			animationAxis == 'Individuals' || animationAxis == 'Populations' || animationAxis == 'Timepoints')) 
-			{
-				tmp = cluster_AnimationAxis(reshapedStatistics, experiment);
-				reshapedStatistics = tmp[0];
-			}
-			
+			//cluster/optimal leaf order			
 			if (clusterComparisonXAxis && (comparisonXAxis == 'Channels' || comparisonXAxis == 'Conditions' ||  comparisonXAxis == 'Dosages' || 
 			comparisonXAxis == 'Individuals' || comparisonXAxis == 'Populations' || comparisonXAxis == 'Timepoints')) 
 			{
@@ -921,125 +902,7 @@
 			
 			return measurement;
 		}
-		
-		private function cluster_BiomoleculeAxis(measurement:Array, experiment:Object, biomoleculeAssociations:Array):Array {
-			var axisOrder:Array;
-			if (biomoleculeAxis == 'Timepoints') {
-				//sort timepoint dimension
-				var orderedTimepoints:Array = experiment.timepoints.sort(timepointComparator, Array.CASEINSENSITIVE);
-				axisOrder = [];
-				for (var idx:uint = 0; idx < experiment.timepoints.length; idx++) {
-					axisOrder.push(orderedTimepoints.indexOf(experiment.timepoints[idx]));
-				}
-			}else {
-				//compute distance matrix
-				var distance:Array = [];
-				var vector1:Array;
-				var vector2:Array;
-				var len:uint = measurement[0].length * measurement[0][0].length * measurement[0][0][0].length;
-				for (var i1:uint = 0; i1 < measurement.length; i1++) {
-					distance.push([]);
-					for (var i2:uint = 0; i2 < i1; i2++) {
-						distance[i1].push(0);
-						vector1 = [];
-						vector2 = [];
-						for (var j:uint = 0; j < measurement[i1].length; j++) {
-							for (var k:uint = 0; k < measurement[i1][j].length; k++) {
-								for (var l:uint = 0; l < measurement[i1][j][k].length; l++) {
-									if (isNaN(measurement[i1][j][k][l]) || isNaN(measurement[i2][j][k][l])) continue;
-									vector1.push(measurement[i1][j][k][l]);
-									vector2.push(measurement[i2][j][k][l]);
-								}
-							}
-						}
-						distance[i1][i2] = HierarchicalClustering.pairwiseDistance(vector1, vector2, distanceMetric);
-					}
-				}
 				
-				//cluster
-				var result:Object = HierarchicalClustering.cluster(distance, linkage, optimalLeafOrder);
-				axisOrder = result.leafOrder;
-			}
-			
-			//order axis
-			var axis:ArrayCollection = new ArrayCollection();
-			for (idx = 0; idx < axisOrder.length; idx++) {
-				axis.addItem(experiment[biomoleculeAxis.toLowerCase()][axisOrder[idx]]);
-			}
-			experiment[biomoleculeAxis.toLowerCase()] = axis;
-			
-			//order measurement
-			var orderedMeasurement:Array = [];
-			for (idx = 0; idx < axisOrder.length; idx++) {
-				orderedMeasurement.push(measurement[axisOrder[idx]]);
-			}
-			
-			//order associations
-			for (idx = 0; idx < biomoleculeAssociations.length; idx++) {
-				biomoleculeAssociations[idx].measurementIdx = axisOrder.indexOf(biomoleculeAssociations[idx].measurementIdx);
-			}
-			
-			return [orderedMeasurement, axisOrder, biomoleculeAssociations];
-		}
-		
-		private function cluster_AnimationAxis(measurement:Array, experiment:Object):Array {
-			var axisOrder:Array;
-			if (animationAxis == 'Timepoints') {
-				//sort timepoint dimension
-				var orderedTimepoints:Array = experiment.timepoints.sort(timepointComparator, Array.CASEINSENSITIVE);
-				axisOrder = [];
-				for (var idx:uint = 0; idx < experiment.timepoints.length; idx++) {
-					axisOrder.push(orderedTimepoints.indexOf(experiment.timepoints[idx]));
-				}
-			}else {
-				//compute distance matrix
-				var distance:Array=[];
-				var vector1:Array;
-				var vector2:Array;
-				var len:uint = measurement.length * measurement[0][0].length * measurement[0][0][0].length;
-				for (var j1:uint = 0; j1 < measurement[0].length; j1++) {
-					distance.push([]);
-					for (var j2:uint = 0; j2 < j1; j2++) {
-						distance[j1].push(0);
-						vector1 = [];
-						vector2 = [];
-						for (var i:uint = 0; i < measurement.length; i++) {
-							for (var k:uint = 0; k < measurement[i][j1].length; k++) {
-								for (var l:uint = 0; l < measurement[i][j1][k].length; l++) {
-									if (isNaN(measurement[i][j1][k][l]) || isNaN(measurement[i][j2][k][l])) continue;
-									vector1.push(measurement[1][j1][k][l]);
-									vector2.push(measurement[i][j2][k][l]);
-								}
-							}
-						}
-						distance[j1][j2] = HierarchicalClustering.pairwiseDistance(vector1, vector2, distanceMetric);
-					}
-				}
-				
-				//cluster
-				var result:Object = HierarchicalClustering.cluster(distance, linkage, optimalLeafOrder);
-				axisOrder = result.leafOrder;
-			}
-			
-			//order axis
-			var axis:ArrayCollection = new ArrayCollection();
-			for (idx = 0; idx < axisOrder.length; idx++) {
-				axis.addItem(experiment[animationAxis.toLowerCase()][axisOrder[idx]]);
-			}
-			experiment[animationAxis.toLowerCase()] = axis;
-			
-			//order measurement
-			var orderedMeasurement:Array = [];
-			for (i = 0; i < measurement.length; i++) {
-				orderedMeasurement.push([]);
-				for (idx = 0; idx < axisOrder.length; idx++) {
-					orderedMeasurement[i].push(measurement[i][axisOrder[idx]]);
-				}
-			}
-			
-			return [orderedMeasurement, axisOrder];
-		}
-		
 		private function cluster_ComparisonXAxis(measurement:Array, experiment:Object):Array {
 			var axisOrder:Array;
 			if (comparisonXAxis == 'Timepoints') {
@@ -1451,8 +1314,6 @@
 				colormap: colormap,
 				
 				//clustering
-				clusterBiomoleculeAxis: clusterBiomoleculeAxis,
-				clusterAnimationAxis: clusterAnimationAxis,
 				clusterComparisonXAxis: clusterComparisonXAxis,
 				clusterComparisonYAxis: clusterComparisonYAxis,
 				optimalLeafOrder: optimalLeafOrder,
@@ -1487,7 +1348,7 @@
 				o.equation, o.dynamicRange, o.colormap, 
 			
 				//clustering
-				o.clusterBiomoleculeAxis, o.clusterAnimationAxis, o.clusterComparisonXAxis, o.clusterComparisonYAxis, 
+				o.clusterComparisonXAxis, o.clusterComparisonYAxis, 
 				o.optimalLeafOrder, o.distanceMetric, o.linkage);		
 		}
 		
