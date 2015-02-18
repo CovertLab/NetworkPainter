@@ -198,7 +198,6 @@
 			pathData = 'M ' + fromPort.x + ',' + fromPort.y + ' ' + 'L ' + toPort.x + ',' + toPort.y;
 		}
 		
-		private var xx:int = 0;
 		private function updatePores():void {
 			while (poreGeometryGroup.numChildren > 0) poreGeometryGroup.removeChildAt(0);
 			var upperCompartment:CompartmentBase;
@@ -208,9 +207,7 @@
 			var i:uint;
 			var segmentIndex:uint = 1;
 			var intersection:*;
-			xx++;
-			//trace(xx,from.myName, from.myCompartment.myName, to.myName, to.myCompartment.myName);
-			//return;
+
 			if (from != null && from.myCompartment != null && to != null && to.myCompartment != null ) {
 				if (from.myCompartment.y < to.myCompartment.y) {
 					upperCompartment = (from.myCompartment is Membrane)? from.myCompartment.myLowerCompartment:from.myCompartment;
@@ -253,7 +250,7 @@
 						//move down compartment
 						upperCompartment = upperCompartment.myLowerCompartment;
 					}
-				}else {
+				} else if (from.myCompartment.y > to.myCompartment.y) {					
 					upperCompartment = (to.myCompartment is Membrane)? to.myCompartment.myLowerCompartment: to.myCompartment;
 					lowerCompartment = (from.myCompartment is Membrane)? from.myCompartment.myUpperCompartment:from.myCompartment;
 					while (upperCompartment != lowerCompartment) {
