@@ -21,7 +21,7 @@ Displayed in about window and on website.
 <mx:Object xmlns:mx="http://www.adobe.com/2006/mxml">
 	<mx:String id="applicationName">NetworkPainter</mx:String>
 	<mx:String id="version">0.4</mx:String>
-	<mx:String id="releaseDate">Jan. 30, 2013</mx:String>
+	<mx:String id="releaseDate">Feb 19, 2015</mx:String>
 	<mx:String id="url">http://covert.stanford.edu/networkpainter</mx:String>
 	<mx:String id="email">covertlab-server@stanford.edu</mx:String>	
 	<mx:String id="description"><![CDATA[<applicationName/> is a web-based software program for collaboratively drawing and painting pathway diagrams with high-dimensional data including flow and mass cytometry.]]></mx:String>
