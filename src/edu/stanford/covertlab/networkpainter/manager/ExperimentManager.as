@@ -35,6 +35,7 @@
 	import mx.controls.MenuBar;
 	import mx.controls.menuClasses.MenuBarItem;
 	import mx.core.Application;
+	import mx.events.ResizeEvent;
 	import mx.rpc.events.FaultEvent;
 	import org.adm.runtime.ModeCheck;
 	
@@ -186,14 +187,22 @@
 			
 			//color scale
 			colorScale = new ColorScale(colormap, [ -1, 0, 1], 20, 200);
-			colorScale.x = diagram.width - colorScale.width - 10;
-			colorScale.y = 25;
+			positionColorScale();
 			diagram.addChild(colorScale);
 			BindingUtils.bindProperty(colorScale, 'colormap', this, 'colormap');
 			BindingUtils.bindProperty(diagram, 'colormap', this, 'colormap');
+			diagram.addEventListener(ResizeEvent.RESIZE, positionColorScale);
 			
 			//file reference
 			exportFileReference = new FileReference();
+		}
+		
+		/***********************************************************
+		 * color scale
+		 * *********************************************************/
+		private function positionColorScale(evt:ResizeEvent = null):void {
+			colorScale.x = diagram.width - colorScale.width - 10;
+			colorScale.y = 25;
 		}
 		
 		/***********************************************************
