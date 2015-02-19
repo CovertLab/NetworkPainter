@@ -65,6 +65,7 @@
 	import mx.events.CloseEvent;
 	import mx.events.DragEvent;
 	import mx.events.FlexEvent;
+	import mx.events.ResizeEvent;
 	import mx.managers.DragManager;
 	import mx.rpc.events.FaultEvent;
 	import mx.rpc.events.ResultEvent;
@@ -1977,14 +1978,21 @@
 			heatmapLegend = new LabeledColorGrid();
 			addChild(heatmapLegend);
 					
-			BindingUtils.bindProperty(heatmapLegend, 'visible', this, 'comparisonHeatmapsVisible')
+			BindingUtils.bindSetter(setHeatmapLegendVisibility, this, 'animationNotStopped');
+			BindingUtils.bindSetter(setHeatmapLegendVisibility, this, 'comparisonHeatmapsVisible');
 			addEventListener(FlexEvent.CREATION_COMPLETE, positionHeatmapLegend);
+			addEventListener(ResizeEvent.RESIZE, positionHeatmapLegend);
 		}
 
-		private function positionHeatmapLegend(event:FlexEvent):void
+		private function positionHeatmapLegend(event:Event):void
 		{
 			heatmapLegend.x = 5;
 			heatmapLegend.y = height - 35;			
+		}
+		
+		private function setHeatmapLegendVisibility(value:Boolean):void
+		{
+			heatmapLegend.visible = animationNotStopped && comparisonHeatmapsVisible;
 		}
 
 		private function updateHeatmapLegend():void {		
