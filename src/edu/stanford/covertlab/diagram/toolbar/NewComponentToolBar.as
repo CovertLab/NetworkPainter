@@ -40,7 +40,7 @@
 			newCompartmentButton.addEventListener(MouseEvent.MOUSE_DOWN, startAddCompartment);
 			addChild(newCompartmentButton);
 			
-			newBiomoleculeStyleButton = new ToolBarButton('New BiomoleculeStyle', addBiomoleculeStyleImg);
+			newBiomoleculeStyleButton = new ToolBarButton('New Biomolecule Style', addBiomoleculeStyleImg);
 			newBiomoleculeStyleButton.addEventListener(MouseEvent.MOUSE_DOWN, startAddBiomoleculeStyle );
 			addChild(newBiomoleculeStyleButton);
 		}
