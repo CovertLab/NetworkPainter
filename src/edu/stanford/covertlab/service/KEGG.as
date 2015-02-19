@@ -97,8 +97,7 @@
 		
 		//preview
 		public function previewSource(pathway:Object):String {
-			var org:String = pathway.id.match(/^[a-z]+/i)[0];
-			return 'http://www.genome.jp/kegg/pathway/' + org + '/' + pathway.id + '.png';
+			return 'services/amfphp/Amfphp/Services/KEGG-cache/' + pathway.id + '.thumb-250x250.png';
 		}		
 	}
 	

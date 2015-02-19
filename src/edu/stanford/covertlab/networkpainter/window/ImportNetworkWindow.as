@@ -115,8 +115,8 @@
 			
 			//view stack
 			viewStack = new ViewStack();
-			viewStack.width = 618;
-			viewStack.height = 452;
+			viewStack.width = 768;
+			viewStack.height = 502;
 			viewStack.addEventListener(IndexChangedEvent.CHANGE, changeView);
 			viewStack.setStyle('paddingTop', 0);
 			viewStack.setStyle('paddingBottom', 0);
@@ -133,6 +133,10 @@
 			viewStack.addChild(vBox);
 			
 			tileList = new ThumbnailTileList();
+			tileList.columnCount = 3;
+			tileList.rowCount = 2;
+			tileList.rowHeight = 250;
+			tileList.columnWidth = 250;
 			vBox.addChild(tileList);
 			
 			var thumbnailFactory:ClassFactory = new ClassFactory(ImportNetworkWindow_ThumbnailTileListItemRenderer);

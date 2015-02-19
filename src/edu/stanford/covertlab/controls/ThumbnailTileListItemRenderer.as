@@ -52,8 +52,8 @@
 			nameBox.percentWidth = 100;
 			nameBox.setStyle('paddingTop', 2);
 			nameBox.setStyle('paddingBottom', 2);
-			nameBox.setStyle('paddingLeft', 2);
-			nameBox.setStyle('paddingRight', 2);
+			nameBox.setStyle('paddingLeft', 6);
+			nameBox.setStyle('paddingRight', 6);
 			nameBox.setStyle('horizontalAlign', 'center');
 			nameBox.setStyle('verticalAlign', 'middle');			
 			addChild(nameBox);

@@ -22,6 +22,8 @@
 		public function ImportNetworkWindow_ThumbnailTileListItemRenderer() 
 		{
 			super();
+			
+			width = height = 250;
 		}
 		
 		public function get importNetworkWindow():ImportNetworkWindow {
@@ -31,24 +33,20 @@
 		public function set importNetworkWindow(value:ImportNetworkWindow):void {
 			if (importNetworkWindow != value) {
 				if (data && !importNetworkWindow) {
-					var source:String = value.previewSource(data);
-					if (source) image.source = 'services/phpThumb/phpThumb.php?src=' + source + '&w=' + image.width + '&h=' + image.height;
-					else image.source = null;
+					image.source = value.previewSource(data);
 				}
 				_importNetworkWindow = value;
 			}
 		}
 		
 		override public function set data(value:Object):void {
-			if(data!=value){
+			if (data != value) {
 				super.data = value;
 				nameLabel.text = value.name;
-				toolTip = value.name;				
+				toolTip = value.name;
 				
 				if (importNetworkWindow) {
-					var source:String = importNetworkWindow.previewSource(data);
-					if (source) image.source = 'services/phpThumb/phpThumb.php?src=' + source + '&w=' + image.width + '&h=' + image.height;
-					else image.source = null;
+					image.source = importNetworkWindow.previewSource(data);
 				}
 			}
 		}
