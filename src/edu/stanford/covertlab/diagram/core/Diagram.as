@@ -1387,6 +1387,16 @@
 
 			var from:Biomolecule = evt.contextMenuOwner as Biomolecule;
 			var to:Biomolecule = (selectedBiomolecules[0] == from ? selectedBiomolecules[1] : selectedBiomolecules[0]);
+			
+			var undoData:Object = { 
+				myName:to.myName, 
+				myLabel:to.myLabel, 
+				myRegulation:to.myRegulation, 
+				myCompartment:to.myCompartment, 
+				myStyle:to.myStyle, 
+				myComments:to.myComments
+				};
+			historyManager.addHistoryAction(new HistoryAction(to, 'update', undoData));
 
 			if (to.myRegulation)
 				to.myRegulation = to.myRegulation + ' || ' + from.myName;
@@ -1401,6 +1411,16 @@
 
 			var to:Biomolecule = evt.contextMenuOwner as Biomolecule;
 			var from:Biomolecule = (selectedBiomolecules[0] == to ? selectedBiomolecules[1] : selectedBiomolecules[0]);
+			
+			var undoData:Object = { 
+				myName:to.myName, 
+				myLabel:to.myLabel, 
+				myRegulation:to.myRegulation, 
+				myCompartment:to.myCompartment, 
+				myStyle:to.myStyle, 
+				myComments:to.myComments
+				};
+			historyManager.addHistoryAction(new HistoryAction(to, 'update', undoData));
 
 			if (to.myRegulation)
 				to.myRegulation = to.myRegulation + ' || ' + from.myName;
