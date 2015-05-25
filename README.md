@@ -19,7 +19,7 @@ Documentation for the NetworkPainter source code is available [here](http://cove
 NetworkPainter is distributed under the [Attribution Assurance License](license.txt).
 
 ### Citing NetworkPainter ###
-Please use the following reference to cite NetworkPainter: Karr JR, Guturu H, Chen EY, Blair SL, Irish JM, Kotecha N, Covert MW. NetworkPainter: Intracellular pathway animation in Cytobank. (In preparation).
+Please use the following reference to cite NetworkPainter:Karr JR, Guturu H, Chen EY, Blair SL, Irish JM, Kotecha N, Covert MW. [NetworkPainter: dynamic intracellular pathway animation in Cytobank](http://www.biomedcentral.com/1471-2105/16/172). BMC Bioinformatics 16, 1:172 (2015).
 
 ### Development team ###
 NetworkPainter was developed by Jonathan Karr, Harendra Guturu, Ed Chen, Stuart Blair, Jonathan Irish, Nikesh Kotecha, and Markus Covert at Stanford University and Cytobank Inc.
